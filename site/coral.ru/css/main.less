@@ -1,0 +1,28 @@
+@import "../../common/css/layout";
+@import "../../common/css/coral-colors";
+
+section {
+
+}
+
+section.nav {
+	background: @brand-nav-bg;
+	color: white;
+	>ul {
+		list-style: none;
+		width: 100%;
+		max-width: @max-content-width;
+		margin: auto;
+		padding: 0;
+		font-size: 14px;
+		display: flex;
+		>li {
+			display: inline-grid;
+			place-content: center;
+			height: 80px;
+			&.generic {
+				padding: 0 16px;
+			}
+		}
+	}
+}

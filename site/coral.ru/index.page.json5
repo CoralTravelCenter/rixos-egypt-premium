@@ -1,0 +1,9 @@
+{
+	env: {
+		brand: 'coral-next',
+	},
+	contents: [
+        '/site/coral.ru/markup/styles.html',
+        '/site/coral.ru/markup/nav.html'
+	],
+}
