@@ -59,3 +59,14 @@
 .trsall(@duration: 0.5s) {
 	.transit(@duration: @duration);
 }
+
+.hidden-on-mobile {
+	@media screen and (max-width: @mobile-breakpoint) {
+	    display: none!important;
+	}
+}
+.hidden-on-desktop {
+	@media screen and (min-width: (@mobile-breakpoint + 1)) {
+	    display: none!important;
+	}
+}

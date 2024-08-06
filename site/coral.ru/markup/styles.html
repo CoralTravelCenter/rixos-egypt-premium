@@ -1,12 +1,3 @@
 <body>
 <link rel="stylesheet" href="/site/coral.ru/css/main.less">
-<script type="module">
-    import { hostReactAppReady } from "../../common/js/usefuls";
-    (async function () {
-        await hostReactAppReady();
-        document.querySelector('section.nav')
-            .closest('.row-container')
-            .classList.remove(...'layout-container-limit center'.split(' '));
-    })();
-</script>
 </body>
