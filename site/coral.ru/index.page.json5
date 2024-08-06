@@ -4,6 +4,7 @@
 	},
 	contents: [
         '/site/coral.ru/markup/styles.html',
-        '/site/coral.ru/markup/nav.html'
+		'/site/coral.ru/markup/nav.html',
+		'/site/coral.ru/markup/content.pug'
 	],
 }

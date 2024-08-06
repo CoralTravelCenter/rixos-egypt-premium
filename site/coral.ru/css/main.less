@@ -1,8 +1,32 @@
-@import "../../common/css/layout";
-@import "../../common/css/coral-colors";
+//@import "../../common/css/layout";
+//@import "../../common/css/coral-colors";
+@import "../../common/css/coral-mixins";
 
-section {
+@font-face {
+	font-family: TrajanPro3Regular;
+	font-weight: 400;
+	src: url(https://font.static.useinsider.com/coraltravel/TrajanPro3Regular.ttf);
+}
 
+section.held {
+	.bbox();
+	font-size: 16px;
+	.inhalt {
+		max-width: @max-content-width;
+		margin: auto;
+		padding: 80px 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 40px;
+		p {
+			&.generic {
+				line-height: (28/16em);
+				font-weight: 300;
+                margin: unset;
+			}
+		}
+	}
 }
 
 section.nav {
@@ -16,12 +40,78 @@ section.nav {
 		padding: 0;
 		font-size: 14px;
 		display: flex;
+		justify-content: center;
 		>li {
 			display: inline-grid;
 			place-content: center;
 			height: 80px;
+			cursor: pointer;
+			user-select: none;
 			&.generic {
 				padding: 0 16px;
+				font-weight: 300;
+				letter-spacing: .05em;
+			}
+			&.logo {
+				margin-right: auto;
+				>a {
+					.proportional(183/50);
+					width: 14em;
+					background: url("data-url:/site/coral.ru/assets-inline/logo-rixos-hotels.svg") center / cover no-repeat;
+				}
+			}
+			&.map {
+				margin-left: auto;
+				>a {
+					.proportional(20/20);
+					width: 2em;
+					background: url("data-url:/site/coral.ru/assets-inline/nav-map-marker.svg") center / cover no-repeat;
+				}
+			}
+		}
+	}
+}
+
+section.kv {
+	position: relative;
+	.inhalt {
+		position: relative;
+		z-index: 1;
+		height: 720px;
+		color: white;
+		justify-content: center;
+		.rixos-logo {
+			.proportional(183/50);
+			width: 330px;
+			background: url("data-url:/site/coral.ru/assets-inline/logo-rixos-hotels.svg") center / cover no-repeat;
+		}
+		h1 {
+			font-family: TrajanPro3Regular;
+			font-weight: 400;
+			font-size: 40px;
+			margin: 0;
+			padding: 0;
+			line-height: 1;
+		}
+	}
+	.backdrop {
+		.abs100x100();
+		z-index: 0;
+		background: url("/site/coral.ru/assets/kv-poster-desktop.jpg") center / cover no-repeat;
+		@media screen and (max-width: @mobile-breakpoint) {
+			background-image: url("/site/coral.ru/assets/kv-poster-mobile.jpg");
+		}
+	}
+}
+
+section.unique-concept {
+	.inhalt {
+		p.generic {
+			text-align: center;
+		}
+		.actions {
+			button {
+				.knopf();
 			}
 		}
 	}
