@@ -1,5 +1,19 @@
 body
-    section.held.kv
+    section.nav.edge2edge
+        nav
+            a.logo(href='#_')
+            .burger
+                label.toggle(for='burger-open')
+                input(type='checkbox', id='burger-open')
+                ul.shortcuts
+                    li Преимущества
+                    li Услуги и удобства
+                    li Отели
+                    li CoralBonus
+                    li Контакты
+            a.map(href='#_')
+
+    section.held.kv.edge2edge
         .backdrop.vimeo-video-box
             .vimeo-player.hidden-on-mobile(data-vimeo-vid=994946039)
             .vimeo-player.hidden-on-desktop(data-vimeo-vid=994946012)
