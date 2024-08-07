@@ -217,3 +217,22 @@ section.unique-concept {
 		}
 	}
 }
+
+section.visuals-x-slider {
+	.proportional(1728/620);
+	overflow: hidden;
+	@media screen and (max-width: @mobile-breakpoint) {
+		.proportional(768/600);
+	}
+	.x-slide {
+		.proportional(3545/1600);
+		position: absolute;
+		width: 110%;
+		background: var(--visual-desktop) center / cover no-repeat;
+		@media screen and (max-width: @mobile-breakpoint) {
+			.proportional(768/600);
+			position: absolute;
+			background-image: var(--visual-mobile);
+		}
+	}
+}
