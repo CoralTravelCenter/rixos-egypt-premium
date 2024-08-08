@@ -11,6 +11,7 @@
 section.held {
 	.bbox();
 	font-size: 16px;
+	color: @brand-main-text;
 	.inhalt {
 		width: calc(~"100% - 200px");
 		max-width: @max-content-width;
@@ -33,6 +34,33 @@ section.held {
                 margin: unset;
 			}
 		}
+		h2 {
+			font-family: TrajanPro3Regular;
+			font-weight: 400;
+			font-size: 40px;
+			margin: 0;
+			padding: 0;
+			line-height: 1;
+			@media screen and (max-width: @narrow-breakpoint) {
+				font-size: 28px;
+				text-align: center;
+				line-height: (36/28);
+			}
+		}
+		h3 {
+			font-family: TrajanPro3Regular;
+			font-weight: 400;
+			font-size: 32px;
+			margin: 0;
+			padding: 0;
+			line-height: (44/32);
+			@media screen and (max-width: @narrow-breakpoint) {
+				font-size: 28px;
+				text-align: center;
+				line-height: (36/28);
+			}
+		}
+
 	}
 }
 
@@ -285,4 +313,30 @@ section.visuals-x-slider {
 		&:nth-child(4) {.x-slide-animation(4, 5);}
 		&:nth-child(5) {.x-slide-animation(5, 5);}
 	}
+}
+
+section.advantages {
+	background: @brand-pale-bg;
+
+	.cards-stack {
+		.stack {
+			.stack-item {
+				.visual {
+					.proportional(1/1);
+					border-radius: 12px;
+					background: center / cover no-repeat;
+				}
+				.info {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					gap: 32px;
+					.description {
+
+					}
+				}
+			}
+		}
+	}
+
 }
