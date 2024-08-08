@@ -218,15 +218,60 @@ section.unique-concept {
 	}
 }
 
+.x-slide-keyframes(@qty, @fadein-duration: 2s, @zoomin-duration: 2s) {
+	@slide-duration: @fadein-duration + @zoomin-duration;
+	@fadein-ratio: (@fadein-duration / @slide-duration);
+	@full-cycle-duration: @slide-duration * @qty;
+	@slide-timeline-percent: (unit(@slide-duration) / unit(@full-cycle-duration) * 100%);
+	@next-slide-fadein-percent: (unit(@slide-duration + @fadein-duration) / unit(@full-cycle-duration) * 100%);
+	@slide-fadein-percent: @slide-timeline-percent * @fadein-ratio;
+	@keyframes x-fade-in {
+		0% {
+			z-index: 1;
+			opacity: 0;
+			transform: translate(-50%,-50%) scale(.95);
+		}
+		@{slide-fadein-percent} {
+			opacity: 1;
+		}
+		@{slide-timeline-percent} {
+			z-index: 0;
+			opacity: 1;
+			transform: translate(-50%,-50%) scale(1);
+		}
+		@{next-slide-fadein-percent} {
+			opacity: 0;
+			transform: translate(-50%,-50%) scale(1.05);
+		}
+		100% {
+			opacity: 0;
+			transform: translate(-50%,-50%) scale(.95);
+		}
+	}
+}
+
+.x-slide-animation(@nth, @qty, @fadein-duration: 2s, @zoomin-duration: 2s) {
+	@idx: @nth - 1;
+	@slide-duration: @fadein-duration + @zoomin-duration;
+	@full-cycle-duration: @slide-duration * @qty;
+	//@delay: unit((@slide-duration / @full-cycle-duration) * @idx, s);
+	@delay: @slide-duration * @idx;
+	animation: x-fade-in @full-cycle-duration @delay infinite both linear;
+}
+
 section.visuals-x-slider {
 	.proportional(1728/620);
 	overflow: hidden;
 	@media screen and (max-width: @mobile-breakpoint) {
 		.proportional(768/600);
 	}
+	.x-slide-keyframes(5);
 	.x-slide {
+		.reset();
 		.proportional(3545/1600);
 		position: absolute;
+		left: 50%;
+		top: 50%;
 		width: 110%;
 		background: var(--visual-desktop) center / cover no-repeat;
 		@media screen and (max-width: @mobile-breakpoint) {
@@ -234,5 +279,10 @@ section.visuals-x-slider {
 			position: absolute;
 			background-image: var(--visual-mobile);
 		}
+		&:nth-child(1) {.x-slide-animation(1, 5);}
+		&:nth-child(2) {.x-slide-animation(2, 5);}
+		&:nth-child(3) {.x-slide-animation(3, 5);}
+		&:nth-child(4) {.x-slide-animation(4, 5);}
+		&:nth-child(5) {.x-slide-animation(5, 5);}
 	}
 }
