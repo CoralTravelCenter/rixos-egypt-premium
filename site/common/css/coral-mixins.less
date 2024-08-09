@@ -18,3 +18,23 @@
     border: 0;
     cursor: pointer;
 }
+
+.shady(@shift: 10px, @blur: 20px) {
+	filter+: drop-shadow(0 @shift @blur fade(black, 10%));
+}
+
+.shifter(@direction: 'forward') {
+	.interactive();
+	outline: none;
+	width: 48px;
+	height: 48px;
+	background: white url("data-url:/site/coral.ru/assets-inline/arrow-forward.svg") center no-repeat;
+	border-radius: 50%;
+	border: 0;
+	cursor: pointer;
+	& when (@direction = 'backward') {
+		background-image: url("data-url:/site/coral.ru/assets-inline/arrow-backward.svg");
+	}
+	.shady();
+}
+

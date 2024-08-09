@@ -3,7 +3,7 @@
 		brand: 'coral-next',
 	},
 	contents: [
-        '/site/coral.ru/markup/styles.html',
+        '/site/coral.ru/markup/styles-and-libs.html',
 		'/site/coral.ru/markup/content.pug',
 		'/site/coral.ru/markup/main-scripts.pug'
 	],

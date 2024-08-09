@@ -319,22 +319,85 @@ section.advantages {
 	background: @brand-pale-bg;
 
 	.cards-stack {
+		position: relative;
+		width: 100%;
 		.stack {
+			display: grid;
+			--pad: 2.5em;
+			padding: calc(var(--pad) * 0.75 * 2) calc(var(--pad) * 0.75 * 2) 0 0;
+			@media screen and (max-width: @mobile-breakpoint) {
+			    display: flex;
+				gap: 16px;
+				overflow: auto;
+				padding: 0;
+				scroll-snap-type: x mandatory;
+				&::-webkit-scrollbar {
+					display: none;
+				}
+			}
 			.stack-item {
+				grid-area: 1 / 1;
+				display: grid;
+				grid-template: [top-line] var(--pad) [visual-top] 30em [visual-bottom] var(--pad) [bottom-line]
+								/ [visual-left] 15em [info-left] 15em [visual-right] 1fr [info-right];
+				transform: translateZ(0);
+				@media screen and (max-width: @mobile-breakpoint) {
+					flex: 0 0 100%;
+					grid-template: none;
+					display: flex;
+					flex-direction: column;
+					background: white;
+					border-radius: 12px;
+					scroll-snap-align: center;
+				}
 				.visual {
+					grid-area: visual-top / visual-left / visual-bottom / visual-right;
 					.proportional(1/1);
 					border-radius: 12px;
 					background: center / cover no-repeat;
+					@media screen and (max-width: @mobile-breakpoint) {
+						grid-area: unset;
+						.proportional(356/260);
+					}
 				}
 				.info {
+					grid-area: top-line / info-left / bottom-line / info-right;
 					display: flex;
 					flex-direction: column;
 					justify-content: center;
 					gap: 32px;
+					background: white;
+					border-radius: 12px;
+					padding: var(--pad) 4em var(--pad) 20em;
+					@media screen and (max-width: @mobile-breakpoint) {
+					    grid-area: unset;
+						text-align: center;
+						padding: 2em 1em;
+					}
+					h3 {
+						font-size: 2em;
+						@media screen and (max-width: @mobile-breakpoint) {
+							font-size: 1.5em;
+						}
+					}
 					.description {
-
+						line-height: (28/16);
 					}
 				}
+			}
+		}
+		button.shifter {
+			position: absolute;
+			z-index: 1;
+			//top: calc(~"50% - 24px");
+			top: 50%;
+			&.forward {
+				.shifter();
+				left: calc(~"100% + (100vw - 100%) / 4 - 24px");
+			}
+			&.backward {
+				.shifter(@direction: 'backward');
+				left: calc(~"(100vw - 100%) / (-4) - 24px");
 			}
 		}
 	}

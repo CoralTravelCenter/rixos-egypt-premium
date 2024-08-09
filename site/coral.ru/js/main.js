@@ -8,17 +8,13 @@ import { hostReactAppReady, preloadScript, vimeoAutoPlay } from "../../common/js
 
     vimeoAutoPlay();
 
-    // preloadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js').then(() => {
-    //     preloadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js').then(() => {
-    //         ScrollTrigger.create({
-    //             markers: true,
-    //             pin: true,
-    //             anticipatePin: 1,
-    //             trigger: 'section.nav',
-    //             // start: 'top top',
-    //             // end: 100
-    //         });
-    //     });
+    // ScrollTrigger.create({
+    //     markers: true,
+    //     pin: true,
+    //     anticipatePin: 1,
+    //     trigger: 'section.nav',
+    //     // start: 'top top',
+    //     // end: 100
     // });
 
 })();
