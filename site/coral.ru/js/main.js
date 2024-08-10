@@ -1,4 +1,5 @@
 import { hostReactAppReady, preloadScript, vimeoAutoPlay } from "../../common/js/usefuls";
+import { StackSlider } from "./stack-slider";
 
 (async function () {
     await hostReactAppReady();
@@ -7,6 +8,12 @@ import { hostReactAppReady, preloadScript, vimeoAutoPlay } from "../../common/js
         .classList.remove(...'layout-container-limit center'.split(' '));
 
     vimeoAutoPlay();
+
+    new StackSlider(
+        document.querySelector('section.advantages .stack'),
+        document.querySelector('section.advantages .paging'),
+        document.querySelector('section.advantages .cards-stack')
+        );
 
     // ScrollTrigger.create({
     //     markers: true,
