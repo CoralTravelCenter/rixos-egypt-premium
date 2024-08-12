@@ -60,6 +60,17 @@ section.held {
 				line-height: (36/28);
 			}
 		}
+		h4 {
+			font-family: TrajanPro3Regular;
+			font-weight: 400;
+			font-size: (20/16em);
+			margin: 0;
+			padding: 0;
+			line-height: (28/20);
+			@media screen and (max-width: @narrow-breakpoint) {
+
+			}
+		}
 
 	}
 }
@@ -448,4 +459,60 @@ section.advantages {
 		}
 	}
 
+}
+
+section.perfection {
+	.inhalt {
+		display: flex;
+		gap: 0;
+		flex-direction: row;
+		.info {
+			flex: 0 0 45%;
+			display: flex;
+			flex-direction: column;
+			gap: 32px;
+			padding-right: 80px;
+			.description {
+				line-height: (24/16em);
+			}
+		}
+		.slider-combo {
+			flex: 0 0 55%;
+			width: 55%;
+			.scroll-slider {
+				width: calc(~"100% + (100vw - (100% * 100 / 55)) / 2");
+				display: flex;
+				gap: 32px;
+				overflow: auto;
+				scroll-snap-type: x mandatory;
+				.shady();
+				&::-webkit-scrollbar {
+					display: none;
+				}
+				.slide {
+					flex-shrink: 0;
+					width: (348/16em);
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					text-align: center;
+					border-radius: 12px;
+					overflow: hidden;
+					background: white;
+					scroll-snap-align: start;
+					&:last-child {
+						scroll-snap-align: end;
+					}
+					.visual {
+						.proportional(348/376);
+						background: center / cover no-repeat;
+						width: 100%;
+					}
+					h4 {
+						padding: 1em;
+					}
+				}
+			}
+		}
+	}
 }
