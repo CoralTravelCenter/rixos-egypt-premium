@@ -7,6 +7,8 @@ export class StackSlider {
     stackEl;
     slides;
     pagerEl;
+    currentSlideEl;
+    totalSlidesEl;
     shiftBackwardEl;
     shiftForwardEl;
 
@@ -17,6 +19,8 @@ export class StackSlider {
     constructor(stack, pager, shifters) {
         this.stackEl = stack;
         this.pagerEl = pager;
+        this.currentSlideEl = pager.querySelector('.current');
+        this.totalSlidesEl = pager.querySelector('.total');
         this.shiftBackwardEl = shifters?.querySelector('button.backward');
         this.shiftForwardEl = shifters?.querySelector('button.forward');
         if (!StackSlider.usedOnce) {
@@ -35,6 +39,7 @@ export class StackSlider {
     init() {
 
         this.slides = [...this.stackEl.children];
+        this.totalSlidesEl.textContent = this.slides.length;
 
         this.shiftBackwardEl?.addEventListener('click', () => {
             this.shiftBackward();
@@ -50,7 +55,7 @@ export class StackSlider {
         }
 
         watchIntersection(this.stackEl.children, { root: this.stackEl, threshold: .66 }, (el) => {
-
+            this.currentSlideEl.textContent = [...this.stackEl.children].indexOf(el) + 1;
         }, (el) => {
 
         });
@@ -65,21 +70,25 @@ export class StackSlider {
         for (const [idx, slide] of this.slides.entries()) {
             const visual = slide.querySelector('.visual');
             const t = gsap.timeline();
+            gsap.killTweensOf([slide, visual]);
             if (idx === 0) {
+                // first slide
                 if (direction === 'forward') {
-                    t.to(slide, { x: 0, y: 0, yPercent: 0, z: -100 * idx, duration });
+                    t.to(slide, { x: 0, y: 0, yPercent: 0, z: -100 * idx, opacity: 1, duration });
                     t.to(visual, { opacity: 1, duration: duration  }, '<');
                 } else {
                     t.set(visual, { opacity: 1 });
-                    t.fromTo(slide, { x: 0, yPercent: 50, y: 0, z: -100 * idx, opacity: 0 }, { x: 0, yPercent: 0, y: 0,  z: -100 * idx, opacity: 1, duration });
+                    t.fromTo(slide, { x: 0, yPercent: 50, y: 0, z: -100 * idx, opacity: 0 }, { x: 0, yPercent: 0, y: 0, opacity: 1, duration });
+                    t.set(slide, { z: -100 * idx }, '<');
                 }
             } else if (idx === this.slides.length - 1) {
+                // last slide
                 if (direction === 'forward') {
-                    t.fromTo(slide, { x: 0, yPercent: 0, y: 0, z: -100 * idx, opacity: 1 }, { x: 0, yPercent: 50, y: 0, z: -100 * idx, opacity: 0, duration });
-                } else {
-
+                    t.fromTo(slide, { x: 0, yPercent: 0, y: 0, opacity: 1 }, { x: 0, yPercent: 50, y: 0, opacity: 0, duration });
+                    t.set(slide, { z: -100 * idx }, '>');
                 }
             } else {
+                // others in between
                 let [, value, unit] = this.backShift.match(/(.+?)([a-z]+)$/);
                 value = Number(value);
                 const shift_value = value * Math.min(idx, this.maxVisibleIdx + 1);
@@ -100,23 +109,29 @@ export class StackSlider {
     }
 
     shiftBackward() {
-        this.slides.unshift(this.slides.pop());
-        this.updateSlides(this.stepDuration, 'backward');
-        this.stackEl.scrollBy({
-            top: 0,
-            left: -this.stackEl.children[0].getBoundingClientRect().width,
-            behavior: 'smooth'
-        });
+        if (document.body.clientWidth >= 768) {
+            this.slides.unshift(this.slides.pop());
+            this.updateSlides(this.stepDuration, 'backward');
+        } else {
+            this.stackEl.scrollBy({
+                top: 0,
+                left: -this.stackEl.getBoundingClientRect().width,
+                behavior: 'smooth'
+            });
+        }
     }
 
     shiftForward() {
-        this.slides.push(this.slides.shift());
-        this.updateSlides(this.stepDuration, 'forward');
-        this.stackEl.scrollBy({
-            top: 0,
-            left: this.stackEl.children[0].getBoundingClientRect().width,
-            behavior: 'smooth'
-        });
+        if (document.body.clientWidth >= 768) {
+            this.slides.push(this.slides.shift());
+            this.updateSlides(this.stepDuration, 'forward');
+        } else {
+            this.stackEl.scrollBy({
+                top: 0,
+                left: this.stackEl.getBoundingClientRect().width,
+                behavior: 'smooth'
+            });
+        }
     }
 
 }
