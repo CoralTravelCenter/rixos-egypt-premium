@@ -1,0 +1,46 @@
+@import "../../../common/css/coral-colors";
+@import "../../../common/css/layout";
+
+.discrete-pager {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: calc(~"100% + 32px");
+	list-style: none;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	>* {
+		.interactive();
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background: @brand-lite-bg;
+		cursor: pointer;
+		.transit(background);
+		&.current {
+			background: @brand-nav-bg;
+		}
+	}
+}
+
+.scroll-pager {
+	position: absolute;
+	left: 0;
+	top: calc(~"100% + 32px");
+	height: 8px;
+	border-radius: 100px;
+	background: @brand-lite-bg;
+	.transit(left);
+	.transit(width);
+	.filler {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 33%;
+		height: 100%;
+		border-radius: 100px;
+		background: @brand-nav-bg;
+	}
+}

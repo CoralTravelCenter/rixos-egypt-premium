@@ -1,5 +1,6 @@
 import { hostReactAppReady, preloadScript, vimeoAutoPlay } from "../../common/js/usefuls";
 import { StackSlider } from "./stack-slider";
+import { ScrollPager } from "./scroll-pager/scroll-pager";
 
 (async function () {
     await hostReactAppReady();
@@ -14,6 +15,12 @@ import { StackSlider } from "./stack-slider";
         document.querySelector('section.advantages .paging'),
         document.querySelector('section.advantages .cards-stack')
         );
+
+    new ScrollPager(
+        document.querySelector('section.perfection .scroll-slider'),
+        document.querySelector('section.perfection .scroll-pager'),
+        document.querySelector('section.perfection .discrete-pager')
+    );
 
     // ScrollTrigger.create({
     //     markers: true,
