@@ -1,3 +1,5 @@
+include ../markup/mixins
+
 body
     section.nav.edge2edge
         nav
@@ -121,6 +123,12 @@ body
 
                 .discrete-pager
 
+    section.held.rixos-hotels
+        .inhalt
+            h2 Отели Rixos в Египте
+            .hotels-grid
+                for hotel in hotels
+                    +hotel-card(hotel)
 
 
 

@@ -540,3 +540,38 @@ section.perfection {
 		}
 	}
 }
+
+section.rixos-hotels {
+	background: @brand-pale-bg;
+
+	.hotels-grid {
+		display: grid;
+		gap: 32px;
+		grid-template: auto / repeat(3, 1fr);
+		.hotel-card {
+			display: flex;
+			flex-direction: column;
+			.visual {
+				.proportional(448/360);
+				background: #def center / cover no-repeat;
+				border-radius: 12px;
+			}
+		}
+		.info {
+			display: flex;
+			flex-direction: column;
+			gap: (24/16em);
+			padding: 1.5em;
+			h4 {
+				font-size: (24/16em);
+			}
+			.description {
+				//line-height: (28/16);
+			}
+			.actions {
+
+			}
+		}
+	}
+
+}
