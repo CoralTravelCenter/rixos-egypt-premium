@@ -1,5 +1,7 @@
 include ../markup/mixins
 
+- const known_hotels = hotels.filter(hotel => !!hotel.id);
+
 body
     section.nav.edge2edge
         nav
@@ -127,8 +129,9 @@ body
         .inhalt
             h2 Отели Rixos в Египте
             .hotels-grid
-                for hotel in hotels
+                each hotel in known_hotels
                     +hotel-card(hotel)
+            .discrete-pager
 
 
 

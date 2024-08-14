@@ -1,7 +1,7 @@
 @import "./layout";
 @import "./coral-colors";
 
-.knopf() {
+.knopf(@style: 'filled') {
     .interactive();
     display: inline-grid;
     place-content: center;
@@ -9,12 +9,19 @@
     border-radius: .5em;
     line-height: 1;
     height: 3em;
-    padding: 0 2em;
+    padding: 0 1em;
     font-weight: 300;
     text-decoration: none;
     letter-spacing: .05em;
-    background: @brand-nav-bg;
-    color: white;
+	& when (@style = 'filled') {
+		background: @brand-nav-bg;
+		color: white;
+	}
+	& when (@style = 'hollow') {
+		background: transparent;
+		box-shadow: inset 0 0 0 1px @brand-nav-bg;
+		color: @brand-nav-bg;
+	}
     border: 0;
     cursor: pointer;
 }

@@ -1,9 +1,12 @@
 mixin hotel-card(hotel)
-    .hotel-card
+    .hotel-card(data-hotel-id=hotel.id)
         .visual
         .info
             h4.name!= hotel.name
-            .stars
+            .stars-black
+                each n in [1,2,3,4,5]
+                    span.star-black
             .description!= hotel.description
-
             .actions
+                a.choose-hotel(href='#_') Выбрать отель
+                a.learn-more(href='#_') Узнать больше

@@ -1,0 +1,8 @@
+{
+    "scripts": {
+        "api-proxy": "lcp --proxyUrl https://b2capi.coral.ru"
+    },
+    "devDependencies": {
+        "local-cors-proxy": "^1.1.0"
+    }
+}

@@ -1,0 +1,5 @@
+- const known_hotels = hotels.filter(hotel => !!hotel.id);
+
+body
+    script
+        != `var known_hotels = ${ JSON.stringify(known_hotels) };`

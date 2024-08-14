@@ -548,29 +548,82 @@ section.rixos-hotels {
 		display: grid;
 		gap: 32px;
 		grid-template: auto / repeat(3, 1fr);
+		@media screen and (max-width: @mid-breakpoint) {
+			grid-template: auto / repeat(2, 1fr);
+		}
+		@media screen and (max-width: @narrow-breakpoint) {
+			width: 100%;
+		    display: flex;
+			overflow: auto;
+			scroll-snap-type: x mandatory;
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
 		.hotel-card {
+			--visual: linear-gradient(to bottom, #def, #def);
 			display: flex;
 			flex-direction: column;
+			@media screen and (max-width: @narrow-breakpoint) {
+				flex-shrink: 0;
+				width: 100%;
+				scroll-snap-align: center;
+			}
 			.visual {
 				.proportional(448/360);
-				background: #def center / cover no-repeat;
+				background: var(--visual) center / cover no-repeat;
 				border-radius: 12px;
 			}
 		}
 		.info {
+			flex-grow: 1;
 			display: flex;
 			flex-direction: column;
 			gap: (24/16em);
 			padding: 1.5em;
 			h4 {
-				font-size: (24/16em);
+				font-size: 1.3em;
+				line-height: 1;
+			}
+			.stars-black {
+				display: inline-flex;
+				gap: 2px;
+				.star-black {
+					width: 1em;
+					height: 1em;
+					background: url("data-url:/site/coral.ru/assets-inline/star-black.svg") center / cover no-repeat;
+				}
 			}
 			.description {
 				//line-height: (28/16);
 			}
 			.actions {
-
+				margin-top: auto;
+				display: flex;
+				align-items: baseline;
+				gap: 1em;
+				@media screen and (max-width: @narrow-breakpoint) {
+				    flex-direction: column;
+					align-items: stretch;
+				}
+				>* {
+					flex: 1 1 auto;
+				}
+				.choose-hotel {
+					.knopf();
+				}
+				.learn-more {
+					.knopf('hollow');
+				}
 			}
+		}
+	}
+
+	.discrete-pager {
+		position: static;
+		margin-top: -2em;
+		@media screen and (min-width: (@narrow-breakpoint + 1)) {
+		    display: none;
 		}
 	}
 
