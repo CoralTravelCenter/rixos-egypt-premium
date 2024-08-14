@@ -3,6 +3,11 @@ import { StackSlider } from "./stack-slider";
 import { ScrollPager } from "./scroll-pager/scroll-pager";
 import { listHotelInfo } from "./api-adapter";
 
+// history.scrollRestoration = "manual";
+// window.onbeforeunload = function () {
+//     window.scrollTo(0, 0);
+// };
+
 (async function () {
     await hostReactAppReady();
     document.querySelector('section.nav')
@@ -21,7 +26,7 @@ import { listHotelInfo } from "./api-adapter";
         document.querySelector('section.advantages .stack'),
         document.querySelector('section.advantages .paging'),
         document.querySelector('section.advantages .cards-stack')
-        );
+    );
 
     new ScrollPager(
         document.querySelector('section.perfection .scroll-slider'),
@@ -49,13 +54,19 @@ import { listHotelInfo } from "./api-adapter";
 
     }
 
-    // ScrollTrigger.create({
-    //     markers: true,
-    //     pin: true,
-    //     anticipatePin: 1,
-    //     trigger: 'section.nav',
-    //     // start: 'top top',
-    //     // end: 100
-    // });
+    document.fonts.ready.then(() => {
+        const st = ScrollTrigger.create({
+            invalidateOnRefresh: true,
+            trigger:             'section.visuals-x-slider',
+            endTrigger:          'section.advantages',
+            markers:             true,
+            pin:                 true,
+            pinSpacing:          false,
+            anticipatePin:       1,
+            start:               'top 80px',
+            end:                 'top 80px'
+        });
+        setTimeout(st.refresh, 100);
+    });
 
 })();
