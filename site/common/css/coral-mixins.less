@@ -26,8 +26,8 @@
     cursor: pointer;
 }
 
-.shady(@shift: 10px, @blur: 20px) {
-	filter+: drop-shadow(0 @shift @blur fade(black, 10%));
+.shady(@shift: 10px, @blur: 20px, @shade: fade(black, 10%)) {
+	filter+: drop-shadow(0 @shift @blur @shade);
 }
 
 .shifter(@direction: 'forward') {

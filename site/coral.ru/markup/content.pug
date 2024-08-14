@@ -3,7 +3,7 @@ include ../markup/mixins
 - const known_hotels = hotels.filter(hotel => !!hotel.id);
 
 body
-    section.nav.edge2edge
+    section.nav.edge2edge.sticky
         nav
             a.logo(href='#_')
             .burger
@@ -16,6 +16,8 @@ body
                     li CoralBonus
                     li Контакты
             a.map(href='#_')
+    section.nav-spacer.edge2edge
+        nav: .burger: ul.shortcuts: li just placeholder
 
     section.held.edge2edge.kv
         .backdrop.vimeo-video-box

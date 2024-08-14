@@ -82,15 +82,42 @@ section.edge2edge {
 	}
 }
 
-section.nav {
+section.sticky {
+	& + section {
+		visibility: hidden;
+		height: 80px;
+	}
+	&:not(.pinned) + section {
+		display: none;
+	}
+	&.pinned {
+		position: fixed;
+		z-index: 10;
+		width: 100vw;
+		left: 0;
+		top: 0;
+		margin: 0;
+		.shady(2px, 8px, fade(black, 50%));
+	}
+}
+
+section.nav, section.nav + section {
 	position: relative;
 	z-index: 10;
 	background: @brand-nav-bg;
 	color: white;
 	font-size: 14px;
-	a {
-		color: inherit!important;
+	.transit(background);
+	//.transit(filter);
+	&.pinned {
+		background: fade(@brand-nav-bg, 90%);
+		backdrop-filter: blur(8px);
 	}
+
+	a {
+		color: inherit !important;
+	}
+
 	nav {
 		width: calc(~"100% - 200px");
 		max-width: @max-content-width;
@@ -101,16 +128,18 @@ section.nav {
 			margin: 0;
 			width: unset;
 		}
+
 		a.logo {
 			flex-shrink: 0;
 			width: 13em;
 			height: 80px;
 			background: url("data-url:/site/coral.ru/assets-inline/logo-rixos-hotels.svg") center / (183/50 * 3.5em) 3.5em no-repeat;
 			@media screen and (max-width: @nav-layout-break) {
-			    order: 1;
+				order: 1;
 			}
 
 		}
+
 		a.map {
 			flex-shrink: 1;
 			width: 13em;
@@ -124,31 +153,38 @@ section.nav {
 				background-position: center;
 			}
 		}
+
 		.burger {
 			position: relative;
 			@media screen and (max-width: @nav-layout-break) {
-			    order: 0;
+				order: 0;
 			}
+
 			input[type='checkbox'] {
 				display: none;
+
 				&:checked + .shortcuts {
 					pointer-events: auto;
 					opacity: 1;
 				}
 			}
+
 			label.toggle {
 				display: block;
 				width: 80px;
 				height: 80px;
 				background: linear-gradient(to bottom, transparent 0 10%, white 10% 13%, transparent 13% 48%, white 48% 51%, transparent 51% 87%, white 87% 90%, transparent 90% 100%) center / 2em 2em no-repeat;
+
 				&:has(+:checked) {
 					background: linear-gradient(to top right, transparent 49%, white 49% 51%, transparent 51% 100%) center / 2em 2em no-repeat,
-						linear-gradient(to bottom right, transparent 49%, white 49% 51%, transparent 51% 100%) center / 2em 2em no-repeat;
+					linear-gradient(to bottom right, transparent 49%, white 49% 51%, transparent 51% 100%) center / 2em 2em no-repeat;
 				}
+
 				@media screen and (min-width: (@nav-layout-break + 1)) {
-				    display: none;
+					display: none;
 				}
 			}
+
 			ul.shortcuts {
 				list-style: no;
 				padding: 0;
@@ -163,7 +199,8 @@ section.nav {
 					opacity: 0;
 					pointer-events: none;
 				}
-				>li {
+
+				> li {
 					display: inline-grid;
 					place-content: center;
 					line-height: 1;
@@ -174,10 +211,12 @@ section.nav {
 					font-weight: 300;
 					white-space: nowrap;
 					letter-spacing: .05em;
-					background: @brand-nav-bg;
 					@media screen and (max-width: @nav-layout-break) {
 						height: 3em;
 						justify-content: start;
+						background: fade(@brand-nav-bg, 90%);
+						backdrop-filter: blur(8px);
+						padding: 0 26px;
 					}
 				}
 			}
