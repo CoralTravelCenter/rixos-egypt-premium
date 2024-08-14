@@ -55,18 +55,30 @@ import { listHotelInfo } from "./api-adapter";
     }
 
     document.fonts.ready.then(() => {
-        const st = ScrollTrigger.create({
+        const st1 = ScrollTrigger.create({
             invalidateOnRefresh: true,
             trigger:             'section.visuals-x-slider',
             endTrigger:          'section.advantages',
-            markers:             true,
+            // markers:             true,
             pin:                 true,
             pinSpacing:          false,
             anticipatePin:       1,
             start:               'top 80px',
             end:                 'top 80px'
         });
-        setTimeout(st.refresh, 100);
+        setTimeout(st1.refresh, 100);
+        const st2 = ScrollTrigger.create({
+            invalidateOnRefresh: true,
+            trigger:             '.coral-bonus-girl',
+            endTrigger:          '.loyality-program',
+            // markers:             true,
+            pin:                 true,
+            pinSpacing:          false,
+            anticipatePin:       1,
+            start:               'top 80px',
+            end:                 'top 80px'
+        });
+        setTimeout(st2.refresh, 100);
     });
 
 })();

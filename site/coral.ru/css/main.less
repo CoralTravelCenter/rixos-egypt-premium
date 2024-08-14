@@ -583,7 +583,6 @@ section.perfection {
 
 section.rixos-hotels {
 	background: @brand-pale-bg;
-
 	.hotels-grid {
 		display: grid;
 		gap: 32px;
@@ -667,4 +666,57 @@ section.rixos-hotels {
 		}
 	}
 
+}
+
+section.cora-bomus {
+	.inhalt {
+		display: block;
+		padding-top: 0;
+		.coral-bonus-girl {
+			.proportional(2719/1347);
+			background: url("/site/coral.ru/assets/coral-bonus-visual-desktop.jpg") center / cover no-repeat;
+			@media screen and (max-width: @mobile-breakpoint) {
+				background-image: url("/site/coral.ru/assets/coral-bonus-visual-mobile.jpg");
+			}
+		}
+		.loyality-program {
+			position: relative;
+			background: @brand-pale-bg;
+			border-radius: 20px;
+			overflow: hidden;
+			img.visual {
+				position: absolute;
+				width: 38%;
+				right: 6em;
+				bottom: -3em;
+			}
+			.info {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 2em;
+				width: 62%;
+				padding: 8em 6em;
+				@media screen and (max-width: @mobile-breakpoint) {
+					width: 100%;
+					padding: 4em 2em;
+					align-items: stretch;
+					text-align: center;
+				}
+				@media screen and (max-width: @narrow-breakpoint) {
+					padding: 2em 0;
+				}
+				p {
+					margin: 0;
+					line-height: 1.4;
+				}
+				.obtain-card {
+					.knopf();
+					@media screen and (max-width: @mobile-breakpoint) {
+					    align-self: center;
+					}
+				}
+			}
+		}
+	}
 }
