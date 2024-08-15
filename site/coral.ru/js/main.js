@@ -1,12 +1,10 @@
-import { hostReactAppReady, preloadScript, vimeoAutoPlay } from "../../common/js/usefuls";
+import { hostReactAppReady, preloadScript, vimeoAutoPlay, watchIntersection } from "../../common/js/usefuls";
 import { StackSlider } from "./stack-slider";
 import { ScrollPager } from "./scroll-pager/scroll-pager";
 import { listHotelInfo } from "./api-adapter";
 
-// history.scrollRestoration = "manual";
-// window.onbeforeunload = function () {
-//     window.scrollTo(0, 0);
-// };
+import RixosMap from '../rixos-map/RixosMap.vue'
+import { createApp } from "vue";
 
 (async function () {
     await hostReactAppReady();
@@ -34,9 +32,10 @@ import { listHotelInfo } from "./api-adapter";
         document.querySelector('section.perfection .discrete-pager')
     );
 
-
+    let fetchingHotelsInfo;
     if (window.known_hotels) {
-        listHotelInfo(window.known_hotels.map(hotel => hotel.id)).then(infos => {
+        fetchingHotelsInfo = listHotelInfo(window.known_hotels.map(hotel => hotel.id));
+        fetchingHotelsInfo.then(infos => {
             const { hotels } = infos;
             for (const hotel of hotels) {
                 const visual = hotel.images?.at(0).sizes?.find(size => size.type === 4)?.url;
@@ -44,6 +43,9 @@ import { listHotelInfo } from "./api-adapter";
                     const visual_el = document.querySelector(`.hotel-card[data-hotel-id='${ hotel.id }'] .visual`);
                     visual_el?.style.setProperty('--visual', `url(${ visual })`);
                 }
+                // extend hotels data with got info
+                const known_hotel = window.known_hotels.find(known => known.id == hotel.id);
+                if (known_hotel) known_hotel.ee = hotel;
             }
         });
         new ScrollPager(
@@ -79,6 +81,15 @@ import { listHotelInfo } from "./api-adapter";
             end:                 'top 80px'
         });
         setTimeout(st2.refresh, 100);
+    });
+
+    let map_init = false;
+    watchIntersection('#rixos-map', { threshold: .01 }, async (el, observer) => {
+        if (!map_init) {
+            await fetchingHotelsInfo;
+            createApp(RixosMap, { hotelsList: known_hotels }).mount('#rixos-map');
+            map_init = true;
+        }
     });
 
 })();

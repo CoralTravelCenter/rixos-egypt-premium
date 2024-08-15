@@ -2,7 +2,17 @@
     "scripts": {
         "api-proxy": "lcp --proxyUrl https://b2capi.coral.ru"
     },
+    "alias": {
+        "vue": {
+            "global": "Vue"
+        },
+        "process": false
+    },
     "devDependencies": {
         "local-cors-proxy": "^1.1.0"
+    },
+    "dependencies": {
+        "vue": "^3.4.38",
+        "vue-yandex-maps": "^2.1.4"
     }
 }
