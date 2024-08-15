@@ -684,11 +684,28 @@ section.cora-bomus {
 			background: @brand-pale-bg;
 			border-radius: 20px;
 			overflow: hidden;
+			@media screen and (max-width: @mobile-breakpoint) {
+			    display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding-top: 4em;
+			}
+			@media screen and (max-width: @narrow-breakpoint) {
+				padding-top: 2em;
+			}
 			img.visual {
 				position: absolute;
 				width: 38%;
 				right: 6em;
 				bottom: -3em;
+				@media screen and (max-width: @mid-breakpoint) {
+					right: 4em;
+				}
+				@media screen and (max-width: @mobile-breakpoint) {
+					position: static;
+					width: 20em;
+					max-width: 90%;
+				}
 			}
 			.info {
 				display: flex;
@@ -697,6 +714,9 @@ section.cora-bomus {
 				gap: 2em;
 				width: 62%;
 				padding: 8em 6em;
+				@media screen and (max-width: @mid-breakpoint) {
+					padding: 8em 4em;
+				}
 				@media screen and (max-width: @mobile-breakpoint) {
 					width: 100%;
 					padding: 4em 2em;
@@ -706,12 +726,21 @@ section.cora-bomus {
 				@media screen and (max-width: @narrow-breakpoint) {
 					padding: 2em 0;
 				}
+				h2 {
+					@media screen and (max-width: @mid-breakpoint) {
+						font-size: 2.3vw;
+					}
+					@media screen and (max-width: @narrow-breakpoint) {
+						font-size: 1.5em;
+					}
+				}
 				p {
 					margin: 0;
 					line-height: 1.4;
 				}
 				.obtain-card {
 					.knopf();
+					padding: 0 2em;
 					@media screen and (max-width: @mobile-breakpoint) {
 					    align-self: center;
 					}
