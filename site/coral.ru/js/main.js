@@ -62,7 +62,7 @@ import { listHotelInfo } from "./api-adapter";
             // markers:             true,
             pin:                 true,
             pinSpacing:          false,
-            anticipatePin:       1,
+            // anticipatePin:       1,
             start:               'top 80px',
             end:                 'top 80px'
         });
@@ -74,7 +74,7 @@ import { listHotelInfo } from "./api-adapter";
             // markers:             true,
             pin:                 true,
             pinSpacing:          false,
-            anticipatePin:       1,
+            // anticipatePin:       1,
             start:               'top 80px',
             end:                 'top 80px'
         });
