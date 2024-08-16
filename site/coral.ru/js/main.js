@@ -87,7 +87,7 @@ import { createApp } from "vue";
     watchIntersection('#rixos-map', { threshold: .01 }, async (el, observer) => {
         if (!map_init) {
             await fetchingHotelsInfo;
-            createApp(RixosMap, { hotelsList: known_hotels }).mount('#rixos-map');
+            createApp(RixosMap, { hotelsList: window.known_hotels }).mount('#rixos-map');
             map_init = true;
         }
     });

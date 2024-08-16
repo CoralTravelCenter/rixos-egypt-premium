@@ -4,17 +4,21 @@
             {
                 id: 13279,
                 name: 'Rixos Premium Seagate',
-                description: 'Отель предлагает концепцию «все включено» с отличными ресторанами, развлечениями и спортом'
+                description: 'Отель предлагает концепцию «все включено» с отличными ресторанами, развлечениями и спортом',
+                url: '/chain/rixos/rixos-premium-seagate/',
+                logo: '/site/coral.ru/assets/logos/rixos-premium-seagate.png'
             },
             {
                 id: 7891,
                 name: 'Rixos Sharm El Sheikh',
-                description: 'Отель с видом на залив Акаба и остров Тиран. Предлагает гостям сконференц-залы, 7 бассейнов, 10 ресторанов, 9 баров, спа и велнес центр'
+                description: 'Отель с видом на залив Акаба и остров Тиран. Предлагает гостям сконференц-залы, 7 бассейнов, 10 ресторанов, 9 баров, спа и велнес центр',
+                url: '/chain/rixos/rixos-sharm-el-sheikh/',
+                logo: '/site/coral.ru/assets/logos/rixos-sharm-el-sheikh.png'
             },
             {
                 id: 52439,
                 name: 'Rixos Golf Villas & Suites',
-                description: 'Виллы и люксы Rixos Golf среди садов и гольф-поля предлагают услуги «все включено» и «все эксклюзивно»'
+                description: 'Виллы и люксы Rixos Golf среди садов и гольф-поля предлагают услуги «все включено» и «все эксклюзивно»',
             },
             {
                 id: 54272,
@@ -29,7 +33,9 @@
             {
                 id: 58466,
                 name: 'Club Prive By Rixos',
-                description:  'Это мир роскоши и элитных услуг, где комфорт сочетается с природой, а ваши желания формируют отдых'
+                description:  'Это мир роскоши и элитных услуг, где комфорт сочетается с природой, а ваши желания формируют отдых',
+                url: '/chain/rixos/club-prive-by-rixos/',
+                logo: '/site/coral.ru/assets/logos/club-preve.png'
             },
             {
                 id: 29367,
