@@ -105,6 +105,7 @@ ymaps:has(>div>div>div.rixos-marker.open) {
         }
         .location {
             text-align: center;
+            line-height: 1.3;
         }
         a.learn-more {
             .knopf();
