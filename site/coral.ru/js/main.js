@@ -5,6 +5,7 @@ import { listHotelInfo } from "./api-adapter";
 
 import RixosMap from '../rixos-map/RixosMap.vue'
 import { createApp } from "vue";
+import Milestones from "./milestones";
 
 (async function () {
     await hostReactAppReady();
@@ -19,6 +20,8 @@ import { createApp } from "vue";
     window.addEventListener('scroll', () => {
         nav_section.classList.toggle('pinned', nav_section.getBoundingClientRect().top <= 0 && nav_spacer.getBoundingClientRect().top <= 0);
     });
+
+    new Milestones(document.querySelector('section.nav .shortcuts')?.children);
 
     new StackSlider(
         document.querySelector('section.advantages .stack'),

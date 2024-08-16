@@ -10,11 +10,11 @@ body
                 label.toggle(for='burger-open')
                 input(type='checkbox', id='burger-open')
                 ul.shortcuts
-                    li Преимущества
-                    li Услуги и удобства
-                    li Отели
-                    li CoralBonus
-                    li Контакты
+                    li(data-ref='section.advantages') Преимущества
+                    li(data-ref='section.perfection') Услуги и удобства
+                    li(data-ref='section.rixos-hotels') Отели
+                    li(data-ref='section.coral-bonus') CoralBonus
+                    li(data-ref='section.leased-line-premium') Контакты
             a.map(href='#_')
     section.nav-spacer.edge2edge
         nav: .burger: ul.shortcuts: li just placeholder
@@ -135,7 +135,7 @@ body
                     +hotel-card(hotel)
             .discrete-pager
 
-    section.held.cora-bomus
+    section.held.coral-bonus
         .inhalt
             .coral-bonus-girl
             .loyality-program

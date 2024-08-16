@@ -211,6 +211,13 @@ section.nav, section.nav + section {
 					font-weight: 300;
 					white-space: nowrap;
 					letter-spacing: .05em;
+					.transit(background);
+					.transit(color);
+					&.in-view {
+						//color: @brand-orange;
+						//background: linear-gradient(transparent 95%, @brand-orange 95%);
+						background: @brand-orange;
+					}
 					@media screen and (max-width: @nav-layout-break) {
 						height: 3em;
 						justify-content: start;
@@ -668,7 +675,7 @@ section.rixos-hotels {
 
 }
 
-section.cora-bomus {
+section.coral-bonus {
 	.inhalt {
 		display: block;
 		padding: 0;
