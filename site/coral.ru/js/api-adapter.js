@@ -12,6 +12,15 @@ export async function listHotelInfo(hotelIds, imageSizes = [4, 7]) {
     return infos;
 }
 
+export async function priceSearchDetail(query) {
+    let { result: details } = await fetch(endpointUrl('/OnlyHotelProduct/PriceSearchDetail'), {
+        method: 'post',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(query)
+    }).then(response => response.json());
+    return details;
+}
+
 export async function fetchArrivalLocation(keyword, type) {
     const query = { text: keyword };
     if (type !== undefined) {

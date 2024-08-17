@@ -1,6 +1,11 @@
 include ../markup/mixins
 
+- const hotel = hotels.find(hotel => hotel.id === 13279);
+
 body
+    script
+        != `var known_hotel = ${ JSON.stringify(hotel) };`
+
     +internal-nav([
         { label: 'Номера', ref: 'section.suites' },
         { label: 'Услуги и удобства', ref: 'section.services' },

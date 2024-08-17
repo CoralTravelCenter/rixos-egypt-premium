@@ -1,0 +1,74 @@
+{
+    "searchSource": 0,
+    "getHotelDetail": true,
+    "searchCriterias": {
+        "reservationType": 0,
+        "beginDates": [
+            "2024-08-17"
+        ],
+        "nights": [
+            {
+                "value": 0
+            }
+        ],
+        "roomCriterias": [
+            {
+                "passengers": [
+                    {
+                        "passengerType": 0,
+                        "age": 0,
+                        "birthDate": "2024-08-17"
+                    }
+                ]
+            }
+        ],
+        "arrivalLocations": [
+            {
+                "id": "string",
+                "type": 0,
+                "name": "string",
+                "friendlyUrl": "string",
+                "parent": {
+                    "id": "string",
+                    "type": 0,
+                    "name": "string",
+                    "countryId": "string"
+                },
+                "children": [
+                    "string"
+                ]
+            }
+        ],
+        "paging": {
+            "hasPreviousPage": true,
+            "hasNextPage": true,
+            "pageNumber": 0,
+            "pageSize": 0,
+            "sortType": 0
+        },
+        "imageSizes": [
+            0
+        ],
+        "categories": [
+            {
+                "id": "string",
+                "type": 1
+            }
+        ],
+        "additionalFilters": [
+            {
+                "type": 0,
+                "values": [
+                    {
+                        "id": "string",
+                        "value": "string",
+                        "parent": "string"
+                    }
+                ],
+                "providers": [
+                    "string"
+                ]
+            }
+        ]
+    }
+}
