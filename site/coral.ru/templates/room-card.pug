@@ -1,8 +1,12 @@
 .room-card
     .head
-        .ai-logo
+        img.ai-logo(src='/site/coral.ru/assets/ai.png')
         .name {{ name }}
-        .pricing от {{ priceFormatted }}
-    .visual(style!='--visual: {{ visual }}')
+        .pricing
+            span.from от
+            | {{ priceFormatted }}
+            span.per-night за ночь
+    // - var vs = '--visual:url({{visual}})'
+    //.visual(style!=vs)
     .features
     a.choose-room(href='#_') Выбрать номер

@@ -897,3 +897,59 @@ section.leased-line-premium {
 		}
 	}
 }
+
+section.suites {
+	background: @brand-pale-bg;
+	.inhalt {
+		.rooms-list-combo {
+			width: 100%;
+			.rooms-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 2em;
+				.shady();
+				.room-card {
+					display: flex;
+					flex-direction: column;
+					gap: 1em;
+					padding: 1em;
+					border-radius: 12px;
+					background: white;
+					line-height: 1;
+					.head {
+						display: flex;
+						gap: 1em;
+						flex-direction: column;
+						align-items: center;
+						text-align: center;
+						.name {
+							font-family: TrajanPro3Regular;
+							font-size: (24/16em);
+							color: @brand-gray;
+						}
+						.pricing {
+							display: flex;
+							align-items: baseline;
+							gap: .3em;
+							font-size: (24/16em);
+							font-weight: 600;
+							.from, .per-night {
+								font-weight: 300;
+								font-size: .75em;
+							}
+						}
+					}
+					.visual {
+
+					}
+					.features {
+
+					}
+					.choose-room {
+						.knopf();
+					}
+				}
+			}
+		}
+	}
+}

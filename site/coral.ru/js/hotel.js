@@ -10,6 +10,9 @@ import { setupScrollTriggerPinups, setupShortcuts } from "../../common/js/utils"
 import { priceSearchDetail_query_defaults } from "../config/defaults";
 
 import room_card_template from 'bundle-text:/site/coral.ru/templates/room-card.pug'
+import mustache from "mustache";
+import '../../common/js/prototypes'
+import dayjs from "dayjs";
 
 console.log(room_card_template);
 
@@ -42,11 +45,22 @@ console.log(room_card_template);
 
             const query = Object.assign({}, priceSearchDetail_query_defaults);
             Object.assign(query.searchCriterias, {
-                beginDates:       ['2024-10-01', '2024-10-31'],
+                beginDates:       [dayjs().add(14, 'days'), dayjs().add(14 + 30, 'days')],
                 arrivalLocations: [window.known_hotel.ee.location]
             });
             priceSearchDetail(query).then(details => {
                 console.log('=== details: %o', details);
+                const { products, rooms } = details;
+                const rooms_html = products.map(product => {
+                    const room = rooms[product.rooms.at(0).roomKey];
+                    const room_model = {
+                        name: room.name,
+                        priceFormatted: Math.round(product.price.amount / product.stayNights).formatCurrency(),
+                        visual: ''
+                    };
+                    return mustache.render(room_card_template, room_model);
+                }).join('');
+                document.querySelector('.rooms-grid').innerHTML = rooms_html;
             });
 
         });
