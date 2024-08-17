@@ -1,0 +1,39 @@
+import { hostReactAppReady, preloadScript, vimeoAutoPlay, watchIntersection } from "../../common/js/usefuls";
+import { StackSlider } from "./stack-slider";
+import { ScrollPager } from "./scroll-pager/scroll-pager";
+import { listHotelInfo } from "./api-adapter";
+
+import RixosMap from '../rixos-map/RixosMap.vue'
+import { createApp } from "vue";
+import Milestones from "./milestones";
+import { setupScrollTriggerPinups, setupShortcuts } from "../../common/js/utils";
+
+(async function () {
+    await hostReactAppReady();
+    document.querySelector('section.nav')
+        .closest('.row-container')
+        .classList.remove(...'layout-container-limit center'.split(' '));
+
+    vimeoAutoPlay();
+
+    const nav_section = document.querySelector('section.nav');
+    const nav_spacer = nav_section.nextSibling;
+    window.addEventListener('scroll', () => {
+        nav_section.classList.toggle('pinned', nav_section.getBoundingClientRect().top <= 0 && nav_spacer.getBoundingClientRect().top <= 0);
+    });
+
+    setupShortcuts();
+    setupScrollTriggerPinups(document.fonts.ready);
+
+    new Milestones(document.querySelector('section.nav .shortcuts')?.children);
+
+    // let map_init = false;
+    // watchIntersection('#rixos-map', { threshold: .01 }, async (el, observer) => {
+    //     if (!map_init) {
+    //         await fetchingHotelsInfo;
+    //         createApp(RixosMap, { hotelsList: window.known_hotels }).mount('#rixos-map');
+    //         map_init = true;
+    //     }
+    // });
+
+})();

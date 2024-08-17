@@ -1,0 +1,32 @@
+include ../markup/mixins
+
+body
+    +internal-nav([
+        { label: 'Номера', ref: 'section.suites' },
+        { label: 'Услуги и удобства', ref: 'section.services' },
+        { label: 'RixyClub', ref: 'section.rixy-club' },
+        { label: 'CoralBonus', ref: 'section.coral-bonus' },
+        { label: 'Контакты', ref: 'section.leased-line-premium' },
+    ], '#_', '.interactive-map')
+
+    +kvv({
+        h1: 'Rixos Premium Seagate',
+        logo: '/site/coral.ru/assets/logos/rixos-premium-seagate.png',
+        desktop_poster: '/site/coral.ru/assets/rixos-premium-seagate/kv-poster-desktop.jpg',
+        mobile_poster:  '/site/coral.ru/assets/rixos-premium-seagate/kv-poster-mobile.jpg',
+        desktop_vid: 995713321,
+        mobile_vid: 995713573,
+        video_scale: 1.5,
+        five_stars: true,
+        location: 'Египет, Шарм-эш-Шейх'
+    })
+
+    section.held.intro
+        .inhalt
+            h2 Добро пожаловать <br>в Rixos Premium Seagate
+            p.generic
+                :typo
+                    Расположенный в живописном Шарм-эш-Шейхе, Rixos Premium Seagate предлагает роскошный отдых с панорамным видом на Красное море. Наслаждайтесь концепцией «Все включено», включающей изысканные рестораны и бары, первоклассные развлечения, разнообразные варианты питания и превосходные оздоровительные и спортивные объекты. Отель предлагает элегантные номера и люксы с прямым выходом на пляж, а также современные конференц-залы и банкетные помещения
+            .actions
+                button.knopf(data-ref='section.suites') Выбрать номер
+

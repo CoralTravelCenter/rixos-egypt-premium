@@ -46,10 +46,13 @@ import { setupScrollTriggerPinups, setupShortcuts } from "../../common/js/utils"
             const { hotels } = infos;
             for (const hotel of hotels) {
                 const visual = hotel.images?.at(0).sizes?.find(size => size.type === 4)?.url;
+                const hotel_card_el = document.querySelector(`.hotel-card[data-hotel-id='${ hotel.id }']`);
                 if (visual) {
-                    const visual_el = document.querySelector(`.hotel-card[data-hotel-id='${ hotel.id }'] .visual`);
+                    const visual_el = hotel_card_el.querySelector('.visual');
                     visual_el?.style.setProperty('--visual', `url(${ visual })`);
                 }
+                // link to hotel page
+                hotel_card_el.querySelector('a.choose-hotel').href = `/hotels/${ hotel.location.friendlyUrl }/`;
                 // extend hotels data with got info
                 const known_hotel = window.known_hotels.find(known => known.id == hotel.id);
                 if (known_hotel) known_hotel.ee = hotel;

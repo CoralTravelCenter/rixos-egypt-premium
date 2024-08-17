@@ -257,6 +257,10 @@ section.kv {
 				width: 66vw;
 			}
 		}
+		img.hotel-logo {
+			width: 20em;
+			filter: brightness(100) saturate(0);
+		}
 		h1 {
 			font-family: TrajanPro3Regular;
 			font-weight: 400;
@@ -270,16 +274,34 @@ section.kv {
 				line-height: 1.4;
 			}
 		}
+		.five-stars {
+			.proportional(120/21);
+			width: (120/16em);
+			background: url("data-url:/site/coral.ru/assets-inline/kvv-five-stars.svg") center / cover no-repeat;
+		}
+		.location {
+			display: inline-flex;
+			align-items: center;
+			&:before {
+				content: '';
+				height: 1.5em;
+				width: (15/18) * 1.5em;
+				background: url("data-url:/site/coral.ru/assets-inline/kvv-location-marker.svg") center / cover no-repeat;
+				margin-right: .7em;
+			}
+		}
 	}
 	.backdrop {
 		.abs100x100();
 		z-index: 0;
-		background: url("/site/coral.ru/assets/kv-poster-desktop.jpg") center / cover no-repeat;
+		//background: url("/site/coral.ru/assets/kv-poster-desktop.jpg") center / cover no-repeat;
+		background: center / cover no-repeat;
 		@media screen and (max-width: @mobile-breakpoint) {
-			background-image: url("/site/coral.ru/assets/kv-poster-mobile.jpg");
+			//background-image: url("/site/coral.ru/assets/kv-poster-mobile.jpg");
 		}
 		.vimeo-player {
 			.abs100x100();
+			overflow: hidden;
 			opacity: 0;
 			.transit(opacity, 1s);
 			&.playback {
@@ -294,8 +316,12 @@ section.kv {
 	}
 }
 
-section.unique-concept {
+section.intro {
 	.inhalt {
+		h2 {
+			text-align: center;
+			line-height: 1.3;
+		}
 		p.generic {
 			text-align: center;
 		}
@@ -661,6 +687,9 @@ section.rixos-hotels {
 				}
 				.choose-hotel {
 					.knopf();
+					&:not([href]) {
+						display: none;
+					}
 				}
 				.learn-more {
 					.knopf('hollow');

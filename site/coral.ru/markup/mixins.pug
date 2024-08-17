@@ -14,17 +14,25 @@ mixin internal-nav(shortcuts, logo_link, map_ref)
 
 mixin kvv(setup)
     section.held.edge2edge.kv
+        style
+            != `section.kv .backdrop {background-image: url("${ setup.desktop_poster }");}  @media screen and (max-width: 768px) {  section.kv .backdrop {background-image: url("${ setup.mobile_poster }");}  }`
+        if setup.video_scale
+            style
+                != `.backdrop.vimeo-video-box .vimeo-player iframe { transform: scale(${ setup.video_scale }); }`
         .backdrop.vimeo-video-box
             .vimeo-player.hidden-on-mobile(data-vimeo-vid=setup.desktop_vid)
             .vimeo-player.hidden-on-desktop(data-vimeo-vid=setup.mobile_vid)
 
         .overlay
-            .rixos-logo
+            if setup.logo
+                img.hotel-logo(src=setup.logo)
+            else
+                .rixos-logo
             h1!= setup.h1
             if setup.five_stars
-                .five_stars
+                .five-stars
             if setup.location
-                .location
+                .location!= setup.location
 
 
 mixin hotel-card(hotel)
@@ -37,5 +45,5 @@ mixin hotel-card(hotel)
                     span.star-black
             .description!= hotel.description
             .actions
-                a.choose-hotel(href='#_') Выбрать отель
-                a.learn-more(href='#_') Узнать больше
+                a.choose-hotel(target='_blank') Выбрать отель
+                a.learn-more(href=hotel.url) Узнать больше
