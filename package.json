@@ -12,6 +12,7 @@
         "local-cors-proxy": "^1.1.0"
     },
     "dependencies": {
+        "mustache": "^4.2.0",
         "vue": "^3.4.38",
         "vue-yandex-maps": "^2.1.4"
     }

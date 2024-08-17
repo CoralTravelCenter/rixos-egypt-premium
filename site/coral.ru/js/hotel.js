@@ -9,6 +9,10 @@ import Milestones from "./milestones";
 import { setupScrollTriggerPinups, setupShortcuts } from "../../common/js/utils";
 import { priceSearchDetail_query_defaults } from "../config/defaults";
 
+import room_card_template from 'bundle-text:/site/coral.ru/templates/room-card.pug'
+
+console.log(room_card_template);
+
 (async function () {
     await hostReactAppReady();
     document.querySelector('section.nav')
