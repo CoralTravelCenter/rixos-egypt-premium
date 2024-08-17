@@ -129,7 +129,11 @@ section.nav, section.nav + section {
 			width: unset;
 		}
 
-		a.logo {
+		*[data-ref], *[href] {
+			cursor: pointer;
+		}
+
+		.logo {
 			flex-shrink: 0;
 			width: 13em;
 			height: 80px;
@@ -140,7 +144,7 @@ section.nav, section.nav + section {
 
 		}
 
-		a.map {
+		.map {
 			flex-shrink: 1;
 			width: 13em;
 			height: 80px;

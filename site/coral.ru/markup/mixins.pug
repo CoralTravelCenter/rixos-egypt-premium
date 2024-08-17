@@ -1,3 +1,18 @@
+mixin internal-nav(shortcuts, logo_link, map_ref)
+    section.nav.edge2edge.sticky
+        nav
+            a.logo(href=logo_link)
+            .burger
+                label.toggle(for='burger-open')
+                input(type='checkbox', id='burger-open')
+                ul.shortcuts
+                    each shortcut in shortcuts
+                        li(data-ref=shortcut.ref)!= shortcut.label
+            span.map(data-ref=map_ref)
+    section.nav-spacer.edge2edge
+        nav: .burger: ul.shortcuts: li just placeholder
+
+
 mixin hotel-card(hotel)
     .hotel-card(data-hotel-id=hotel.id)
         .visual
