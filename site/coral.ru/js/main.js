@@ -6,6 +6,7 @@ import { listHotelInfo } from "./api-adapter";
 import RixosMap from '../rixos-map/RixosMap.vue'
 import { createApp } from "vue";
 import Milestones from "./milestones";
+import { setupScrollTriggerPinups, setupShortcuts } from "../../common/js/utils";
 
 (async function () {
     await hostReactAppReady();
@@ -20,6 +21,9 @@ import Milestones from "./milestones";
     window.addEventListener('scroll', () => {
         nav_section.classList.toggle('pinned', nav_section.getBoundingClientRect().top <= 0 && nav_spacer.getBoundingClientRect().top <= 0);
     });
+
+    setupShortcuts();
+    setupScrollTriggerPinups(document.fonts.ready);
 
     new Milestones(document.querySelector('section.nav .shortcuts')?.children);
 
@@ -58,33 +62,6 @@ import Milestones from "./milestones";
         );
 
     }
-
-    document.fonts.ready.then(() => {
-        const st1 = ScrollTrigger.create({
-            invalidateOnRefresh: true,
-            trigger:             'section.visuals-x-slider',
-            endTrigger:          'section.advantages',
-            // markers:             true,
-            pin:                 true,
-            pinSpacing:          false,
-            // anticipatePin:       1,
-            start:               'top 80px',
-            end:                 'top 80px'
-        });
-        setTimeout(st1.refresh, 100);
-        const st2 = ScrollTrigger.create({
-            invalidateOnRefresh: true,
-            trigger:             '.coral-bonus-girl',
-            endTrigger:          '.loyality-program',
-            // markers:             true,
-            pin:                 true,
-            pinSpacing:          false,
-            // anticipatePin:       1,
-            start:               'top 80px',
-            end:                 'top 80px'
-        });
-        setTimeout(st2.refresh, 100);
-    });
 
     let map_init = false;
     watchIntersection('#rixos-map', { threshold: .01 }, async (el, observer) => {

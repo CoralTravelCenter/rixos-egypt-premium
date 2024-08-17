@@ -20,15 +20,6 @@ export default class Milestones {
             }
         });
 
-        this.shortcuts.forEach((shortcut, idx) => {
-            shortcut.addEventListener('click', e => {
-                window.scrollTo({
-                    top: this.refs.at(idx).getBoundingClientRect().top + window.scrollY - 80,
-                    behavior: 'smooth'
-                });
-            });
-        });
-
         return  this;
     }
 
