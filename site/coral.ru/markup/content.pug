@@ -11,14 +11,11 @@ body
         { label: 'Контакты', ref: 'section.leased-line-premium' },
     ], '#_', '.interactive-map')
 
-    section.held.edge2edge.kv
-        .backdrop.vimeo-video-box
-            .vimeo-player.hidden-on-mobile(data-vimeo-vid=994946039)
-            .vimeo-player.hidden-on-desktop(data-vimeo-vid=994946012)
-
-        .overlay
-            .rixos-logo
-            h1 All Inclusive – All Exclusive
+    +kvv({
+        h1: 'All Inclusive – All Exclusive',
+        desktop_vid: 994946039,
+        mobile_vid: 994946012
+    })
 
     section.held.unique-concept
         .inhalt

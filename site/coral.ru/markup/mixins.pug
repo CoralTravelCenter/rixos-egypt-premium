@@ -12,6 +12,20 @@ mixin internal-nav(shortcuts, logo_link, map_ref)
     section.nav-spacer.edge2edge
         nav: .burger: ul.shortcuts: li just placeholder
 
+mixin kvv(setup)
+    section.held.edge2edge.kv
+        .backdrop.vimeo-video-box
+            .vimeo-player.hidden-on-mobile(data-vimeo-vid=setup.desktop_vid)
+            .vimeo-player.hidden-on-desktop(data-vimeo-vid=setup.mobile_vid)
+
+        .overlay
+            .rixos-logo
+            h1!= setup.h1
+            if setup.five_stars
+                .five_stars
+            if setup.location
+                .location
+
 
 mixin hotel-card(hotel)
     .hotel-card(data-hotel-id=hotel.id)
