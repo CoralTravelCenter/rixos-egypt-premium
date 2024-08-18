@@ -922,6 +922,10 @@ section.suites {
 						flex-direction: column;
 						align-items: center;
 						text-align: center;
+						img.ai-logo {
+							width: 100%;
+							max-width: 104px;
+						}
 						.name {
 							font-family: TrajanPro3Regular;
 							font-size: (24/16em);
@@ -940,10 +944,60 @@ section.suites {
 						}
 					}
 					.visual {
-
+						.proportional(4/3);
+						width: 100%;
+						background: center / cover no-repeat;
+						border-radius: 12px;
 					}
 					.features {
-
+						display: flex;
+						justify-content: space-evenly;
+						background: @brand-pale-bg;
+						border-radius: 12px;
+						padding: 1em 1em .75em;
+						.feature {
+							flex: 1 1 25%;
+							display: flex;
+							flex-direction: column;
+							gap: 1em;
+							align-items: stretch;
+							text-align: center;
+							font-size: 12px;
+							>.icon {
+								display: inline-grid;
+								place-content: center;
+								height: 20px;
+								background: center / contain no-repeat;
+							}
+							>.label {
+								line-height: 1.2;
+							}
+							&.area {
+								.icon {
+									background-image: url("/site/coral.ru/assets/icons/room-area.svg");
+								}
+							}
+							&.pax {
+								.pax-count {
+									width: 20px;
+									height: 20px;
+									display: inline-grid;
+									place-content: center;
+									border-radius: 50%;
+									box-shadow: inset 0 0 0 1px @brand-main-text;
+								}
+							}
+							&.balcony {
+								.icon {
+									background-image: url("/site/coral.ru/assets/icons/balcony.svg");
+								}
+							}
+							&.bed {
+								.icon {
+									background-image: url("/site/coral.ru/assets/icons/bed.svg");
+								}
+							}
+						}
 					}
 					.choose-room {
 						.knopf();

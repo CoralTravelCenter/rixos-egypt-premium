@@ -6,7 +6,18 @@
             span.from от
             | {{ priceFormatted }}
             span.per-night за ночь
-    // - var vs = '--visual:url({{visual}})'
-    //.visual(style!=vs)
+    | {{{ tag_visual }}}
     .features
+        .feature.area
+            .icon
+            .label Площадь <br>{{ room_area }}
+        .feature.pax
+            .icon: span.pax-count {{ pax }}
+            .label Максимальное размещение
+        .feature.balcony
+            .icon
+            .label Балкон или терраса
+        .feature.bed
+            .icon
+            .label {{{ bedrooms }}}
     a.choose-room(href='#_') Выбрать номер

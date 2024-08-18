@@ -14,8 +14,6 @@ import mustache from "mustache";
 import '../../common/js/prototypes'
 import dayjs from "dayjs";
 
-console.log(room_card_template);
-
 (async function () {
     await hostReactAppReady();
     document.querySelector('section.nav')
@@ -53,10 +51,18 @@ console.log(room_card_template);
                 const { products, rooms } = details;
                 const rooms_html = products.map(product => {
                     const room = rooms[product.rooms.at(0).roomKey];
+                    const visual = room.images?.at(0)?.sizes.find(s => s.type === 4)?.url;
+                    const visual_style = visual ? `url(${ visual })` : 'linear-gradient(#def, #def)';
+                    const room_area = room.roomSize.value;
+                    const pax = room.maxPax.value;
+                    const bedrooms = room.bedroom.value.split(/\s+/).join('<br>');
                     const room_model = {
                         name: room.name,
                         priceFormatted: Math.round(product.price.amount / product.stayNights).formatCurrency(),
-                        visual: ''
+                        tag_visual: `<duv class="visual" style="background-image: ${ visual_style }"></duv>`,
+                        room_area,
+                        pax,
+                        bedrooms
                     };
                     return mustache.render(room_card_template, room_model);
                 }).join('');
