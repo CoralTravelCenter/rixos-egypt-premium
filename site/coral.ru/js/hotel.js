@@ -1,5 +1,4 @@
 import { hostReactAppReady, preloadScript, vimeoAutoPlay, watchIntersection } from "../../common/js/usefuls";
-import { StackSlider } from "./stack-slider";
 import { ScrollPager } from "./scroll-pager/scroll-pager";
 import { listHotelInfo, priceSearchDetail, priceSearchEncrypt } from "./api-adapter";
 
@@ -74,6 +73,12 @@ import RoomsSplitter from "./rooms-splitter";
                         document.querySelector('h2.rooms-splitter'),
                         document.querySelector('.rooms-grid')
                     );
+                    new ScrollPager(
+                        document.querySelector('.rooms-grid'),
+                        null,
+                        document.querySelector('.rooms-paging')
+                    );
+
                     setTimeout(() => refreshAllScrollTriggers(), 1);
                 });
             });
