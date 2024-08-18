@@ -98,7 +98,7 @@ ymaps:has(>div>div>div.rixos-marker.open) {
             transform: translate(-50%, -100%);
             aspect-ratio: 17/27;
             width: 17px;
-            background: url("data-url:/site/coral.ru/assets-inline/map-card-pointer-decor.svg") center / cover no-repeat;
+            background: url("/site/coral.ru/assets/icons/map-card-pointer-decor.svg") center / cover no-repeat;
         }
         img.logo {
 
