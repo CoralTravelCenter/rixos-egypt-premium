@@ -6,7 +6,12 @@
                 name: 'Rixos Premium Seagate',
                 description: 'Отель предлагает концепцию «все включено» с отличными ресторанами, развлечениями и спортом',
                 url: '/chain/rixos/rixos-premium-seagate/',
-                logo: '/site/coral.ru/assets/logos/rixos-premium-seagate.png'
+                logo: '/site/coral.ru/assets/logos/rixos-premium-seagate.png',
+                roomsSplit: [
+                    { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
+                    { name: 'Номера', matcher: { field: 'name', regex: 'suite', flags: 'i', negate: true } },
+                    { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } }
+                ]
             },
             {
                 id: 7891,

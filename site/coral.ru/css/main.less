@@ -901,6 +901,35 @@ section.leased-line-premium {
 section.suites {
 	background: @brand-pale-bg;
 	.inhalt {
+		.rooms-splitter {
+			line-height: 1.5;
+			display: flex;
+			gap: 1em;
+			max-width: 100%;
+			overflow: auto;
+			scroll-snap-type: x mandatory;
+			&::-webkit-scrollbar {
+				display: none;
+			}
+			.splitter-item {
+				.interactive();
+				pointer-events: none;
+				white-space: nowrap;
+				scroll-snap-align: center;
+				.transit(opacity);
+				&:first-child {
+					scroll-snap-align: start;
+				}
+				&:last-child {
+					scroll-snap-align: end;
+				}
+				&:not(.selected) {
+					opacity: .2;
+					cursor: pointer;
+					pointer-events: auto;
+				}
+			}
+		}
 		.rooms-list-combo {
 			width: 100%;
 			.rooms-grid {
@@ -908,6 +937,17 @@ section.suites {
 				grid-template-columns: repeat(3, 1fr);
 				gap: 2em;
 				.shady();
+				@media screen and (max-width: @max-content-width) {
+					grid-template-columns: repeat(2, 1fr);
+				}
+				@media screen and (max-width: @narrow-breakpoint) {
+				    display: flex;
+					overflow: auto;
+					scroll-snap-type: x mandatory;
+					&::-webkit-scrollbar {
+						display: none;
+					}
+				}
 				.room-card {
 					display: flex;
 					flex-direction: column;
@@ -916,6 +956,17 @@ section.suites {
 					border-radius: 12px;
 					background: white;
 					line-height: 1;
+					@media screen and (max-width: @narrow-breakpoint) {
+						width: 100%;
+						flex: 0 0 100%;
+					    scroll-snap-align: center;
+						&:first-child {
+							scroll-snap-align: start;
+						}
+						&:last-child {
+							scroll-snap-align: end;
+						}
+					}
 					.head {
 						display: flex;
 						gap: 1em;
@@ -971,6 +1022,9 @@ section.suites {
 							}
 							>.label {
 								line-height: 1.2;
+								@media screen and (max-width: @narrow-breakpoint) {
+									font-size: 2.5vw;
+								}
 							}
 							&.area {
 								.icon {

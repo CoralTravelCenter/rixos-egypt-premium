@@ -10,9 +10,9 @@ import { refreshAllScrollTriggers, setupScrollTriggerPinups, setupShortcuts } fr
 import { priceSearchDetail_query_defaults } from "../config/defaults";
 
 import room_card_template from 'bundle-text:/site/coral.ru/templates/room-card.pug'
-import mustache from "mustache";
 import '../../common/js/prototypes'
 import dayjs from "dayjs";
+import RoomsSplitter from "./rooms-splitter";
 
 (async function () {
     await hostReactAppReady();
@@ -39,7 +39,6 @@ import dayjs from "dayjs";
         fetchingHotelsInfo.then(infos => {
             const { hotels } = infos;
             window.known_hotel.ee = hotels[0];
-            //
 
             const query = Object.assign({}, priceSearchDetail_query_defaults);
             Object.assign(query.searchCriterias, {
@@ -49,14 +48,14 @@ import dayjs from "dayjs";
             priceSearchDetail(query).then(details => {
                 console.log('=== details: %o', details);
                 const { products, rooms } = details;
-                const rooms_html = products.map(product => {
+                const models_list = products.map(product => {
                     const room = rooms[product.rooms.at(0).roomKey];
                     const visual = room.images?.at(0)?.sizes.find(s => s.type === 4)?.url;
                     const visual_style = visual ? `url(${ visual })` : 'linear-gradient(#def, #def)';
                     const room_area = room.roomSize.value;
                     const pax = room.maxPax.value;
                     const bedrooms = room.bedroom.value.split(/\s+/).join('<br>');
-                    const room_model = {
+                    return {
                         name: room.name,
                         priceFormatted: Math.round(product.price.amount / product.stayNights).formatCurrency(),
                         tag_visual: `<duv class="visual" style="background-image: ${ visual_style }"></duv>`,
@@ -64,9 +63,14 @@ import dayjs from "dayjs";
                         pax,
                         bedrooms
                     };
-                    return mustache.render(room_card_template, room_model);
-                }).join('');
-                document.querySelector('.rooms-grid').innerHTML = rooms_html;
+                });
+                new RoomsSplitter(
+                    window.known_hotel.roomsSplit,
+                    models_list,
+                    room_card_template,
+                    document.querySelector('h2.rooms-splitter'),
+                    document.querySelector('.rooms-grid')
+                );
                 setTimeout(() => refreshAllScrollTriggers(), 1);
             });
 
