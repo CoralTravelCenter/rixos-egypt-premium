@@ -1,12 +1,14 @@
 export function setupShortcuts(top_gap = 80) {
     document.addEventListener('click', e => {
         const shortcut = e.target.closest('[data-ref]');
-        const ref = document.querySelector(shortcut.dataset.ref);
-        if (ref) {
-            window.scrollTo({
-                top: ref.getBoundingClientRect().top + window.scrollY - top_gap,
-                behavior: 'smooth'
-            });
+        if (shortcut) {
+            const ref = document.querySelector(shortcut.dataset.ref);
+            if (ref) {
+                window.scrollTo({
+                    top: ref.getBoundingClientRect().top + window.scrollY - top_gap,
+                    behavior: 'smooth'
+                });
+            }
         }
     });
 }

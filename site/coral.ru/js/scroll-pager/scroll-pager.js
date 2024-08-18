@@ -29,9 +29,27 @@ export class ScrollPager {
         document.head.append(style_el);
     }
 
-    init() {
+    refillDiscretePager() {
         const pager_items = new Array(this.scrollerEl.children.length).fill('<li></li>');
         this.discretePagerEl.innerHTML = pager_items.join('');
+        watchIntersection(this.scrollerEl.children, { root: this.scrollerEl, threshold: .66 }, (el) => {
+            this.discretePagerEl.children[[...this.scrollerEl.children].indexOf(el)]?.classList.add('current');
+        }, (el) => {
+            this.discretePagerEl.children[[...this.scrollerEl.children].indexOf(el)]?.classList.remove('current');
+        });
+        this.syncAppearance();
+    }
+
+    init() {
+
+        const mo = new MutationObserver(list => {
+            this.refillDiscretePager();
+        });
+        mo.observe(this.scrollerEl, { childList: true });
+
+        this.refillDiscretePager();
+        // const pager_items = new Array(this.scrollerEl.children.length).fill('<li></li>');
+        // this.discretePagerEl.innerHTML = pager_items.join('');
 
         this.shiftBackwardEl?.addEventListener('click', () => {
             this.shiftBackward();
@@ -55,13 +73,13 @@ export class ScrollPager {
             }
         });
 
-        watchIntersection(this.scrollerEl.children, { root: this.scrollerEl, threshold: .66 }, (el) => {
-            this.discretePagerEl.children[[...this.scrollerEl.children].indexOf(el)].classList.add('current');
-        }, (el) => {
-            this.discretePagerEl.children[[...this.scrollerEl.children].indexOf(el)].classList.remove('current');
-        });
-
-        this.syncAppearance();
+        // watchIntersection(this.scrollerEl.children, { root: this.scrollerEl, threshold: .66 }, (el) => {
+        //     this.discretePagerEl.children[[...this.scrollerEl.children].indexOf(el)].classList.add('current');
+        // }, (el) => {
+        //     this.discretePagerEl.children[[...this.scrollerEl.children].indexOf(el)].classList.remove('current');
+        // });
+        //
+        // this.syncAppearance();
 
         return this;
     }
