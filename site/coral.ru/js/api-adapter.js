@@ -21,6 +21,15 @@ export async function priceSearchDetail(query) {
     return details;
 }
 
+export async function priceSearchEncrypt(query) {
+    let { result: details } = await fetch(endpointUrl('/OnlyHotelProduct/PriceSearchEncrypt'), {
+        method: 'post',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(query)
+    }).then(response => response.json());
+    return details;
+}
+
 export async function fetchArrivalLocation(keyword, type) {
     const query = { text: keyword };
     if (type !== undefined) {

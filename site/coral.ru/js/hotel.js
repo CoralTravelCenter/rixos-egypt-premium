@@ -1,7 +1,7 @@
 import { hostReactAppReady, preloadScript, vimeoAutoPlay, watchIntersection } from "../../common/js/usefuls";
 import { StackSlider } from "./stack-slider";
 import { ScrollPager } from "./scroll-pager/scroll-pager";
-import { listHotelInfo, priceSearchDetail } from "./api-adapter";
+import { listHotelInfo, priceSearchDetail, priceSearchEncrypt } from "./api-adapter";
 
 import RixosMap from '../rixos-map/RixosMap.vue'
 import { createApp } from "vue";
@@ -45,33 +45,37 @@ import RoomsSplitter from "./rooms-splitter";
                 beginDates:       [dayjs().add(14, 'days'), dayjs().add(14 + 30, 'days')],
                 arrivalLocations: [window.known_hotel.ee.location]
             });
-            priceSearchDetail(query).then(details => {
-                console.log('=== details: %o', details);
-                const { products, rooms } = details;
-                const models_list = products.map(product => {
-                    const room = rooms[product.rooms.at(0).roomKey];
-                    const visual = room.images?.at(0)?.sizes.find(s => s.type === 4)?.url;
-                    const visual_style = visual ? `url(${ visual })` : 'linear-gradient(#def, #def)';
-                    const room_area = room.roomSize.value;
-                    const pax = room.maxPax.value;
-                    const bedrooms = room.bedroom.value.split(/\s+/).join('<br>');
-                    return {
-                        name: room.name,
-                        priceFormatted: Math.round(product.price.amount / product.stayNights).formatCurrency(),
-                        tag_visual: `<duv class="visual" style="background-image: ${ visual_style }"></duv>`,
-                        room_area,
-                        pax,
-                        bedrooms
-                    };
+            priceSearchEncrypt(query.searchCriterias).then(search => {
+                const hotel_page_uri = `${ search.redirectionUrl }?qp=${ search.queryParam }&p=2`;
+                priceSearchDetail(query).then(details => {
+                    console.log('=== details: %o', details);
+                    const { products, rooms } = details;
+                    const models_list = products.map(product => {
+                        const room = rooms[product.rooms.at(0).roomKey];
+                        const visual = room.images?.at(0)?.sizes.find(s => s.type === 4)?.url;
+                        const visual_style = visual ? `url(${ visual })` : 'linear-gradient(#def, #def)';
+                        const room_area = room.roomSize.value;
+                        const pax = room.maxPax.value;
+                        const bedrooms = room.bedroom.value.split(/\s+/).join('<br>');
+                        return {
+                            name: room.name,
+                            priceFormatted: Math.round(product.price.amount / product.stayNights).formatCurrency(),
+                            tag_visual: `<duv class="visual" style="background-image: ${ visual_style }"></duv>`,
+                            room_area,
+                            pax,
+                            bedrooms,
+                            hotel_page_uri: hotel_page_uri + `&room_name=${ encodeURIComponent(room.name) }`
+                        };
+                    });
+                    new RoomsSplitter(
+                        window.known_hotel.roomsSplit,
+                        models_list,
+                        room_card_template,
+                        document.querySelector('h2.rooms-splitter'),
+                        document.querySelector('.rooms-grid')
+                    );
+                    setTimeout(() => refreshAllScrollTriggers(), 1);
                 });
-                new RoomsSplitter(
-                    window.known_hotel.roomsSplit,
-                    models_list,
-                    room_card_template,
-                    document.querySelector('h2.rooms-splitter'),
-                    document.querySelector('.rooms-grid')
-                );
-                setTimeout(() => refreshAllScrollTriggers(), 1);
             });
 
         });
