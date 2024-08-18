@@ -11,6 +11,12 @@ export function setupShortcuts(top_gap = 80) {
     });
 }
 
+export const allScrollTriggers = [];
+
+export function refreshAllScrollTriggers() {
+    allScrollTriggers.forEach(st => st.refresh());
+}
+
 export function setupScrollTriggerPinups(promise_to_wait_for = Promise.resolve(), top_gap = '80px') {
     promise_to_wait_for.then(() => {
         const pinups = document.querySelectorAll('[data-pinup]');
@@ -27,6 +33,7 @@ export function setupScrollTriggerPinups(promise_to_wait_for = Promise.resolve()
                 start:               `top ${ top_gap }`,
                 end:                 `top ${ top_gap }`
             });
+            allScrollTriggers.push(scroll_trigger);
             setTimeout(scroll_trigger.refresh, 100);
         }
     });

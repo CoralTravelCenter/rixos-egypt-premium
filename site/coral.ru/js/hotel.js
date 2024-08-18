@@ -6,7 +6,7 @@ import { listHotelInfo, priceSearchDetail } from "./api-adapter";
 import RixosMap from '../rixos-map/RixosMap.vue'
 import { createApp } from "vue";
 import Milestones from "./milestones";
-import { setupScrollTriggerPinups, setupShortcuts } from "../../common/js/utils";
+import { refreshAllScrollTriggers, setupScrollTriggerPinups, setupShortcuts } from "../../common/js/utils";
 import { priceSearchDetail_query_defaults } from "../config/defaults";
 
 import room_card_template from 'bundle-text:/site/coral.ru/templates/room-card.pug'
@@ -67,6 +67,7 @@ import dayjs from "dayjs";
                     return mustache.render(room_card_template, room_model);
                 }).join('');
                 document.querySelector('.rooms-grid').innerHTML = rooms_html;
+                setTimeout(() => refreshAllScrollTriggers(), 1);
             });
 
         });
