@@ -47,3 +47,17 @@ mixin hotel-card(hotel)
             .actions
                 a.choose-hotel(target='_blank') Выбрать отель
                 a.learn-more(href=hotel.url) Узнать больше
+
+mixin gallery(list)
+    section.held.hotel-gallery(data-pinup)
+        .inhalt
+            h2 Галерея
+            .slider-combo
+                .swiper
+                    .swiper-wrapper
+                        each item in list
+                            .swiper-slide
+                                img.hidden-on-mobile(src=item.visual_desktop)
+                                img.hidden-on-desktop(src=item.visual_mobile)
+                    button.shifter.backward.swiper-button-prev
+                    button.shifter.forward.swiper-button-next

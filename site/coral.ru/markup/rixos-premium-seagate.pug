@@ -8,7 +8,7 @@ body
 
     +internal-nav([
         { label: 'Номера', ref: 'section.suites' },
-        { label: 'Услуги и удобства', ref: 'section.services' },
+        { label: 'Рестораны и бары', ref: 'section.restaurants-and-bars' },
         { label: 'RixyClub', ref: 'section.rixy-club' },
         { label: 'CoralBonus', ref: 'section.coral-bonus' },
         { label: 'Контакты', ref: 'section.leased-line-premium' },
@@ -41,3 +41,24 @@ body
             .rooms-list-combo
                 .rooms-grid
                 .rooms-paging.discrete-pager
+
+    +gallery([
+        { visual_desktop: '/site/coral.ru/assets/rixos-premium-seagate/gallery/01-desktop.jpg', visual_mobile: 'site/coral.ru/assets/rixos-premium-seagate/gallery/01-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-premium-seagate/gallery/02-desktop.jpg', visual_mobile: 'site/coral.ru/assets/rixos-premium-seagate/gallery/02-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-premium-seagate/gallery/03-desktop.jpg', visual_mobile: 'site/coral.ru/assets/rixos-premium-seagate/gallery/03-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-premium-seagate/gallery/04-desktop.jpg', visual_mobile: 'site/coral.ru/assets/rixos-premium-seagate/gallery/04-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-premium-seagate/gallery/05-desktop.jpg', visual_mobile: 'site/coral.ru/assets/rixos-premium-seagate/gallery/05-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-premium-seagate/gallery/06-desktop.jpg', visual_mobile: 'site/coral.ru/assets/rixos-premium-seagate/gallery/06-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-premium-seagate/gallery/07-desktop.jpg', visual_mobile: 'site/coral.ru/assets/rixos-premium-seagate/gallery/07-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-premium-seagate/gallery/08-desktop.jpg', visual_mobile: 'site/coral.ru/assets/rixos-premium-seagate/gallery/08-mobile.jpg' },
+    ])
+
+    section.held.restaurants-and-bars
+        .inhalt
+            h2 Рестораны и бары
+            p.generic
+                :typo
+                    Отправьтесь в гастрономическое приключение.
+
+    section.held.rixy-club
+        .inhalt

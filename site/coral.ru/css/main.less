@@ -1068,3 +1068,69 @@ section.suites {
 		}
 	}
 }
+
+section.hotel-gallery {
+	.inhalt {
+		.slider-combo {
+			width: 100%;
+			.swiper {
+				position: relative;
+				overflow: visible;
+				.swiper-wrapper {
+					.swiper-slide {
+						.proportional(16/9);
+						width: (890/@max-content-width) * 100%;
+						border-radius: 20px;
+						overflow: hidden;
+						@media screen and (max-width: @mobile-breakpoint) {
+						    .proportional(560/540);
+							//width: 100%;
+							border-radius: 8px;
+							.transit(transform, .3s);
+							&:not(.swiper-slide-active) {
+								transform: scale(.8);
+							}
+						}
+						>img {
+							position: absolute;
+							inset: 0;
+							object-fit: cover;
+						}
+					}
+				}
+				button.shifter {
+					position: absolute;
+					z-index: 1;
+					//top: calc(~"50% - 24px");
+					top: 50%;
+					.transit(opacity);
+					@media screen and (max-width: @mobile-breakpoint) {
+						display: none;
+						position: static;
+						&.disabled {
+							opacity: 0;
+							pointer-events: none;
+						}
+					}
+					&.forward {
+						.shifter();
+						left: calc(~"100% + (100vw - 100%) / 4 - 24px");
+					}
+					&.backward {
+						.shifter(@direction: 'backward');
+						left: calc(~"(100vw - 100%) / (-4) - 24px");
+					}
+				}
+			}
+		}
+	}
+}
+
+section.restaurants-and-bars {
+	position: relative;
+	z-index: 1;
+	background: @brand-pale-bg;
+	.inhalt {
+
+	}
+}

@@ -6,6 +6,9 @@
         "vue": {
             "global": "Vue"
         },
+        "swiper": {
+            "global": "Swiper"
+        },
         "process": false
     },
     "devDependencies": {
@@ -14,6 +17,7 @@
     "dependencies": {
         "dayjs": "^1.11.12",
         "mustache": "^4.2.0",
+        "swiper": "^11.1.9",
         "vue": "^3.4.38",
         "vue-yandex-maps": "^2.1.4"
     }

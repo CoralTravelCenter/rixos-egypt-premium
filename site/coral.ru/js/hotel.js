@@ -12,6 +12,7 @@ import room_card_template from 'bundle-text:/site/coral.ru/templates/room-card.p
 import '../../common/js/prototypes'
 import dayjs from "dayjs";
 import RoomsSplitter from "./rooms-splitter";
+import Swiper from "swiper";
 
 (async function () {
     await hostReactAppReady();
@@ -86,7 +87,19 @@ import RoomsSplitter from "./rooms-splitter";
         });
     }
 
-
+    const gallerySwiper = new Swiper(document.querySelector('section.hotel-gallery .swiper'), {
+        loop: true,
+        centeredSlides: true,
+        spaceBetween: 0,
+        slidesPerView: 'auto',
+        initialSlide: 0,
+        navigation: {
+            prevEl: document.querySelector('section.hotel-gallery button.swiper-button-prev'),
+            nextEl: document.querySelector('section.hotel-gallery button.swiper-button-next'),
+        },
+        breakpoints: { 768: { spaceBetween: 32 } }
+    });
+    gallerySwiper.slideNext();
 
     // let map_init = false;
     // watchIntersection('#rixos-map', { threshold: .01 }, async (el, observer) => {
