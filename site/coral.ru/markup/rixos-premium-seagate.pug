@@ -53,12 +53,117 @@ body
         { visual_desktop: '/site/coral.ru/assets/rixos-premium-seagate/gallery/08-desktop.jpg', visual_mobile: 'site/coral.ru/assets/rixos-premium-seagate/gallery/08-mobile.jpg' },
     ])
 
-    section.held.restaurants-and-bars
-        .inhalt
-            h2 Рестораны и бары
-            p.generic
-                :typo
-                    Отправьтесь в гастрономическое приключение.
+    +restaurants-and-bars({
+        restaurants: [
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-seagate/restaurants-and-bars/rest-01.jpg',
+                heading: 'Turquoise',
+                body:    'Turquoise, ресторан курорта, работающий в течение всего дня, предлагает роскошный открытый «шведский стол» с изысканными блюдами лучших кухонь мира.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-seagate/restaurants-and-bars/rest-02.jpg',
+                heading: 'Фуд-Корт',
+                body:    'Открытый ресторанный дворик рядом с пляжем. Насладитесь идеальными бургерами, аравийской шаурмой, чизбургерами, салатами, пастой и пиццей, картофелем фри и многим другим.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-seagate/restaurants-and-bars/rest-03.jpg',
+                heading: 'L\'olivo',
+                body:    'Насладитесь изысканными блюдами в самом роскошном ресторане с широким выбором пасты, пиццы и блюд традиционной итальянской кухни.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-seagate/restaurants-and-bars/rest-04.jpg',
+                heading: 'asian',
+                body:    'Ресторан стремится предлагать качественные аутентичные блюда дальневосточной кухни в расслабленной обстановке. Свежие ингредиенты, современная обстановка, вкусные блюда.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-seagate/restaurants-and-bars/rest-05.jpg',
+                heading: 'Epicure',
+                body:    'Epicure предлагает широкий выбор изысканных блюд французской кухни — от традиционных до новаторских, приготовленных из свежих ингредиентов от местных производителей.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-seagate/restaurants-and-bars/rest-06.jpg',
+                heading: 'La Churrascaria',
+                body:    'Попробуйте лучшие аппетитные бразильских блюда, в том числе из первосортной говядины, из которой опытные повара создают настоящие произведения искусства — сочные стейки.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-seagate/restaurants-and-bars/rest-07.jpg',
+                heading: 'Executive Lounge',
+                body:    'Насладитесь восхитительными блюдами в нашем изысканном ресторане a la carte. В его меню вкусные завтраки, обеды и ужины; уютная и утонченная атмосфера для наших уважаемых VIP-гостей.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-seagate/restaurants-and-bars/rest-08.jpg',
+                heading: 'The Mangal',
+                body:    'Ресторан Mangal расположен на берегу Красного моря, в тени высоких пальм и под нежным морским бризом, где рядом с каждым столом есть гриль и опытные шеф-повара готовят разнообразное мясо.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-seagate/restaurants-and-bars/rest-09.jpg',
+                heading: 'Salt',
+                body:    'Ресторан морепродуктов предлагает отличное меню свежей рыбы и сезонных блюд для отдыха в уникальной атмосфере за непринужденной беседой с изысканными морепродуктами и бутылкой вина.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-seagate/restaurants-and-bars/rest-10.jpg',
+                heading: 'People\'s',
+                body:    'Отдохните от солнца и насладитесь невероятными блюдами со всего мира. У нас есть варианты на любой вкус, включая бар Sushi & Teppanyaki, где подают только самые свежие продукты.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-seagate/restaurants-and-bars/rest-11.jpg',
+                heading: 'Lalezar',
+                body:    'Отправьтесь в кулинарное путешествие, в котором традиционная турецкая кухня сочетается с элегантным османским дизайном и обслуживанием.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-seagate/restaurants-and-bars/rest-12.jpg',
+                heading: 'Veranda',
+                body:    'В Veranda Вас ждет великолепная подача интернациональной кухни, а также внимательное обслуживание, лучшие повара, невероятно вкусные и разнообразные блюда.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-seagate/restaurants-and-bars/rest-13.jpg',
+                heading: 'Mykonos',
+                body:    'Побалуйте себя вкусами Греции в ресторане, где вы сможете насладиться настоящей греческой кухней в невероятной атмосфере с элегантным декором и потрясающей сервировкой стола.'
+            },
+        ],
+        bars: [
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-seagate/restaurants-and-bars/bar-01.jpg',
+                heading: 'Бар В Фойе Piano',
+                body:    'Это элегантное место, где можно расслабиться, наслаждаясь чашечкой ароматного чая или коктейлем. Кроме того, в течение дня через определенные интервалы в баре подают свежемолотый кофе.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-seagate/restaurants-and-bars/bar-02.jpg',
+                heading: 'Бар У Бассейна Lagoon',
+                body:    'Бар у бассейна Lagoon — прекрасное место для отдыха и общения с друзьями с экзотическим коктейлем в руке.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-seagate/restaurants-and-bars/bar-03.jpg',
+                heading: 'Бар У Бассейна Fountain',
+                body:    'Это место для отдыха расположено рядом с бассейном с фонтанами, куда можно окунуться, взяв с собой что-нибудь вкусненькое.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-seagate/restaurants-and-bars/bar-04.jpg',
+                heading: 'Rixos Arena Bar',
+                body:    'Rixos Arena Bar — место, где вы почувствуете ритм музыки без границ. Выступления всемирно известных диджеев и концерты суперзвезд добавят радости вашему отдыху.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-seagate/restaurants-and-bars/bar-05.jpg',
+                heading: 'Entertainment Pool Bar',
+                body:    'Entertainment Pool Bar славится богатым, роскошным интерьером и меню новых и классических коктейлей.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-seagate/restaurants-and-bars/bar-06.jpg',
+                heading: 'Ixir Vitamin',
+                body:    'Два бара IXIR Vitamin расположены в спа-центре Anjana Spa, где можно насладиться свежими соками и безалкогольными напитками после успокаивающих оздоровительных процедур.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-seagate/restaurants-and-bars/bar-07.jpg',
+                heading: 'Detox Bar',
+                body:    'Ценителям здорового образа жизни предложат разнообразные свежевыжатые фруктовые и овощные соки в этом оздоровительном центре на Красном море.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-seagate/restaurants-and-bars/bar-08.jpg',
+                heading: 'Лобби-Гостиная (Aqua)',
+                body:    'В лобби-гостиной круглосуточно предлагают алкогольные и безалкогольные напитки, а также вкусные закуски и десерты.'
+            },
+        ]
+    })
 
     section.held.rixy-club
         .inhalt

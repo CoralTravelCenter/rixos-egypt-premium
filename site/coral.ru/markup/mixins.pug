@@ -49,7 +49,7 @@ mixin hotel-card(hotel)
                 a.learn-more(href=hotel.url) Узнать больше
 
 mixin gallery(list)
-    section.held.hotel-gallery(data-pinup)
+    section.held.hotel-gallery
         .inhalt
             h2 Галерея
             .slider-combo
@@ -61,3 +61,43 @@ mixin gallery(list)
                                 img.hidden-on-desktop(src=item.visual_mobile)
                     button.shifter.backward.swiper-button-prev
                     button.shifter.forward.swiper-button-next
+
+mixin restaurants-and-bars(setup)
+    section.held.restaurants-and-bars
+        .inhalt
+            h2 Рестораны и бары
+            p.generic
+                :typo
+                    Отправьтесь в гастрономическое приключение.
+            .combo
+                .info
+                    h3
+                        label
+                            input(type='radio' name='zzz' value='restaurants' checked)
+                            | Рестораны
+                        label
+                            input(type='radio' name='zzz' value='bars')
+                            | Бары
+                    .description
+                        :typo
+                            Насладитесь бескрайним множестов ресторанов в Rixos Premium Seagate где для вас запомнятся новые незабываемые вкусы и безупречное обслуживание.
+                    .actions
+                        button.knopf(data-ref='section.suites') Выбрать номер
+                .slider-combo.restaurants
+                    .scroll-slider
+                        each item in setup.restaurants
+                            .slide
+                                .visual(style=`background-image: url("${ item.visual }")`)
+                                h4!= item.heading
+                                p!= item.body
+                    .discrete-pager
+                .slider-combo.bars
+                    .scroll-slider
+                        each item in setup.bars
+                            .slide
+                                .visual(style=`background-image: url("${ item.visual }")`)
+                                h4!= item.heading
+                                p!= item.body
+                    .discrete-pager
+            .actions
+                button.knopf(data-ref='section.suites') Выбрать номер

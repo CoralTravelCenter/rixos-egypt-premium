@@ -1131,6 +1131,142 @@ section.restaurants-and-bars {
 	z-index: 1;
 	background: @brand-pale-bg;
 	.inhalt {
+		p.generic {
+			@media screen and (max-width: @mobile-breakpoint) {
+				text-align: center;
+			}
+		}
+		>.actions {
+			@media screen and (min-width: (@narrow-breakpoint + 1)) {
+			    display: none;
+			}
+			>button {
+				.knopf('hollow');
+			}
+		}
+		.combo {
+			width: 100%;
+			display: flex;
+			gap: 0;
+			flex-direction: row;
+			@media screen and (max-width: @mobile-breakpoint) {
+				flex-direction: column;
+			}
+			.info {
+				flex: 0 0 45%;
+				display: flex;
+				flex-direction: column;
+				gap: 32px;
+				padding-right: 80px;
+				@media screen and (max-width: @mobile-breakpoint) {
+					padding: 0 2em 32px;
+					text-align: center;
+				}
+				&:not(:has(h3  input[value='restaurants']:checked)) ~ .restaurants {
+					display: none;
+				}
+				&:not(:has(h3  input[value='bars']:checked)) ~ .bars {
+					display: none;
+				}
+				h3 {
+					display: flex;
+					gap: 1.5em;
+					@media screen and (max-width: @narrow-breakpoint) {
+						justify-content: center;
+						font-size: 6vw;
+					}
+					input[type='radio'] {
+						display: none;
+					}
+					>label {
+						.transit(opacity);
+					}
+					>label:not(:has(input:checked)) {
+						.interactive();
+						opacity: .2;
+						cursor: pointer;
+					}
+					>label:has(input:checked) {
+						pointer-events: none;
+					}
+				}
+				.description {
+					line-height: (24/16em);
+				}
+				.actions {
+					@media screen and (max-width: @narrow-breakpoint) {
+					    display: none;
+					}
+					>* {
+						.knopf();
+					}
+				}
+			}
+			.slider-combo {
+				position: relative;
+				flex: 0 0 55%;
+				width: 55%;
+				@media screen and (max-width: @mobile-breakpoint) {
+					flex: 0 0 100%;
+					width: 100%;
+				}
+				.discrete-pager {
+					position: static;
+					margin-top: 2em;
+				}
+				.scroll-slider {
+					width: calc(~"100% + (100vw - (100% * 100 / 55)) / 2");
+					display: flex;
+					gap: 32px;
+					overflow: auto;
+					scroll-snap-type: x mandatory;
+					.shady();
+					@media screen and (max-width: @mobile-breakpoint) {
+						width: 100%;
+					}
+					&::-webkit-scrollbar {
+						display: none;
+					}
+					.slide {
+						flex-shrink: 0;
+						width: (448/16em);
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						text-align: center;
+						border-radius: 12px;
+						overflow: hidden;
+						background: white;
+						scroll-snap-align: start;
+						@media screen and (max-width: @mobile-breakpoint) {
+							width: calc(~"50% - 16px");
+						}
+						@media screen and (max-width: @narrow-breakpoint) {
+							width: 100%;
+						}
+						&:last-child {
+							scroll-snap-align: end;
+						}
+						.visual {
+							.proportional(448/300);
+							background: center / cover no-repeat;
+							width: 100%;
+						}
+						h4 {
+							font-size: 2em;
+							padding: .7em 1em .5em;
+							@media screen and (max-width: @narrow-breakpoint) {
+								font-size: 5vw;
+							}
+						}
+						p {
+							margin: 0;
+							padding: 0 1.5em 1.5em;
+						}
+					}
+				}
+			}
+		}
 
 	}
 }

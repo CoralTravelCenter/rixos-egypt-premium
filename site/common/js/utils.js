@@ -16,7 +16,8 @@ export function setupShortcuts(top_gap = 80) {
 export const allScrollTriggers = [];
 
 export function refreshAllScrollTriggers() {
-    allScrollTriggers.forEach(st => st.refresh());
+    // allScrollTriggers.forEach(st => st.refresh());
+    ScrollTrigger.refresh(true);
 }
 
 export function setupScrollTriggerPinups(promise_to_wait_for = Promise.resolve(), top_gap = '80px') {

@@ -80,7 +80,7 @@ import Swiper from "swiper";
                         document.querySelector('.rooms-paging')
                     );
 
-                    setTimeout(() => refreshAllScrollTriggers(), 1);
+                    setTimeout(() => refreshAllScrollTriggers(), 100);
                 });
             });
 
@@ -100,6 +100,17 @@ import Swiper from "swiper";
         breakpoints: { 768: { spaceBetween: 32 } }
     });
     gallerySwiper.slideNext();
+
+    new ScrollPager(
+        document.querySelector('section.restaurants-and-bars .restaurants .scroll-slider'),
+        document.querySelector('section.restaurants-and-bars .restaurants .scroll-pager'),
+        document.querySelector('section.restaurants-and-bars .restaurants .discrete-pager')
+    );
+    new ScrollPager(
+        document.querySelector('section.restaurants-and-bars .bars .scroll-slider'),
+        document.querySelector('section.restaurants-and-bars .bars .scroll-pager'),
+        document.querySelector('section.restaurants-and-bars .bars .discrete-pager')
+    );
 
     // let map_init = false;
     // watchIntersection('#rixos-map', { threshold: .01 }, async (el, observer) => {
