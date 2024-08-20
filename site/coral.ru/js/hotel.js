@@ -42,7 +42,10 @@ import Swiper from "swiper";
 
             const query = Object.assign({}, priceSearchDetail_query_defaults);
             Object.assign(query.searchCriterias, {
-                beginDates:       [dayjs().add(14, 'days'), dayjs().add(14 + 30, 'days')],
+                beginDates:       [
+                    dayjs().add(14, 'days').format('YYYY-MM-DD'),
+                    dayjs().add(14 + 60, 'days').format('YYYY-MM-DD')
+                ],
                 arrivalLocations: [window.known_hotel.ee.location]
             });
             priceSearchEncrypt(query.searchCriterias).then(search => {
@@ -67,19 +70,20 @@ import Swiper from "swiper";
                             hotel_page_uri: hotel_page_uri + `&room_name=${ encodeURIComponent(room.name) }`
                         };
                     });
-                    new RoomsSplitter(
-                        window.known_hotel.roomsSplit,
-                        models_list,
-                        room_card_template,
-                        document.querySelector('h2.rooms-splitter'),
-                        document.querySelector('.rooms-grid')
-                    );
-                    new ScrollPager(
-                        document.querySelector('.rooms-grid'),
-                        null,
-                        document.querySelector('.rooms-paging')
-                    );
-
+                    if (window.known_hotel.roomsSplit) {
+                        new RoomsSplitter(
+                            window.known_hotel.roomsSplit,
+                            models_list,
+                            room_card_template,
+                            document.querySelector('h2.rooms-splitter'),
+                            document.querySelector('.rooms-grid')
+                        );
+                        new ScrollPager(
+                            document.querySelector('.rooms-grid'),
+                            null,
+                            document.querySelector('.rooms-paging')
+                        );
+                    }
                     setTimeout(() => refreshAllScrollTriggers(), 100);
                 });
             });
@@ -87,19 +91,22 @@ import Swiper from "swiper";
         });
     }
 
-    const gallerySwiper = new Swiper(document.querySelector('section.hotel-gallery .swiper'), {
-        loop: true,
-        centeredSlides: true,
-        spaceBetween: 0,
-        slidesPerView: 'auto',
-        initialSlide: 0,
-        navigation: {
-            prevEl: document.querySelector('section.hotel-gallery button.swiper-button-prev'),
-            nextEl: document.querySelector('section.hotel-gallery button.swiper-button-next'),
-        },
-        breakpoints: { 768: { spaceBetween: 32 } }
-    });
-    gallerySwiper.slideNext();
+    let swiper_el = document.querySelector('section.hotel-gallery .swiper');
+    if (swiper_el) {
+        const gallerySwiper = new Swiper(swiper_el, {
+            loop: true,
+            centeredSlides: true,
+            spaceBetween: 0,
+            slidesPerView: 'auto',
+            initialSlide: 0,
+            navigation: {
+                prevEl: document.querySelector('section.hotel-gallery button.swiper-button-prev'),
+                nextEl: document.querySelector('section.hotel-gallery button.swiper-button-next'),
+            },
+            breakpoints: { 768: { spaceBetween: 32 } }
+        });
+        gallerySwiper.slideNext();
+    }
 
     new ScrollPager(
         document.querySelector('section.restaurants-and-bars .restaurants .scroll-slider'),

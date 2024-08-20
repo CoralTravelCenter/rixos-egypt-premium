@@ -3,7 +3,7 @@ export const priceSearchDetail_query_defaults = {
     searchCriterias: {
         reservationType: 2,
         nights: [
-            { value: 7 },
+            // { value: 7 },
             { value: 14 }
         ],
         roomCriterias: [
