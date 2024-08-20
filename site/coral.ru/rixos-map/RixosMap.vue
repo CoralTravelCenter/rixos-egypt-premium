@@ -49,7 +49,7 @@ watchEffect(async () => {
     } else if (hotelsWithLocation.value.length === 1) {
         const hotel = hotelsWithLocation.value[0];
         map_settings.location = {
-            center: [hotel.coordinates.longitude, hotel.coordinates.latitude],
+            center: [hotel.ee.coordinates.longitude, hotel.ee.coordinates.latitude],
             zoom: 10
         };
     }
@@ -63,6 +63,8 @@ function hoverZIndex(e) {
         e.target.closest('ymaps').style.zIndex = zi - 1;
     }
 }
+
+const autoOpenSingleMarker = computed(() => hotelsWithLocation.value.length === 1);
 
 </script>
 
@@ -90,7 +92,7 @@ function hoverZIndex(e) {
                                        }"
                                    :style="{ cursor: 'pointer' }"
                                    :key="hotel.id">
-                    <RixosMarker :hotel="hotel" @mouseenter="hoverZIndex" @mouseleave="hoverZIndex"/>
+                    <RixosMarker :hotel="hotel" :initially-open="autoOpenSingleMarker" @mouseenter="hoverZIndex" @mouseleave="hoverZIndex"/>
                 </yandex-map-marker>
             </yandex-map-clusterer>
         </yandex-map>

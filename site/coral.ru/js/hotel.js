@@ -118,13 +118,13 @@ import Swiper from "swiper";
         document.querySelector('section.entertainment .discrete-pager')
     );
 
-    // let map_init = false;
-    // watchIntersection('#rixos-map', { threshold: .01 }, async (el, observer) => {
-    //     if (!map_init) {
-    //         await fetchingHotelsInfo;
-    //         createApp(RixosMap, { hotelsList: window.known_hotels }).mount('#rixos-map');
-    //         map_init = true;
-    //     }
-    // });
+    let map_init = false;
+    watchIntersection('#rixos-map', { threshold: .01 }, async (el, observer) => {
+        if (!map_init) {
+            await fetchingHotelsInfo;
+            createApp(RixosMap, { hotelsList: [window.known_hotel] }).mount('#rixos-map');
+            map_init = true;
+        }
+    });
 
 })();
