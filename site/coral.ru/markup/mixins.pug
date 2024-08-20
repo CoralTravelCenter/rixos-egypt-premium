@@ -118,3 +118,17 @@ mixin entertainment(setup)
                         h3= setup.righty.title
                     .reminder(style=`--visual-desktop: url("${ setup.righty.visual_desktop }"); --visual-mobile: url("${ setup.righty.visual_mobile }")`)
             .discrete-pager
+
+mixin coral-bonus(pinup)
+    section.held.coral-bonus
+        .inhalt
+            if pinup
+                .coral-bonus-girl(data-pinup)
+            else
+                .coral-bonus-girl
+            .loyality-program
+                img.visual(src='/site/coral.ru/assets/coral-bonus-cards.jpg')
+                .info
+                    h2 Наша программа лояльности CoralBonus
+                    p  Копите бонусы за покупку туров Coral Travel <br>и оплачивайте ими до 100% вашего путешествия!
+                    a.obtain-card(href='https://coralbonus.ru/registration', target='_blank') Получить карту
