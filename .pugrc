@@ -29,6 +29,13 @@
                 id: 52439,
                 name: 'Rixos Golf Villas & Suites',
                 description: 'Виллы и люксы Rixos Golf среди садов и гольф-поля предлагают услуги «все включено» и «все эксклюзивно»',
+                url: '/chain/rixos/rixos-golf-villas-suites/',
+                logo: '/site/coral.ru/assets/logos/rixos-golf-villas-suites.png',
+                roomsSplit: [
+                    { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
+                    { name: 'Номера', matcher: { field: 'name', regex: 'villa', flags: 'i', negate: true } },
+                    { name: 'Виллы', matcher: { field: 'name', regex: 'villa', flags: 'i' } }
+                ]
             },
 //            {
 //                id: 54272,
