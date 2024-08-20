@@ -1,6 +1,6 @@
 include ../markup/mixins
 
-- const hotel = hotels.find(hotel => hotel.id === 7891);
+- const hotel = hotels.find(hotel => hotel.id === 58466);
 
 body
     script
@@ -9,17 +9,18 @@ body
     +internal-nav([
         { label: 'Номера', ref: 'section.suites' },
         { label: 'Рестораны и бары', ref: 'section.restaurants-and-bars' },
+        { label: 'RixyClub', ref: 'section.rixy-club' },
         { label: 'CoralBonus', ref: 'section.coral-bonus' },
         { label: 'Контакты', ref: 'section.leased-line-premium' },
     ], '#_', '.interactive-map')
 
     +kvv({
-        h1: 'Rixos Sharm El Sheikh Adults Only',
-        logo: '/site/coral.ru/assets/logos/rixos-sharm-el-sheikh.png',
-        desktop_poster: '/site/coral.ru/assets/rixos-sharm-el-sheikh/kv-poster-desktop.jpg',
-        mobile_poster:  '/site/coral.ru/assets/rixos-sharm-el-sheikh/kv-poster-mobile.jpg',
-        desktop_vid: 998128773,
-        mobile_vid: 998129404,
+        h1: 'Club Privé by Rixos',
+        logo: '/site/coral.ru/assets/logos/club-preve.png',
+        desktop_poster: '/site/coral.ru/assets/club-preve-by-rixos/kv-poster-desktop.jpg',
+        mobile_poster:  '/site/coral.ru/assets/club-preve-by-rixos/kv-poster-mobile.jpg',
+        desktop_vid: 998623688,
+        mobile_vid: 998624620,
         video_scale: 1.5,
         five_stars: true,
         location: 'Египет, Шарм-эш-Шейх'
@@ -27,10 +28,10 @@ body
 
     section.held.intro
         .inhalt
-            h2 Добро пожаловать <br>в Rixos Sharm El Sheikh
+            h2 Добро пожаловать <br>в Club Privé by Rixos
             p.generic
                 :typo
-                    Великолепный роскошный курорт только для взрослых (18+), созданный для того, чтобы предложить гостям высший уровень роскоши, комфорта и уединения. Курорт предлагает широкий спектр услуг и удобств, чтобы обеспечить максимально приятное пребывание для всех гостей. Спортивные мероприятия, развлечения, вечеринки на закате и ночи с диджеем. Гости могут наслаждаться просторными и роскошными номерами и люксами, спа Anjana и общей расслабляющей атмосферой, которая гарантирует спокойствие для каждого гостя.
+                    Club Prive by Rixos Sharm El Sheikh расположен в Шарм-эль-Шейхе, Египет — портовом и курортном городе на южной части Синайского полуострова. Это одно из самых популярных туристических направлений в арабском мире, это новый бутик-продукт мирового бренда Rixos Hotels, известного на протяжении многих лет своим лучшим сервисом. Club Privé by Rixos — это мир, где изысканная роскошь и элитный сервис идут рука об руку, где комфорт сочетается с красотой природы и где ваши желания формируют ваш отдых. Мы будем рады удивить и порадовать наших дорогих гостей, превзойдя ваши ожидания
             .actions
                 button.knopf(data-ref='section.suites') Выбрать номер
 
@@ -42,131 +43,127 @@ body
                 .rooms-paging.discrete-pager
 
     +gallery([
-        { visual_desktop: '/site/coral.ru/assets/rixos-sharm-el-sheikh/gallery/01-desktop.jpg', visual_mobile: 'site/coral.ru/assets/rixos-sharm-el-sheikh/gallery/01-mobile.jpg' },
-        { visual_desktop: '/site/coral.ru/assets/rixos-sharm-el-sheikh/gallery/02-desktop.jpg', visual_mobile: 'site/coral.ru/assets/rixos-sharm-el-sheikh/gallery/02-mobile.jpg' },
-        { visual_desktop: '/site/coral.ru/assets/rixos-sharm-el-sheikh/gallery/03-desktop.jpg', visual_mobile: 'site/coral.ru/assets/rixos-sharm-el-sheikh/gallery/03-mobile.jpg' },
-        { visual_desktop: '/site/coral.ru/assets/rixos-sharm-el-sheikh/gallery/04-desktop.jpg', visual_mobile: 'site/coral.ru/assets/rixos-sharm-el-sheikh/gallery/04-mobile.jpg' },
-        { visual_desktop: '/site/coral.ru/assets/rixos-sharm-el-sheikh/gallery/05-desktop.jpg', visual_mobile: 'site/coral.ru/assets/rixos-sharm-el-sheikh/gallery/05-mobile.jpg' },
-        { visual_desktop: '/site/coral.ru/assets/rixos-sharm-el-sheikh/gallery/06-desktop.jpg', visual_mobile: 'site/coral.ru/assets/rixos-sharm-el-sheikh/gallery/06-mobile.jpg' },
-        { visual_desktop: '/site/coral.ru/assets/rixos-sharm-el-sheikh/gallery/07-desktop.jpg', visual_mobile: 'site/coral.ru/assets/rixos-sharm-el-sheikh/gallery/07-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/club-preve-by-rixos/gallery/01-desktop.jpg', visual_mobile: 'site/coral.ru/assets/club-preve-by-rixos/gallery/01-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/club-preve-by-rixos/gallery/02-desktop.jpg', visual_mobile: 'site/coral.ru/assets/club-preve-by-rixos/gallery/02-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/club-preve-by-rixos/gallery/03-desktop.jpg', visual_mobile: 'site/coral.ru/assets/club-preve-by-rixos/gallery/03-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/club-preve-by-rixos/gallery/04-desktop.jpg', visual_mobile: 'site/coral.ru/assets/club-preve-by-rixos/gallery/04-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/club-preve-by-rixos/gallery/05-desktop.jpg', visual_mobile: 'site/coral.ru/assets/club-preve-by-rixos/gallery/05-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/club-preve-by-rixos/gallery/06-desktop.jpg', visual_mobile: 'site/coral.ru/assets/club-preve-by-rixos/gallery/06-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/club-preve-by-rixos/gallery/07-desktop.jpg', visual_mobile: 'site/coral.ru/assets/club-preve-by-rixos/gallery/07-mobile.jpg' },
     ])
 
     +restaurants-and-bars({
+        about: "Club Prive by Rixos Sharm El Sheikh — это настоящий рай для гурманов с  изобилием кулинарных изысков. Будь то основные рестораны или однин из  ресторанов с обслуживанием по меню, гости могут познакомиться с широким  разнообразием блюд разных стран, обещая изысканные гастрономические  впечатления. Побалуйте себя богатством вкусов каждого приема пищи.",
         restaurants: [
             {
-                visual:  '/site/coral.ru/assets/rixos-sharm-el-sheikh/restaurants-and-bars/rest-01.jpg',
-                heading: 'Gusto',
-                body:    'Побалуйте себя традиционной итальянской кухней. Оцените широкий выбор антипасти, салатов, пиццы и пасты из свежих высококачественных ингредиентов.'
+                visual:  '/site/coral.ru/assets/club-preve-by-rixos/restaurants-and-bars/rest-01.jpg',
+                heading: "Turquoise",
+                body:    "Насладитесь уникальным кулинарным путешествием в нашем главном ресторане. Попробуйте широкий выбор вкуснейших блюд со всего мира, искусно приготовленных нашими талантливыми поварами."
             },
             {
-                visual:  '/site/coral.ru/assets/rixos-sharm-el-sheikh/restaurants-and-bars/rest-02.jpg',
-                heading: 'Lalezar',
-                body:    'Ресторан Lalezar не имеет себе равных в Шарм-эль-Шейхе. Аристократические вкусы османской кухни в сочетании с захватывающим видом на Красное море дарят чистое удовольствие.'
+                visual:  '/site/coral.ru/assets/club-preve-by-rixos/restaurants-and-bars/rest-02.jpg',
+                heading: "Riviera",
+                body:    "Отправьтесь в настоящее кулинарное путешествие в наш ресторан Riviera, где вы сможете насладиться традиционными рецептами, приготовленными из лучших ингредиентов."
             },
             {
-                visual:  '/site/coral.ru/assets/rixos-sharm-el-sheikh/restaurants-and-bars/rest-03.jpg',
-                heading: 'sakura',
-                body:    'Будучи одним из самых популярных блюд японской кухни, суши превращаются в еще более вкусное угощение, если их приготовить нашими превосходными опытными шеф-поварами.'
+                visual:  '/site/coral.ru/assets/club-preve-by-rixos/restaurants-and-bars/rest-03.jpg',
+                heading: "Salt Restaurant",
+                body:    "Погрузитесь в богатые вкусы моря в ресторане Salt seafood. Насладитесь разнообразием свежевыловленных морепродуктов, искусно приготовленных нашими талантливыми поварами."
             },
             {
-                visual:  '/site/coral.ru/assets/rixos-sharm-el-sheikh/restaurants-and-bars/rest-04.jpg',
-                heading: 'salt',
-                body:    'Опытные шеф-повара готовят свежую рыбу и морские деликатесы. Холодные и горячие закуски, а также великолепные основные блюда доставят Вам истинное гастрономическое удовольствие.'
+                visual:  '/site/coral.ru/assets/club-preve-by-rixos/restaurants-and-bars/rest-04.jpg',
+                heading: "L'olivio",
+                body:    "Место, где классические вкусы встречаются с современными нотками, где каждое блюдо представляет собой гармоничное сочетание свежих ингредиентов и кулинарного мастерства."
             },
             {
-                visual:  '/site/coral.ru/assets/rixos-sharm-el-sheikh/restaurants-and-bars/rest-05.jpg',
-                heading: 'Taj Mahal',
-                body:    'Попробуйте настоящие блюда индийской кухни в ресторане Taj Mahal, где вы ощутите чудесную магию специй.'
+                visual:  '/site/coral.ru/assets/club-preve-by-rixos/restaurants-and-bars/rest-05.jpg',
+                heading: "Cactus",
+                body:    "Побалуйте себя настоящими мексиканскими блюдами, от шипящих фахитас до аппетитных энчиладас, наслаждайтесь смелыми и огненными вкусами Мексики."
             },
             {
-                visual:  '/site/coral.ru/assets/rixos-sharm-el-sheikh/restaurants-and-bars/rest-06.jpg',
-                heading: 'Asian Restaurant',
-                body:    'Окунитесь в таинственную атмосферу ресторана, пробуя яркие вкусы восточной кухни, и Вы забудете про все на свете.'
+                visual:  '/site/coral.ru/assets/club-preve-by-rixos/restaurants-and-bars/rest-06.jpg',
+                heading: "Lalezar",
+                body:    "Откройте для себя богатое кулинарное наследие Турции с разнообразными традиционными блюдами, подаваемыми с теплым гостеприимством. "
             },
             {
-                visual:  '/site/coral.ru/assets/rixos-sharm-el-sheikh/restaurants-and-bars/rest-07.jpg',
-                heading: 'Executive Lounge',
-                body:    'Executive lounge предлагает самые изысканные блюда, доступные на рынке, предлагая меню a la carte на завтрак, обед и ужин.'
+                visual:  '/site/coral.ru/assets/club-preve-by-rixos/restaurants-and-bars/rest-07.jpg',
+                heading: "Mandarin",
+                body:    "Откройте для себя яркие вкусы настоящей тайской кухни, позвольте гармоничному сочетанию ароматных специй и душистых трав перенести вас в экзотическую страну Таиланда."
             },
             {
-                visual:  '/site/coral.ru/assets/rixos-sharm-el-sheikh/restaurants-and-bars/rest-08.jpg',
-                heading: 'La Churrascaria',
-                body:    'Побалуйте себя блюдами традиционной бразильской кухни.'
-            },
-            {
-                visual:  '/site/coral.ru/assets/rixos-sharm-el-sheikh/restaurants-and-bars/rest-09.jpg',
-                heading: 'The Palm',
-                body:    'Ресторан предлагает богатый и широкий выбор блюд современной и интернациональной кухни: вегетарианские блюда и станции открытой кухни, паста, бургеры и салаты, а также десерты.'
-            },
-            {
-                visual:  '/site/coral.ru/assets/rixos-sharm-el-sheikh/restaurants-and-bars/rest-10.jpg',
-                heading: 'The Mangal',
-                body:    'Ресторан в тени высоких пальм у Красного моря - это идеальное место для семейного ужина. Рядом с каждым столиком есть отдельная зона барбекю, где наши шеф-повара готовят разные виды мяса.'
+                visual:  '/site/coral.ru/assets/club-preve-by-rixos/restaurants-and-bars/rest-08.jpg',
+                heading: "People's",
+                body:    "Насладитесь вкусом мировых деликатесов в нашем ресторане People's, где интернациональная кухня встречается с завораживающим видом на Красное море."
             },
         ],
         bars: [
             {
                 visual:  '/site/coral.ru/assets/rixos-sharm-el-sheikh/restaurants-and-bars/bar-01.jpg',
-                heading: 'BLUE X',
-                body:    'Отсюда открывается живописный вид на остров Тиран, и здесь предлагают лучшие развлечения, включая незабываемые выступления диджеев под открытым небом.'
+                heading: "Executive Lounge",
+                body:    "Погрузитесь в роскошь в нашем Lobby Lounge, Насладитесь персонализированным обслуживанием, изысканными кулинарными предложениями специально разработанном для наших гостей. "
             },
             {
                 visual:  '/site/coral.ru/assets/rixos-sharm-el-sheikh/restaurants-and-bars/bar-02.jpg',
-                heading: 'Detox Bar',
-                body:    'Порадуйте себя прохладительными фруктовыми и овощными соками свежего отжима на берегу Красного моря'
+                heading: "Lobby Bar",
+                body:    "Почувствуйте элегантность и изысканность нашего восхитительного лобби-бара. Побалуйте себя широким выбором искусно приготовленных напитков, наслаждаясь стильной атмосферой."
             },
             {
                 visual:  '/site/coral.ru/assets/rixos-sharm-el-sheikh/restaurants-and-bars/bar-03.jpg',
-                heading: 'LAGOON POOL BAR',
-                body:    'В баре Lagoon Pool Bar, расположенного рядом бассейна Lagoon, одного из двух главных бассейнов отеля, вам предложат фирменные коктейли, алкогольные и безалкогольные напитки и закуски.'
+                heading: "Pool Bar",
+                body:    "Наш бар у бассейна предлагает широкий выбор коктейлей, от тропических до смузи и безалкогольных напитков, все они созданы, чтобы вы чувствовали себя прохладно и освеженно под теплым солнцем."
             },
             {
                 visual:  '/site/coral.ru/assets/rixos-sharm-el-sheikh/restaurants-and-bars/bar-04.jpg',
-                heading: 'OASIS POOL BAR',
-                body:    'В баре Oasis Pool Bar, расположенном у бассейна Oasis, второго главного бассейна, вы сможете заказать прохладительные напитки, чтобы ненадолго отвлечься от плавания и отдохнуть от жаркого солнца.'
+                heading: "Beach Bar",
+                body:    "Побалуйте себя идеальным сочетанием солнца, песка и потягиваний в нашем Beach Bar. С освежающими коктейлями, непринужденной атмосферой и потрясающими видами на берегу моря."
             },
             {
                 visual:  '/site/coral.ru/assets/rixos-sharm-el-sheikh/restaurants-and-bars/bar-05.jpg',
-                heading: 'PIANO BAR',
-                body:    'В баре Piano Bar, подают восхитительные коктейли, фирменные напитки и разнообразные чаи. Днем вы можете попробовать наши торты и печенье, а вечером вас ждет фортепианная музыка.'
+                heading: "Candy Bar",
+                body:    "Побалуйте себя в нашем Candy Bar, сладком раю для любителей десертов всех возрастов. Предлагая разнообразные сладкие лакомства, от шоколада до конфет и многого другого."
             },
             {
                 visual:  '/site/coral.ru/assets/rixos-sharm-el-sheikh/restaurants-and-bars/bar-06.jpg',
-                heading: 'RIXOS LOUNGE',
-                body:    'В лаунже Rixos, расположенном в старом холле отеля, царит гостеприимная атмосфера для теплых дружеских встреч. А в нашем спорт-баре Вы можете смотреть спортивные трансляции'
+                heading: "Irish Pub",
+                body:    "Этот аутентичный бар, спроектированный в архитектурном стиле и концепции, служит местом для наслаждения напитками и местом встреч для ведения беседы в непринужденной обстановке."
             },
             {
                 visual:  '/site/coral.ru/assets/rixos-sharm-el-sheikh/restaurants-and-bars/bar-07.jpg',
-                heading: 'Sport Bar',
-                body:    'Café De Nuit в нашем очаровательном старом холле заключает в себе целый мир французских кафе. Порадуйте свои вкусовые рецепторы французским кофе и выпечкой.'
+                heading: "E-Sport Café",
+                body:    "Почувствуйте захватывающий мир соревновательных игр в нашем E-Sport Café. Мы предлагаем разнообразные игры, которые подойдут для любого уровня мастерства."
             },
             {
                 visual:  '/site/coral.ru/assets/rixos-sharm-el-sheikh/restaurants-and-bars/bar-08.jpg',
-                heading: 'TIRAN ISLAND BEACH BAR',
-                body:    'Наслаждайтесь легким морским бризом и завораживающими видами в лаунже Sunset с коктейлями на зажигательных Sunset-вечеринках'
-            },
-            {
-                visual:  '/site/coral.ru/assets/rixos-sharm-el-sheikh/restaurants-and-bars/bar-09.jpg',
-                heading: 'The White Lounge',
-                body:    'Приглашаем Вас погрузиться в ароматный мир чайной церемонии. А любителей сигар и вина ожидает неописуемая атмосфера лаунж-зоны'
+                heading: "Lobby Lounge",
+                body:    "Погрузитесь в роскошь в нашем VIP Lounge, специально для наших гостей. Насладитесь  обслуживанием, кулинарными предложениями и выбором изысканных вин в элегантной обстановке."
             },
         ]
     })
 
+    section.held.edge2edge.rixy-club.visuals-x-slider
+        .x-slider
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/club-preve-by-rixos/visuals/rixy-club-01-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/club-preve-by-rixos/visuals/rixy-club-01-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/club-preve-by-rixos/visuals/rixy-club-02-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/club-preve-by-rixos/visuals/rixy-club-02-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/club-preve-by-rixos/visuals/rixy-club-03-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/club-preve-by-rixos/visuals/rixy-club-03-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/club-preve-by-rixos/visuals/rixy-club-01-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/club-preve-by-rixos/visuals/rixy-club-01-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/club-preve-by-rixos/visuals/rixy-club-02-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/club-preve-by-rixos/visuals/rixy-club-02-mobile.jpg)')
+        .overlay
+            h2 Rixy kids town & Rixy kids club
+            p
+                :typo
+                    Исследуйте очаровательный мир Rixy Kids Town, страны детей, где юные умы отправляются в захватывающее путешествие. Здесь дети не только знакомятся с разнообразными профессиями, совершенствуя свои двигательные, физические и социальные навыки, но также наслаждаются свободой выбора, раскрывают свой творческий потенциал, играют и с гордостью создают свои собственные творения.
+
     +entertainment({
-        ps: [
-            'Rixos Sharm El Sheikh предлагает невероятный выбор спортивных сооружений, дающих возможность побаловать себя и тело, фитнес-центр оснащен самым современным спортивным оборудованием. Вы можете участвовать в спортивных мероприятиях, таких как теннис, дайвинг, йога, пляжный волейбол, аквааэробика и другие вещи, которые вы откроете для себя. Наша профессиональная команда готова помочь. Поддерживать физическую форму в Rixos Sharm El Sheikh очень весело.',
-            'Погрузитесь в восхитительное спокойствие Rixos Royal Spa, здесь вы найдете невероятный выбор процедур: изящное переплетение традиционных методик Востока (включая тайские, балийские и индийские) и Запада, выполняемых квалифицированными специалистами. В самом сердце спа расположена турецкая баня. Отдайтесь во власть традиционных турецких методик, испытайте блаженство пенного массажа или отдохните и расслабьтесь в паровой комнате, сауне или джакузи.'
-        ],
+        ps: [],
         lefty: {
-            title: 'Активный отдых под открытым небом',
-            visual_desktop: '/site/coral.ru/assets/rixos-sharm-el-sheikh/visuals/entertainment-01-desktop.jpg',
-            visual_mobile: '/site/coral.ru/assets/rixos-sharm-el-sheikh/visuals/entertainment-01-mobile.jpg'
+            title: 'Занятия спортом и фитнесом',
+            visual_desktop: '/site/coral.ru/assets/club-preve-by-rixos/visuals/entertainment-01-desktop.jpg',
+            visual_mobile: '/site/coral.ru/assets/club-preve-by-rixos/visuals/entertainment-01-mobile.jpg'
         },
         righty: {
-            title: 'Спа и Оздоровление',
-            visual_desktop: '/site/coral.ru/assets/rixos-sharm-el-sheikh/visuals/entertainment-02-desktop.jpg',
-            visual_mobile: '/site/coral.ru/assets/rixos-sharm-el-sheikh/visuals/entertainment-02-mobile.jpg'
+            title: 'Полное расслабление в спа-салоне',
+            visual_desktop: '/site/coral.ru/assets/club-preve-by-rixos/visuals/entertainment-02-desktop.jpg',
+            visual_mobile: '/site/coral.ru/assets/club-preve-by-rixos/visuals/entertainment-02-mobile.jpg'
         }
     })
 

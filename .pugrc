@@ -45,7 +45,10 @@
                 name: 'Club Prive By Rixos',
                 description:  'Это мир роскоши и элитных услуг, где комфорт сочетается с природой, а ваши желания формируют отдых',
                 url: '/chain/rixos/club-prive-by-rixos/',
-                logo: '/site/coral.ru/assets/logos/club-preve.png'
+                logo: '/site/coral.ru/assets/logos/club-preve.png',
+                roomsSplit: [
+                    { name: 'Виллы', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
+                ]
             },
             {
                 id: 29367,
