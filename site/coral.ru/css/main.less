@@ -375,30 +375,33 @@ section.intro {
 }
 
 section.visuals-x-slider {
-	.proportional(1728/620);
-	overflow: hidden;
-	@media screen and (max-width: @mobile-breakpoint) {
-		.proportional(768/600);
-	}
-	.x-slide-keyframes(5);
-	.x-slide {
-		.reset();
-		.proportional(3545/1600);
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		width: 110%;
-		background: var(--visual-desktop) center / cover no-repeat;
+	position: relative;
+	.x-slider {
+		.proportional(1728/620);
+		overflow: hidden;
 		@media screen and (max-width: @mobile-breakpoint) {
 			.proportional(768/600);
-			position: absolute;
-			background-image: var(--visual-mobile);
 		}
-		&:nth-child(1) {.x-slide-animation(1, 5);}
-		&:nth-child(2) {.x-slide-animation(2, 5);}
-		&:nth-child(3) {.x-slide-animation(3, 5);}
-		&:nth-child(4) {.x-slide-animation(4, 5);}
-		&:nth-child(5) {.x-slide-animation(5, 5);}
+		.x-slide-keyframes(5);
+		.x-slide {
+			.reset();
+			.proportional(3545/1600);
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 110%;
+			background: var(--visual-desktop) center / cover no-repeat;
+			@media screen and (max-width: @mobile-breakpoint) {
+				.proportional(768/600);
+				position: absolute;
+				background-image: var(--visual-mobile);
+			}
+			&:nth-child(1) {.x-slide-animation(1, 5);}
+			&:nth-child(2) {.x-slide-animation(2, 5);}
+			&:nth-child(3) {.x-slide-animation(3, 5);}
+			&:nth-child(4) {.x-slide-animation(4, 5);}
+			&:nth-child(5) {.x-slide-animation(5, 5);}
+		}
 	}
 	.overlay {
 		position: absolute;
@@ -411,6 +414,15 @@ section.visuals-x-slider {
 		align-items: center;
 		text-align: center;
 		color: white;
+		@media screen and (max-width: @mobile-breakpoint) {
+		    text-shadow: 0 2px 8px fade(black, 50%);
+		}
+		@media screen and (max-width: @narrow-breakpoint) {
+			position: static;
+			text-shadow: none;
+			color: inherit;
+			padding: 2em 0;
+		}
 		h2 {
 			font-family: TrajanPro3Regular;
 			font-weight: normal;
@@ -421,8 +433,8 @@ section.visuals-x-slider {
 		p {
 			line-height: 1.4;
 			margin: 0;
-			max-width: 60em;
-			padding: 0 1.5em;
+			max-width: 65em;
+			padding: 0 3em;
 		}
 	}
 }
