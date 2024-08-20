@@ -1307,3 +1307,113 @@ section.restaurants-and-bars {
 
 	}
 }
+
+section.entertainment {
+	background: white;
+	position: relative;
+	z-index: 10;
+	.inhalt {
+		p.generic {
+			text-align: center;
+			@media screen and (max-width: @mobile-breakpoint) {
+			    order: 1;
+				padding: 0 1em;
+			}
+		}
+		.two-usps {
+			width: 100%;
+			display: grid;
+			grid-template: auto / 1fr;
+			@media screen and (max-width: @mobile-breakpoint) {
+			    display: flex;
+				gap: 1em;
+				overflow: auto;
+				scroll-snap-type: x mandatory;
+				&::-webkit-scrollbar {
+					display: none;
+				}
+			}
+			.usp {
+				grid-area: 1 / 1;
+				display: flex;
+				gap: 2em;
+				@media screen and (max-width: @mobile-breakpoint) {
+				    flex: 0 0 100%;
+					scroll-snap-align: center;
+				}
+				&:has(>*:nth-child(1):hover) {
+					z-index: 1;
+				}
+				>*:nth-child(1):hover {
+					& + * {
+						opacity: 1!important;
+					}
+				}
+				>*:nth-child(1) {
+					@media screen and (max-width: @mobile-breakpoint) {
+					    border-radius: 8px;
+					}
+				}
+				>*:nth-child(2) {
+					pointer-events: none!important;
+					@media screen and (max-width: @mobile-breakpoint) {
+					    display: none!important;
+					}
+				}
+				>* {
+					flex: 1 1 50%;
+					.proportional(684/600);
+					background-size: auto 100%;
+					background-repeat: no-repeat;
+					background-image: var(--visual-desktop);
+					.transit(opacity);
+					@media screen and (max-width: @mobile-breakpoint) {
+						background-image: var(--visual-mobile);
+					}
+				}
+				h3 {
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-end;
+					padding: 2em;
+					font-size: 1.5em;
+					margin: 0;
+					line-height: 1;
+					text-align: center;
+					color: white;
+					font-weight: normal;
+					@media screen and (max-width: @mobile-breakpoint) {
+						padding: 1em;
+						line-height: 1.2;
+						text-shadow: 0 2px 8px fade(black, 50%);
+					}
+				}
+				&.lefty {
+					>*:nth-child(1) {
+						background-position: left top;
+					}
+					>*:nth-child(2) {
+						background-position: right top;
+						opacity: 0;
+					}
+				}
+				&.righty {
+					flex-direction: row-reverse;
+					>*:nth-child(1) {
+						background-position: right top;
+					}
+					>*:nth-child(2) {
+						background-position: left top;
+						opacity: 0;
+					}
+				}
+			}
+		}
+		.discrete-pager {
+			position: static;
+			@media screen and (min-width: (@mobile-breakpoint + 1)) {
+			    display: none;
+			}
+		}
+	}
+}

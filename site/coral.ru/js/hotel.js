@@ -108,8 +108,14 @@ import Swiper from "swiper";
     );
     new ScrollPager(
         document.querySelector('section.restaurants-and-bars .bars .scroll-slider'),
-        document.querySelector('section.restaurants-and-bars .bars .scroll-pager'),
+        null,
         document.querySelector('section.restaurants-and-bars .bars .discrete-pager')
+    );
+
+    new ScrollPager(
+        document.querySelector('section.entertainment .two-usps'),
+        null,
+        document.querySelector('section.entertainment .discrete-pager')
     );
 
     // let map_init = false;

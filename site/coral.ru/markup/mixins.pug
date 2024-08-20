@@ -101,3 +101,20 @@ mixin restaurants-and-bars(setup)
                     .discrete-pager
             .actions
                 button.knopf(data-ref='section.suites') Выбрать номер
+
+mixin entertainment(setup)
+    section.held.entertainment
+        .inhalt
+            h2 Развлечения и мероприятия
+            each p in setup.ps
+                p.generic!= p
+            .two-usps
+                .usp.lefty
+                    .heading(style=`--visual-desktop: url("${ setup.lefty.visual_desktop }"); --visual-mobile: url("${ setup.lefty.visual_mobile }")`)
+                        h3= setup.lefty.title
+                    .reminder(style=`--visual-desktop: url("${ setup.lefty.visual_desktop }"); --visual-mobile: url("${ setup.lefty.visual_mobile }")`)
+                .usp.righty
+                    .heading(style=`--visual-desktop: url("${ setup.righty.visual_desktop }"); --visual-mobile: url("${ setup.righty.visual_mobile }")`)
+                        h3= setup.righty.title
+                    .reminder(style=`--visual-desktop: url("${ setup.righty.visual_desktop }"); --visual-mobile: url("${ setup.righty.visual_mobile }")`)
+            .discrete-pager
