@@ -18,18 +18,23 @@
                 name: 'Rixos Sharm El Sheikh',
                 description: 'Отель с видом на залив Акаба и остров Тиран. Предлагает гостям сконференц-залы, 7 бассейнов, 10 ресторанов, 9 баров, спа и велнес центр',
                 url: '/chain/rixos/rixos-sharm-el-sheikh/',
-                logo: '/site/coral.ru/assets/logos/rixos-sharm-el-sheikh.png'
+                logo: '/site/coral.ru/assets/logos/rixos-sharm-el-sheikh.png',
+                roomsSplit: [
+                    { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
+                    { name: 'Номера', matcher: { field: 'name', regex: 'suite', flags: 'i', negate: true } },
+                    { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } }
+                ]
             },
             {
                 id: 52439,
                 name: 'Rixos Golf Villas & Suites',
                 description: 'Виллы и люксы Rixos Golf среди садов и гольф-поля предлагают услуги «все включено» и «все эксклюзивно»',
             },
-            {
-                id: 54272,
-                name: 'Swissotel Sharm El Sheikh',
-                description:  'Отель в центре Наама-Бей с 590 номерами и потрясающими видами, предлагает изысканную кухню и комфорт'
-            },
+//            {
+//                id: 54272,
+//                name: 'Swissotel Sharm El Sheikh',
+//                description:  'Отель в центре Наама-Бей с 590 номерами и потрясающими видами, предлагает изысканную кухню и комфорт'
+//            },
             {
                 id: 64951,
                 name: 'Rixos Radamis Sharm El Sheikh',
@@ -47,19 +52,19 @@
                 name: 'Rixos Premium Magawish',
                 description:  'Курорт Хургада — рай для любителей дайвинга. Отель с клубом дайвинга и серфинга, идеально подходит для изучения Красного моря.'
             },
-            {
-                name: 'Rixos Alamein',
-                description:  'Этот курорт на северном побережье Средиземного моря сочетает кобальтово-синееморе и пышные сады.'
-            },
-            {
-                name: 'Rixos Premium Alamein',
-                description:  'Этот небоскреб в Эль-Аламейне — роскошныйретрит с ультраэлитными номерамидля круглогодичного отдыха.'
-            },
-            {
-                id: 118,
-                name: 'Golf Beach Resort',
-                description:  'Отель с 18-луночным гольф-полем, ресторанами интернациональной кухни, бассейнами, теннисными кортами и спа.'
-            },
+//            {
+//                name: 'Rixos Alamein',
+//                description:  'Этот курорт на северном побережье Средиземного моря сочетает кобальтово-синееморе и пышные сады.'
+//            },
+//            {
+//                name: 'Rixos Premium Alamein',
+//                description:  'Этот небоскреб в Эль-Аламейне — роскошныйретрит с ультраэлитными номерамидля круглогодичного отдыха.'
+//            },
+//            {
+//                id: 118,
+//                name: 'Golf Beach Resort',
+//                description:  'Отель с 18-луночным гольф-полем, ресторанами интернациональной кухни, бассейнами, теннисными кортами и спа.'
+//            },
         ]
     }
 }

@@ -1,5 +1,5 @@
 <script setup>
-import { getCurrentInstance, ref } from "vue";
+import { computed, getCurrentInstance, ref } from "vue";
 
 import icon_elite from 'data-url:/site/coral.ru/assets-inline/hotel-marker-elite.svg';
 import { openedMapMarker } from "./global-state";
@@ -31,7 +31,8 @@ function handleClick() {
         <div class="card">
             <img v-if="hotel.logo" :src="hotel.logo" class="logo">
             <div class="location">{{ hotel.ee.locationSummary.replace(/\(.+?\)/g,'') }}</div>
-            <a v-if="hotel.url" :href="hotel.url" class="learn-more" target="_blank">Подробнее об отеле</a>
+            <button v-if="initiallyOpen" data-ref="section.suites" class="learn-more">Выбрать номер</button>
+            <a v-else-if="hotel.url" :href="hotel.url" class="learn-more" target="_blank">Подробнее об отеле</a>
             <div class="pointer-decor"></div>
         </div>
     </div>
@@ -107,7 +108,7 @@ ymaps:has(>div>div>div.rixos-marker.open) {
             text-align: center;
             line-height: 1.3;
         }
-        a.learn-more {
+        .learn-more {
             .knopf();
             font-size: inherit;
             white-space: nowrap;
