@@ -103,7 +103,7 @@ mixin restaurants-and-bars(setup)
 mixin entertainment(setup)
     section.held.entertainment
         .inhalt
-            h2 Развлечения и мероприятия
+            h2!= setup.heading || 'Развлечения и мероприятия'
             each p in setup.ps
                 p.generic!= p
             .two-usps

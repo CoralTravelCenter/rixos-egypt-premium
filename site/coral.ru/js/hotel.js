@@ -61,7 +61,8 @@ import Swiper from "swiper";
                         const pax = room.maxPax.value;
                         const bedrooms = room.bedroom.value.split(/\s+/).join('<br>');
                         return {
-                            name: room.name,
+                            // name: room.name,
+                            name: room.name.replace(/\d.*/,''),
                             priceFormatted: Math.round(product.price.amount / product.stayNights).formatCurrency(),
                             tag_visual: `<duv class="visual" style="background-image: ${ visual_style }"></duv>`,
                             room_area,
