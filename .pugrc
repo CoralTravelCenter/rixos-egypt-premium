@@ -5,7 +5,7 @@
                 id: 13279,
                 name: 'Rixos Premium Seagate',
                 description: 'Отель предлагает концепцию «все включено» с отличными ресторанами, развлечениями и спортом',
-                url: '/chain/rixos/rixos-premium-seagate/',
+                url: '/chain/rixos/egypt/rixos-premium-seagate/',
                 logo: '/site/coral.ru/assets/logos/rixos-premium-seagate.png',
                 roomsSplit: [
                     { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
@@ -17,7 +17,7 @@
                 id: 7891,
                 name: 'Rixos Sharm El Sheikh',
                 description: 'Отель с видом на залив Акаба и остров Тиран. Предлагает гостям сконференц-залы, 7 бассейнов, 10 ресторанов, 9 баров, спа и велнес центр',
-                url: '/chain/rixos/rixos-sharm-el-sheikh/',
+                url: '/chain/rixos/egypt/rixos-sharm-el-sheikh/',
                 logo: '/site/coral.ru/assets/logos/rixos-sharm-el-sheikh.png',
                 roomsSplit: [
                     { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
@@ -29,7 +29,7 @@
                 id: 52439,
                 name: 'Rixos Golf Villas & Suites',
                 description: 'Виллы и люксы Rixos Golf среди садов и гольф-поля предлагают услуги «все включено» и «все эксклюзивно»',
-                url: '/chain/rixos/rixos-golf-villas-suites/',
+                url: '/chain/rixos/egypt/rixos-golf-villas-suites/',
                 logo: '/site/coral.ru/assets/logos/rixos-golf-villas-suites.png',
                 roomsSplit: [
                     { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
@@ -46,7 +46,7 @@
 //                id: 64951,
 //                name: 'Rixos Radamis Sharm El Sheikh',
 //                description:  'Этот водный рай с аквапарком, кафе, детским клубом и эксклюзивной кухней предлагает идеальный семейный отдых',
-//                url: '/chain/rixos/rixos-radamis-sharm-el-sheikh/',
+//                url: '/chain/rixos/egypt/rixos-radamis-sharm-el-sheikh/',
 //                logo: '/site/coral.ru/assets/logos/rixos-radamis-sharm-el-sheikh.png',
 //                roomsSplit: [
 //                    { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
@@ -58,7 +58,7 @@
                 id: 58466,
                 name: 'Club Prive By Rixos',
                 description:  'Это мир роскоши и элитных услуг, где комфорт сочетается с природой, а ваши желания формируют отдых',
-                url: '/chain/rixos/club-prive-by-rixos/',
+                url: '/chain/rixos/egypt/club-prive-by-rixos/',
                 logo: '/site/coral.ru/assets/logos/club-preve.png',
                 roomsSplit: [
                     { name: 'Виллы', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
@@ -68,7 +68,7 @@
                 id: 29367,
                 name: 'Rixos Premium Magawish',
                 description:  'Курорт Хургада — рай для любителей дайвинга. Отель с клубом дайвинга и серфинга, идеально подходит для изучения Красного моря.',
-                url: '/chain/rixos/rixos-premium-magawish/',
+                url: '/chain/rixos/egypt/rixos-premium-magawish/',
                 logo: '/site/coral.ru/assets/logos/rixos-premium-magawish.png',
                 roomsSplit: [
                     { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
