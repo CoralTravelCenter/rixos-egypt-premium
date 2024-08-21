@@ -4,7 +4,7 @@
 	},
 	contents: [
         '/site/coral.ru/markup/styles-and-libs.html',
-		'/site/coral.ru/markup/club-preve-by-rixos.pug',
+		'/site/coral.ru/markup/club-prive-by-rixos.pug',
 		'/site/coral.ru/markup/hotel-scripts.pug'
 	],
 }
