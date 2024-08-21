@@ -45,7 +45,14 @@
             {
                 id: 64951,
                 name: 'Rixos Radamis Sharm El Sheikh',
-                description:  'Этот водный рай с аквапарком, кафе, детским клубом и эксклюзивной кухней предлагает идеальный семейный отдых'
+                description:  'Этот водный рай с аквапарком, кафе, детским клубом и эксклюзивной кухней предлагает идеальный семейный отдых',
+                url: '/chain/rixos/rixos-radamis-sharm-el-sheikh/',
+                logo: '/site/coral.ru/assets/logos/rixos-radamis-sharm-el-sheikh.png',
+                roomsSplit: [
+                    { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
+                    { name: 'Номера', matcher: { field: 'name', regex: 'suite', flags: 'i', negate: true } },
+                    { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } }
+                ]
             },
             {
                 id: 58466,

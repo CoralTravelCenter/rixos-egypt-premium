@@ -1,0 +1,208 @@
+include ../markup/mixins
+
+- const hotel = hotels.find(hotel => hotel.id === 64951);
+
+body
+    script
+        != `var known_hotel = ${ JSON.stringify(hotel) };`
+
+    +internal-nav([
+        { label: 'Номера', ref: 'section.suites' },
+        { label: 'Рестораны и бары', ref: 'section.restaurants-and-bars' },
+        { label: 'RixyClub', ref: 'section.rixy-club' },
+        { label: 'CoralBonus', ref: 'section.coral-bonus' },
+        { label: 'Контакты', ref: 'section.leased-line-premium' },
+    ], '#_', '.interactive-map')
+
+    +kvv({
+        h1: 'Rixos Radamis Sharm El Sheikh',
+        logo: '/site/coral.ru/assets/logos/rixos-radamis-sharm-el-sheikh.png',
+        desktop_poster: '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/kv-poster-desktop.jpg',
+        mobile_poster:  '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/kv-poster-mobile.jpg',
+        desktop_vid: 999555635,
+        mobile_vid: 999556220,
+        video_scale: 1.5,
+        five_stars: true,
+        location: 'Египет, Шарм-эш-Шейх'
+    })
+
+    section.held.intro
+        .inhalt
+            h2 Добро пожаловать <br>в Rixos Radamis Sharm El Sheikh
+            p.generic
+                :typo
+                    Rixos Radamis Sharm El Sheikh — это самый захватывающий водный рай с прекрасно спроектированными и красочными номерами, где вы найдете широкий спектр возможностей для приятного отдыха всей семьи. Станьте частью идеального отдыха с семейной концепцией, которая включает аквапарк, спортивные кафе, игровые комнаты, детский клуб, эксклюзивные кулинарные изыски и множество исключительных удобств для детей.
+            .actions
+                button.knopf(data-ref='section.suites') Выбрать номер
+
+    section.held.suites
+        .inhalt
+            h2.rooms-splitter
+            .rooms-list-combo
+                .rooms-grid
+                .rooms-paging.discrete-pager
+
+    //+gallery([
+    //    { visual_desktop: '/site/coral.ru/assets/rixos-premium-magawish/gallery/01-desktop.jpg', visual_mobile: 'site/coral.ru/assets/rixos-premium-magawish/gallery/01-mobile.jpg' },
+    //    { visual_desktop: '/site/coral.ru/assets/rixos-premium-magawish/gallery/02-desktop.jpg', visual_mobile: 'site/coral.ru/assets/rixos-premium-magawish/gallery/02-mobile.jpg' },
+    //    { visual_desktop: '/site/coral.ru/assets/rixos-premium-magawish/gallery/03-desktop.jpg', visual_mobile: 'site/coral.ru/assets/rixos-premium-magawish/gallery/03-mobile.jpg' },
+    //    { visual_desktop: '/site/coral.ru/assets/rixos-premium-magawish/gallery/04-desktop.jpg', visual_mobile: 'site/coral.ru/assets/rixos-premium-magawish/gallery/04-mobile.jpg' },
+    //    { visual_desktop: '/site/coral.ru/assets/rixos-premium-magawish/gallery/05-desktop.jpg', visual_mobile: 'site/coral.ru/assets/rixos-premium-magawish/gallery/05-mobile.jpg' },
+    //    { visual_desktop: '/site/coral.ru/assets/rixos-premium-magawish/gallery/06-desktop.jpg', visual_mobile: 'site/coral.ru/assets/rixos-premium-magawish/gallery/06-mobile.jpg' },
+    //    { visual_desktop: '/site/coral.ru/assets/rixos-premium-magawish/gallery/07-desktop.jpg', visual_mobile: 'site/coral.ru/assets/rixos-premium-magawish/gallery/07-mobile.jpg' },
+    //    { visual_desktop: '/site/coral.ru/assets/rixos-premium-magawish/gallery/08-desktop.jpg', visual_mobile: 'site/coral.ru/assets/rixos-premium-magawish/gallery/08-mobile.jpg' },
+    //])
+
+    //+restaurants-and-bars({
+    //    about: 'Насладитесь захватывающим ассортиментом вкусов со всего мира и зароваживающим видом на Красное море в в Rixos Premium Magawish.',
+    //    restaurants: [
+    //        {
+    //            visual:  '/site/coral.ru/assets/rixos-premium-magawish/restaurants-and-bars/rest-01.jpg',
+    //            heading: "Turquoise",
+    //            body:    "Идеальное место, чтобы насладиться широким выбором блюд мировой кухни. Отведайте бесконечное разнообразие горячих, холодных и детских блюд. "
+    //        },
+    //        {
+    //            visual:  '/site/coral.ru/assets/rixos-premium-magawish/restaurants-and-bars/rest-02.jpg',
+    //            heading: "PEOPLE’S",
+    //            body:    "Насладитесь захватывающим ассортиментом вкусов со всего мира и зароваживающим видом на Красное море в нашем интернациональном ресторане, который работает в течении дня."
+    //        },
+    //        {
+    //            visual:  '/site/coral.ru/assets/rixos-premium-magawish/restaurants-and-bars/rest-03.jpg',
+    //            heading: "SALT",
+    //            body:    "Ресторан Salt расположен прямо на пляже Красного моря и предлагает только свежие морепродукты и напитки в сочетании с легкой музыкой в атмосфере умиротворения."
+    //        },
+    //        {
+    //            visual:  '/site/coral.ru/assets/rixos-premium-magawish/restaurants-and-bars/rest-04.jpg',
+    //            heading: "LALEZAR",
+    //            body:    "Откройте для себя подлинные вкусы турецкой кухни в этом фирменном ресторане с обслуживанием по меню. Разнообразные виды мясных блюд, гарниры и хрустящая медовая похлава ждут вас"
+    //        },
+    //        {
+    //            visual:  '/site/coral.ru/assets/rixos-premium-magawish/restaurants-and-bars/rest-05.jpg',
+    //            heading: "asian",
+    //            body:    "Таинственные и оригинальные ароматы дальневосточной кухни ждут вас на ужин в нашем азиатском ресторане с обслуживание по меню."
+    //        },
+    //        {
+    //            visual:  '/site/coral.ru/assets/rixos-premium-magawish/restaurants-and-bars/rest-06.jpg',
+    //            heading: "La Churrascaria",
+    //            body:    "Ресторан бразильской кухни не оставит равнодушним наших гостей. Профессиональные повара предложат вам различные виды мяса и креветок, приготовленые на гриле, салаты, гарниры, соусы к мясу."
+    //        },
+    //        {
+    //            visual:  '/site/coral.ru/assets/rixos-premium-magawish/restaurants-and-bars/rest-07.jpg',
+    //            heading: "THE MANGAL",
+    //            body:    "Ресторан The Mangal предлагает восхитительные блюда барбекю с разнообразным мясом и овощами, приготовленными на гриле до совершенства."
+    //        },
+    //        {
+    //            visual:  '/site/coral.ru/assets/rixos-premium-magawish/restaurants-and-bars/rest-08.jpg',
+    //            heading: "TEPPANYAKI",
+    //            body:    "Испытайте настоящее кулинарное шоу и насладитесь живой кухней ресторана Teppanyaki, наблюдая за тем, как на ваших глазах готовятся ваши любимые азиатские блюда."
+    //        },
+    //    ],
+    //    bars: [
+    //        {
+    //            visual:  '/site/coral.ru/assets/rixos-premium-magawish/restaurants-and-bars/bar-01.jpg',
+    //            heading: "Lobby Bar",
+    //            body:    "В этом уютном месте гости могут освежиться фруктовым фрешем после дороги, взбодриться ароматным кофе или чаем, или насладиться коктейлями и премиумным алкоголем."
+    //        },
+    //        {
+    //            visual:  '/site/coral.ru/assets/rixos-premium-magawish/restaurants-and-bars/bar-02.jpg',
+    //            heading: "ENGLISH PUB",
+    //            body:    "Это идеальное место для встреч и отдыха с элегантным декором, где гости могут отдохнуть в теплой атмосфере в компании друзей, насладиться живой музыкой и драйвовыми диджеями."
+    //        },
+    //        {
+    //            visual:  '/site/coral.ru/assets/rixos-premium-magawish/restaurants-and-bars/bar-03.jpg',
+    //            heading: "BEER GARDEN",
+    //            body:    "Присоединяйтесь к нам в нашем баре Beer Garden, где сочетаются освежающие напитки, оживленная атмосфера и хорошее времяпрепровождение. Приветствуйте моменты, приятные на вкус!"
+    //        },
+    //        {
+    //            visual:  '/site/coral.ru/assets/rixos-premium-magawish/restaurants-and-bars/bar-04.jpg',
+    //            heading: "PANORAMA BAR",
+    //            body:    "Наши гости могут насладиться выбором всевозможных освежающих коктейлей, горячих и алкогольных напитков с захватывающим видом на Красное море."
+    //        },
+    //        {
+    //            visual:  '/site/coral.ru/assets/rixos-premium-magawish/restaurants-and-bars/bar-05.jpg',
+    //            heading: "LAGOON POOL BAR",
+    //            body:    "Расслабьтесь и насладитесь релаксом у бассейнов Lagoon и Entertainment, потягивая свой любимый освежающий напиток."
+    //        },
+    //        {
+    //            visual:  '/site/coral.ru/assets/rixos-premium-magawish/restaurants-and-bars/bar-06.jpg',
+    //            heading: "BEACH LOUNGE",
+    //            body:    "Бар расположен у самой кромки моря, где вы можете насладиться в течении дня освежающими напитками и разнообразными коктейлями."
+    //        },
+    //        {
+    //            visual:  '/site/coral.ru/assets/rixos-premium-magawish/restaurants-and-bars/bar-07.jpg',
+    //            heading: "LOTUS POOL BAR",
+    //            body:    "Получите удовольствие от плавания в бассейне, теплых солнечных ванн и умиротворения, а наши бармены позаботятся о ваших напитках. Каждую деталь мы создаем с учетом ваших ожиданий."
+    //        },
+    //        {
+    //            visual:  '/site/coral.ru/assets/rixos-premium-magawish/restaurants-and-bars/bar-08.jpg',
+    //            heading: "VITAMIN BAR",
+    //            body:    "Бар расположен в Rixos Anjana Spa, открывает двери для здорового и очищающего отдыха со свежевыжатыми фруктовыми соками, детокс и антиоксидантными напитками"
+    //        },
+    //        {
+    //            visual:  '/site/coral.ru/assets/rixos-premium-magawish/restaurants-and-bars/bar-09.jpg',
+    //            heading: "X LOUNGE",
+    //            body:    "Бар расположенный всего в нескольких шагах от пляжа. Предназначенный только для особых мероприятий."
+    //        },
+    //    ],
+    //    cafe: [
+    //        {
+    //            visual:  '/site/coral.ru/assets/rixos-premium-magawish/restaurants-and-bars/cafe-01.jpg',
+    //            heading: "VANILLA ICE CAFÉ",
+    //            body:    "Наше предложение в Vanilla Ice Café не оставит вас равнодушным! Гости могут освежиться мороженым или холодными смузи, а также насладиться свежеприготовленными вафлями и блинчиками."
+    //        },
+    //        {
+    //            visual:  '/site/coral.ru/assets/rixos-premium-magawish/restaurants-and-bars/cafe-02.jpg',
+    //            heading: "BEACH SNAXX",
+    //            body:    "Beach Snaхх Bar место, где можно насладиться разнообразными вкусными угощениями! Кафе предлагает свежий турецкий гозлеме, хрустящие тосты, вкусный кумпир и картофель фри."
+    //        },
+    //        {
+    //            visual:  '/site/coral.ru/assets/rixos-premium-magawish/restaurants-and-bars/cafe-03.jpg',
+    //            heading: "LA CRÈME CAFÉ",
+    //            body:    "La Crème Café фантастическое место для всей семьи, где можно насладиться широким выбором горячего и холодного кофе, вкусными десертами, выпечкой и травяным чаем."
+    //        },
+    //        {
+    //            visual:  '/site/coral.ru/assets/rixos-premium-magawish/restaurants-and-bars/cafe-04.jpg',
+    //            heading: "CAFÉ DE VIENNE",
+    //            body:    "Побалуйте себя восхитительными лакомствами в нашем кафе, где ароматный кофе сочетается с изысканной выпечкой."
+    //        },
+    //        {
+    //            visual:  '/site/coral.ru/assets/rixos-premium-magawish/restaurants-and-bars/cafe-05.jpg',
+    //            heading: "STREET FOOD",
+    //            body:    "Насладитесь кулинарным путешествием в нашем ресторане, где с гордостью подают аппетитную лапшу, неотразимый кумпир, восхитительные турецкие донеры и многое другое."
+    //        },
+    //    ],
+    //})
+
+    //section.held.edge2edge.rixy-club.visuals-x-slider
+    //    .x-slider
+    //        .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-magawish/visuals/rixy-club-01-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-magawish/visuals/rixy-club-01-mobile.jpg)')
+    //        .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-magawish/visuals/rixy-club-02-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-magawish/visuals/rixy-club-02-mobile.jpg)')
+    //        .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-magawish/visuals/rixy-club-03-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-magawish/visuals/rixy-club-03-mobile.jpg)')
+    //        .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-magawish/visuals/rixy-club-01-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-magawish/visuals/rixy-club-01-mobile.jpg)')
+    //        .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-magawish/visuals/rixy-club-02-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-magawish/visuals/rixy-club-02-mobile.jpg)')
+    //    .overlay
+    //        h2 Детский клуб Rixy
+    //        p
+    //            :typo
+    //                Детский клуб Rixy Kids Club — это настоящий курорт на курорте, ведь он создан специально для того, чтобы наши маленькие гости получили только лучшие впечатления и незабываемые воспоминания. В клубе есть все для творчества и развития креативности детей 4–12 лет.
+
+    //+entertainment({
+    //    heading: 'Спа и спортивный клуб Exclusive',
+    //    ps: [
+    //        'Вас ждет спокойствие и безмятежность в Rixos Anjana Spa.Отправьтесь в путешествие, призванное пробудить ваши чувства и восстановить тело, душу и разум.',
+    //        'Наших гостей ждет множество развлечений в течение дня.Спортивные мероприятия доступны всем, кто хочет потратить свою энергию на что - то более активное, чем купание на пляже под солнцем.Команда профессиональных инструкторов спортивного клуба Exclusive всегда готова провести спортивные тренировки на самом высоком уровне.'
+    //    ],
+    //    lefty: {
+    //        title: 'Расслабление в спа-салоне',
+    //        visual_desktop: '/site/coral.ru/assets/rixos-premium-magawish/visuals/entertainment-01-desktop.jpg',
+    //        visual_mobile: '/site/coral.ru/assets/rixos-premium-magawish/visuals/entertainment-01-mobile.jpg'
+    //    },
+    //    righty: {
+    //        title: 'Занятия спортом и фитнесом',
+    //        visual_desktop: '/site/coral.ru/assets/rixos-premium-magawish/visuals/entertainment-02-desktop.jpg',
+    //        visual_mobile: '/site/coral.ru/assets/rixos-premium-magawish/visuals/entertainment-02-mobile.jpg'
+    //    }
+    //})
+
+    +coral-bonus()
+    +contacts-and-map()
