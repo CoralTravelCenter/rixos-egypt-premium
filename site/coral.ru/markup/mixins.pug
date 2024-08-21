@@ -78,6 +78,10 @@ mixin restaurants-and-bars(setup)
                         label
                             input(type='radio' name='zzz' value='bars')
                             | Бары
+                        if setup.cafe
+                            label
+                                input(type='radio' name='zzz' value='cafe')
+                                | Кафе
                     .description!= setup.about
                     .actions
                         button.knopf(data-ref='section.suites') Выбрать номер
@@ -97,6 +101,15 @@ mixin restaurants-and-bars(setup)
                                 h4!= item.heading
                                 p!= item.body
                     .discrete-pager
+                if setup.cafe
+                    .slider-combo.cafe
+                        .scroll-slider
+                            each item in setup.cafe
+                                .slide
+                                    .visual(style=`background-image: url("${ item.visual }")`)
+                                    h4!= item.heading
+                                    p!= item.body
+                        .discrete-pager
             .actions
                 button.knopf(data-ref='section.suites') Выбрать номер
 

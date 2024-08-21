@@ -60,7 +60,14 @@
             {
                 id: 29367,
                 name: 'Rixos Premium Magawish',
-                description:  'Курорт Хургада — рай для любителей дайвинга. Отель с клубом дайвинга и серфинга, идеально подходит для изучения Красного моря.'
+                description:  'Курорт Хургада — рай для любителей дайвинга. Отель с клубом дайвинга и серфинга, идеально подходит для изучения Красного моря.',
+                url: '/chain/rixos/rixos-premium-magawish/',
+                logo: '/site/coral.ru/assets/logos/rixos-premium-magawish.png',
+                roomsSplit: [
+                    { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
+                    { name: 'Номера', matcher: { field: 'name', regex: 'villa', flags: 'i', negate: true } },
+                    { name: 'Виллы', matcher: { field: 'name', regex: 'villa', flags: 'i' } }
+                ]
             },
 //            {
 //                name: 'Rixos Alamein',

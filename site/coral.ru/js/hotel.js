@@ -109,22 +109,35 @@ import Swiper from "swiper";
         gallerySwiper.slideNext();
     }
 
-    new ScrollPager(
-        document.querySelector('section.restaurants-and-bars .restaurants .scroll-slider'),
-        document.querySelector('section.restaurants-and-bars .restaurants .scroll-pager'),
-        document.querySelector('section.restaurants-and-bars .restaurants .discrete-pager')
-    );
-    new ScrollPager(
-        document.querySelector('section.restaurants-and-bars .bars .scroll-slider'),
-        null,
-        document.querySelector('section.restaurants-and-bars .bars .discrete-pager')
-    );
+    if (document.querySelector('section.restaurants-and-bars .restaurants .scroll-slider')) {
+        new ScrollPager(
+            document.querySelector('section.restaurants-and-bars .restaurants .scroll-slider'),
+            null,
+            document.querySelector('section.restaurants-and-bars .restaurants .discrete-pager')
+        );
+    }
+    if (document.querySelector('section.restaurants-and-bars .bars .scroll-slider')) {
+        new ScrollPager(
+            document.querySelector('section.restaurants-and-bars .bars .scroll-slider'),
+            null,
+            document.querySelector('section.restaurants-and-bars .bars .discrete-pager')
+        );
+    }
+    if (document.querySelector('section.restaurants-and-bars .cafe .scroll-slider')) {
+        new ScrollPager(
+            document.querySelector('section.restaurants-and-bars .cafe .scroll-slider'),
+            null,
+            document.querySelector('section.restaurants-and-bars .cafe .discrete-pager')
+        );
+    }
 
-    new ScrollPager(
-        document.querySelector('section.entertainment .two-usps'),
-        null,
-        document.querySelector('section.entertainment .discrete-pager')
-    );
+    if (document.querySelector('section.entertainment .two-usps')) {
+        new ScrollPager(
+            document.querySelector('section.entertainment .two-usps'),
+            null,
+            document.querySelector('section.entertainment .discrete-pager')
+        );
+    }
 
     let map_init = false;
     watchIntersection('#rixos-map', { threshold: .01 }, async (el, observer) => {
