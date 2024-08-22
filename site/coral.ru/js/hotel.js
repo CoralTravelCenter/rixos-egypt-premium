@@ -10,7 +10,11 @@ import { priceSearchDetail_query_defaults } from "../config/defaults";
 
 import room_card_template from 'bundle-text:/site/coral.ru/templates/room-card.pug'
 import '../../common/js/prototypes'
+
 import dayjs from "dayjs";
+import MinMax from "dayjs/plugin/minMax";
+dayjs.extend(MinMax);
+
 import RoomsSplitter from "./rooms-splitter";
 import Swiper from "swiper";
 
@@ -41,10 +45,11 @@ import Swiper from "swiper";
             window.known_hotel.ee = hotels[0];
 
             const query = Object.assign({}, priceSearchDetail_query_defaults);
+            const since = dayjs(window.known_hotel.searchOffersSince);
             Object.assign(query.searchCriterias, {
                 beginDates:       [
-                    dayjs().add(14, 'days').format('YYYY-MM-DD'),
-                    dayjs().add(14 + 60, 'days').format('YYYY-MM-DD')
+                    since.add(14, 'days').format('YYYY-MM-DD'),
+                    since.add(14 + 60, 'days').format('YYYY-MM-DD')
                 ],
                 arrivalLocations: [window.known_hotel.ee.location]
             });
