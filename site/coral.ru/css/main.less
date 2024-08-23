@@ -492,6 +492,13 @@ section.advantages {
 					opacity: 1!important;
 					filter: none!important;
 				}
+				ul {
+					padding: 0;
+					@media screen and (max-width: @narrow-breakpoint) {
+						text-align: left;
+						padding: 0 2em;
+					}
+				}
 				.visual {
 					grid-area: visual-top / visual-left / visual-bottom / visual-right;
 					.proportional(1/1);
