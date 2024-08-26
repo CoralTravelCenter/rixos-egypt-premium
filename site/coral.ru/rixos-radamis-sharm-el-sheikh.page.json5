@@ -4,7 +4,7 @@
 	},
 	contents: [
         '/site/coral.ru/markup/styles-and-libs.html',
-		'/site/coral.ru/markup/rixos-radamis-shark-el-sheikh.pug',
+		'/site/coral.ru/markup/rixos-radamis-sharm-el-sheikh.pug',
 		'/site/coral.ru/markup/hotel-scripts.pug'
 	],
 }
