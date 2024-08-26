@@ -1613,5 +1613,245 @@
         "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/rixos-premium-seagate/restaurants-and-bars/bar-05.jpg",
         "relativePath": "rixos-premium-seagate/restaurants-and-bars/bar-05.jpg",
         "md5": "13997a5c7c5d2a2d80724ea9fb6a880a"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/visuals/rixy-club-02-mobile.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/visuals/rixy-club-02-mobile.jpg",
+        "md5": "86fa5e83678e0194a04a7524e194a0c4"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/visuals/rixy-club-03-desktop.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/visuals/rixy-club-03-desktop.jpg",
+        "md5": "ec3f8303e47af67fd6d09d07a3aaa302"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/visuals/rixy-club-02-desktop.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/visuals/rixy-club-02-desktop.jpg",
+        "md5": "22cb437ec0019a6184e7c771be949499"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/kv-poster-desktop.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/kv-poster-desktop.jpg",
+        "md5": "8c58eae84cd99b8af172a6960aed0f1a"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/kv-poster-mobile.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/kv-poster-mobile.jpg",
+        "md5": "57aac91ccc0a6735e285c29330268b88"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/visuals/rixy-club-01-desktop.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/visuals/rixy-club-01-desktop.jpg",
+        "md5": "3bdf168da41ae4772da8c355eb43916e"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/visuals/entertainment-02-mobile.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/visuals/entertainment-02-mobile.jpg",
+        "md5": "45665c6731fc7d4b48f9a11f097d383d"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/visuals/rixy-club-03-mobile.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/visuals/rixy-club-03-mobile.jpg",
+        "md5": "dde54b87c90d3270d56238cb8a8b716f"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/visuals/rixy-club-01-mobile.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/visuals/rixy-club-01-mobile.jpg",
+        "md5": "28d46b6db3059c928d05c13a24670467"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/visuals/entertainment-02-desktop.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/visuals/entertainment-02-desktop.jpg",
+        "md5": "dd53aca3ddf7da5f5f60a77a2498c6b8"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/visuals/entertainment-01-mobile.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/visuals/entertainment-01-mobile.jpg",
+        "md5": "8e8c008b13a311806880e0c2d955cc55"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/rest-10.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/restaurants-and-bars/rest-10.jpg",
+        "md5": "94b0872ebd2b0a49cc611d4bc00241be"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/rest-09.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/restaurants-and-bars/rest-09.jpg",
+        "md5": "18cb12abe168e9239364bfaafe691d64"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/rest-07.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/restaurants-and-bars/rest-07.jpg",
+        "md5": "610261eaaf971c9196f584b8625f28d9"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/visuals/entertainment-01-desktop.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/visuals/entertainment-01-desktop.jpg",
+        "md5": "982caa9286784c88c09f2231c67f4d23"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/rest-11.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/restaurants-and-bars/rest-11.jpg",
+        "md5": "4674d09acff0d1534a4dba8ede1c2f07"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/rest-08.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/restaurants-and-bars/rest-08.jpg",
+        "md5": "410ca66fd7a687d3f50f221d05b3a308"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/rest-04.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/restaurants-and-bars/rest-04.jpg",
+        "md5": "ce3929c122897a2b0a5b6d7122b244d0"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/rest-02.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/restaurants-and-bars/rest-02.jpg",
+        "md5": "65717385fed997bb3af811aa59a4f0a8"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/rest-05.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/restaurants-and-bars/rest-05.jpg",
+        "md5": "b7d7117e8456ce3bfd467dfb3a358c15"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/rest-06.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/restaurants-and-bars/rest-06.jpg",
+        "md5": "6a7d6a7d57df1238c1081d0b2d51396b"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/rest-03.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/restaurants-and-bars/rest-03.jpg",
+        "md5": "10bfb16978bd5aabce6f7f3a94a23384"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/bar-08.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/restaurants-and-bars/bar-08.jpg",
+        "md5": "53230200e77ed6203ffae277865fd0b5"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/bar-07.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/restaurants-and-bars/bar-07.jpg",
+        "md5": "fee1ebd4c6015d0733aefbd87e856ff0"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/rest-01.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/restaurants-and-bars/rest-01.jpg",
+        "md5": "2fc4905cef3915d6479d6e72b3dcade6"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/bar-03.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/restaurants-and-bars/bar-03.jpg",
+        "md5": "7231eda010308da9889754c057dc85fb"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/bar-04.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/restaurants-and-bars/bar-04.jpg",
+        "md5": "90402db60ec7aeef7f87217e7bec027c"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/bar-06.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/restaurants-and-bars/bar-06.jpg",
+        "md5": "1abd7dce5545bf5953a478bf325087e6"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/bar-05.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/restaurants-and-bars/bar-05.jpg",
+        "md5": "accaf157b328f134e5eeba6d2897b792"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/bar-02.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/restaurants-and-bars/bar-02.jpg",
+        "md5": "71f44c7e7a76ca2173c9098b29bb6ab9"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/bar-01.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/restaurants-and-bars/bar-01.jpg",
+        "md5": "f3f599a1476b00f7a29f5d8e713b3a26"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/07-mobile.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/gallery/07-mobile.jpg",
+        "md5": "58f3cfe000b6339a8f2b3ebf18a43a44"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/08-mobile.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/gallery/08-mobile.jpg",
+        "md5": "2cd04c3e752232325138c36678e474bc"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/07-desktop.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/gallery/07-desktop.jpg",
+        "md5": "1435bd55d4bdf80061a7e1019ca025d2"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/06-mobile.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/gallery/06-mobile.jpg",
+        "md5": "d160b78dd0e1346ef6520ff6eefa865c"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/05-mobile.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/gallery/05-mobile.jpg",
+        "md5": "7a524da49ef112202b7cf684b704a0d7"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/04-desktop.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/gallery/04-desktop.jpg",
+        "md5": "aa6079d9e55b9926bd1cdbac5de408a9"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/03-mobile.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/gallery/03-mobile.jpg",
+        "md5": "ca236371741d3efcef2b1a40c5ce3eb6"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/08-desktop.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/gallery/08-desktop.jpg",
+        "md5": "540701dfdf5d06c671c9b06f6a766024"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/06-desktop.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/gallery/06-desktop.jpg",
+        "md5": "21e770ddd07b39c439adaf30a6639acc"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/05-desktop.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/gallery/05-desktop.jpg",
+        "md5": "21c74874f2db44427be66633505caea7"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/04-mobile.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/gallery/04-mobile.jpg",
+        "md5": "8a6353b18db32683d472044580c30801"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/02-mobile.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/gallery/02-mobile.jpg",
+        "md5": "e2188b5b20997fa4b5a8d55a72806a45"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/01-mobile.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/gallery/01-mobile.jpg",
+        "md5": "2d30c14cacb149ba9c188ff25bd77753"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/03-desktop.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/gallery/03-desktop.jpg",
+        "md5": "8e40bb47be2e8d00366e2d02913fa846"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/01-desktop.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/gallery/01-desktop.jpg",
+        "md5": "0448d1b9fdea38828d9cf11d2ee1a387"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/02-desktop.jpg",
+        "relativePath": "swissotel-sharm-el-sheikh/gallery/02-desktop.jpg",
+        "md5": "d1239d8d843983ed6d4ffc6b6cbc4cf4"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/logos/swissotel-sharm-el-sheikh.png",
+        "relativePath": "logos/swissotel-sharm-el-sheikh.png",
+        "md5": "4a8476f34b0517e32d1be0b03abd0f2f"
     }
 ]
