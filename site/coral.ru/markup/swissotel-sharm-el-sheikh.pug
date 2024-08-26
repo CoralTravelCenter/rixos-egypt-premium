@@ -1,0 +1,191 @@
+include ../markup/mixins
+
+- const hotel = hotels.find(hotel => hotel.id === 54272);
+
+body
+    script
+        != `var known_hotel = ${ JSON.stringify(hotel) };`
+
+    +internal-nav([
+        { label: 'Номера', ref: 'section.suites' },
+        { label: 'Рестораны и бары', ref: 'section.restaurants-and-bars' },
+        { label: 'Kids Club', ref: 'section.rixy-club' },
+        { label: 'CoralBonus', ref: 'section.coral-bonus' },
+        { label: 'Контакты', ref: 'section.leased-line-premium' },
+    ], '/chain/rixos/egypt/', '.interactive-map')
+
+    +kvv({
+        h1: 'Swissôtel Sharm El Sheikh',
+        logo: '/site/coral.ru/assets/logos/swissotel-sharm-el-sheikh.png',
+        desktop_poster: '/site/coral.ru/assets/swissotel-sharm-el-sheikh/kv-poster-desktop.jpg',
+        mobile_poster:  '/site/coral.ru/assets/swissotel-sharm-el-sheikh/kv-poster-mobile.jpg',
+        desktop_vid: 1002697441,
+        mobile_vid: 1002697552,
+        video_scale: 1.5,
+        five_stars: true,
+        location: 'Египет, Шарм-эш-Шейх'
+    })
+
+    section.held.intro
+        .inhalt
+            h2 Добро пожаловать <br>в Swissôtel Sharm El Sheikh
+            p.generic
+                :typo
+                    Представляем изысканный отель Swissotel Sharm El-Sheikh, роскошь в самом сердце Наама-Бей. Благодаря собственному песчаному пляжу, который ласкают кристально чистые воды, у этого оазиса изобилия попросту нет конкурентов. Отель может похвастаться 590 прекрасно обставленными номерами и потрясающими видами; здесь гости чувствуют комфорт и элегантность. В основном ресторане вас ждут гастрономические изыски и великолепные ароматы, которые возбудят вкусовые рецепторы. Чтобы получить незабываемые впечатления, отправляйтесь в один из четырех ресторанов a la carte, где вам предложат попробовать произведения кулинарного искусства.
+            .actions
+                button.knopf(data-ref='section.suites') Выбрать номер
+
+    section.held.suites
+        .inhalt
+            h2.rooms-splitter
+            .rooms-list-combo
+                .rooms-grid
+                .rooms-paging.discrete-pager
+
+    +gallery([
+        { visual_desktop: '/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/01-desktop.jpg', visual_mobile: '/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/01-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/02-desktop.jpg', visual_mobile: '/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/02-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/03-desktop.jpg', visual_mobile: '/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/03-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/04-desktop.jpg', visual_mobile: '/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/04-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/05-desktop.jpg', visual_mobile: '/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/05-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/06-desktop.jpg', visual_mobile: '/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/06-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/07-desktop.jpg', visual_mobile: '/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/07-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/08-desktop.jpg', visual_mobile: '/site/coral.ru/assets/swissotel-sharm-el-sheikh/gallery/08-mobile.jpg' },
+    ])
+
+    +restaurants-and-bars({
+        about: 'Насладитесь свежеприготовленными блюдами всего мира. В Swissôtel Sharm El Sheikh вы можете насладиться, пикантным мясом на гриле, ароматной пастой, суши, традиционными гарнирами османской и турецкой кухни, восхитительными десертами и многими другими блюдами в яркой и удобной обстановке.',
+        restaurants: [
+            {
+                visual:  '/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/rest-01.jpg',
+                heading: "LA ROSETTA",
+                body:    "Наш уютный ресторан приглашает вас насладиться сутью итальянской кухни, в место, где каждое блюдо готовится с любовью и традициями."
+            },
+            {
+                visual:  '/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/rest-02.jpg',
+                heading: "MUMBAI",
+                body:    "Mumbai as a Spice House — это место, где можно ощутить яркие вкусы Индии. Погрузитесь в шумиху Мумбаи в нашем аутентичном индийском ресторане."
+            },
+            {
+                visual:  '/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/rest-03.jpg',
+                heading: "THE QUARTER",
+                body:    "Наш ресторан предлагает уникальную концепцию питания, предлагая шведские столы на завтрак, обед и ужин с различными открытыми станциями приготовления блюд."
+            },
+            {
+                visual:  '/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/rest-04.jpg',
+                heading: "FOOD COURT AQUA",
+                body:    "От блюд интернациональной кухни и свежих салатов до пикантных закусок и восхитительных десертов — здесь найдется что-то для каждого. Насладитесь ярким и удобным обедом в одном месте."
+            },
+            {
+                visual:  '/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/rest-05.jpg',
+                heading: "FOOD COURT BEACH",
+                body:    "Откройте для себя разнообразные кулинарные впечатления в нашем фуд-корте, где представлен широкий выбор блюд интернациональной кухни. "
+            },
+            {
+                visual:  '/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/rest-06.jpg',
+                heading: "CHURRASCO BRAZIL",
+                body:    "Это настоящий бразильский ресторан, который чтит традицию чурраско — стиль приготовления, при котором разнообразные виды мяса жарятся на шампурах над угольным огнем. "
+            },
+            {
+                visual:  '/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/rest-07.jpg',
+                heading: "DIM SUM NOODLE",
+                body:    "В нашем ресторане мы предлагаем восхитительную концепцию, которая объединяет лучшее из блюд димсам и лапши. Гости могут насладиться широким выбором небольших закусок и ароматной лапши."
+            },
+            {
+                visual:  '/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/rest-08.jpg',
+                heading: "LA TAVERNA",
+                body:    "Греческий ресторан La Taverna предлагает яркие и аутентичные блюда, вдохновленные богатыми кулинарными традициями Греции."
+            },
+            {
+                visual:  '/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/rest-09.jpg',
+                heading: "THE MUTFAK",
+                body:    "Mutfak, очаровательный ресторан османской кухни, приглашает посетителей в кулинарное путешествие по ароматам и истории Османской империи."
+            },
+            {
+                visual:  '/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/rest-10.jpg',
+                heading: "FRAME GARDEN GRIILL",
+                body:    "Добро пожаловать в Flame Garden Grill, где сочетание природы, приготовленных на огне деликатесов и интерактивных обеденных впечатлений отправит гостей в кулинарное путешествие, "
+            },
+            {
+                visual:  '/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/rest-11.jpg',
+                heading: "SKY LOUNGE",
+                body:    "Почувствуйте изысканную элегантность нашего Sky Lounge, где вы можете насладиться яркими вкусами азиатской кухни и побаловать себя искусно приготовленными суши. "
+            },
+        ],
+        bars: [
+            {
+                visual:  '/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/bar-01.jpg',
+                heading: "SKY LOUNGE BAR",
+                body:    "Поднимитесь в Sky Lounge Bar и насладитесь захватывающими видами, наслаждаясь любимыми напитками. Испытайте элегантность и расслабление в нашей возвышенной обстановке лаунжа."
+            },
+            {
+                visual:  '/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/bar-02.jpg',
+                heading: "TERRACE BAR",
+                body:    "Посетите бар Terrace, где вы можете насладиться уютной атмосферой и расслабиться с любимыми напитками. Расслабьтесь и насладитесь атмосферой, наслаждаясь напитками на нашей уютной террасе."
+            },
+            {
+                visual:  '/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/bar-03.jpg',
+                heading: "POOL BAR",
+                body:    "Расслабьтесь и освежитесь в нашем баре у бассейна. Насладитесь разнообразными прохладительными напитками, коктейлями и легкими закусками, греясь на солнце и наслаждаясь у бассейна."
+            },
+            {
+                visual:  '/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/bar-04.jpg',
+                heading: "BEACH LOUNGE",
+                body:    "Бар расположен у самой кромки моря, где вы можете насладиться в течении дня освежающими напитками и разнообразными коктейлями."
+            },
+            {
+                visual:  '/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/bar-05.jpg',
+                heading: "ISLAND BAR",
+                body:    "Island Bar, ваш оазис для детоксикации и полезных напитков, включая освежающие пузырьковые чаи. Побалуйте себя омолаживающими напитками, которые питают и тело, и душу."
+            },
+            {
+                visual:  '/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/bar-06.jpg',
+                heading: "SWISS CAFE",
+                body:    "Расслабьтесь в элегантной атмосфере нашего Swiss Café. Насладитесь мастерски приготовленными коктейлями, изысканными винами и выбором легких закусок."
+            },
+            {
+                visual:  '/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/bar-07.jpg',
+                heading: "BEACH BAR",
+                body:    "Наслаждайтесь отдыхом на пляже в нашем Beach Bar, предлагающем освежающие напитки и коктейли с видом на море. Это идеальное место, чтобы расслабиться и понежиться на солнце."
+            },
+            {
+                visual:  '/site/coral.ru/assets/swissotel-sharm-el-sheikh/restaurants-and-bars/bar-08.jpg',
+                heading: "AQUA FOOD COURT BAR",
+                body:    "Погрузитесь в веселье в нашем баре Aqua Park! Наслаждайтесь освежающими напитками и коктейлями между захватывающими аттракционами."
+            },
+        ],
+    })
+
+    section.held.edge2edge.rixy-club.visuals-x-slider
+        .x-slider
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/swissotel-sharm-el-sheikh/visuals/rixy-club-01-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/swissotel-sharm-el-sheikh/visuals/rixy-club-01-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/swissotel-sharm-el-sheikh/visuals/rixy-club-02-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/swissotel-sharm-el-sheikh/visuals/rixy-club-02-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/swissotel-sharm-el-sheikh/visuals/rixy-club-03-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/swissotel-sharm-el-sheikh/visuals/rixy-club-03-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/swissotel-sharm-el-sheikh/visuals/rixy-club-01-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/swissotel-sharm-el-sheikh/visuals/rixy-club-01-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/swissotel-sharm-el-sheikh/visuals/rixy-club-02-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/swissotel-sharm-el-sheikh/visuals/rixy-club-02-mobile.jpg)')
+        .overlay
+            h2 Детский Kids Club
+            p
+                :typo
+                    Откройте для себя наш детский клуб, где дети в возрасте от 4 до 12 лет наслаждаются весельем и увлекательными занятиями под присмотром. От искусства и ремесел до игр, это безопасное и захватывающее место для маленьких гостей, где можно играть и заводить новых друзей.
+
+    +entertainment({
+        heading: 'Purovel Spa и Exclusive Sports Club',
+        ps: [
+            'Побалуйте себя омолаживающим спа-днем, наполненным множеством процедур для тела и разума. В спортзале есть множество кардиотренажеров и свободных весов, которые помогут вам оставаться мотивированными во время вашего отдыха. Побалуйте себя роскошными услугами салона красоты, такими как педикюр и процедуры для волос.',
+            'Шагните в мир благополучия с нашей командой профессиональных тренеров по фитнесу, которые готовы провести вас через бодрящие спортивные тренировки. Независимо от того, являетесь ли вы любителем фитнеса или только начинаете свой путь к здоровью, наши тренеры стремятся обеспечить, чтобы каждая тренировка соответствовала вашим индивидуальным потребностям.'
+        ],
+        lefty: {
+            title: 'Расслабление в Purovel Spa',
+            visual_desktop: '/site/coral.ru/assets/swissotel-sharm-el-sheikh/visuals/entertainment-01-desktop.jpg',
+            visual_mobile: '/site/coral.ru/assets/swissotel-sharm-el-sheikh/visuals/entertainment-01-mobile.jpg'
+        },
+        righty: {
+            title: 'Занятия спортом и фитнесом',
+            visual_desktop: '/site/coral.ru/assets/swissotel-sharm-el-sheikh/visuals/entertainment-02-desktop.jpg',
+            visual_mobile: '/site/coral.ru/assets/swissotel-sharm-el-sheikh/visuals/entertainment-02-mobile.jpg'
+        }
+    })
+
+    +coral-bonus()
+    +contacts-and-map()

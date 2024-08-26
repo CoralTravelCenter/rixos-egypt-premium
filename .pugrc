@@ -37,11 +37,18 @@
                     { name: 'Виллы', matcher: { field: 'name', regex: 'villa', flags: 'i' } }
                 ]
             },
-//            {
-//                id: 54272,
-//                name: 'Swissotel Sharm El Sheikh',
-//                description:  'Отель в центре Наама-Бей с 590 номерами и потрясающими видами, предлагает изысканную кухню и комфорт'
-//            },
+            {
+                id: 54272,
+                name: 'Swissotel Sharm El Sheikh',
+                description:  'Отель в центре Наама-Бей с 590 номерами и потрясающими видами, предлагает изысканную кухню и комфорт',
+                url: '/chain/rixos/egypt/swissotel-sharm-el-sheikh/',
+                logo: '/site/coral.ru/assets/logos/swissotel-sharm-el-sheikh.png',
+                roomsSplit: [
+                    { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
+                    { name: 'Номера', matcher: { field: 'name', regex: 'suite', flags: 'i', negate: true } },
+                    { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } }
+                ]
+            },
             {
                 id: 64951,
                 name: 'Rixos Radamis Sharm El Sheikh',
