@@ -59,14 +59,18 @@ import Swiper from "swiper";
                     console.log('=== details: %o', details);
                     const { products, rooms } = details;
                     const models_list = products.map(product => {
-                        const room = rooms[product.rooms.at(0).roomKey];
-                        const visual = room.images?.at(0)?.sizes.find(s => s.type === 4)?.url;
+                        let room_key = product.rooms.at(0).roomKey;
+                        const room = rooms[room_key];
+                        let visual = room.images?.at(0)?.sizes.find(s => s.type === 4)?.url;
+                        if (~visual.indexOf('defaultimages')) {
+                            visual = `/site/coral.ru/assets/missing-room-pics/${ room_key }.jpg`;
+                        }
                         const visual_style = visual ? `url(${ visual })` : 'linear-gradient(#def, #def)';
                         const room_area = room.roomSize.value;
                         const pax = room.maxPax.value;
                         const bedrooms = room.bedroom.value.split(/\s+/).join('<br>');
                         return {
-                            id: product.rooms.at(0).roomKey,
+                            id: room_key,
                             // name: room.name,
                             name: room.name.replace(/\d.*/,''),
                             priceFormatted: Math.round(product.price.amount / product.stayNights).formatCurrency(),
