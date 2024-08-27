@@ -1,12 +1,14 @@
 import { hostReactAppReady, preloadScript, vimeoAutoPlay, watchIntersection } from "../../common/js/usefuls";
 import { StackSlider } from "./stack-slider";
 import { ScrollPager } from "./scroll-pager/scroll-pager";
-import { listHotelInfo } from "./api-adapter";
+import { listHotelInfo, priceSearchEncrypt } from "./api-adapter";
 
 import RixosMap from '../rixos-map/RixosMap.vue'
 import { createApp } from "vue";
 import Milestones from "./milestones";
 import { setupScrollTriggerPinups, setupShortcuts } from "../../common/js/utils";
+import { priceSearchDetail_query_defaults } from "../config/defaults";
+import dayjs from "dayjs";
 
 (async function () {
     await hostReactAppReady();
@@ -51,11 +53,23 @@ import { setupScrollTriggerPinups, setupShortcuts } from "../../common/js/utils"
                     const visual_el = hotel_card_el.querySelector('.visual');
                     visual_el?.style.setProperty('--visual', `url(${ visual })`);
                 }
-                // link to hotel page
-                hotel_card_el.querySelector('a.choose-hotel').href = `/hotels/${ hotel.location.friendlyUrl }/`;
                 // extend hotels data with got info
                 const known_hotel = window.known_hotels.find(known => known.id == hotel.id);
                 if (known_hotel) known_hotel.ee = hotel;
+                // link to hotel page
+                const query = Object.assign({}, priceSearchDetail_query_defaults);
+                const since = dayjs(known_hotel.searchOffersSince);
+                Object.assign(query.searchCriterias, {
+                    beginDates:       [
+                        since.add(14, 'days').format('YYYY-MM-DD'),
+                        since.add(14 + 60, 'days').format('YYYY-MM-DD')
+                    ],
+                    arrivalLocations: [known_hotel.ee.location]
+                });
+                priceSearchEncrypt(query.searchCriterias).then(search => {
+                    const hotel_page_uri = `${ search.redirectionUrl }?qp=${ search.queryParam }&p=2`;
+                    hotel_card_el.querySelector('a.choose-hotel').href = hotel_page_uri;
+                });
             }
         });
         new ScrollPager(
