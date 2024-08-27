@@ -1863,5 +1863,15 @@
         "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/missing-room-pics/50090.jpg",
         "relativePath": "missing-room-pics/50090.jpg",
         "md5": "937b1104fe108711526faf5043676892"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/coral-bonus-visual-mobile.jpg",
+        "relativePath": "coral-bonus-visual-mobile.jpg",
+        "md5": "d4e81826e22bd083638e073ec286b692"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/coral-bonus-visual-desktop.jpg",
+        "relativePath": "coral-bonus-visual-desktop.jpg",
+        "md5": "a8f4d26574ac450a80653fc79631b14d"
     }
 ]
