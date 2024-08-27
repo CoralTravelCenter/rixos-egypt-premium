@@ -66,6 +66,7 @@ import Swiper from "swiper";
                         const pax = room.maxPax.value;
                         const bedrooms = room.bedroom.value.split(/\s+/).join('<br>');
                         return {
+                            id: product.rooms.at(0).roomKey,
                             // name: room.name,
                             name: room.name.replace(/\d.*/,''),
                             priceFormatted: Math.round(product.price.amount / product.stayNights).formatCurrency(),
