@@ -1,0 +1,197 @@
+include ../markup/mixins
+
+- const hotel = hotels.find(hotel => hotel.id === 58465);
+
+body
+    script
+        != `var known_hotel = ${ JSON.stringify(hotel) };`
+
+    +internal-nav([
+        { label: 'Номера', ref: 'section.suites' },
+        { label: 'Рестораны и бары', ref: 'section.restaurants-and-bars' },
+        { label: 'RixyClub', ref: 'section.rixy-club' },
+        { label: 'CoralBonus', ref: 'section.coral-bonus' },
+        { label: 'Контакты', ref: 'section.leased-line-premium' },
+    ], '/chain/rixos/egypt/', '.interactive-map')
+
+    +kvv({
+        h1: 'Rixos Radamis Blue Planet Hotel',
+        logo: '/site/coral.ru/assets/logos/rixos-radamis-blue-planet-hotel.png',
+        desktop_poster: '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/kv-poster-desktop.jpg',
+        mobile_poster:  '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/kv-poster-mobile.jpg',
+        desktop_vid: 999555635,
+        mobile_vid: 999556220,
+        video_scale: 1.5,
+        five_stars: true,
+        location: 'Египет, Шарм-эш-Шейх'
+    })
+
+    section.held.intro
+        .inhalt
+            h2 Добро пожаловать <br>в Rixos Radamis Blue Planet Hotel
+            p.generic
+                :typo
+                    Rixos Radamis Blue Planet Hotel — это самый захватывающий водный рай с прекрасно спроектированными и красочными номерами, где вы найдете широкий спектр возможностей для приятного отдыха всей семьи. Станьте частью идеального отдыха с семейной концепцией, которая включает аквапарк, спортивные кафе, игровые комнаты, детский клуб, эксклюзивные кулинарные изыски и множество исключительных удобств для детей.
+            .rebranding-announcement
+                .logo(style='background-image: url("/site/coral.ru/assets/logos/rixos-radamis-sharm-el-sheikh.png")')
+                h3 Обратите внимание
+                p
+                    :typo
+                        С 16 октября Rixos Radamis Blue Planet Hotel изменит название на Rixos Radamis Sharm El Sheikh
+            .actions
+                button.knopf(data-ref='section.suites') Выбрать номер
+
+    section.held.suites
+        .inhalt
+            h2.rooms-splitter
+            .rooms-list-combo
+                .rooms-grid
+                .rooms-paging.discrete-pager
+
+    +gallery([
+        { visual_desktop: '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/gallery/01-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/gallery/01-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/gallery/02-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/gallery/02-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/gallery/03-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/gallery/03-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/gallery/04-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/gallery/04-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/gallery/05-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/gallery/05-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/gallery/06-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/gallery/06-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/gallery/07-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/gallery/07-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/gallery/08-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/gallery/08-mobile.jpg' },
+    ])
+
+    +restaurants-and-bars({
+        about: 'в Rixos Radamis Blue Planet Hotel вы можете попробовать изыканные блюда со всего мира, приготовленные опытными поварами. Насладитесь отдыхом на берегу моря или в приятной амосфере, окруженные теплым гостеприимством.',
+        restaurants: [
+            {
+                visual:  '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/restaurants-and-bars/rest-01.jpg',
+                heading: "CACTUS",
+                body:    "Побалуйте себя настоящими мексиканскими блюдами, искусно приготовленными опытными поварами. Насладитесь яркими и огненными вкусами, которые может предложить Мексика"
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/restaurants-and-bars/rest-02.jpg',
+                heading: "L’OLIVIO",
+                body:    "Место, где классические вкусы Италии сочетаются с современными нотками. Блюда, приготовленные на углях, представляют  собой гармоничное сочетание ингредиентов и кулинарного мастерства."
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/restaurants-and-bars/rest-03.jpg',
+                heading: "MANDARIN",
+                body:    "Отправьтесь в кулинарное путешествие на Дальний Восток в нашем изысканном ресторане. Побалуйте себя богатыми вкусами и ароматами, которые определяют разнообразие блюд  кухни."
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/restaurants-and-bars/rest-04.jpg',
+                heading: "RIVIERA",
+                body:    "Отправьтесь в настоящее кулинарное путешествие в наш ресторан Riviera, где вы сможете  насладиться традиционными рецептами, приготовленными из лучших ингредиентов."
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/restaurants-and-bars/rest-05.jpg',
+                heading: "LALEZAR",
+                body:    "Исследуйте богатое кулинарное наследие Турции с разнообразными традиционными  блюдами, которые подаются с теплым гостеприимством."
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/restaurants-and-bars/rest-06.jpg',
+                heading: "Turquoise",
+                body:    "Погрузитесь в кулинарное путешествие в нашем ресторане Turquoise. Эта концепция открытого шведского стола предлагает широкий выбор блюд со всего мира на любой вкус."
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/restaurants-and-bars/rest-07.jpg',
+                heading: "VERANDA",
+                body:    "Насладитесь уникальным кулинарным путешествием в нашем главном ресторане Veranda.  Попробуйте широкий выбор вкусных блюд со всего мира, искусно приготовленных нашими талантливыми поварами."
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/restaurants-and-bars/rest-08.jpg',
+                heading: "SALT",
+                body:    "Погрузитесь в богатые вкусы моря в ресторане морепродуктов Salt. Наслаждайтесь разнообразными свежевыловленными морепродуктами, искусно приготовленными нашими  талантливыми поварами."
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/restaurants-and-bars/rest-09.jpg',
+                heading: "RIXY",
+                body:    "Порадуйте своих малышей нашим рестораном Rixy. Предлагая детское меню в игровой  обстановке, обед становится веселее."
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/restaurants-and-bars/rest-10.jpg',
+                heading: "PEOPLE’S",
+                body:    "Насладитесь вкусом мировых деликатесов в нашем ресторане Peoples, где международная  кухня сочетается с завораживающим видом на Красное море."
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/restaurants-and-bars/rest-11.jpg',
+                heading: "THE MANGAL",
+                body:    "Насладитесь богатым вкусом нашего ресторана The Mangal, где дразнящий аромат барбекю  и вкус овощей на гриле сочетаются воедино."
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/restaurants-and-bars/rest-12.jpg',
+                heading: "TEPPANYAKI",
+                body:    "Отправьтесь в кулинарное путешествие в нашем ресторане Теппаньяки, где опытные повара  превращают ужин в завораживающее представление."
+            },
+        ],
+        bars: [
+            {
+                visual:  '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/restaurants-and-bars/bar-01.jpg',
+                heading: "Irish Pub",
+                body:    "Этот аутентичный бар, расположен на первом этаже  главного здания, служит местом для наслаждения напитками и местом встреч для ведения беседы в непринужденной обстановке."
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/restaurants-and-bars/bar-02.jpg',
+                heading: "Lobby Bar",
+                body:    "Лобби-бар предлагает теплую и гостеприимную атмосферу, с разнообразными напитками и закусками.  Это идеальное место, чтобы расслабиться, пообщаться с другими гостями"
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/restaurants-and-bars/bar-03.jpg',
+                heading: "POOL BAR",
+                body:    "Наши бары у бассейнов предлагают широкий выбор коктейлей, от тропических до смузи и безалкогольных  напитков, созданных для того, чтобы вы освежились под теплым солнцем."
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/restaurants-and-bars/bar-04.jpg',
+                heading: "E-SPORT CAFÉ",
+                body:    "Окунитесь в захватывающий мир соревновательных игр в нашем E-Sport Café. Мы предлагаем множество игр, подходящих для всех уровней  навыков."
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/restaurants-and-bars/bar-05.jpg',
+                heading: "CANDY BAR",
+                body:    "Побалуйте себя нашим Candy Bar – сладким раем для любителей десертов всех возрастов. Предлагая  разнообразные сладости, это идеальное место для сладкоежек."
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/restaurants-and-bars/bar-06.jpg',
+                heading: "Beach Bar",
+                body:    "Побалуйте себя идеальным сочетанием солнца, песка и напитков в нашем баре на пляже. Освежающие  коктейли, непринужденная атмосфера и потрясающие виды — это идеальный морской рай."
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/restaurants-and-bars/bar-07.jpg',
+                heading: "MOVENPICK ICE CREAM CAFE",
+                body:    "Позвольте себе сладкое  удовольствие с нашими богатейшими вкусами на фоне красивого пляжа. Идеальное место для  освежающего десерта!"
+            },
+        ],
+    })
+
+    section.held.edge2edge.rixy-club.visuals-x-slider
+        .x-slider
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/visuals/rixy-club-01-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/visuals/rixy-club-01-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/visuals/rixy-club-02-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/visuals/rixy-club-02-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/visuals/rixy-club-03-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/visuals/rixy-club-03-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/visuals/rixy-club-01-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/visuals/rixy-club-01-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/visuals/rixy-club-02-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/visuals/rixy-club-02-mobile.jpg)')
+        .overlay
+            h2 Rixy Kids Town
+            p
+                :typo
+                    Rixy Kids Town выходит за рамки традиционных игровых площадок; это настоящий город, созданный исключительно для детей. Это больше, чем просто развлечение – это захватывающий образовательный опыт, который дает детским умам возможность мечтать, учиться и творить в своем собственном оживленном городе. Присоединяйтесь к нам в волшебном месте, где каждый ребенок становится архитектором своих приключений!
+
+    +entertainment({
+        heading: 'Спа и спортивный клуб Exclusive',
+        ps: [
+            'Окунитесь в мир благополучия вместе с нашей командой профессиональных фитнес-тренеров Exclusive Sports Club, которые готовы провести вас через бодрящие спортивные тренировки. Независимо от того, являетесь ли вы энтузиастом фитнеса или только начинаете свой путь к оздоровлению, наши тренеры позаботятся о том, чтобы каждое занятие соответствовало вашим индивидуальным потребностям.',
+            'Погрузитесь в мир релаксации и омоложения в нашем изысканном спа-центре Anjana, где спокойствие сочетается с наслаждением. Наши опытные специалисты создают индивидуальные спа-процедуры, предлагая симфонию спокойствия для вашего разума, тела и души.'
+        ],
+        lefty: {
+            title: 'Расслабление в спа-салоне',
+            visual_desktop: '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/visuals/entertainment-01-desktop.jpg',
+            visual_mobile: '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/visuals/entertainment-01-mobile.jpg'
+        },
+        righty: {
+            title: 'Занятия спортом и фитнесом',
+            visual_desktop: '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/visuals/entertainment-02-desktop.jpg',
+            visual_mobile: '/site/coral.ru/assets/rixos-radamis-sharm-el-sheikh/visuals/entertainment-02-mobile.jpg'
+        }
+    })
+
+    +coral-bonus()
+    +contacts-and-map()
