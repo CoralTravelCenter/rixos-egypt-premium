@@ -330,6 +330,43 @@ section.intro {
 				.knopf();
 			}
 		}
+		.rebranding-announcement {
+			width: 100%;
+			border-radius: 12px;
+			background: white;
+			padding: 40px 40px 40px 0;
+			display: grid;
+			gap: 20px;
+			grid-template: auto auto / 20em 1fr;
+			.shady();
+			@media screen and (max-width: @mobile-breakpoint) {
+				grid-template: unset;
+				text-align: center;
+				padding: 20px;
+			}
+			.logo {
+				grid-area: 1 / 1 / -1 / 2;
+				background: center / contain no-repeat;
+				@media screen and (max-width: @mobile-breakpoint) {
+				    grid-area: unset;
+					height: 5em;
+				}
+			}
+			h3 {
+				grid-area: 1 / 2;
+				line-height: 1;
+				@media screen and (max-width: @mobile-breakpoint) {
+					grid-area: unset;
+				}
+			}
+			p {
+				grid-area: 2 / 2;
+				margin: 0;
+				@media screen and (max-width: @mobile-breakpoint) {
+					grid-area: unset;
+				}
+			}
+		}
 	}
 }
 

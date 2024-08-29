@@ -63,6 +63,30 @@
                 searchOffersSince: '2024-10-02',
             },
             {
+                id: 58464,
+                name: 'Rixos Radamis Tirana Hotel',
+                description:  '',
+                url: '/chain/rixos/egypt/rixos-radamis-tirana-hotel/',
+                logo: '/site/coral.ru/assets/logos/rixos-radamis-tirana-hotel.png',
+                roomsSplit: [
+                    { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
+                    { name: 'Номера', matcher: { field: 'name', regex: 'suite', flags: 'i', negate: true } },
+                    { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } }
+                ],
+            },
+//            {
+//                id: 58465,
+//                name: 'Rixos Radamis Blue Planet Hotel',
+//                description:  '',
+//                url: '/chain/rixos/egypt/rixos-radamis-blue-planet-hotel/',
+//                logo: '/site/coral.ru/assets/logos/rixos-radamis-blue-planet-hotel.png',
+//                roomsSplit: [
+//                    { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
+//                    { name: 'Номера', matcher: { field: 'name', regex: 'suite', flags: 'i', negate: true } },
+//                    { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } }
+//                ],
+//            },
+            {
                 id: 58466,
                 name: 'Club Prive By Rixos',
                 description:  'Это мир роскоши и элитных услуг, где комфорт сочетается с природой, а ваши желания формируют отдых',

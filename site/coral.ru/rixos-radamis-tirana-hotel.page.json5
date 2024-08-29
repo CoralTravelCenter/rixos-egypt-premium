@@ -1,0 +1,10 @@
+{
+	env: {
+		brand: 'coral-next',
+	},
+	contents: [
+        '/site/coral.ru/markup/styles-and-libs.html',
+		'/site/coral.ru/markup/rixos-radamis-tirana-hotel.pug',
+		'/site/coral.ru/markup/hotel-scripts.pug'
+	],
+}
