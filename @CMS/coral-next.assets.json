@@ -1873,5 +1873,15 @@
         "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/coral-bonus-visual-desktop.jpg",
         "relativePath": "coral-bonus-visual-desktop.jpg",
         "md5": "a8f4d26574ac450a80653fc79631b14d"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/logos/rixos-radamis-blue-planet-hotel.png",
+        "relativePath": "logos/rixos-radamis-blue-planet-hotel.png",
+        "md5": "3a5db23ef86edb9cc61de48b4b119f23"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/logos/rixos-radamis-tirana-hotel.png",
+        "relativePath": "logos/rixos-radamis-tirana-hotel.png",
+        "md5": "28cc4964d2d1f15f870aa90364b00a71"
     }
 ]
