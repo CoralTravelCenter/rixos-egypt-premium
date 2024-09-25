@@ -16,3 +16,6 @@ export const priceSearchDetail_query_defaults = {
         arrivalLocations: []
     }
 };
+
+export const defaultSearchOffersStart = 14;
+export const defaultSearchOffersDuration = 60;

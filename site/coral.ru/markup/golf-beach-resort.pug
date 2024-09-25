@@ -1,0 +1,163 @@
+include ../markup/mixins
+
+- const hotel = hotels.find(hotel => hotel.id === 118);
+
+body
+    script
+        != `var known_hotel = ${ JSON.stringify(hotel) };`
+
+    +internal-nav([
+        { label: 'Номера', ref: 'section.suites' },
+        { label: 'Рестораны и бары', ref: 'section.restaurants-and-bars' },
+        { label: 'RixyClub', ref: 'section.rixy-club' },
+        { label: 'CoralBonus', ref: 'section.coral-bonus' },
+        { label: 'Контакты', ref: 'section.leased-line-premium' },
+    ], '/chain/rixos/egypt/', '.interactive-map')
+
+    +kvv({
+        h1: 'Golf Beach Resort',
+        logo: '/site/coral.ru/assets/logos/golf-beach-resort.png',
+        desktop_poster: '/site/coral.ru/assets/golf-beach-resort/kv-poster-desktop.jpg',
+        mobile_poster:  '/site/coral.ru/assets/golf-beach-resort/kv-poster-mobile.jpg',
+        desktop_vid: 1012747068,
+        mobile_vid: 1012747132,
+        video_scale: 1.5,
+        five_stars: true,
+        location: 'Египет, Шарм-эш-Шейх'
+    })
+
+    section.held.intro
+        .inhalt
+            h2 Добро пожаловать <br>в Golf Beach Resort
+            p.generic
+                :typo
+                    Golf Beach Resort, расположенный на берегу Красного моря, является прекрасным 5-звездочным курортным отелем, в котором гостям предоставляются приватный пляж, 18-луночное поле для гольфа, 13 ресторанов с интернациональными блюдами, 2 бассейна с водными горками и ленивой рекой, а также 4 теннисных корта. Яркие номера отеля Jolie Ville гармонично оформлены в египетском стиле с коврами и плиткой на полу. Каждый номер имеет собственный балкон и телевизор с спутниковыми каналами, а из некоторых номеров открывается великолепный вид на Красное море.
+            .actions
+                button.knopf(data-ref='section.suites') Выбрать номер
+
+    section.held.suites
+        .inhalt
+            h2.rooms-splitter
+            .rooms-list-combo
+                .rooms-grid
+                .rooms-paging.discrete-pager
+
+    +gallery([
+       { visual_desktop: '/site/coral.ru/assets/golf-beach-resort/gallery/01-desktop.jpg', visual_mobile: '/site/coral.ru/assets/golf-beach-resort/gallery/01-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/golf-beach-resort/gallery/02-desktop.jpg', visual_mobile: '/site/coral.ru/assets/golf-beach-resort/gallery/02-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/golf-beach-resort/gallery/03-desktop.jpg', visual_mobile: '/site/coral.ru/assets/golf-beach-resort/gallery/03-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/golf-beach-resort/gallery/04-desktop.jpg', visual_mobile: '/site/coral.ru/assets/golf-beach-resort/gallery/04-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/golf-beach-resort/gallery/05-desktop.jpg', visual_mobile: '/site/coral.ru/assets/golf-beach-resort/gallery/05-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/golf-beach-resort/gallery/06-desktop.jpg', visual_mobile: '/site/coral.ru/assets/golf-beach-resort/gallery/06-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/golf-beach-resort/gallery/07-desktop.jpg', visual_mobile: '/site/coral.ru/assets/golf-beach-resort/gallery/07-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/golf-beach-resort/gallery/08-desktop.jpg', visual_mobile: '/site/coral.ru/assets/golf-beach-resort/gallery/08-mobile.jpg' },
+    ])
+
+    +restaurants-and-bars({
+        about: "Club Prive by Rixos Sharm El Sheikh — это настоящий рай для гурманов с  изобилием кулинарных изысков. Будь то основные рестораны или один из  ресторанов с обслуживанием по меню, гости могут познакомиться с широким  разнообразием блюд разных стран, обещая изысканные гастрономические  впечатления. Побалуйте себя богатством вкусов каждого приема пищи.",
+        restaurants: [
+            {
+                visual:  '/site/coral.ru/assets/golf-beach-resort/restaurants-and-bars/rest-01.jpg',
+                heading: "Mosaique Main",
+                body:    "Ресторан MosaiqueMain - сердце отеля, где подают блюда со всего мира. Наши шеф-повара создают настоящий кулинарный мозаик, объединяя традиции  и вкусы разных культур в одном месте."
+            },
+            {
+                visual:  '/site/coral.ru/assets/golf-beach-resort/restaurants-and-bars/rest-02.jpg',
+                heading: "Vintage Bistro",
+                body:    "Изысканное место, где интернациональная кухня встречается с элегантной атмосферой. Наслаждайтесь блюдами со всего мира в уютном и стильном окружении."
+            },
+            {
+                visual:  '/site/coral.ru/assets/golf-beach-resort/restaurants-and-bars/rest-03.jpg',
+                heading: "Grill BBQ",
+                body:    "Рай для любителей гриля. Наслаждайтесь сочными блюдами, приготовленными на открытом огне, в теплой и гостеприимной атмосфере настоящего барбекю."
+            },
+            {
+                visual:  '/site/coral.ru/assets/golf-beach-resort/restaurants-and-bars/rest-04.jpg',
+                heading: "Asian",
+                body:    "Ресторан Asian - экзотический уголок, где ароматы и вкусы Востока оживают. Откройте для себя разнообразие азиатской кухни в современной и изысканной атмосфере."
+            },
+            {
+                visual:  '/site/coral.ru/assets/golf-beach-resort/restaurants-and-bars/rest-05.jpg',
+                heading: "Bonsai",
+                body:    "Ресторан Bonsai - маленький кусочек Японии. Наслаждайтесь традиционными японскими блюдами, от суши до рамена, в минималистской и гармоничной атмосфере, вдохновленной искусством бонсай."
+            },
+            {
+                visual:  '/site/coral.ru/assets/golf-beach-resort/restaurants-and-bars/rest-06.jpg',
+                heading: "Mezze",
+                body:    "Кусочек Ближнего Востока в сердце отеля. Откройте для себя разнообразие ливанской кухни, от традиционных закусок до изысканных блюд, в теплой и гостеприимной атмосфере."
+            },
+            {
+                visual:  '/site/coral.ru/assets/golf-beach-resort/restaurants-and-bars/rest-07.jpg',
+                heading: "Samurai Noodle",
+                body:    "Samurai Noodle - путешествие по Азии в одном месте. Наслаждайтесь разнообразными азиатскими блюдами, от японских лапши до тайских карри, в современной и динамичной атмосфере отеля."
+            },
+            {
+                visual:  '/site/coral.ru/assets/golf-beach-resort/restaurants-and-bars/rest-08.jpg',
+                heading: "Wasabi",
+                body:    "Храм японской гастрономии в отеле. Откройте для себя мир суши и сашими, приготовленных из свежайших ингредиентов, в элегантной и минималистской атмосфере."
+            },
+        ],
+        bars: [
+            {
+                visual:  '/site/coral.ru/assets/golf-beach-resort/restaurants-and-bars/bar-01.jpg',
+                heading: "Lobby Bar",
+                body:    "Lobby Bar - сердце отеля, где можно расслабиться и насладиться широким выбором коктейлей и напитков в уютной и современной атмосфере, идеальной для встреч и отдыха."
+            },
+            {
+                visual:  '/site/coral.ru/assets/golf-beach-resort/restaurants-and-bars/bar-02.jpg',
+                heading: "Pirate Bar",
+                body:    "Уголок отеля, где можно окунуться в атмосферу морских приключений и насладиться экзотическими коктейлями и прохладными напитками в окружении пиратских артефактов и морской тематики."
+            },
+            {
+                visual:  '/site/coral.ru/assets/golf-beach-resort/restaurants-and-bars/bar-03.jpg',
+                heading: "Irish Pub",
+                body:    "Уютный уголок Ирландии где можно ощутить теплоту и гостеприимство, наслаждаясь пинтой Гиннесса и традиционной ирландской кухней в дружественной атмосфере."
+            },
+            {
+                visual:  '/site/coral.ru/assets/golf-beach-resort/restaurants-and-bars/bar-04.jpg',
+                heading: "Pool Bar",
+                body:    "Освежающий оазис у бассейна, где можно расслабиться и насладиться прохладными напитками и легкими закусками в солнечной атмосфере, не отрываясь от водных развлечений."
+            },
+            {
+                visual:  '/site/coral.ru/assets/golf-beach-resort/restaurants-and-bars/bar-05.jpg',
+                heading: "Sunset Bar",
+                body:    "Романтичный уголок с панорамным видом на закат, где можно насладиться изысканными коктейлями и легкими закусками, наблюдая за волшебным спектаклем природы в умиротворенной атмосфере."
+            },
+            {
+                visual:  '/site/coral.ru/assets/golf-beach-resort/restaurants-and-bars/bar-06.jpg',
+                heading: "Shisha Corner",
+                body:    "Восточный уголок релаксации, где можно расслабиться с чашкой ароматного кофе или чая, наслаждаясь разнообразными вкусами кальяна в уютной и спокойной атмосфере."
+            },
+        ]
+    })
+
+    section.held.edge2edge.rixy-club.visuals-x-slider
+        .x-slider
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/golf-beach-resort/visuals/show-01-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/golf-beach-resort/visuals/show-01-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/golf-beach-resort/visuals/show-02-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/golf-beach-resort/visuals/show-02-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/golf-beach-resort/visuals/show-03-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/golf-beach-resort/visuals/show-03-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/golf-beach-resort/visuals/show-01-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/golf-beach-resort/visuals/show-01-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/golf-beach-resort/visuals/show-02-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/golf-beach-resort/visuals/show-02-mobile.jpg)')
+        .overlay
+            h2 Rixy Kids Town
+            p
+                :typo
+                    В Golf Beach Resort детей ждет уникальный развлекательный клуб Rixy Kids Town. Здесь дети могут погрузиться в захватывающий образовательный опыт, который стимулирует их творчество и воображение. Каждый ребенок становится архитектором своих приключений, исследуя разнообразные активности и мероприятия, которые развивают навыки и дарят радость. Rixy Kids Town — это волшебное место, где веселье и обучение идут рука об руку, обеспечивая незабываемые моменты для всей семьи.
+
+    +entertainment({
+        heading: 'Spa & Wellness',
+        ps: ['Окунитесь в мир благополучия вместе с нашей командой профессиональных фитнес-тренеров. В Golf Beach Resort гости могут насладиться современным спа-центром, предлагающим широкий спектр процедур для расслабления и восстановления. Фитнес-зал, оборудованный современными тренажерами, позволяет поддерживать активный образ жизни, а живописные виды на Красное море создают идеальную атмосферу для тренировок.'],
+        lefty: {
+            title: 'Полное расслабление в спа-салоне',
+            visual_desktop: '/site/coral.ru/assets/golf-beach-resort/visuals/entertainment-01-desktop.jpg',
+            visual_mobile: '/site/coral.ru/assets/golf-beach-resort/visuals/entertainment-01-mobile.jpg'
+        },
+        righty: {
+            title: 'Занятия спортом и фитнесом',
+            visual_desktop: '/site/coral.ru/assets/golf-beach-resort/visuals/entertainment-02-desktop.jpg',
+            visual_mobile: '/site/coral.ru/assets/golf-beach-resort/visuals/entertainment-02-mobile.jpg'
+        }
+    })
+
+    +coral-bonus()
+    +contacts-and-map()

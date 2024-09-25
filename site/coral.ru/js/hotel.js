@@ -6,7 +6,11 @@ import RixosMap from '../rixos-map/RixosMap.vue'
 import { createApp } from "vue";
 import Milestones from "./milestones";
 import { refreshAllScrollTriggers, setupScrollTriggerPinups, setupShortcuts } from "../../common/js/utils";
-import { priceSearchDetail_query_defaults } from "../config/defaults";
+import {
+    defaultSearchOffersDuration,
+    defaultSearchOffersStart,
+    priceSearchDetail_query_defaults
+} from "../config/defaults";
 
 import room_card_template from 'bundle-text:/site/coral.ru/templates/room-card.pug'
 import '../../common/js/prototypes'
@@ -46,10 +50,12 @@ import Swiper from "swiper";
 
             const query = Object.assign({}, priceSearchDetail_query_defaults);
             const since = dayjs(window.known_hotel.searchOffersSince);
+            const start = window.known_hotel.searchOffersStart || defaultSearchOffersStart;
+            const duration = window.known_hotel.searchOffersDuration || defaultSearchOffersDuration;
             Object.assign(query.searchCriterias, {
                 beginDates:       [
-                    since.add(14, 'days').format('YYYY-MM-DD'),
-                    since.add(14 + 60, 'days').format('YYYY-MM-DD')
+                    since.add(start, 'days').format('YYYY-MM-DD'),
+                    since.add(start + duration, 'days').format('YYYY-MM-DD')
                 ],
                 arrivalLocations: [window.known_hotel.ee.location]
             });

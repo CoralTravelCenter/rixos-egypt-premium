@@ -19,6 +19,7 @@
                 description: 'Отель с видом на залив Акаба и остров Тиран. Предлагает гостям сконференц-залы, 7 бассейнов, 10 ресторанов, 9 баров, спа и велнес центр',
                 url: '/chain/rixos/egypt/rixos-sharm-el-sheikh/',
                 logo: '/site/coral.ru/assets/logos/rixos-sharm-el-sheikh.png',
+                searchOffersStart: 30,
                 roomsSplit: [
                     { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
                     { name: 'Номера', matcher: { field: 'name', regex: 'suite', flags: 'i', negate: true } },
@@ -116,11 +117,19 @@
 //                name: 'Rixos Premium Alamein',
 //                description:  'Этот небоскреб в Эль-Аламейне — роскошныйретрит с ультраэлитными номерамидля круглогодичного отдыха.'
 //            },
-//            {
-//                id: 118,
-//                name: 'Golf Beach Resort',
-//                description:  'Отель с 18-луночным гольф-полем, ресторанами интернациональной кухни, бассейнами, теннисными кортами и спа.'
-//            },
+            {
+                id: 118,
+                name: 'Golf Beach Resort',
+                description:  'Отель с 18-луночным гольф-полем, ресторанами интернациональной кухни, бассейнами, теннисными кортами и спа.',
+                url: '/chain/rixos/egypt/golf-beach-resort/',
+                logo: '/site/coral.ru/assets/logos/golf-beach-resort.png',
+                roomsSplit: [
+                    { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
+                    { name: 'Номера', matcher: { field: 'name', regex: 'suite|villa', flags: 'i', negate: true } },
+                    { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } },
+                    { name: 'Виллы', matcher: { field: 'name', regex: 'villa', flags: 'i' } }
+                ]
+            },
         ]
     }
 }
