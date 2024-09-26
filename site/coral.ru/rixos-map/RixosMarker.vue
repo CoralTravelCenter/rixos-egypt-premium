@@ -1,5 +1,6 @@
 <script setup>
 import { computed, getCurrentInstance, ref } from "vue";
+import { onClickOutside } from "@vueuse/core";
 
 import icon_elite from 'data-url:/site/coral.ru/assets-inline/hotel-marker-elite.svg';
 import { openedMapMarker } from "./global-state";
@@ -22,13 +23,23 @@ function handleClick() {
     openedMapMarker.value = isOpen.value ? $this : null;
 }
 
+const card_el = ref(null);
+onClickOutside(card_el, e => {
+    if (isOpen.value) {
+        // console.log('+++ onClickOutside: e: %o', e);
+        if (e.target.closest('.rixos-map')) {
+            isOpen.value = false;
+        }
+    }
+});
+
 </script>
 
 <template>
     <div class="rixos-marker" :class="{ open: isOpen }" @click="handleClick">
         <div class="placemark" :style="{ backgroundImage: `url(${ icon_elite })` }"></div>
         <div class="name">{{ hotel.name }}</div>
-        <div class="card">
+        <div class="card" ref="card_el">
             <img v-if="hotel.logo" :src="hotel.logo" class="logo">
             <div class="location">{{ hotel.ee.locationSummary.replace(/\(.+?\)/g,'') }}</div>
             <button v-if="initiallyOpen" data-ref="section.suites" class="learn-more">Выбрать номер</button>
