@@ -21,6 +21,7 @@ dayjs.extend(MinMax);
 
 import RoomsSplitter from "./rooms-splitter";
 import Swiper from "swiper";
+import { debounce } from "lodash";
 
 (async function () {
     await hostReactAppReady();
@@ -32,9 +33,9 @@ import Swiper from "swiper";
 
     const nav_section = document.querySelector('section.nav');
     const nav_spacer = nav_section.nextSibling;
-    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', debounce(() => {
         nav_section.classList.toggle('pinned', nav_section.getBoundingClientRect().top < 1 && nav_spacer.getBoundingClientRect().top < 1);
-    });
+    }, 10));
 
     setupShortcuts();
     setupScrollTriggerPinups(document.fonts.ready);

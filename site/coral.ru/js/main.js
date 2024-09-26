@@ -13,6 +13,7 @@ import {
     priceSearchDetail_query_defaults
 } from "../config/defaults";
 import dayjs from "dayjs";
+import { debounce } from "lodash";
 
 (async function () {
     await hostReactAppReady();
@@ -24,9 +25,9 @@ import dayjs from "dayjs";
 
     const nav_section = document.querySelector('section.nav');
     const nav_spacer = nav_section.nextSibling;
-    window.addEventListener('scroll', () => {
-        nav_section.classList.toggle('pinned', nav_section.getBoundingClientRect().top <= 0 && nav_spacer.getBoundingClientRect().top <= 0);
-    });
+    window.addEventListener('scroll', debounce(() => {
+        nav_section.classList.toggle('pinned', nav_section.getBoundingClientRect().top < 1 && nav_spacer.getBoundingClientRect().top < 1);
+    }, 10));
 
     setupShortcuts();
     setupScrollTriggerPinups(document.fonts.ready);
