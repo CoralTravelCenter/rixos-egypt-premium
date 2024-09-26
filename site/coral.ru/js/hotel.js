@@ -33,7 +33,7 @@ import Swiper from "swiper";
     const nav_section = document.querySelector('section.nav');
     const nav_spacer = nav_section.nextSibling;
     window.addEventListener('scroll', () => {
-        nav_section.classList.toggle('pinned', nav_section.getBoundingClientRect().top <= 0 && nav_spacer.getBoundingClientRect().top <= 0);
+        nav_section.classList.toggle('pinned', nav_section.getBoundingClientRect().top < 1 && nav_spacer.getBoundingClientRect().top < 1);
     });
 
     setupShortcuts();
