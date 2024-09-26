@@ -158,6 +158,23 @@ section.nav, section.nav + section {
 			}
 		}
 
+		.accommodation-shortcut {
+			.knopf();
+			font-weight: 300!important;
+			font-size: inherit;
+			background: @brand-orange;
+			align-self: center;
+			@media screen and (max-width: @nav-layout-break) {
+				order: 2;
+				.label {
+					display: none;
+				}
+			}
+			@media screen and (max-width: @mobile-breakpoint) {
+				margin-right: 1em;
+			}
+		}
+
 		.burger {
 			position: relative;
 			@media screen and (max-width: @nav-layout-break) {
