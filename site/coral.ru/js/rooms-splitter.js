@@ -33,7 +33,9 @@ export default class RoomsSplitter {
                         });
                         this.splitterEl.append(splitter_item);
                     }
-                    setup_item.list.push(room_card_el);
+                    if (!setup_item.list.includes(room_card_el)) {
+                        setup_item.list.push(room_card_el);
+                    }
                 }
             }
         }
