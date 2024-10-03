@@ -42,10 +42,16 @@ mixin hotel-card(hotel)
     .hotel-card(data-hotel-id=hotel.id)
         .visual
         .info
-            h4.name!= hotel.name
             .stars-black
                 each n in [1,2,3,4,5]
                     span.star-black
+            h4.name!= hotel.name
+            if hotel.usps && hotel.usps.length
+                ul.usps
+                    each usp in hotel.usps
+                        li
+                            span.icon(style=`--icon-url: url(${ usp.icon })`)
+                            span.label!= usp.label
             .description!= hotel.description
             .actions
                 a.choose-hotel(target='_blank') Выбрать отель

@@ -11,6 +11,24 @@
                     { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
                     { name: 'Номера', matcher: { field: 'name', regex: 'suite', flags: 'i', negate: true } },
                     { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } }
+                ],
+                usps: [
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-rixos-sharm-el-sheikh-service.svg',
+                        label: 'Доступ к сервису Rixos Sharm El Sheikh'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-aquaventure.svg',
+                        label: 'Эксклюзивный парк Aquaventure'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-carting.svg',
+                        label: 'Впечатляющий картинг'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-reef.svg',
+                        label: 'Частный коралловый риф'
+                    },
                 ]
             },
             {
@@ -24,6 +42,24 @@
                     { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
                     { name: 'Номера', matcher: { field: 'name', regex: 'suite', flags: 'i', negate: true } },
                     { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } }
+                ],
+                usps: [
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-18plus.svg',
+                        label: 'Эксклюзив только для взрослых'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-fine-cousine.svg',
+                        label: 'Рестораны с изысканной кухней'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-aquaventure.svg',
+                        label: 'Доступ в Aquaventure Park'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-beach-huts.svg',
+                        label: 'Премиальные пляжные домики'
+                    },
                 ]
             },
             {
@@ -36,6 +72,24 @@
                     { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
                     { name: 'Номера', matcher: { field: 'name', regex: 'villa', flags: 'i', negate: true } },
                     { name: 'Виллы', matcher: { field: 'name', regex: 'villa', flags: 'i' } }
+                ],
+                usps: [
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-beach.svg',
+                        label: 'Доступ к частному пляжу'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-golf.svg',
+                        label: 'Поле для гольфа с 18 лунками'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-bed.svg',
+                        label: 'Ультра-роскошные люксы'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-dish-vars.svg',
+                        label: 'Варианты изысканных блюд'
+                    },
                 ]
             },
             {
@@ -48,6 +102,24 @@
                     { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
                     { name: 'Номера', matcher: { field: 'name', regex: 'suite', flags: 'i', negate: true } },
                     { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } }
+                ],
+                usps: [
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-beach.svg',
+                        label: 'Доступ к частному пляжу'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-aquapark.svg',
+                        label: 'Собственный аквапарк'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/uso-bar.svg',
+                        label: 'Бар на крыше'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-party.svg',
+                        label: 'Вечеринки на пляже'
+                    },
                 ]
             },
             {
@@ -60,6 +132,24 @@
                     { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
                     { name: 'Номера', matcher: { field: 'name', regex: 'suite', flags: 'i', negate: true } },
                     { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } }
+                ],
+                usps: [
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-beach.svg',
+                        label: 'Доступ к частному пляжу'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-rixy-kids-town.svg',
+                        label: 'Город профессий Rixy Kids Town'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-e-sport-cafe.svg',
+                        label: 'E-Sport Café для геймеров'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-suite-design.svg',
+                        label: 'Номера с ярким дизайном'
+                    },
                 ],
                 searchOffersSince: '2024-10-02',
             },
@@ -74,6 +164,24 @@
                     { name: 'Номера', matcher: { field: 'name', regex: 'suite', flags: 'i', negate: true } },
                     { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } }
                 ],
+                usps: [
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-beach.svg',
+                        label: 'Доступ к частному пляжу'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-rixy-kids-town.svg',
+                        label: 'Город профессий Rixy Kids Town'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-e-sport-cafe.svg',
+                        label: 'E-Sport Café для геймеров'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-suite-design.svg',
+                        label: 'Номера с ярким дизайном'
+                    },
+                ],
             },
             {
                 id: 58465,
@@ -86,6 +194,24 @@
                     { name: 'Номера', matcher: { field: 'name', regex: 'suite', flags: 'i', negate: true } },
                     { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } }
                 ],
+                usps: [
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-beach.svg',
+                        label: 'Доступ к частному пляжу'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-rixy-kids-town.svg',
+                        label: 'Город профессий Rixy Kids Town'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-e-sport-cafe.svg',
+                        label: 'E-Sport Café для геймеров'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-suite-design.svg',
+                        label: 'Номера с ярким дизайном'
+                    },
+                ],
             },
             {
                 id: 58466,
@@ -95,6 +221,24 @@
                 logo: '/site/coral.ru/assets/logos/club-preve.png',
                 roomsSplit: [
                     { name: 'Виллы', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
+                ],
+                usps: [
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-spa.svg',
+                        label: 'Спа и оздоровительный центр'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-private-villas.svg',
+                        label: 'Частные виллы с бассейном'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-vip-transfer.svg',
+                        label: 'VIP трансфер аэропорт-отель-аэропорт'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-0plus.svg',
+                        label: 'Без возрастных ограничений'
+                    },
                 ]
             },
             {
@@ -107,6 +251,24 @@
                     { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
                     { name: 'Номера', matcher: { field: 'name', regex: 'villa', flags: 'i', negate: true } },
                     { name: 'Виллы', matcher: { field: 'name', regex: 'villa', flags: 'i' } }
+                ],
+                usps: [
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-horse-ride.svg',
+                        label: 'Верховая езда'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-authentic.svg',
+                        label: 'Аутентичные рестораны и сервис'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-entertainment.svg',
+                        label: 'Широкий выбор развлечений '
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-luxe-villas-swimup.svg',
+                        label: 'Люксы и виллы swim up'
+                    },
                 ]
             },
 //            {
@@ -128,6 +290,24 @@
                     { name: 'Номера', matcher: { field: 'name', regex: 'suite|villa', flags: 'i', negate: true } },
                     { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } },
                     { name: 'Виллы', matcher: { field: 'name', regex: 'villa', flags: 'i' } }
+                ],
+                usps: [
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-golf.svg',
+                        label: 'Доступ на поле для гольфа'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-authentic.svg',
+                        label: 'Интернациональная кухня'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-beach.svg',
+                        label: 'Частная пляжная зона'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-sea-view.svg',
+                        label: 'Панорамный вид на море'
+                    },
                 ]
             },
         ]

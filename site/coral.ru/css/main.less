@@ -768,6 +768,33 @@ section.rixos-hotels {
 					background: url("/site/coral.ru/assets/icons/star-black.svg") center / cover no-repeat;
 				}
 			}
+			ul.usps {
+				list-style: none;
+				font-size: (12/16em);
+				padding: 1.2em 1.5em;
+				margin: 0;
+				display: grid;
+				gap: 1.5em;
+				grid-template-columns: 1fr 1fr;
+				background: white;
+				border-radius: 1em;
+				@media screen and (max-width: @narrow-breakpoint) {
+					grid-template-columns: 1fr;
+				}
+				>li {
+					display: flex;
+					align-items: center;
+					gap: 1em;
+					line-height: 1.3;
+					font-weight: 300;
+					.icon {
+						flex-shrink: 0;
+						width: 2.4em;
+						height: 2.4em;
+						background: var(--icon-url) center / cover no-repeat;
+					}
+				}
+			}
 			.description {
 				//line-height: (28/16);
 			}
