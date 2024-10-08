@@ -274,11 +274,39 @@
                     },
                 ]
             },
+            {
+                id: 14197,
+                name: 'Rixos Alamein',
+                description:  'Этот курорт на северном побережье Средиземного моря сочетает кобальтово-синее море и пышные сады.',
+                url: '/chain/rixos/egypt/rixos-alamein/',
+                logo: '/site/coral.ru/assets/logos/rixos-alamein.png',
+//                roomsSplit: [
+//                    { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
+//                    { name: 'Номера', matcher: { field: 'name', regex: 'suite|villa', flags: 'i', negate: true } },
+//                    { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } },
+//                    { name: 'Виллы', matcher: { field: 'name', regex: 'villa', flags: 'i' } }
+//                ],
+                usps: [
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-beach.svg',
+                        label: 'Доступ к частному пляжу'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-beach-huts.svg',
+                        label: 'Бунгало над водой'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-aquapark.svg',
+                        label: 'Большой уникальный аквапарк'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-seashore-supper.svg',
+                        label: 'Ужин на берегу моря'
+                    },
+                ]
+            },
 //            {
-//                name: 'Rixos Alamein',
-//                description:  'Этот курорт на северном побережье Средиземного моря сочетает кобальтово-синееморе и пышные сады.'
-//            },
-//            {
+//                id: 66402,
 //                name: 'Rixos Premium Alamein',
 //                description:  'Этот небоскреб в Эль-Аламейне — роскошныйретрит с ультраэлитными номерамидля круглогодичного отдыха.'
 //            },

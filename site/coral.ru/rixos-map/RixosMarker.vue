@@ -42,8 +42,8 @@ onClickOutside(card_el, e => {
         <div class="card" ref="card_el">
             <img v-if="hotel.logo" :src="hotel.logo" class="logo">
             <div class="location">{{ hotel.ee.locationSummary.replace(/\(.+?\)/g,'') }}</div>
-            <button v-if="initiallyOpen" data-ref="section.suites" class="learn-more">Выбрать номер</button>
-            <a v-else-if="hotel.url" :href="hotel.url" class="learn-more" target="_blank">Подробнее об отеле</a>
+            <button v-if="hotel.roomsSplit && initiallyOpen" data-ref="section.suites" class="learn-more">Выбрать номер</button>
+            <a v-else-if="hotel.roomsSplit && hotel.url" :href="hotel.url" class="learn-more" target="_blank">Подробнее об отеле</a>
             <div class="pointer-decor"></div>
         </div>
     </div>

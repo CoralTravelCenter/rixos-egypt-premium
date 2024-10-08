@@ -1,0 +1,10 @@
+{
+	env: {
+		brand: 'coral-next',
+	},
+	contents: [
+        '/site/coral.ru/markup/styles-and-libs.html',
+		'/site/coral.ru/markup/rixos-alamein.pug',
+		'/site/coral.ru/markup/hotel-scripts.pug'
+	],
+}

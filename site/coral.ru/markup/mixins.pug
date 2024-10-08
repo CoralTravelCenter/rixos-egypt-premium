@@ -8,10 +8,14 @@ mixin internal-nav(shortcuts, logo_link, map_ref, accommodation_shortcut)
                 ul.shortcuts
                     each shortcut in shortcuts
                         li(data-ref=shortcut.ref)!= shortcut.label
-            //span.map(data-ref=map_ref)
-            button.accommodation-shortcut(data-ref=accommodation_shortcut.ref)
-                img(src='/site/coral.ru/assets/icons/accommodation-shortcut.svg')
-                span.label!= accommodation_shortcut.label
+            if accommodation_shortcut
+                button.accommodation-shortcut(data-ref=accommodation_shortcut.ref)
+                    img(src='/site/coral.ru/assets/icons/accommodation-shortcut.svg')
+                    span.label!= accommodation_shortcut.label
+            else
+                button.accommodation-shortcut(data-ref='.nowhere', style='visibility:hidden')
+                    img(src='/site/coral.ru/assets/icons/accommodation-shortcut.svg')
+                    span.label nowhere
     section.nav-spacer.edge2edge
         nav: .burger: ul.shortcuts: li just placeholder
 
