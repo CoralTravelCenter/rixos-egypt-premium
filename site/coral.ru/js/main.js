@@ -67,17 +67,19 @@ import { debounce } from "lodash";
                 const start = known_hotel.searchOffersStart || defaultSearchOffersStart;
                 const duration = known_hotel.searchOffersDuration || defaultSearchOffersDuration;
 
-                Object.assign(query.searchCriterias, {
-                    beginDates:       [
-                        since.add(start, 'days').format('YYYY-MM-DD'),
-                        since.add(start + duration, 'days').format('YYYY-MM-DD')
-                    ],
-                    arrivalLocations: [known_hotel.ee.location]
-                });
-                priceSearchEncrypt(query.searchCriterias).then(search => {
-                    const hotel_page_uri = `${ search.redirectionUrl }?qp=${ search.queryParam }&p=2`;
-                    hotel_card_el.querySelector('a.choose-hotel').href = hotel_page_uri;
-                });
+                if (known_hotel?.roomsSplit) {
+                    Object.assign(query.searchCriterias, {
+                        beginDates:       [
+                            since.add(start, 'days').format('YYYY-MM-DD'),
+                            since.add(start + duration, 'days').format('YYYY-MM-DD')
+                        ],
+                        arrivalLocations: [known_hotel.ee.location]
+                    });
+                    priceSearchEncrypt(query.searchCriterias).then(search => {
+                        const hotel_page_uri = `${ search.redirectionUrl }?qp=${ search.queryParam }&p=2`;
+                        hotel_card_el.querySelector('a.choose-hotel').href = hotel_page_uri;
+                    });
+                }
             }
         });
         new ScrollPager(
