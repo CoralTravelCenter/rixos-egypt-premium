@@ -1,5 +1,7 @@
 function endpointUrl(endpoint) {
-    const host = location.hostname === 'localhost' ? 'http://localhost:8010/proxy' : '//' + location.hostname.replace(/www|new/, 'b2capi');
+    // const host = location.hostname === 'localhost' ? 'http://localhost:8010/proxy' : '//' + location.hostname.replace(/www|new/, 'b2capi');
+    const host = location.hostname === 'localhost' ? 'http://localhost:8010/proxy' : '//'
+        + location.hostname.replace(/^[^.]+/, 'b2capi');
     return host + endpoint;
 }
 
