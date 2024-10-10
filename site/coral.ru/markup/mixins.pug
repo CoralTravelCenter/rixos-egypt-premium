@@ -58,8 +58,8 @@ mixin hotel-card(hotel)
                             span.label!= usp.label
             .description!= hotel.description
             .actions
-                a.choose-hotel(target='_blank') Выбрать отель
-                a.learn-more(href=hotel.url) Узнать больше
+                a.choose-hotel(target='_blank', data-ym-event='rixos-choose-hotel', data-ym-event-data-hotel=hotel.name) Выбрать отель
+                a.learn-more(href=hotel.url, data-ym-event='rixos-learn-more', data-ym-event-data-hotel=hotel.name) Узнать больше
 
 mixin gallery(list)
     section.held.hotel-gallery

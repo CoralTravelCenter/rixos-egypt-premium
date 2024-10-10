@@ -88,6 +88,18 @@ import { debounce } from "lodash";
             document.querySelector('section.rixos-hotels .discrete-pager')
         );
 
+        document.addEventListener('click', (e) => {
+            const ym_event_emitter = e.target.closest('[data-ym-event]');
+            if (ym_event_emitter) {
+                const ym_event_name = ym_event_emitter.getAttribute('data-ym-event');
+                const hotel_name = ym_event_emitter.getAttribute('data-ym-event-data-hotel');
+                const em_event_data = hotel_name ? { Hotel: hotel_name } : undefined;
+                try {
+                    ym(96674199, 'reachGoal', ym_event_name, em_event_data);
+                } catch (e) {}
+            }
+        });
+
     }
 
     let map_init = false;
