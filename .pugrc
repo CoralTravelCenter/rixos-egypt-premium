@@ -7,6 +7,7 @@
                 description: 'Отель предлагает концепцию «все включено» с отличными ресторанами, развлечениями и спортом',
                 url: '/chain/rixos/egypt/rixos-premium-seagate/',
                 logo: '/site/coral.ru/assets/logos/rixos-premium-seagate.png',
+                searchOffersSince: '2024-12-01',
                 roomsSplit: [
                     { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
                     { name: 'Номера', matcher: { field: 'name', regex: 'suite', flags: 'i', negate: true } },
