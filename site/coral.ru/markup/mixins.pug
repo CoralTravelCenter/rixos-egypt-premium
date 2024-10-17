@@ -75,7 +75,7 @@ mixin gallery(list)
                     button.shifter.backward.swiper-button-prev
                     button.shifter.forward.swiper-button-next
 
-mixin restaurants-and-bars(setup)
+mixin restaurants-and-bars(setup, has_accommodation=true)
     section.held.restaurants-and-bars
         .inhalt
             h2 Рестораны и бары
@@ -96,8 +96,9 @@ mixin restaurants-and-bars(setup)
                                 input(type='radio' name='zzz' value='cafe')
                                 | Кафе
                     .description!= setup.about
-                    .actions
-                        button.knopf(data-ref='section.suites') Выбрать номер
+                    if has_accommodation
+                        .actions
+                            button.knopf(data-ref='section.suites') Выбрать номер
                 .slider-combo.restaurants
                     .scroll-slider
                         each item in setup.restaurants
@@ -123,8 +124,9 @@ mixin restaurants-and-bars(setup)
                                     h4!= item.heading
                                     p!= item.body
                         .discrete-pager
-            .actions
-                button.knopf(data-ref='section.suites') Выбрать номер
+            if has_accommodation
+                .actions
+                    button.knopf(data-ref='section.suites') Выбрать номер
 
 mixin entertainment(setup)
     section.held.entertainment
