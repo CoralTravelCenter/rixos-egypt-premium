@@ -20,4 +20,4 @@
         .feature.bed
             .icon
             .label {{{ bedrooms }}}
-    a.choose-room(href='{{ hotel_page_uri }}', target='_blank') Выбрать номер
+    a.choose-room(href='{{ hotel_page_uri }}', target='_blank', data-ym-event='rixos-choose-room', data-ym-event-room='{{name}}', data-ym-event-idx='{{list_idx}}') Выбрать номер

@@ -65,7 +65,7 @@ import { debounce } from "lodash";
                 priceSearchDetail(query).then(details => {
                     console.log('=== details: %o', details);
                     const { products, rooms } = details;
-                    const models_list = products.map(product => {
+                    const models_list = products.map((product, idx) => {
                         let room_key = product.rooms.at(0).roomKey;
                         const room = rooms[room_key];
                         let visual = room.images?.at(0)?.sizes.find(s => s.type === 4)?.url;
@@ -85,7 +85,8 @@ import { debounce } from "lodash";
                             room_area,
                             pax,
                             bedrooms,
-                            hotel_page_uri: hotel_page_uri + `&room_name=${ encodeURIComponent(room.name) }`
+                            hotel_page_uri: hotel_page_uri + `&room_name=${ encodeURIComponent(room.name) }`,
+                            list_idx: idx + 1
                         };
                     });
                     if (window.known_hotel.roomsSplit) {
@@ -155,6 +156,28 @@ import { debounce } from "lodash";
             document.querySelector('section.entertainment .discrete-pager')
         );
     }
+
+    document.addEventListener('click', (e) => {
+        const ym_event_emitter = e.target.closest('[data-ym-event]');
+        if (ym_event_emitter) {
+            const ym_event_name = ym_event_emitter.getAttribute('data-ym-event');
+            const room_name = ym_event_emitter.getAttribute('data-ym-event-data-room');
+            const list_idx = ym_event_emitter.getAttribute('data-ym-event-data-idx');
+            let em_event_data;
+            if (room_name) {
+                em_event_data ||= {};
+                em_event_data.room = room_name;
+            }
+            if (list_idx) {
+                em_event_data ||= {};
+                em_event_data.index = list_idx;
+            }
+            try {
+                ym(96674199, 'reachGoal', ym_event_name, em_event_data);
+            } catch (e) {}
+        }
+    });
+
 
     let map_init = false;
     watchIntersection('#rixos-map', { threshold: .01 }, async (el, observer) => {
