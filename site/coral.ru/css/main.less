@@ -124,6 +124,9 @@ section.nav, section.nav + section {
 		margin: auto;
 		display: flex;
 		justify-content: space-between;
+		@media screen and (max-width: @nav-layout-break) {
+			position: relative;
+		}
 		@media screen and (max-width: @mobile-breakpoint) {
 			margin: 0;
 			width: unset;
@@ -140,8 +143,11 @@ section.nav, section.nav + section {
 			background: url("/site/coral.ru/assets/icons/logo-rixos-hotels.svg") center / (183/50 * 3.5em) 3.5em no-repeat;
 			@media screen and (max-width: @nav-layout-break) {
 				order: 1;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
 			}
-
 		}
 
 		.map {
