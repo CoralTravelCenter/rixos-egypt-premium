@@ -250,7 +250,7 @@
                 description:  'Курорт Хургада — рай для любителей дайвинга. Отель с клубом дайвинга и серфинга, идеально подходит для изучения Красного моря.',
                 url: '/chain/rixos/egypt/rixos-premium-magawish/',
                 logo: '/site/coral.ru/assets/logos/rixos-premium-magawish.png',
-                searchOffersSince: '2024-11-01',
+                searchOffersSince: '2024-12-01',
                 roomsSplit: [
                     { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
                     { name: 'Номера', matcher: { field: 'name', regex: 'villa', flags: 'i', negate: true } },
