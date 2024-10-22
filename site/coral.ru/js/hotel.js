@@ -65,7 +65,9 @@ import { debounce } from "lodash";
                 priceSearchDetail(query).then(details => {
                     console.log('=== details: %o', details);
                     const { products, rooms } = details;
-                    const models_list = products.map((product, idx) => {
+                    const models_list = products.filter(product => {
+                        return !!rooms[product.rooms.at(0).roomKey]?.hasDetail;
+                    }).map((product, idx) => {
                         let room_key = product.rooms.at(0).roomKey;
                         const room = rooms[room_key];
                         let visual = room.images?.at(0)?.sizes.find(s => s.type === 4)?.url;
@@ -79,7 +81,7 @@ import { debounce } from "lodash";
                         return {
                             id: room_key,
                             // name: room.name,
-                            name: room.name.replace(/\d.*/,''),
+                            name: room.name.replace(/\d.*/, ''),
                             priceFormatted: Math.round(product.price.amount / product.stayNights).formatCurrency(),
                             tag_visual: `<duv class="visual" style="background-image: ${ visual_style }"></duv>`,
                             room_area,
