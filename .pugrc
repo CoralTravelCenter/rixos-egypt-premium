@@ -306,11 +306,37 @@
                     },
                 ]
             },
-//            {
-//                id: 66402,
-//                name: 'Rixos Premium Alamein',
-//                description:  'Этот небоскреб в Эль-Аламейне — роскошныйретрит с ультраэлитными номерамидля круглогодичного отдыха.'
-//            },
+            {
+                id: 66402,
+                name: 'Rixos Premium Alamein',
+                description:  'Этот небоскреб в Эль-Аламейне — роскошный ретрит с ультраэлитными номерами для круглогодичного отдыха.',
+                url: '/chain/rixos/egypt/rixos-premium-alamein/',
+                logo: '/site/coral.ru/assets/logos/rixos-premium-alamein.png',
+                roomsSplit: [
+                    { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
+                    { name: 'Номера', matcher: { field: 'name', regex: 'suite|villa', flags: 'i', negate: true } },
+                    { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } },
+                    { name: 'Виллы', matcher: { field: 'name', regex: 'villa', flags: 'i' } }
+                ],
+                usps: [
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-beach.svg',
+                        label: 'Доступ к частному пляжу'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-beach-huts.svg',
+                        label: 'Бунгало над водой'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-aquapark.svg',
+                        label: 'Большой уникальный аквапарк'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-seashore-supper.svg',
+                        label: 'Ужин на берегу моря'
+                    },
+                ]
+            },
             {
                 id: 118,
                 name: 'Golf Beach Resort',

@@ -1,0 +1,191 @@
+include ../markup/mixins
+
+- const hotel = hotels.find(hotel => hotel.id === 66402);
+
+body
+    script
+        != `var known_hotel = ${ JSON.stringify(hotel) };`
+
+    +internal-nav([
+        { label: 'Номера', ref: 'section.suites' },
+        { label: 'Рестораны и бары', ref: 'section.restaurants-and-bars' },
+        { label: 'RixyClub', ref: 'section.rixy-club' },
+        { label: 'CoralBonus', ref: 'section.coral-bonus' },
+        { label: 'Контакты', ref: 'section.leased-line-premium' },
+    ], '/chain/rixos/egypt/', '.interactive-map')
+
+    +kvv({
+        h1: 'Rixos Premium Alamein',
+        logo: '/site/coral.ru/assets/logos/rixos-premium-alamein.png',
+        desktop_poster: '/site/coral.ru/assets/rixos-premium-alamein/kv-poster-desktop.jpg',
+        mobile_poster:  '/site/coral.ru/assets/rixos-premium-alamein/kv-poster-mobile.jpg',
+        desktop_vid: 1017456869,
+        mobile_vid: 1017456916,
+        video_scale: 1.5,
+        five_stars: true,
+        location: 'Египет, Эль-Аламейн'
+    })
+
+    section.held.intro
+        .inhalt
+            h2 Добро пожаловать <br>в Rixos Premium Alamein
+            p.generic
+                :typo
+                    Rixos Premium Alamein — это курортный отель с 5 звездами на первой линии города Эль-Аламейн. В распоряжении гостей сезонный открытый бассейн, фитнес-центр и сад. К услугам гостей общий лаундж, терраса и бар. Среди удобств курортного отеля — крытый бассейн, развлекательные мероприятия от команды аниматоров и детский клуб.
+            p.generic
+                :typo
+                    В номерах Rixos Premium Alamein установлен кондиционер, сейф и телевизор. Среди прочих удобств — платяной шкаф, чайник и мини-бар, а также собственная ванная комната с биде. Помимо собственной ванной комнаты с душем и бесплатными туалетно-косметическими принадлежностями, в определенных единицах размещения в Rixos Premium Alamein из окон открывается вид на город.            p.generic
+            .actions
+                button.knopf(data-ref='section.suites') Выбрать номер
+
+    section.held.suites
+        .inhalt
+            h2.rooms-splitter
+            .rooms-list-combo
+                .rooms-grid
+                .rooms-paging.discrete-pager
+
+    section.held.edge2edge.leisure.visuals-x-slider
+        .x-slider
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-alamein/visuals/leisure-01-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-alamein/visuals/leisure-01-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-alamein/visuals/leisure-02-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-alamein/visuals/leisure-02-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-alamein/visuals/leisure-03-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-alamein/visuals/leisure-03-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-alamein/visuals/leisure-01-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-alamein/visuals/leisure-01-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-alamein/visuals/leisure-02-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-alamein/visuals/leisure-02-mobile.jpg)')
+        .overlay
+            h2 Анимация и развлечения
+            p
+                :typo
+                    У нас есть круглогодичный календарь невероятных развлечений, специально созданный для вас. Мы хотим сделать для вас незабываемые впечатления, предлагая только лучшие развлечения и эксклюзивные программы.
+
+    +gallery([
+       { visual_desktop: '/site/coral.ru/assets/rixos-premium-alamein/gallery/01-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-premium-alamein/gallery/01-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/rixos-premium-alamein/gallery/02-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-premium-alamein/gallery/02-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/rixos-premium-alamein/gallery/03-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-premium-alamein/gallery/03-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/rixos-premium-alamein/gallery/04-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-premium-alamein/gallery/04-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/rixos-premium-alamein/gallery/05-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-premium-alamein/gallery/05-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/rixos-premium-alamein/gallery/06-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-premium-alamein/gallery/06-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/rixos-premium-alamein/gallery/07-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-premium-alamein/gallery/07-mobile.jpg' },
+    ])
+
+    +restaurants-and-bars({
+        about: "Каждая деталь ресторанов продумана с большой тщательностью  для каждого приема пищи. Наши повара удивят вас, создав фирменные блюда из лучших ингредиентов. Наслаждайтесь различными деликатесами и их прекрасной подачей под приятным океанским бризом.",
+        restaurants: [
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-alamein/restaurants-and-bars/rest-01.jpg',
+                heading: "LaLezar",
+                body:    "Наслаждайтесь традиционными блюдами и кулинарными изысками, искусно  приготовленными, чтобы побаловать ваши вкусовые предпочтения."
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-alamein/restaurants-and-bars/rest-02.jpg',
+                heading: "Salt",
+                body:    "Насладитесь яркими вкусами Средиземноморья прямо здесь, в нашем ресторане. От свежих  морепродуктов до ароматных трав."
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-alamein/restaurants-and-bars/rest-03.jpg',
+                heading: "Turquoise",
+                body:    "Побалуйте себя кулинарными изысками в нашем главном ресторане Turquoise, где каждое  блюдо готовится с заботой и страстью. "
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-alamein/restaurants-and-bars/rest-04.jpg',
+                heading: "Veranda",
+                body:    "Насладитесь уникальным кулинарным путешествием в нашем главном ресторане Veranda.  Попробуйте широкий выбор вкусных блюд со всего мира."
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-alamein/restaurants-and-bars/rest-05.jpg',
+                heading: "Mykonos",
+                body:    "Отправьтесь в Грецию, не вставая со своего места в нашем аутентичном ресторане на  Миконосе. От традиционной мусаки до сувлаки на гриле."
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-alamein/restaurants-and-bars/rest-06.jpg',
+                heading: "The Mangal",
+                body:    "Побалуйте себя аппетитными фирменными блюдами-барбекю: от нежного  мяса до пикантных овощей на гриле, искусно приготовленных на открытом огне."
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-alamein/restaurants-and-bars/rest-07.jpg',
+                heading: "La Churrascaria",
+                body:    "Отправьтесь в кулинарное путешествие в Бразилию в нашем ярком ресторане. От сочного  мяса чураско, приготовленного на гриле, до традиционной фейжоады."
+            },
+        ],
+        bars: [
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-alamein/restaurants-and-bars/bar-01.jpg',
+                heading: "La Terrace Bar",
+                body:    "Побалуйте себя отдыхом на свежем воздухе в баре La Terrace, где освежающие напитки сочетаются с панорамным видом. "
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-alamein/restaurants-and-bars/bar-02.jpg',
+                heading: "Piano Lobby Bar",
+                body:    "Бар предлагает теплую и гостеприимную атмосферу, предлагая разнообразные напитки и закуски. Это идеальное  место, чтобы расслабиться, пообщаться с другими гостями или спланировать дела."
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-alamein/restaurants-and-bars/bar-03.jpg',
+                heading: "Zodiac Lobby Bar",
+                body:    "Насладитесь любимым напитком в уютном лобби-баре Zodiac. Если вы ищете освежающий коктейль или  фирменный кофе, наш бар предлагает непринужденную атмосферу и безупречный сервис."
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-alamein/restaurants-and-bars/bar-04.jpg',
+                heading: "Stanley Pool Bar",
+                body:    "Наш бар у бассейна предлагает широкий выбор коктейлей, от тропических до смузи и безалкогольных напитков, созданных  для того, чтобы вы освежились под теплым солнцем."
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-alamein/restaurants-and-bars/bar-05.jpg',
+                heading: "Infinity Bar",
+                body:    "Погрузитесь в бесконечную релаксацию в баре, где напитки так же безграничны, как и виды. Этот бар,  расположенный на грани роскоши, предлагает потрясающие панорамы и изысканную атмосферу. "
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-alamein/restaurants-and-bars/bar-06.jpg',
+                heading: "Beach Bar",
+                body:    "Побалуйте себя идеальным сочетанием солнца, песка и напитков в нашем Beach bar. Освежающие коктейли,  непринужденная атмосфера и потрясающие виды — это идеальный рай для отдыха и наслаждения."
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-alamein/restaurants-and-bars/bar-07.jpg',
+                heading: "Oasis Bar",
+                body:    "Посетите наш бар Oasis, где вас ждут освежающие напитки и спокойная обстановка. Этот бар со спокойной атмосферой  предлагает умиротворенное уединение от шума и суеты."
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-alamein/restaurants-and-bars/bar-08.jpg',
+                heading: "Blendo Café & Bar",
+                body:    "Испытайте идеальное сочетание релаксации и удовольствия в нашем Blendo cafe&bar. Начните свой день со  свежесваренного кофе или расслабьтесь вечером с фирменным коктейлем."
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-alamein/restaurants-and-bars/bar-09.jpg',
+                heading: "Cigar Lounge",
+                body:    "Cigar Lounge — идеальное место, где можно расслабиться и отдохнуть, наслаждаясь выбором сигар мирового класса,  наслаждаясь попивая коктейли в интимной обстановке."
+            },
+        ]
+    })
+
+    section.held.edge2edge.rixy-club.visuals-x-slider
+        .x-slider
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-alamein/visuals/rixy-01-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-alamein/visuals/rixy-01-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-alamein/visuals/rixy-02-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-alamein/visuals/rixy-02-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-alamein/visuals/rixy-03-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-alamein/visuals/rixy-03-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-alamein/visuals/rixy-01-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-alamein/visuals/rixy-01-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-alamein/visuals/rixy-02-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-alamein/visuals/rixy-02-mobile.jpg)')
+        .overlay
+            h2 Rixy Kids Club
+            p
+                :typo
+                    Откройте для себя чудеса Rixy Kids Club, мира, созданного для наших самых маленьких гостей. От захватывающих игр до творческих занятий, наш клуб обеспечивает радостную и безопасную среду для игр и обучения детей.
+
+    +entertainment({
+        heading: 'Спа и спортивный клуб Exclusive',
+        ps: [
+            'Добро пожаловать в наш Exclusive Sport Club, где фитнес сочетается с роскошью. Повысьте качество своих тренировок благодаря современному оборудованию и индивидуальному обучению от наших профессиональных тренеров.',
+            'Побалуйте себя полной релаксацией в нашем спа-центре Anjana, где спокойствие сочетается с омоложением. Погрузитесь в мир успокаивающих процедур, безмятежной атмосферы и оздоровительного опыта.'
+        ],
+        lefty: {
+            title: 'Расслабление в спа-салоне',
+            visual_desktop: '/site/coral.ru/assets/rixos-premium-alamein/visuals/entertainment-01-desktop.jpg',
+            visual_mobile: '/site/coral.ru/assets/rixos-premium-alamein/visuals/entertainment-01-mobile.jpg'
+        },
+        righty: {
+            title: 'Занятия спортом и фитнесом',
+            visual_desktop: '/site/coral.ru/assets/rixos-premium-alamein/visuals/entertainment-02-desktop.jpg',
+            visual_mobile: '/site/coral.ru/assets/rixos-premium-alamein/visuals/entertainment-02-mobile.jpg'
+        }
+    })
+
+    +coral-bonus()
+    +contacts-and-map()
