@@ -88,7 +88,9 @@ import { debounce } from "lodash";
                             pax,
                             bedrooms,
                             hotel_page_uri: hotel_page_uri + `&room_name=${ encodeURIComponent(room.name) }`,
-                            list_idx: idx + 1
+                            list_idx: idx + 1,
+                            price: Math.round(product.price.amount / product.stayNights),
+                            hotel_name: window.known_hotel.name
                         };
                     });
                     if (window.known_hotel.roomsSplit) {
@@ -165,6 +167,8 @@ import { debounce } from "lodash";
             const ym_event_name = ym_event_emitter.getAttribute('data-ym-event');
             const room_name = ym_event_emitter.getAttribute('data-ym-event-data-room');
             const list_idx = ym_event_emitter.getAttribute('data-ym-event-data-idx');
+            const price = ym_event_emitter.getAttribute('data-ym-event-data-price');
+            const hotel_name = ym_event_emitter.getAttribute('data-ym-event-data-hotel-name');
             let em_event_data;
             if (room_name) {
                 em_event_data ||= {};
@@ -173,6 +177,14 @@ import { debounce } from "lodash";
             if (list_idx) {
                 em_event_data ||= {};
                 em_event_data.index = list_idx;
+            }
+            if (price) {
+                em_event_data ||= {};
+                em_event_data.price = price;
+            }
+            if (price) {
+                em_event_data ||= {};
+                em_event_data.hotel = hotel_name;
             }
             try {
                 ym(96674199, 'reachGoal', ym_event_name, em_event_data);
