@@ -8,7 +8,7 @@ import Milestones from "./milestones";
 import { refreshAllScrollTriggers, setupScrollTriggerPinups, setupShortcuts } from "../../common/js/utils";
 import {
     defaultSearchOffersDuration,
-    defaultSearchOffersStart,
+    defaultSearchOffersStart, packageSearchDetail_query_defaults,
     priceSearchDetail_query_defaults
 } from "../config/defaults";
 
@@ -49,7 +49,8 @@ import { debounce } from "lodash";
             const { hotels } = infos;
             window.known_hotel.ee = hotels[0];
 
-            const query = Object.assign({}, priceSearchDetail_query_defaults);
+            // const query = Object.assign({}, priceSearchDetail_query_defaults);
+            const query = Object.assign({}, packageSearchDetail_query_defaults);
             const since = dayjs(window.known_hotel.searchOffersSince);
             const start = window.known_hotel.searchOffersStart || defaultSearchOffersStart;
             const duration = window.known_hotel.searchOffersDuration || defaultSearchOffersDuration;
@@ -61,7 +62,8 @@ import { debounce } from "lodash";
                 arrivalLocations: [window.known_hotel.ee.location]
             });
             priceSearchEncrypt(query.searchCriterias).then(search => {
-                const hotel_page_uri = `${ search.redirectionUrl }?qp=${ search.queryParam }&p=2`;
+                // const hotel_page_uri = `${ search.redirectionUrl }?qp=${ search.queryParam }&p=2`;
+                const hotel_page_uri = `${ search.redirectionUrl }?qp=${ search.queryParam }&p=1`;
                 priceSearchDetail(query).then(details => {
                     console.log('=== details: %o', details);
                     const { products, rooms } = details;

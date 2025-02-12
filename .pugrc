@@ -7,7 +7,7 @@
                 description: 'Отель предлагает концепцию «все включено» с отличными ресторанами, развлечениями и спортом',
                 url: '/chain/rixos/egypt/rixos-premium-seagate/',
                 logo: '/site/coral.ru/assets/logos/rixos-premium-seagate.png',
-                searchOffersSince: '2024-12-01',
+//                searchOffersSince: '2024-12-01',
                 roomsSplit: [
                     { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
                     { name: 'Номера', matcher: { field: 'name', regex: 'suite', flags: 'i', negate: true } },
@@ -39,7 +39,7 @@
                 url: '/chain/rixos/egypt/rixos-sharm-el-sheikh/',
                 logo: '/site/coral.ru/assets/logos/rixos-sharm-el-sheikh.png',
 //                searchOffersStart: 30,
-                searchOffersSince: '2024-11-01',
+//                searchOffersSince: '2024-11-01',
                 roomsSplit: [
                     { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
                     { name: 'Номера', matcher: { field: 'name', regex: 'suite', flags: 'i', negate: true } },
@@ -64,36 +64,36 @@
                     },
                 ]
             },
-            {
-                id: 52439,
-                name: 'Rixos Golf Villas & Suites',
-                description: 'Виллы и люксы Rixos Golf среди садов и гольф-поля предлагают услуги «все включено» и «все эксклюзивно»',
-                url: '/chain/rixos/egypt/rixos-golf-villas-suites/',
-                logo: '/site/coral.ru/assets/logos/rixos-golf-villas-suites.png',
-                roomsSplit: [
-                    { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
-                    { name: 'Номера', matcher: { field: 'name', regex: 'villa', flags: 'i', negate: true } },
-                    { name: 'Виллы', matcher: { field: 'name', regex: 'villa', flags: 'i' } }
-                ],
-                usps: [
-                    {
-                        icon: '/site/coral.ru/assets/icons/usp-beach.svg',
-                        label: 'Доступ к частному пляжу'
-                    },
-                    {
-                        icon: '/site/coral.ru/assets/icons/usp-golf.svg',
-                        label: 'Поле для гольфа с 18 лунками'
-                    },
-                    {
-                        icon: '/site/coral.ru/assets/icons/usp-bed.svg',
-                        label: 'Ультра-роскошные люксы'
-                    },
-                    {
-                        icon: '/site/coral.ru/assets/icons/usp-dish-vars.svg',
-                        label: 'Варианты изысканных блюд'
-                    },
-                ]
-            },
+//            {
+//                id: 52439,
+//                name: 'Rixos Golf Villas & Suites',
+//                description: 'Виллы и люксы Rixos Golf среди садов и гольф-поля предлагают услуги «все включено» и «все эксклюзивно»',
+//                url: '/chain/rixos/egypt/rixos-golf-villas-suites/',
+//                logo: '/site/coral.ru/assets/logos/rixos-golf-villas-suites.png',
+//                roomsSplit: [
+//                    { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
+//                    { name: 'Номера', matcher: { field: 'name', regex: 'villa', flags: 'i', negate: true } },
+//                    { name: 'Виллы', matcher: { field: 'name', regex: 'villa', flags: 'i' } }
+//                ],
+//                usps: [
+//                    {
+//                        icon: '/site/coral.ru/assets/icons/usp-beach.svg',
+//                        label: 'Доступ к частному пляжу'
+//                    },
+//                    {
+//                        icon: '/site/coral.ru/assets/icons/usp-golf.svg',
+//                        label: 'Поле для гольфа с 18 лунками'
+//                    },
+//                    {
+//                        icon: '/site/coral.ru/assets/icons/usp-bed.svg',
+//                        label: 'Ультра-роскошные люксы'
+//                    },
+//                    {
+//                        icon: '/site/coral.ru/assets/icons/usp-dish-vars.svg',
+//                        label: 'Варианты изысканных блюд'
+//                    },
+//                ]
+//            },
             {
                 id: 54272,
                 name: 'Swissotel Sharm El Sheikh',
@@ -153,75 +153,75 @@
                         label: 'Номера с ярким дизайном'
                     },
                 ],
-                searchOffersSince: '2024-10-02',
+//                searchOffersSince: '2024-10-02',
             },
-            {
-                id: 58464,
-                name: 'Rixos Radamis Tirana Hotel',
-                description:  'Этот рай для детей и взрослых с аквапарком, детским клубом, а также рестораном с изысканной кухней предлагает незабываемый отдых для всей семьи.',
-                url: '/chain/rixos/egypt/rixos-radamis-tirana-hotel/',
-                logo: '/site/coral.ru/assets/logos/rixos-radamis-tirana-hotel.png',
-                roomsSplit: [
-                    { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
-                    { name: 'Номера', matcher: { field: 'name', regex: 'suite', flags: 'i', negate: true } },
-                    { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } }
-                ],
-                usps: [
-                    {
-                        icon: '/site/coral.ru/assets/icons/usp-beach.svg',
-                        label: 'Доступ к частному пляжу'
-                    },
-                    {
-                        icon: '/site/coral.ru/assets/icons/usp-rixy-kids-town.svg',
-                        label: 'Город профессий Rixy Kids Town'
-                    },
-                    {
-                        icon: '/site/coral.ru/assets/icons/usp-e-sport-cafe.svg',
-                        label: 'E-Sport Café для геймеров'
-                    },
-                    {
-                        icon: '/site/coral.ru/assets/icons/usp-suite-design.svg',
-                        label: 'Номера с ярким дизайном'
-                    },
-                ],
-            },
-            {
-                id: 58465,
-                name: 'Rixos Radamis Blue Planet',
-                description:  'Отдых здесь станет незабываемым для всей семьи. К услугам гостей: аквапарк, детский клуб и рестораны с изысканной кухней.',
-                url: '/chain/rixos/egypt/rixos-radamis-blue-planet-hotel/',
-                logo: '/site/coral.ru/assets/logos/rixos-radamis-blue-planet-hotel.png',
-                roomsSplit: [
-                    { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
-                    { name: 'Номера', matcher: { field: 'name', regex: 'suite', flags: 'i', negate: true } },
-                    { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } }
-                ],
-                usps: [
-                    {
-                        icon: '/site/coral.ru/assets/icons/usp-beach.svg',
-                        label: 'Доступ к частному пляжу'
-                    },
-                    {
-                        icon: '/site/coral.ru/assets/icons/usp-rixy-kids-town.svg',
-                        label: 'Город профессий Rixy Kids Town'
-                    },
-                    {
-                        icon: '/site/coral.ru/assets/icons/usp-e-sport-cafe.svg',
-                        label: 'E-Sport Café для геймеров'
-                    },
-                    {
-                        icon: '/site/coral.ru/assets/icons/usp-suite-design.svg',
-                        label: 'Номера с ярким дизайном'
-                    },
-                ],
-            },
+//            {
+//                id: 58464,
+//                name: 'Rixos Radamis Tirana Hotel',
+//                description:  'Этот рай для детей и взрослых с аквапарком, детским клубом, а также рестораном с изысканной кухней предлагает незабываемый отдых для всей семьи.',
+//                url: '/chain/rixos/egypt/rixos-radamis-tirana-hotel/',
+//                logo: '/site/coral.ru/assets/logos/rixos-radamis-tirana-hotel.png',
+//                roomsSplit: [
+//                    { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
+//                    { name: 'Номера', matcher: { field: 'name', regex: 'suite', flags: 'i', negate: true } },
+//                    { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } }
+//                ],
+//                usps: [
+//                    {
+//                        icon: '/site/coral.ru/assets/icons/usp-beach.svg',
+//                        label: 'Доступ к частному пляжу'
+//                    },
+//                    {
+//                        icon: '/site/coral.ru/assets/icons/usp-rixy-kids-town.svg',
+//                        label: 'Город профессий Rixy Kids Town'
+//                    },
+//                    {
+//                        icon: '/site/coral.ru/assets/icons/usp-e-sport-cafe.svg',
+//                        label: 'E-Sport Café для геймеров'
+//                    },
+//                    {
+//                        icon: '/site/coral.ru/assets/icons/usp-suite-design.svg',
+//                        label: 'Номера с ярким дизайном'
+//                    },
+//                ],
+//            },
+//            {
+//                id: 58465,
+//                name: 'Rixos Radamis Blue Planet',
+//                description:  'Отдых здесь станет незабываемым для всей семьи. К услугам гостей: аквапарк, детский клуб и рестораны с изысканной кухней.',
+//                url: '/chain/rixos/egypt/rixos-radamis-blue-planet-hotel/',
+//                logo: '/site/coral.ru/assets/logos/rixos-radamis-blue-planet-hotel.png',
+//                roomsSplit: [
+//                    { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
+//                    { name: 'Номера', matcher: { field: 'name', regex: 'suite', flags: 'i', negate: true } },
+//                    { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } }
+//                ],
+//                usps: [
+//                    {
+//                        icon: '/site/coral.ru/assets/icons/usp-beach.svg',
+//                        label: 'Доступ к частному пляжу'
+//                    },
+//                    {
+//                        icon: '/site/coral.ru/assets/icons/usp-rixy-kids-town.svg',
+//                        label: 'Город профессий Rixy Kids Town'
+//                    },
+//                    {
+//                        icon: '/site/coral.ru/assets/icons/usp-e-sport-cafe.svg',
+//                        label: 'E-Sport Café для геймеров'
+//                    },
+//                    {
+//                        icon: '/site/coral.ru/assets/icons/usp-suite-design.svg',
+//                        label: 'Номера с ярким дизайном'
+//                    },
+//                ],
+//            },
             {
                 id: 58466,
                 name: 'Club Prive By Rixos',
                 description:  'Это мир роскоши и элитных услуг, где комфорт сочетается с природой, а ваши желания формируют отдых',
                 url: '/chain/rixos/egypt/club-prive-by-rixos/',
                 logo: '/site/coral.ru/assets/logos/club-preve.png',
-                searchOffersSince: '2024-11-01',
+//                searchOffersSince: '2024-11-01',
                 roomsSplit: [
                     { name: 'Виллы', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
                 ],
@@ -250,7 +250,7 @@
                 description:  'Курорт Хургада — рай для любителей дайвинга. Отель с клубом дайвинга и серфинга, идеально подходит для изучения Красного моря.',
                 url: '/chain/rixos/egypt/rixos-premium-magawish/',
                 logo: '/site/coral.ru/assets/logos/rixos-premium-magawish.png',
-                searchOffersSince: '2024-12-01',
+//                searchOffersSince: '2024-12-01',
                 roomsSplit: [
                     { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
                     { name: 'Номера', matcher: { field: 'name', regex: 'villa', flags: 'i', negate: true } },
@@ -275,99 +275,93 @@
                     },
                 ]
             },
-            {
-                id: 14197,
-                name: 'Rixos Alamein',
-                description:  'Этот курорт на северном побережье Средиземного моря сочетает кобальтово-синее море и пышные сады.',
-                url: '/chain/rixos/egypt/rixos-alamein/',
-                logo: '/site/coral.ru/assets/logos/rixos-alamein.png',
+//            {
+//                id: 14197,
+//                name: 'Rixos Alamein',
+//                description:  'Этот курорт на северном побережье Средиземного моря сочетает кобальтово-синее море и пышные сады.',
+//                url: '/chain/rixos/egypt/rixos-alamein/',
+//                logo: '/site/coral.ru/assets/logos/rixos-alamein.png',
+//                usps: [
+//                    {
+//                        icon: '/site/coral.ru/assets/icons/usp-beach.svg',
+//                        label: 'Доступ к частному пляжу'
+//                    },
+//                    {
+//                        icon: '/site/coral.ru/assets/icons/usp-beach-huts.svg',
+//                        label: 'Бунгало над водой'
+//                    },
+//                    {
+//                        icon: '/site/coral.ru/assets/icons/usp-aquapark.svg',
+//                        label: 'Большой уникальный аквапарк'
+//                    },
+//                    {
+//                        icon: '/site/coral.ru/assets/icons/usp-seashore-supper.svg',
+//                        label: 'Ужин на берегу моря'
+//                    },
+//                ]
+//            },
+//            {
+//                id: 66402,
+//                name: 'Rixos Premium Alamein',
+//                description:  'Этот небоскреб в Эль-Аламейне — роскошный ретрит с ультраэлитными номерами для круглогодичного отдыха.',
+//                url: '/chain/rixos/egypt/rixos-premium-alamein/',
+//                logo: '/site/coral.ru/assets/logos/rixos-premium-alamein.png',
 //                roomsSplit: [
 //                    { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
 //                    { name: 'Номера', matcher: { field: 'name', regex: 'suite|villa', flags: 'i', negate: true } },
 //                    { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } },
 //                    { name: 'Виллы', matcher: { field: 'name', regex: 'villa', flags: 'i' } }
 //                ],
-                usps: [
-                    {
-                        icon: '/site/coral.ru/assets/icons/usp-beach.svg',
-                        label: 'Доступ к частному пляжу'
-                    },
-                    {
-                        icon: '/site/coral.ru/assets/icons/usp-beach-huts.svg',
-                        label: 'Бунгало над водой'
-                    },
-                    {
-                        icon: '/site/coral.ru/assets/icons/usp-aquapark.svg',
-                        label: 'Большой уникальный аквапарк'
-                    },
-                    {
-                        icon: '/site/coral.ru/assets/icons/usp-seashore-supper.svg',
-                        label: 'Ужин на берегу моря'
-                    },
-                ]
-            },
-            {
-                id: 66402,
-                name: 'Rixos Premium Alamein',
-                description:  'Этот небоскреб в Эль-Аламейне — роскошный ретрит с ультраэлитными номерами для круглогодичного отдыха.',
-                url: '/chain/rixos/egypt/rixos-premium-alamein/',
-                logo: '/site/coral.ru/assets/logos/rixos-premium-alamein.png',
-                roomsSplit: [
-                    { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
-                    { name: 'Номера', matcher: { field: 'name', regex: 'suite|villa', flags: 'i', negate: true } },
-                    { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } },
-                    { name: 'Виллы', matcher: { field: 'name', regex: 'villa', flags: 'i' } }
-                ],
-                usps: [
-                    {
-                        icon: '/site/coral.ru/assets/icons/usp-beach.svg',
-                        label: 'Доступ к частному пляжу'
-                    },
-                    {
-                        icon: '/site/coral.ru/assets/icons/usp-beach-huts.svg',
-                        label: 'Бунгало над водой'
-                    },
-                    {
-                        icon: '/site/coral.ru/assets/icons/usp-aquapark.svg',
-                        label: 'Большой уникальный аквапарк'
-                    },
-                    {
-                        icon: '/site/coral.ru/assets/icons/usp-seashore-supper.svg',
-                        label: 'Ужин на берегу моря'
-                    },
-                ]
-            },
-            {
-                id: 118,
-                name: 'Golf Beach Resort',
-                description:  'Отель с 18-луночным гольф-полем, ресторанами интернациональной кухни, бассейнами, теннисными кортами и спа.',
-                url: '/chain/rixos/egypt/golf-beach-resort/',
-                logo: '/site/coral.ru/assets/logos/golf-beach-resort.png',
-                roomsSplit: [
-                    { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
-                    { name: 'Номера', matcher: { field: 'name', regex: 'suite|villa', flags: 'i', negate: true } },
-                    { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } },
-                    { name: 'Виллы', matcher: { field: 'name', regex: 'villa', flags: 'i' } }
-                ],
-                usps: [
-                    {
-                        icon: '/site/coral.ru/assets/icons/usp-golf.svg',
-                        label: 'Доступ на поле для гольфа'
-                    },
-                    {
-                        icon: '/site/coral.ru/assets/icons/usp-authentic.svg',
-                        label: 'Интернациональная кухня'
-                    },
-                    {
-                        icon: '/site/coral.ru/assets/icons/usp-beach.svg',
-                        label: 'Частная пляжная зона'
-                    },
-                    {
-                        icon: '/site/coral.ru/assets/icons/usp-sea-view.svg',
-                        label: 'Панорамный вид на море'
-                    },
-                ]
-            },
+//                usps: [
+//                    {
+//                        icon: '/site/coral.ru/assets/icons/usp-beach.svg',
+//                        label: 'Доступ к частному пляжу'
+//                    },
+//                    {
+//                        icon: '/site/coral.ru/assets/icons/usp-beach-huts.svg',
+//                        label: 'Бунгало над водой'
+//                    },
+//                    {
+//                        icon: '/site/coral.ru/assets/icons/usp-aquapark.svg',
+//                        label: 'Большой уникальный аквапарк'
+//                    },
+//                    {
+//                        icon: '/site/coral.ru/assets/icons/usp-seashore-supper.svg',
+//                        label: 'Ужин на берегу моря'
+//                    },
+//                ]
+//            },
+//            {
+//                id: 118,
+//                name: 'Golf Beach Resort',
+//                description:  'Отель с 18-луночным гольф-полем, ресторанами интернациональной кухни, бассейнами, теннисными кортами и спа.',
+//                url: '/chain/rixos/egypt/golf-beach-resort/',
+//                logo: '/site/coral.ru/assets/logos/golf-beach-resort.png',
+//                roomsSplit: [
+//                    { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
+//                    { name: 'Номера', matcher: { field: 'name', regex: 'suite|villa', flags: 'i', negate: true } },
+//                    { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } },
+//                    { name: 'Виллы', matcher: { field: 'name', regex: 'villa', flags: 'i' } }
+//                ],
+//                usps: [
+//                    {
+//                        icon: '/site/coral.ru/assets/icons/usp-golf.svg',
+//                        label: 'Доступ на поле для гольфа'
+//                    },
+//                    {
+//                        icon: '/site/coral.ru/assets/icons/usp-authentic.svg',
+//                        label: 'Интернациональная кухня'
+//                    },
+//                    {
+//                        icon: '/site/coral.ru/assets/icons/usp-beach.svg',
+//                        label: 'Частная пляжная зона'
+//                    },
+//                    {
+//                        icon: '/site/coral.ru/assets/icons/usp-sea-view.svg',
+//                        label: 'Панорамный вид на море'
+//                    },
+//                ]
+//            },
         ]
     }
 }

@@ -9,7 +9,7 @@ import Milestones from "./milestones";
 import { setupScrollTriggerPinups, setupShortcuts } from "../../common/js/utils";
 import {
     defaultSearchOffersDuration,
-    defaultSearchOffersStart,
+    defaultSearchOffersStart, packageSearchDetail_query_defaults,
     priceSearchDetail_query_defaults
 } from "../config/defaults";
 import dayjs from "dayjs";
@@ -62,7 +62,8 @@ import { debounce } from "lodash";
                 const known_hotel = window.known_hotels.find(known => known.id == hotel.id);
                 if (known_hotel) known_hotel.ee = hotel;
                 // link to hotel page
-                const query = Object.assign({}, priceSearchDetail_query_defaults);
+                // const query = Object.assign({}, priceSearchDetail_query_defaults);
+                const query = Object.assign({}, packageSearchDetail_query_defaults);
                 const since = dayjs(known_hotel.searchOffersSince);
                 const start = known_hotel.searchOffersStart || defaultSearchOffersStart;
                 const duration = known_hotel.searchOffersDuration || defaultSearchOffersDuration;
@@ -76,7 +77,8 @@ import { debounce } from "lodash";
                         arrivalLocations: [known_hotel.ee.location]
                     });
                     priceSearchEncrypt(query.searchCriterias).then(search => {
-                        const hotel_page_uri = `${ search.redirectionUrl }?qp=${ search.queryParam }&p=2`;
+                        // const hotel_page_uri = `${ search.redirectionUrl }?qp=${ search.queryParam }&p=2`;
+                        const hotel_page_uri = `${ search.redirectionUrl }?qp=${ search.queryParam }&p=1`;
                         hotel_card_el.querySelector('a.choose-hotel').href = hotel_page_uri;
                     });
                 }

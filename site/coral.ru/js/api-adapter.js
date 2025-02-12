@@ -15,7 +15,8 @@ export async function listHotelInfo(hotelIds, imageSizes = [4, 7]) {
 }
 
 export async function priceSearchDetail(query) {
-    let { result: details } = await fetch(endpointUrl('/OnlyHotelProduct/PriceSearchDetail'), {
+    // let { result: details } = await fetch(endpointUrl('/OnlyHotelProduct/PriceSearchDetail'), {
+    let { result: details } = await fetch(endpointUrl('/PackageTourHotelProduct/PriceSearchDetail'), {
         method: 'post',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(query)
@@ -24,7 +25,8 @@ export async function priceSearchDetail(query) {
 }
 
 export async function priceSearchEncrypt(query) {
-    let { result: details } = await fetch(endpointUrl('/OnlyHotelProduct/PriceSearchEncrypt'), {
+    // let { result: details } = await fetch(endpointUrl('/OnlyHotelProduct/PriceSearchEncrypt'), {
+    let { result: details } = await fetch(endpointUrl('/PackageTourHotelProduct/PriceSearchEncrypt'), {
         method: 'post',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(query)
