@@ -722,6 +722,39 @@ section.perfection {
 	}
 }
 
+section.enrique {
+	.inhalt {
+		text-align: center;
+		.poster {
+			.proportional(1370/655);
+			width: 100%;
+			background: url("/site/coral.ru/assets/events-visuals/enrique-iglesias-desktop.jpg") center / cover no-repeat;
+			border-radius: 1.5em;
+			@media screen and (max-width: @mobile-breakpoint) {
+				.proportional(712/712);
+				background-image: url("/site/coral.ru/assets/events-visuals/enrique-iglesias-mobile.jpg");
+			}
+		}
+		ul.terms {
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1.5em;
+			margin: 0;
+			padding: 0;
+			> li {
+				font-family: TrajanPro3Regular;
+				display: grid;
+				place-content: center;
+				flex: 1 1 30%;
+				background: @brand-pale-bg;
+				border-radius: 1em;
+				padding: 1.5em 2em;
+			}
+		}
+	}
+}
+
 section.rixos-hotels {
 	background: @brand-pale-bg;
 	.hotels-grid {
