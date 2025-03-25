@@ -2728,5 +2728,15 @@
         "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/events-visuals/enrique-iglesias-desktop.jpg",
         "relativePath": "events-visuals/enrique-iglesias-desktop.jpg",
         "md5": "e7acca2911ef06112849187402aa31b4"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/events-visuals/enrique-iglesias-mobile.webp",
+        "relativePath": "events-visuals/enrique-iglesias-mobile.webp",
+        "md5": "ef4db4e91ea8f44a10d4ebe50cbf4b0e"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/events-visuals/enrique-iglesias-desktop.webp",
+        "relativePath": "events-visuals/enrique-iglesias-desktop.webp",
+        "md5": "36974a6deea5a37e2a7d6642dbd01155"
     }
 ]
