@@ -722,6 +722,67 @@ section.perfection {
 	}
 }
 
+section.lopez {
+	.inhalt {
+		position: relative;
+		.poster {
+			.proportional(944/1180);
+			position: absolute;
+			left: 16%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			width: 32%;
+			background: url("/site/coral.ru/assets/events-visuals/lopez-desktop.jpg") center / cover no-repeat;
+			border-radius: 1.5em;
+			@media screen and (max-width: @mobile-breakpoint) {
+				position: static;
+				width: 100%;
+				transform: none;
+			}
+		}
+		.info {
+			background: @brand-pale-bg;
+			border-radius: 1.5em;
+			padding: 3em 3em 3em calc(16% + 3em);
+			margin-left: 16%;
+			line-height: 1.5;
+			@media screen and (max-width: @mobile-breakpoint) {
+				background: none;
+				padding: 0;
+				margin: 0;
+			}
+			h2 {
+				line-height: 1.25;
+			}
+			>p {
+				@media screen and (max-width: @mobile-breakpoint) {
+					text-align: center;
+				}
+			}
+			ol.terms {
+				display: flex;
+				flex-direction: column;
+				gap: .5em;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				counter-reset: lopez-term;
+				li {
+					counter-increment: lopez-term;
+					display: flex;
+					align-items: baseline;
+					gap: 1.5em;
+					&:before {
+						content: counter(lopez-term) '.';
+						font-family: TrajanPro3Regular;
+						font-size: (24/16em);
+					}
+				}
+			}
+		}
+	}
+}
+
 section.enrique {
 	.inhalt {
 		text-align: center;
