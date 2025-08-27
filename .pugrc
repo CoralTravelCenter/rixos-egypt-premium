@@ -3,6 +3,7 @@
         hotels: [
             {
                 id: 13279,
+                country: 'Egypt',
                 name: 'Rixos Premium Seagate',
                 description: 'Отель предлагает концепцию «все включено» с отличными ресторанами, развлечениями и спортом',
                 url: '/chain/rixos/egypt/rixos-premium-seagate/',
@@ -34,6 +35,7 @@
             },
             {
                 id: 7891,
+                country: 'Egypt',
                 name: 'Rixos Sharm El Sheikh',
                 description: 'Отель с видом на залив Акаба и остров Тиран. Предлагает гостям сконференц-залы, 7 бассейнов, 10 ресторанов, 9 баров, спа и велнес центр',
                 url: '/chain/rixos/egypt/rixos-sharm-el-sheikh/',
@@ -66,6 +68,7 @@
             },
 //            {
 //                id: 52439,
+//                  country: 'Egypt',
 //                name: 'Rixos Golf Villas & Suites',
 //                description: 'Виллы и люксы Rixos Golf среди садов и гольф-поля предлагают услуги «все включено» и «все эксклюзивно»',
 //                url: '/chain/rixos/egypt/rixos-golf-villas-suites/',
@@ -96,6 +99,7 @@
 //            },
             {
                 id: 54272,
+                country: 'Egypt',
                 name: 'Swissotel Sharm El Sheikh',
                 description:  'Отель в центре Наама-Бей с 590 номерами и потрясающими видами, предлагает изысканную кухню и комфорт',
                 url: '/chain/rixos/egypt/swissotel-sharm-el-sheikh/',
@@ -126,6 +130,7 @@
             },
             {
                 id: 64951,
+                country: 'Egypt',
                 name: 'Rixos Radamis Sharm El Sheikh',
                 description:  'Этот водный рай с аквапарком, кафе, детским клубом и эксклюзивной кухней предлагает идеальный семейный отдых',
                 url: '/chain/rixos/egypt/rixos-radamis-sharm-el-sheikh/',
@@ -157,6 +162,7 @@
             },
 //            {
 //                id: 58464,
+//                country: 'Egypt',
 //                name: 'Rixos Radamis Tirana Hotel',
 //                description:  'Этот рай для детей и взрослых с аквапарком, детским клубом, а также рестораном с изысканной кухней предлагает незабываемый отдых для всей семьи.',
 //                url: '/chain/rixos/egypt/rixos-radamis-tirana-hotel/',
@@ -187,6 +193,7 @@
 //            },
 //            {
 //                id: 58465,
+//                country: 'Egypt',
 //                name: 'Rixos Radamis Blue Planet',
 //                description:  'Отдых здесь станет незабываемым для всей семьи. К услугам гостей: аквапарк, детский клуб и рестораны с изысканной кухней.',
 //                url: '/chain/rixos/egypt/rixos-radamis-blue-planet-hotel/',
@@ -217,6 +224,7 @@
 //            },
             {
                 id: 58466,
+                country: 'Egypt',
                 name: 'Club Prive By Rixos',
                 description:  'Это мир роскоши и элитных услуг, где комфорт сочетается с природой, а ваши желания формируют отдых',
                 url: '/chain/rixos/egypt/club-prive-by-rixos/',
@@ -236,7 +244,7 @@
                     },
                     {
                         icon: '/site/coral.ru/assets/icons/usp-vip-transfer.svg',
-                        label: 'VIP трансфер аэропорт-отель-аэропорт'
+                        label: 'VIP трансфер'
                     },
                     {
                         icon: '/site/coral.ru/assets/icons/usp-0plus.svg',
@@ -246,6 +254,7 @@
             },
             {
                 id: 29367,
+                country: 'Egypt',
                 name: 'Rixos Premium Magawish',
                 description:  'Курорт Хургада — рай для любителей дайвинга. Отель с клубом дайвинга и серфинга, идеально подходит для изучения Красного моря.',
                 url: '/chain/rixos/egypt/rixos-premium-magawish/',
@@ -362,6 +371,296 @@
 //                    },
 //                ]
 //            },
+              {
+                       id: 461,
+                       country: 'Turkey',
+                       name: 'RIXOS PREMIUM TEKIROVA',
+                       description:  'Отель с большой благоустроенной площадью, чей частный пляж отмечен голубым флагом',
+//                     url: '/chain/rixos/turkey/rixos-premium-tekirova-the-land-of-legends-free-access-kemer/',
+                       logo: '/site/coral.ru/assets/logos/rixos-tekirova.png',
+                       searchOffersStart: 60,
+                       roomsSplit: [
+                           { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
+                           { name: 'Номера', matcher: { field: 'name', regex: 'suite|villa', flags: 'i', negate: true } },
+                           { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } },
+                           { name: 'Виллы', matcher: { field: 'name', regex: 'villa', flags: 'i' } }
+                       ],
+                       usps: [
+                           {
+                               icon: '/site/coral.ru/assets/icons/usp-beach.svg',
+                               label: 'Частный пляж с Голубым флагом'
+                           },
+                           {
+                               icon: '/site/coral.ru/assets/icons/usp-rixos-sharm-el-sheikh-service.svg',
+                               label: 'Доступ в Adventure Land'
+                           },
+                           {
+                               icon: '/site/coral.ru/assets/icons/usp-golf.svg',
+                               label: 'Эксклюзивный спорт клуб'
+                           },
+                           {
+                               icon: '/site/coral.ru/assets/icons/usp-spa.svg',
+                               label: 'Спа-центр Anjana'
+                           },
+                       ]
+                   },
+              {
+                 id: 978,
+                 country: 'Turkey',
+                 name: 'RIXOS PREMIUM BELEK',
+                 description:  'Расположенный почти в центре Белека отель идеально подойдет для тех, кто ценит экотуризм.',
+//               url: '/chain/rixos/turkey/rixos-premium-belek-the-land-of-legends-free-access-belek/',
+                 logo: '/site/coral.ru/assets/logos/rixos-belek.png',
+                 roomsSplit: [
+                     { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
+                     { name: 'Номера', matcher: { field: 'name', regex: 'suite|villa', flags: 'i', negate: true } },
+                     { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } },
+                     { name: 'Виллы', matcher: { field: 'name', regex: 'villa', flags: 'i' } }
+                 ],
+                 usps: [
+                     {
+                         icon: '/site/coral.ru/assets/icons/usp-rixy-kids-town.svg',
+                         label: 'Недалеко от важных точек города'
+                     },
+                     {
+                         icon: '/site/coral.ru/assets/icons/usp-vip-transfer.svg',
+                         label: 'Элитный сервис'
+                     },
+                     {
+                         icon: '/site/coral.ru/assets/icons/usp-beach.svg',
+                         label: 'Протяженный частный пляж'
+                     },
+                     {
+                         icon: '/site/coral.ru/assets/icons/usp-gym.svg',
+                                             label: 'Экотуризм и спорт '
+                                         },
+                                     ]
+              },
+              {
+                id: 934,
+                country: 'Turkey',
+                name: 'RIXOS SUNGATE',
+                description:  'Отель располагается в живописном заливе, на его территории проводятся спортивные мероприятия и фестивали.',
+//                url: '/chain/rixos/turkey/rixos-sungate-the-land-of-legends-free-access-kemer/',
+                logo: '/site/coral.ru/assets/logos/rixos-sungate.png',
+                roomsSplit: [
+                    { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
+                    { name: 'Номера', matcher: { field: 'name', regex: 'suite|villa', flags: 'i', negate: true } },
+                    { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } },
+                    { name: 'Виллы', matcher: { field: 'name', regex: 'villa', flags: 'i' } }
+                ],
+                usps: [
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-rixos-sharm-el-sheikh-service.svg',
+                        label: 'Удобное расположение'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-castle.svg',
+                        label: 'Доступ к The Land of Legends'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-spa.svg',
+                        label: 'Rixos Anjana Spa'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-aquapark.svg',
+                                            label: 'Два аквапарка'
+                                        },
+                                    ]
+                },
+                {
+                    id: 21888,
+                    country: 'Turkey',
+                    name: 'CLUB PRIVE BY RIXOS BELEK',
+                    description:  'Концепция элитного сервиса в отеле Rixos Premium Belek с проживанием на частной вилле.',
+//                  url: '/chain/rixos/turkey/club-prive-by-rixos-belek-belek/',
+                    logo: '/site/coral.ru/assets/logos/club-prive-by-rixos.png',
+                    roomsSplit: [
+                        { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
+                        { name: 'Номера', matcher: { field: 'name', regex: 'suite|villa', flags: 'i', negate: true } },
+                        { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } },
+                        { name: 'Виллы', matcher: { field: 'name', regex: 'villa', flags: 'i' } }
+                    ],
+                    usps: [
+                        {
+                            icon: '/site/coral.ru/assets/icons/uso-bar.svg',
+                            label: 'Эксклюзивные рестораны и бары'
+                        },
+                        {
+                            icon: '/site/coral.ru/assets/icons/usp-vip-transfer.svg',
+                            label: 'Индивидуальный трансфер'
+                        },
+                        {
+                            icon: '/site/coral.ru/assets/icons/usp-authentic.svg',
+                            label: 'VIP-обслуживание в номере'
+                        },
+                        {
+                            icon: '/site/coral.ru/assets/icons/usp-rixy-kids-town.svg',
+                                                label: 'Личная вилла со всеми удобствами '
+                                            },
+                                        ]
+                },
+                {
+                     id: 52703,
+                     country: 'Turkey',
+                     name: 'RIXOS PARK BELEK',
+                     description:  'Отель с благоустроенной территорией и прекрасным сервисом, расположенный максимально близко к парку The Land of Legends.',
+//                   url: '/chain/rixos/turkey/rixos-park-belek-the-land-of-legends-free-access-belek/',
+                     logo: '/site/coral.ru/assets/logos/rixos-park-belek.png',
+                     roomsSplit: [
+                         { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
+                         { name: 'Номера', matcher: { field: 'name', regex: 'suite|villa', flags: 'i', negate: true } },
+                         { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } },
+                         { name: 'Виллы', matcher: { field: 'name', regex: 'villa', flags: 'i' } }
+                     ],
+                     usps: [
+                         {
+                             icon: '/site/coral.ru/assets/icons/usp-catering.svg',
+                             label: 'Высокий уровень сервиса'
+                         },
+                         {
+                             icon: '/site/coral.ru/assets/icons/usp-gym.svg',
+                             label: 'Спортивные мероприятия'
+                         },
+                         {
+                             icon: '/site/coral.ru/assets/icons/usp-dish.svg',
+                             label: 'Разнообразная кухня со всего мира'
+                         },
+                         {
+                             icon: '/site/coral.ru/assets/icons/usp-vip-transfer.svg',
+                                                 label: 'Бесплатный трансфер в The Land of Legends'
+                                             },
+                                         ]
+                 },
+                 {
+                     id: 781,
+                     country: 'Turkey',
+                     name: 'RIXOS DOWNTOWN ANTALYA',
+                     description:  'Отель в самом центре Антальи для тех, кто хочет сочетать отдых с яркими открытиями в городе и окрестностях.',
+//                    url: '/chain/rixos/turkey/rixos-downtown-antalya-the-land-of-legends-free-access-antalya/',
+                     logo: '/site/coral.ru/assets/logos/rixos-downtown-antalya.png',
+                     roomsSplit: [
+                         { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
+                         { name: 'Номера', matcher: { field: 'name', regex: 'suite|villa', flags: 'i', negate: true } },
+                         { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } },
+                         { name: 'Виллы', matcher: { field: 'name', regex: 'villa', flags: 'i' } }
+                     ],
+                     usps: [
+                         {
+                             icon: '/site/coral.ru/assets/icons/usp-gym.svg',
+                             label: 'Прекрасные условия для фитнеса'
+                         },
+                         {
+                             icon: '/site/coral.ru/assets/icons/usp-spa.svg',
+                             label: 'Услуги спа-центра'
+                         },
+                         {
+                             icon: '/site/coral.ru/assets/icons/usp-castle.svg',
+                             label: 'Доступ в парк The Land of Legends '
+                         },
+                         {
+                             icon: '/site/coral.ru/assets/icons/usp-city.svg',
+                                                 label: 'Расположен в центре города'
+                                             },
+                                         ]
+                 },
+                    {
+                       id: 805,
+                       country: 'Turkey',
+                       name: 'RIXOS PREMIUM BODRUM',
+                       description:  'Отель для тех, кто хочет насладиться высоким уровнем сервиса и предпочитает активный отдых.',
+ //                     url: '/chain/rixos/turkey/rixos-premium-bodrum-bodrum',
+                       logo: '/site/coral.ru/assets/logos/rixos-premium-bodrum.png',
+                       roomsSplit: [
+                           { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
+                           { name: 'Номера', matcher: { field: 'name', regex: 'suite|villa', flags: 'i', negate: true } },
+                           { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } },
+                           { name: 'Виллы', matcher: { field: 'name', regex: 'villa', flags: 'i' } }
+                       ],
+                       usps: [
+                           {
+                               icon: '/site/coral.ru/assets/icons/usp-catering.svg',
+                               label: 'Элитный сервис'
+                           },
+                           {
+                               icon: '/site/coral.ru/assets/icons/usp-city.svg',
+                               label: 'Удобное расположение отеля'
+                           },
+                           {
+                               icon: '/site/coral.ru/assets/icons/usp-beach.svg',
+                               label: 'Частный пляж с пирсом'
+                           },
+                           {
+                               icon: '/site/coral.ru/assets/icons/usp-gym.svg',
+                                                   label: 'Спортивные фестивали'
+                                               },
+                                           ]
+                   },
+                    {
+                       id: 21965,
+                       country: 'Turkey',
+                       name: 'CLUB PRIVE BY RIXOS GOCEK',
+                       description:  'Концепция элитного сервиса в отеле Rixos Gocek с проживанием на частной вилле.',
+  //                    url: '/chain/rixos/turkey/club-prive-by-rixos-gocek-fethiye',
+                       logo: '/site/coral.ru/assets/logos/club-prive-gocek.png',
+                       roomsSplit: [
+                           { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
+                           { name: 'Номера', matcher: { field: 'name', regex: 'suite|villa', flags: 'i', negate: true } },
+                           { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } },
+                           { name: 'Виллы', matcher: { field: 'name', regex: 'villa', flags: 'i' } }
+                       ],
+                       usps: [
+                           {
+                               icon: '/site/coral.ru/assets/icons/usp-13.svg',
+                               label: 'Только для  взрослых 13+'
+                           },
+                           {
+                               icon: '/site/coral.ru/assets/icons/usp-palm.svg',
+                               label: 'Расположение  в заповеднике'
+                           },
+                           {
+                               icon: '/site/coral.ru/assets/icons/usp-gym.svg',
+                               label: 'Программы для спорта и здоровья'
+                           },
+                           {
+                               icon: '/site/coral.ru/assets/icons/usp-butler.svg',
+                                                   label: 'Элитный сервис'
+                                               },
+                                           ]
+                   },
+                    {
+                       id: 9789,
+                       country: 'Turkey',
+                       name: 'RIXOS PREMIUM GOCEK',
+                       description:  'Отель, расположенный в природном заповеднике, принимает гостей 13+.',
+     //                 url: '/chain/rixos/turkey/rixos-premium-gocek-fethiye',
+                       logo: '/site/coral.ru/assets/logos/rixos-premium-gocek.png',
+                       roomsSplit: [
+                           { name: 'Все', matcher: { field: 'name', regex: '.', flags: '' }, default: true },
+                           { name: 'Номера', matcher: { field: 'name', regex: 'suite|villa', flags: 'i', negate: true } },
+                           { name: 'Номера люкс', matcher: { field: 'name', regex: 'suite', flags: 'i' } },
+                           { name: 'Виллы', matcher: { field: 'name', regex: 'villa', flags: 'i' } }
+                       ],
+                       usps: [
+                           {
+                               icon: '/site/coral.ru/assets/icons/usp-private-villas.svg',
+                               label: 'Проживание на личной вилле'
+                           },
+                           {
+                               icon: '/site/coral.ru/assets/icons/usp-butler.svg',
+                               label: 'VIP-сервис'
+                           },
+                           {
+                               icon: '/site/coral.ru/assets/icons/usp-vip-transfer.svg',
+                               label: 'Персональный трансфер'
+                           },
+                           {
+                               icon: '/site/coral.ru/assets/icons/usp-party.svg',
+                                                   label: 'Эксклюзивные рестораны и бары'
+                                               },
+                                           ]
+                   },
+
         ]
     }
 }
