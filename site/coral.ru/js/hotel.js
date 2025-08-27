@@ -33,9 +33,9 @@ import { debounce } from "lodash";
 
     const nav_section = document.querySelector('section.nav');
     const nav_spacer = nav_section.nextSibling;
-    window.addEventListener('scroll', debounce(() => {
-        nav_section.classList.toggle('pinned', nav_section.getBoundingClientRect().top < 1 && nav_spacer.getBoundingClientRect().top < 1);
-    }, 10));
+    // window.addEventListener('scroll', debounce(() => {
+    //     nav_section.classList.toggle('pinned', nav_section.getBoundingClientRect().top < 1 && nav_spacer.getBoundingClientRect().top < 1);
+    // }, 10));
 
     setupShortcuts();
     setupScrollTriggerPinups(document.fonts.ready);
@@ -203,5 +203,33 @@ import { debounce } from "lodash";
             map_init = true;
         }
     });
+
+    const container = document.querySelector('.blocks_items');
+    const dots = document.querySelectorAll('.pagination .dot');
+    const items = document.querySelectorAll('.blocks_item');
+
+    const updateActiveDot = () => {
+        const scrollLeft = container.scrollLeft;
+        const containerWidth = container.offsetWidth;
+
+        let activeIndex = Math.round(scrollLeft / containerWidth);
+
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[activeIndex]?.classList.add('active');
+    };
+
+    container.addEventListener('scroll', () => {
+        requestAnimationFrame(updateActiveDot);
+    });
+
+    dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            const index = +dot.dataset.index;
+            const scrollTo = index * container.offsetWidth;
+            container.scrollTo({ left: scrollTo, behavior: 'smooth' });
+        });
+    });
+
+    updateActiveDot(); // инициализация
 
 })();

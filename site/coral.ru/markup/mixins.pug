@@ -43,7 +43,7 @@ mixin kvv(setup)
 
 
 mixin hotel-card(hotel)
-    .hotel-card(data-hotel-id=hotel.id)
+    .hotel-card(data-hotel-id=hotel.id data-country=hotel.country)
         .visual
         .info
             .stars-black
@@ -59,7 +59,8 @@ mixin hotel-card(hotel)
             .description!= hotel.description
             .actions
                 a.choose-hotel(target='_blank', data-ym-event='rixos-choose-hotel', data-ym-event-data-hotel=hotel.name) Выбрать отель
-                a.learn-more(href=hotel.url, data-ym-event='rixos-learn-more', data-ym-event-data-hotel=hotel.name) Узнать больше
+                if hotel.url
+                    a.learn-more(href=hotel.url, data-ym-event='rixos-learn-more', data-ym-event-data-hotel=hotel.name) Узнать больше
 
 mixin gallery(list)
     section.held.hotel-gallery
@@ -132,17 +133,25 @@ mixin entertainment(setup)
     section.held.entertainment
         .inhalt
             h2!= setup.heading || 'Развлечения и мероприятия'
-            each p in setup.ps
-                p.generic!= p
+             // each p in setup.ps
+             //    p.generic!= p
             .two-usps
                 .usp.lefty
                     .heading(style=`--visual-desktop: url("${ setup.lefty.visual_desktop }"); --visual-mobile: url("${ setup.lefty.visual_mobile }")`)
                         h3= setup.lefty.title
+                        .animated-text.hidden-on-mobile
+                            p= setup.lefty.text
                     .reminder(style=`--visual-desktop: url("${ setup.lefty.visual_desktop }"); --visual-mobile: url("${ setup.lefty.visual_mobile }")`)
+                    p.hidden-on-desktop.pad-needed= setup.lefty.text
+
                 .usp.righty
                     .heading(style=`--visual-desktop: url("${ setup.righty.visual_desktop }"); --visual-mobile: url("${ setup.righty.visual_mobile }")`)
                         h3= setup.righty.title
+                        .animated-text.hidden-on-mobile
+                            p= setup.righty.text
                     .reminder(style=`--visual-desktop: url("${ setup.righty.visual_desktop }"); --visual-mobile: url("${ setup.righty.visual_mobile }")`)
+                    p.hidden-on-desktop.pad-needed= setup.righty.text
+
             .discrete-pager
 
 mixin coral-bonus(pinup)

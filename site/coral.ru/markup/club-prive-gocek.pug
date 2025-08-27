@@ -1,0 +1,140 @@
+include ../markup/mixins
+
+- const hotel = hotels.find(hotel => hotel.id === 21965);
+
+body
+    script
+        != `var known_hotel = ${ JSON.stringify(hotel) };`
+
+    +internal-nav([
+        { label: 'Номера', ref: 'section.suites' },
+        { label: 'Рестораны и бары', ref: 'section.restaurants-and-bars' },
+        { label: 'CoralBonus', ref: 'section.coral-bonus' },
+        { label: 'Контакты', ref: 'section.leased-line-premium' },
+    ], '/chain/rixos/egypt/', '.interactive-map', { label: 'Выбрать номер', ref: 'section.suites' })
+
+    +kvv({
+        h1: 'Club Prive By Rixos Gocek',
+        logo: '/site/coral.ru/assets/logos/club-prive-gocek.png',
+        desktop_poster: '/site/coral.ru/assets/club-prive-gocek/kv.webp',
+        mobile_poster:  '/site/coral.ru/assets/club-prive-gocek/kv_m.webp',
+        desktop_vid: 1103730954,
+        mobile_vid: 1103730923,
+        video_scale: 1.5,
+        five_stars: true,
+        location: 'Турция, Фетхие, Гёчек'
+    })
+
+    section.held.intro
+        .inhalt
+            h2 Добро пожаловать в Club Prive By Rixos Gocek 5*Deluxe
+
+            p.generic
+                :typo
+                    Club Privé by Rixos предлагает гостям персональное обслуживание на частной вилле. Для проживания доступны несколько видов вилл, каждый из которых имеет собственные дополнительные услуги, входящие в стоимость. Всех гостей ожидает личная встреча в аэропорту и трансфер прямо до дверей виллы. Также гостям будут доступны специальные рестораны и бары, лучшие места на развлекательных площадках и услуги всей инфраструктуры отеля.
+            .actions
+                button.knopf(data-ref='section.suites') Выбрать номер
+
+    section.held.suites
+        .inhalt
+            h2.rooms-splitter
+            .rooms-list-combo
+                .rooms-grid
+                .rooms-paging.discrete-pager
+
+    +gallery([
+        { visual_desktop: '/site/coral.ru/assets/club-prive-gocek/gallery/01-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/club-prive-gocek/gallery/01-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/club-prive-gocek/gallery/02-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/club-prive-gocek/gallery/02-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/club-prive-gocek/gallery/03-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/club-prive-gocek/gallery/03-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/club-prive-gocek/gallery/04-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/club-prive-gocek/gallery/04-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/club-prive-gocek/gallery/05-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/club-prive-gocek/gallery/05-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/club-prive-gocek/gallery/06-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/club-prive-gocek/gallery/06-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/club-prive-gocek/gallery/07-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/club-prive-gocek/gallery/07-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/club-prive-gocek/gallery/08-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/club-prive-gocek/gallery/08-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/club-prive-gocek/gallery/09-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/club-prive-gocek/gallery/09-gallery-mobile.webp' },
+    ])
+
+    +restaurants-and-bars({
+        about: 'Гости, отдыхающие на виллах, могут посетить рестораны в Privé Lounge или насладиться блюдами со всего мира в любом из восьми великолепных ресторанов и баров в основном отеле Rixos Premium Gocek 5*. Если вы предпочитаете абсолютное уединение, то менеджмент отеля предоставит вам собственного шеф-повара, который с удовольствием приготовит любой кулинарный шедевр по вашему желанию прямо на вилле.',
+        restaurants: [
+            {
+                visual:  '/site/coral.ru/assets/club-prive-gocek/restaurants-and-bars/rest-01.webp',
+                heading: 'Turquoise',
+                body:    'Главный ресторан в отеле для завтрака, обеда и ужина.'
+            },
+            {
+                visual: '/site/coral.ru/assets/club-prive-gocek/restaurants-and-bars/rest-02.webp',
+                heading: 'People’s',
+                body: 'Насладитесь вкусными закусками, которые подаются в течение всего дня.'
+            },
+            {
+                visual: '/site/coral.ru/assets/club-prive-gocek/restaurants-and-bars/rest-03.webp',
+                heading: 'Daidala Restaurant',
+                body: 'Морской ресторан с рыбными блюдами и коктейлями.'
+            },
+            {
+                visual: '/site/coral.ru/assets/club-prive-gocek/restaurants-and-bars/rest-04.webp',
+                heading: 'Azur',
+                body: 'Место со спокойной атмосферой, где можно попробовать легкие закуски.'
+            },
+            {
+                visual: '/site/coral.ru/assets/club-prive-gocek/restaurants-and-bars/rest-05.webp',
+                heading: 'L’olivo',
+                body: 'Благодаря меню и атмосфере, здесь вы сможете перенестись прямиком в Италию.'
+            },
+            {
+                visual: '/site/coral.ru/assets/club-prive-gocek/restaurants-and-bars/rest-06.webp',
+                heading: 'Umi Teppanyaki',
+                body: 'Тур по вкусам Дальнего Востока с видом на море.'
+            },
+
+        ],
+        bars: [
+            {
+                visual:  '/site/coral.ru/assets/club-prive-gocek/restaurants-and-bars/bar-01.webp',
+                heading: 'Rixos Lounge',
+                body:    'Стильный лобби-бар, где разнообразные напитки круглые сутки.'
+            },
+            {
+                visual: '/site/coral.ru/assets/club-prive-gocek/restaurants-and-bars/bar-02.webp',
+                heading: 'Azur Бар',
+                body: 'Легкие классические закуски и напитки к ним.'
+            },
+            {
+                visual: '/site/coral.ru/assets/club-prive-gocek/restaurants-and-bars/bar-03.webp',
+                heading: 'Nox The Stage',
+                body: 'Место, где проходят вечерние мероприятия и подают напитки.'
+            },
+
+        ]
+    })
+
+
+    section.three-blocks.held
+        .inhalt
+            h2 РАЗВЛЕЧЕНИЯ И МЕРОПРИЯТИЯ
+            p.text
+                :typo
+                    В отеле проводятся спортивные мероприятия, дневная анимация, а также работает спа-центр, в котором можно расслабиться и восстановить силы. Вечером гостей ждет увлекательная программа с живой музыкой и выступлением артистов.
+            p.text
+                :typo
+                    В отеле на регулярной основе проводятся специальные мероприятия и фестивали, в том числе спортивные. Кроме того, все гости смогут насладиться райскими бухтами благодаря экскурсии на корабле. Тур доступен бесплатно всем гостям отеля.
+            .blocks_items
+                .blocks_item
+                    img(src='/site/coral.ru/assets/club-prive-gocek/visuals/b-1.webp').hidden-on-mobile
+                    img(src='/site/coral.ru/assets/club-prive-gocek/visuals/b-1m.webp').hidden-on-desktop
+                    .text спа-центр Anjana
+                .blocks_item
+                    img(src='/site/coral.ru/assets/club-prive-gocek/visuals/b-2.webp').hidden-on-mobile
+                    img(src='/site/coral.ru/assets/club-prive-gocek/visuals/b-2m.webp').hidden-on-desktop
+                    .text Отдых на корабле
+                .blocks_item
+                    img(src='/site/coral.ru/assets/club-prive-gocek/visuals/b-3.webp').hidden-on-mobile
+                    img(src='/site/coral.ru/assets/club-prive-gocek/visuals/b-3m.webp').hidden-on-desktop
+                    .text Спорт и фитнес
+            .pagination
+                .dot(data-index='0')
+                .dot(data-index='1')
+                .dot(data-index='2')
+    +coral-bonus()
+    +contacts-and-map()

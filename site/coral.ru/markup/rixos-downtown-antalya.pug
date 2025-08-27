@@ -1,0 +1,168 @@
+include ../markup/mixins
+
+- const hotel = hotels.find(hotel => hotel.id === 781);
+
+body
+    script
+        != `var known_hotel = ${ JSON.stringify(hotel) };`
+
+    +internal-nav([
+        { label: 'Номера', ref: 'section.suites' },
+        { label: 'Рестораны и бары', ref: 'section.restaurants-and-bars' },
+        { label: 'RixyKidsClub', ref: 'section.rixy-club' },
+        { label: 'CoralBonus', ref: 'section.coral-bonus' },
+        { label: 'Контакты', ref: 'section.leased-line-premium' },
+    ], '/chain/rixos/egypt/', '.interactive-map', { label: 'Выбрать номер', ref: 'section.suites' })
+
+    +kvv({
+        h1: 'Rixos Downtown Antalya',
+        logo: '/site/coral.ru/assets/logos/rixos-downtown-antalya.png',
+        desktop_poster: '/site/coral.ru/assets/rixos-downtown-antalya/kv.webp',
+        mobile_poster:  '/site/coral.ru/assets/rixos-downtown-antalya/kv_m.webp',
+        desktop_vid: 1103730995,
+        mobile_vid: 1103731031,
+        video_scale: 1.5,
+        five_stars: true,
+        location: 'Турция, Анталья'
+    })
+
+    section.held.intro
+        .inhalt
+            h2 Добро пожаловать в Rixos Downtown Antalya 5*Deluxe
+            p.generic
+                :typo
+                    Превосходный городской отель в самом сердце Антальи. Он современно оборудован и идеально подойдет тем, кто хочет посвятить отпуск  изучению истории и культуры Турции. Здесь вас ждут прекрасные спортзалы, спа и оздоровительный центр, а также изысканные блюды разных кухонь мира.
+            p.generic
+                :typo
+                    Территория вокруг отеля озеленена, имеет спортивные площадки и развитую инфраструктуру. Здесь также можно воспользоваться велосипедом, который станет вашей альтернативой машине и даст возможность устроить себе незабываемую прогулку по городу.
+            .actions
+                button.knopf(data-ref='section.suites') Выбрать номер
+
+    section.held.suites
+        .inhalt
+            h2.rooms-splitter
+            .rooms-list-combo
+                .rooms-grid
+                .rooms-paging.discrete-pager
+
+    +gallery([
+        { visual_desktop: '/site/coral.ru/assets/rixos-downtown-antalya/gallery/01-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-downtown-antalya/gallery/01-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-downtown-antalya/gallery/02-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-downtown-antalya/gallery/02-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-downtown-antalya/gallery/03-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-downtown-antalya/gallery/03-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-downtown-antalya/gallery/04-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-downtown-antalya/gallery/04-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-downtown-antalya/gallery/05-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-downtown-antalya/gallery/05-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-downtown-antalya/gallery/06-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-downtown-antalya/gallery/06-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-downtown-antalya/gallery/07-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-downtown-antalya/gallery/07-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-downtown-antalya/gallery/08-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-downtown-antalya/gallery/08-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-downtown-antalya/gallery/09-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-downtown-antalya/gallery/09-gallery-mobile.webp' },
+    ])
+
+    +restaurants-and-bars({
+        about: 'К выбору гостей предлагается несколько ресторанов, баров и снек-баров с закусками. Кухни мира и аутентичная атмосфера позволят вам выбирать направление и настроение каждого приема пищи и превратит каждый завтрак, обед и ужин в гастрономическое путешествие.',
+        restaurants: [
+            {
+                visual:  '/site/coral.ru/assets/rixos-downtown-antalya/restaurants-and-bars/rest-01.webp',
+                heading: 'Panoramic',
+                body:    'Главный ресторан, предлагающий блюда интернациональной кухни на завтрак, обед и ужин.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-downtown-antalya/restaurants-and-bars/rest-02.webp',
+                heading: 'Vegan & Vegetarian Restaurant ',
+                body:    'А-ля карт ресторан со средиземноморской кухней, веганскими блюдами и винной картой.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-downtown-antalya/restaurants-and-bars/rest-03.webp',
+                heading: 'Tropic Snack',
+                body:    'Место, где можно перекусить в приятной атмосфере цветущего сада, прямо на свежем воздухе.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-downtown-antalya/restaurants-and-bars/rest-04.webp',
+                heading: 'Lobby Lounge ',
+                body:    'Ресторан интернациональной кухни, где можно насладиться ужином по системе а-ля карт.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-downtown-antalya/restaurants-and-bars/rest-05.webp',
+                heading: 'Sense',
+                body:    'Свежие морепродукты и рыба в приятном стильном интерьере.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-downtown-antalya/restaurants-and-bars/rest-06.webp',
+                heading: 'Aruna Beach Snack',
+                body:    'Здесь можно найти быстрый перекус или заказать еду прямо на пляж с помощью QR-кода.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-downtown-antalya/restaurants-and-bars/rest-07.webp',
+                heading: 'Terrace Meat',
+                body:    'Здесь подают мясные блюда и кухню со всех уголков мира, а атмосфера и панорамный вид радуют глаз.'
+            },
+
+        ],
+        bars: [
+            {
+                visual:  '/site/coral.ru/assets/rixos-downtown-antalya/restaurants-and-bars/bar-01.webp',
+                heading: 'Lobby бар',
+                body:    'Широкий выбор чая и кофе, шоколад ручной работы и свежие десерты на выбор.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-downtown-antalya/restaurants-and-bars/bar-02.webp',
+                heading: 'Lobby Lounge Bar',
+                body:    'Бар с прекрасной панорамной террасой, где можно насладиться ужином и приятной беседой.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-downtown-antalya/restaurants-and-bars/bar-03.webp',
+                heading: 'Tropic бар',
+                body:    'Здесь широкий выбор фруктовых и молочных коктейлей, свежих фруктов и прохладительных напитков.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-downtown-antalya/restaurants-and-bars/bar-04.webp',
+                heading: 'Коктейль-бар Turunç',
+                body:    'Насладитесь деликатесами и уникальными напитками в современном исполнении и модном дизайнерском интерьере.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-downtown-antalya/restaurants-and-bars/bar-05.webp',
+                heading: 'Aruna Beach бар',
+                body:    'Пляжный бар, где можно наслаждаться напитками с видом на море.'
+            },
+
+        ]
+    })
+
+    section.held.edge2edge.rixy-club.visuals-x-slider
+        .x-slider
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-downtown-antalya/rixy-club/01-desktop.webp); --visual-mobile: url(/site/coral.ru/assets/rixos-downtown-antalya/rixy-club/01-mobile.webp)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-downtown-antalya/rixy-club/02-desktop.webp); --visual-mobile: url(/site/coral.ru/assets/rixos-downtown-antalya/rixy-club/02-mobile.webp)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-downtown-antalya/rixy-club/03-desktop.webp); --visual-mobile: url(/site/coral.ru/assets/rixos-downtown-antalya/rixy-club/03-mobile.webp)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-downtown-antalya/rixy-club/04-desktop.webp); --visual-mobile: url(/site/coral.ru/assets/rixos-downtown-antalya/rixy-club/04-mobile.webp)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-downtown-antalya/rixy-club/05-desktop.webp); --visual-mobile: url(/site/coral.ru/assets/rixos-downtown-antalya/rixy-club/05-mobile.webp)')
+        .overlay
+            h2 Rixy Kids Club
+            p
+                :typo
+                    В течение дня и вечером в Rixy Disco проводятся музыкальные и танцевальные мероприятия, а для детей созданы все условия для отличного питания и веселья в Rixy Kids Club. Также гости могут насладиться аттракционами в парке The Land of Legends, куда они получают свободный вход и бесплатный трансфер.
+    section.three-blocks.held
+        .inhalt
+            h2 РАЗВЛЕЧЕНИЯ И МЕРОПРИЯТИЯ
+            p.text
+                :typo
+                    Оборудованные по последнему слову техники спортзалы дают огромный простор для занятий, а Rixos Golf Range предлагает обучение гольфу на прекрасной городской площадке. Бассейны и оздоровительные процедуры помогут сбросить напряжение и расслабиться после насыщенного дня.
+            p.text
+                :typo
+                    Выступления диджея, живая музыка, настольный теннис, волейбольные и футбольные поля. Для комфортной велопрогулки предоставляется транспорт и индивидуальная карта с маршрутом.
+            .blocks_items
+                .blocks_item
+                    img(src='/site/coral.ru/assets/rixos-downtown-antalya/visuals/b-1.webp').hidden-on-mobile
+                    img(src='/site/coral.ru/assets/rixos-downtown-antalya/visuals/b-1m.webp').hidden-on-desktop
+                    .text спа-центр Anjana
+                .blocks_item
+                    img(src='/site/coral.ru/assets/rixos-downtown-antalya/visuals/b-2.webp').hidden-on-mobile
+                    img(src='/site/coral.ru/assets/rixos-downtown-antalya/visuals/b-2m.webp').hidden-on-desktop
+                    .text тематические вечеринки
+            .pagination
+                .dot(data-index='0')
+                .dot(data-index='1')
+                .dot(data-index='2')
+
+
+
+    +coral-bonus()
+    +contacts-and-map()

@@ -1,0 +1,225 @@
+include ../markup/mixins
+
+- const hotel = hotels.find(hotel => hotel.id === 461);
+
+body
+    script
+        != `var known_hotel = ${ JSON.stringify(hotel) };`
+
+    +internal-nav([
+        { label: 'Номера', ref: 'section.suites' },
+        { label: 'Рестораны и бары', ref: 'section.restaurants-and-bars' },
+        { label: 'RixyKidsClub', ref: 'section.rixy-club' },
+        { label: 'CoralBonus', ref: 'section.coral-bonus' },
+        { label: 'Контакты', ref: 'section.leased-line-premium' },
+    ], '/chain/rixos/egypt/', '.interactive-map', { label: 'Выбрать номер', ref: 'section.suites' })
+
+    +kvv({
+        h1: 'Rixos Premium Tekirova',
+        logo: '/site/coral.ru/assets/logos/rixos-tekirova.png',
+        desktop_poster: '/site/coral.ru/assets/rixos-premium-tekirova/kv.webp',
+        mobile_poster:  '/site/coral.ru/assets/rixos-premium-tekirova/kv_m.webp',
+        desktop_vid: 1103731411,
+        mobile_vid: 1103731439,
+        video_scale: 1.5,
+        five_stars: true,
+        location: 'Турция, Текирова'
+    })
+
+    section.held.intro
+        .inhalt
+            h2 Добро пожаловать <br>в Rixos Premium Tekirova
+            p.generic
+                :typo
+                    Отель с прекрасной инфраструктурой и разнообразным досугом прямо на территории. Каждый номер имеет приятный декор, доступны варианты размещения на виллах с персональным обслуживанием. Гостей ожидают дневные развлекательные программы и ночные дискотеки, множество активностей, в том числе спортивных, спа-салон и разнообразная кухня, а для детей работает Rixy Kids Club, учитывающий возраст каждого юного посетителя.
+            .actions
+                button.knopf(data-ref='section.suites') Выбрать номер
+
+    section.held.suites
+        .inhalt
+            h2.rooms-splitter
+            .rooms-list-combo
+                .rooms-grid
+                .rooms-paging.discrete-pager
+
+    +gallery([
+        { visual_desktop: '/site/coral.ru/assets/rixos-premium-tekirova/gallery/01-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-premium-tekirova/gallery/01-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-premium-tekirova/gallery/02-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-premium-tekirova/gallery/02-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-premium-tekirova/gallery/03-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-premium-tekirova/gallery/03-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-premium-tekirova/gallery/04-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-premium-tekirova/gallery/04-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-premium-tekirova/gallery/05-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-premium-tekirova/gallery/05-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-premium-tekirova/gallery/06-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-premium-tekirova/gallery/06-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-premium-tekirova/gallery/07-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-premium-tekirova/gallery/07-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-premium-tekirova/gallery/08-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-premium-tekirova/gallery/08-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-premium-tekirova/gallery/09-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-premium-tekirova/gallery/09-gallery-mobile.webp' },
+        ])
+
+    +restaurants-and-bars({
+        about: 'Самые популярные и уникальные блюда кухонь мира из 14 ресторанов. Классическая турецкая, дальневосточная, южноамериканская, итальянская кухни, рыбный ресторан, дом мороженого и детский ресторан со специальным меню дают максимальный простор для гастрономических открытий.',
+        restaurants: [
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-tekirova/restaurants-and-bars/rest-01.webp',
+                heading: 'Turquoise',
+                body:    'Основной ресторан отеля, обслуживающих посетителей по системе шведский стол на завтрак, обед и ужин.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-tekirova/restaurants-and-bars/rest-08.webp',
+                heading: 'Cactus',
+                body: 'Лучшие блюда южноамериканской кухни в превосходном исполнении разнообразят ваш отдых.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-tekirova/restaurants-and-bars/rest-09.webp',
+                heading: 'Exclusive Club',
+                body: 'Ресторан интернациональной кухни для гостей Executive и Superior Villas и King Suite. Здесь вы можете насладиться завтраком, обедом и ужином по системе а-ля карт и посмотреть кулинарные шоу.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-tekirova/restaurants-and-bars/rest-10.webp',
+                heading: 'Food Court',
+                body: 'Место, где можно в течение дня попробовать турецкие лепешки гезлеме, различные аперитивы, гамбургеры, пасту и сэндвичи.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-tekirova/restaurants-and-bars/rest-12.webp',
+                heading: 'Ice Cream House',
+                body: 'Разнообразное мороженое и вафли станут вкусным дополнением к вашему отдыху.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-tekirova/restaurants-and-bars/rest-11.webp',
+                heading: 'La Rosetta',
+                body: 'Классика итальянской кухни в уютной атмосфере станет изюминкой вашего отпуска.\n' +
+                    '10:00 – 23:00'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-tekirova/restaurants-and-bars/rest-06.webp',
+                heading: 'Mandarin ',
+                body: 'Попробуйте необыкновенную дальневосточную кухню в волшебной атмосфере.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-tekirova/restaurants-and-bars/rest-05.webp',
+                heading: 'Mermaid ',
+                body: 'Рыбный ресторан, готовый предложить изумительные блюда из свежей рыбы и морепродуктов Средиземного моря.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-tekirova/restaurants-and-bars/rest-03.webp',
+                heading: 'Rixy Kids Club ',
+                body: 'Ресторан, предлагающий детям и их родителям полезное, здоровое и очень вкусное меню.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-tekirova/restaurants-and-bars/rest-02.webp',
+                heading: 'Veranda',
+                body:    'Ресторан для Гостей Pool Suite, Pool Villa и Family Pool Villa, где можно отведать разнообразные блюда на завтрак и ужин.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-tekirova/restaurants-and-bars/rest-04.webp',
+                heading: 'People’s',
+                body:    'Блюда от шеф-повара, доступные гасят 24/7.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-tekirova/restaurants-and-bars/rest-07.webp',
+                heading: 'A’la Turca ',
+                body:    'Традиционная турецкая кухня, рецептура которой сохранялась веками и передавалась из поколение в поколение, в исполнении профессиональных шеф-поваров.'
+            },
+        ],
+        bars: [
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-tekirova/restaurants-and-bars/bar-01.webp',
+                heading: 'Patisserie Art',
+                body:    'Кафе-бар, где вы можете насладиться свежими десертами и кофе.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-tekirova/restaurants-and-bars/bar-06.webp',
+                heading: 'Chaos Disco',
+                body: 'Главное развлекательное заведение отеля с большим выбором напитков и развлечений.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-tekirova/restaurants-and-bars/bar-10.webp',
+                heading: 'The Public Sports Lounge ',
+                body: 'Атмосферный лаундж с уютным пабом и живописным видом. Здесь вы можете уютно провести время с близкими. '
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-tekirova/restaurants-and-bars/bar-07.webp',
+                heading: 'Pool Villa ',
+                body: 'Бар со всевозможными напитками для гостей Pool Villas, Family Pool Villas, Pool Suites.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-tekirova/restaurants-and-bars/bar-08.webp',
+                heading: 'Rixy Kids бар',
+                body: 'Предлагает маленьким гостям множество полезных напитков, заряжающих энергией.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-tekirova/restaurants-and-bars/bar-05.webp',
+                heading: 'Highlights',
+                body: 'Наслаждайтесь большим выбором коктейлей и алкогольных напитков рядом с бассейном.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-tekirova/restaurants-and-bars/bar-09.webp',
+                heading: 'Island Bar',
+                body: 'Бар на берегу моря, где вы можете насладиться прохладой и коктейлями.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-tekirova/restaurants-and-bars/bar-02.webp',
+                heading: 'Lotus',
+                body:    'Насладитесь напитками и вечерними шоу в приятной дружеской атмосфере.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-tekirova/restaurants-and-bars/bar-03.webp',
+                heading: 'Lobby-бар',
+                body:    'Место с огромным выбором напитков и приятным интерьером.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-tekirova/restaurants-and-bars/bar-11.webp',
+                heading: 'Starbucks',
+                body: 'Классическое меню известной сети кофеен в отеле и на пляже.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-tekirova/restaurants-and-bars/bar-12.webp',
+                heading: 'Private Lounge ',
+                body:    'Эксклюзивный лаунж с напитками и закусками только для гостей вилл.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-tekirova/restaurants-and-bars/bar-13.webp',
+                heading: 'Xpress Bar',
+                body: 'Бар с эксклюзивными напитками. '
+            },
+        ]
+    })
+
+    section.held.edge2edge.rixy-club.visuals-x-slider
+        .x-slider
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-tekirova/rixy-club/01-desktop.webp); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-tekirova/rixy-club/01-mobile.webp)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-tekirova/rixy-club/02-desktop.webp); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-tekirova/rixy-club/02-mobile.webp)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-tekirova/rixy-club/03-desktop.webp); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-tekirova/rixy-club/03-mobile.webp)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-tekirova/rixy-club/04-desktop.webp); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-tekirova/rixy-club/04-mobile.webp)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-tekirova/rixy-club/05-desktop.webp); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-tekirova/rixy-club/05-mobile.webp)')
+        .overlay
+            h2 Rixy Kids Club
+            p
+                :typo
+                    Вечером проводятся концерты и выступления артистов, дискотеки и представления. Для детей отель предлагает отдельную ежедневную программу с мастер-классами, конкурсами, занятиями и играми в Rixy Kids Club.
+    section.three-blocks.held
+        .inhalt
+            h2 РАЗВЛЕЧЕНИЯ И МЕРОПРИЯТИЯ
+            p.text
+                :typo
+                    В Rixos Premium Tekirova вы можете полностью отдаться отдыху с заботой о себе. В дневные мероприятия входит анимация, живая музыка и тематические вечеринки. Для гостей работает фитнес-центр с современным оборудованием, вы можете заниматься пляжным волейболом, настольным теннисом, футболом, бадминтоном и водным поло, а также поучаствовать в командных соревнованиях. Чтобы восстановить силы, посетите спа-центр Anjana с зоной отдыха, парной и хамамом. 
+            .blocks_items
+                .blocks_item
+                    img(src='/site/coral.ru/assets/rixos-premium-tekirova/visuals/b-1.webp').hidden-on-mobile
+                    img(src='/site/coral.ru/assets/rixos-premium-tekirova/visuals/b-1m.webp').hidden-on-desktop
+                    .text спа-центр Anjana
+                .blocks_item
+                    img(src='/site/coral.ru/assets/rixos-premium-tekirova/visuals/b-2.webp').hidden-on-mobile
+                    img(src='/site/coral.ru/assets/rixos-premium-tekirova/visuals/b-2m.webp').hidden-on-desktop
+                    .text тематические вечеринки
+                .blocks_item
+                    img(src='/site/coral.ru/assets/rixos-premium-tekirova/visuals/b-3.webp').hidden-on-mobile
+                    img(src='/site/coral.ru/assets/rixos-premium-tekirova/visuals/b-3m.webp').hidden-on-desktop
+                    .text Спорт и фитнес
+            .pagination
+                .dot(data-index='0')
+                .dot(data-index='1')
+                .dot(data-index='2')
+
+
+
+    +coral-bonus()
+    +contacts-and-map()

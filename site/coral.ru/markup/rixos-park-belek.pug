@@ -1,0 +1,162 @@
+include ../markup/mixins
+
+- const hotel = hotels.find(hotel => hotel.id === 21888);
+
+body
+    script
+        != `var known_hotel = ${ JSON.stringify(hotel) };`
+
+    +internal-nav([
+        { label: 'Номера', ref: 'section.suites' },
+        { label: 'Рестораны и бары', ref: 'section.restaurants-and-bars' },
+        { label: 'RixyKidsClub', ref: 'section.rixy-club' },
+        { label: 'CoralBonus', ref: 'section.coral-bonus' },
+        { label: 'Контакты', ref: 'section.leased-line-premium' },
+    ], '/chain/rixos/turkey/', '.interactive-map', { label: 'Выбрать номер', ref: 'section.suites' })
+
+    +kvv({
+        h1: 'Rixos Park Belek',
+        logo: '/site/coral.ru/assets/logos/rixos-park-belek.png',
+        desktop_poster: '/site/coral.ru/assets/rixos-park-belek/kv.webp',
+        mobile_poster:  '/site/coral.ru/assets/rixos-park-belek/kv_m.webp',
+        desktop_vid: 1103731054,
+        mobile_vid: 1103731106,
+        video_scale: 1.5,
+        five_stars: true,
+        location: 'Турция, Белек'
+    })
+
+    section.held.intro
+        .inhalt
+            h2 Добро пожаловать в Rixos Park Belek 5*
+            p.generic
+                :typo
+                    Комфорт и непередаваемая атмосфера отеля, а также обслуживание по системе Все включено сделают ваше пребывание здесь максимально приятным. Наслаждайтесь разнообразной кухней, спортивными и развлекательными мероприятиями. Большая ухоженная территория идеально подойдет как для неспешного расслабленного отдыха, так и для активного отпуска, полного ярких впечатлений.
+            .actions
+                button.knopf(data-ref='section.suites') Выбрать номер
+
+    section.held.suites
+        .inhalt
+            h2.rooms-splitter
+            .rooms-list-combo
+                .rooms-grid
+                .rooms-paging.discrete-pager
+
+    +gallery([
+        { visual_desktop: '/site/coral.ru/assets/rixos-park-belek/gallery/01-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-park-belek/gallery/01-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-park-belek/gallery/02-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-park-belek/gallery/02-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-park-belek/gallery/03-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-park-belek/gallery/03-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-park-belek/gallery/04-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-park-belek/gallery/04-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-park-belek/gallery/05-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-park-belek/gallery/05-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-park-belek/gallery/06-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-park-belek/gallery/06-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-park-belek/gallery/07-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-park-belek/gallery/07-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-park-belek/gallery/08-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-park-belek/gallery/08-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-park-belek/gallery/09-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-park-belek/gallery/09-gallery-mobile.webp' },
+    ])
+
+    +restaurants-and-bars({
+        about: 'Здесь каждый прием пищи превращается в увлекательное путешествие по миру вкусов. Классические интернациональные блюда, итальянская кухня, морепродукты или специальное диетическое меню для детей и тех, кто хочет оставаться в тонусе даже в отпуске.',
+        restaurants: [
+            {
+                visual: '/site/coral.ru/assets/rixos-park-belek/restaurants-and-bars/rest-01.webp',
+                heading: 'Turquoise',
+                body: 'Главный ресторан отеля, где по системе шведский стол вас ждут завтрак, обед и ужин.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-park-belek/restaurants-and-bars/rest-02.webp',
+                heading: 'Rixy Restaurant',
+                body: 'Ресторан для детей и их родителей, где меню составлено с учетом всего необходимого для растущего организма.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-park-belek/restaurants-and-bars/rest-03.webp',
+                heading: 'Mosaic',
+                body: 'Ресторан, объединяющий международные кулинарные культуры, а также самые аутентичные вкусы.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-park-belek/restaurants-and-bars/rest-04.webp',
+                heading: 'UMI Teppanyaki',
+                body: 'Классика и изыски японской кухни для ценителей вкуса азии.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-park-belek/restaurants-and-bars/rest-05.webp',
+                heading: 'La Rosetta ',
+                body: 'Вкусы Италии и Средиземноморья: великолепная пицца и восхитительная паста с чабрецом'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-park-belek/restaurants-and-bars/rest-06.webp',
+                heading: 'Patisserie Art',
+                body: 'Кондитерская, где вы можете порадовать себя свежими десертами.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-park-belek/restaurants-and-bars/rest-07.webp',
+                heading: 'Mermaid',
+                body: 'Блюда из морепродуктов и рыбы в исполнении профессиональных поваров.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-park-belek/restaurants-and-bars/rest-08.webp',
+                heading: 'People’s',
+                body: 'Ресторан, работающий по системе а-ля карт, где вас ожидают блюда интернациональной кухни.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-park-belek/restaurants-and-bars/rest-09.webp',
+                heading: 'The Grill ',
+                body: 'Вкуснейшие блюда на гриле, которые приготовят прямо при вас.'
+            },
+
+        ],
+        bars: [
+            {
+                visual: '/site/coral.ru/assets/rixos-park-belek/restaurants-and-bars/bar-01.webp',
+                heading: 'Lobby бар',
+                body: 'Место с уютной атмосферой и большим выбором напитков.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-park-belek/restaurants-and-bars/bar-02.webp',
+                heading: 'Beach Bar',
+                body: 'Место, где можно наслаждаться восхитительным видом, коктейлями и сетами диджеев.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-park-belek/restaurants-and-bars/bar-03.webp',
+                heading: 'Orient Pool бар',
+                body: 'Напитки на любой вкус прямо рядом с бассейном.'
+            },
+
+        ]
+    })
+
+    section.held.edge2edge.rixy-club.visuals-x-slider
+        .x-slider
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-park-belek/rixy-club/01-desktop.webp); --visual-mobile: url(/site/coral.ru/assets/rixos-park-belek/rixy-club/01-mobile.webp)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-park-belek/rixy-club/02-desktop.webp); --visual-mobile: url(/site/coral.ru/assets/rixos-park-belek/rixy-club/02-mobile.webp)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-park-belek/rixy-club/03-desktop.webp); --visual-mobile: url(/site/coral.ru/assets/rixos-park-belek/rixy-club/03-mobile.webp)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-park-belek/rixy-club/04-desktop.webp); --visual-mobile: url(/site/coral.ru/assets/rixos-park-belek/rixy-club/04-mobile.webp)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-park-belek/rixy-club/05-desktop.webp); --visual-mobile: url(/site/coral.ru/assets/rixos-park-belek/rixy-club/05-mobile.webp)')
+        .overlay
+            h2 Rixy Kids Club
+            p
+                :typo
+                    Гости отеля могут расслабиться в Anjana Spa и поучаствовать в дневных и вечерних развлекательных мероприятиях с живой музыкой и танцами. В Rixy Kids Club детей ожидает море веселья и игр с опытными аниматорами, конкурсы, интерактивы и мастер-классы.
+    section.three-blocks.held
+        .inhalt
+            h2 РАЗВЛЕЧЕНИЯ И МЕРОПРИЯТИЯ
+            p.text
+                :typo
+                    Огромное количество спортивных активностей для детей и взрослых: большой и настольный теннис, футбол, стрельба из лука, а также настольные игры и тренировки с профессиональными тренерами, частные и общие. Всем гостям предоставляется бесплатный трансфер и проход в парк The Land of Legends, где можно весело провести хоть целый день.
+            .blocks_items
+                .blocks_item
+                    img(src='/site/coral.ru/assets/rixos-park-belek/visuals/b-1.webp').hidden-on-mobile
+                    img(src='/site/coral.ru/assets/rixos-park-belek/visuals/b-1m.webp').hidden-on-desktop
+                    .text The Land of Legends
+
+                .blocks_item
+                    img(src='/site/coral.ru/assets/rixos-park-belek/visuals/b-2.webp').hidden-on-mobile
+                    img(src='/site/coral.ru/assets/rixos-park-belek/visuals/b-2m.webp').hidden-on-desktop
+                    .text Спорт и фитнес
+            .pagination
+                .dot(data-index='0')
+                .dot(data-index='1')
+                .dot(data-index='2')
+
+
+    +coral-bonus()
+    +contacts-and-map()

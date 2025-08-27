@@ -25,29 +25,70 @@ import { debounce } from "lodash";
 
     const nav_section = document.querySelector('section.nav');
     const nav_spacer = nav_section.nextSibling;
-    window.addEventListener('scroll', debounce(() => {
-        nav_section.classList.toggle('pinned', nav_section.getBoundingClientRect().top < 1 && nav_spacer.getBoundingClientRect().top < 1);
-    }, 10));
+    // window.addEventListener('scroll', debounce(() => {
+    //     nav_section.classList.toggle('pinned', nav_section.getBoundingClientRect().top < 1 && nav_spacer.getBoundingClientRect().top < 1);
+    // }, 10));
 
     setupShortcuts();
     setupScrollTriggerPinups(document.fonts.ready);
 
     new Milestones(document.querySelector('section.nav .shortcuts')?.children);
 
-    new StackSlider(
-        document.querySelector('section.advantages .stack'),
-        document.querySelector('section.advantages .paging'),
-        document.querySelector('section.advantages .cards-stack')
-    );
-
-    new ScrollPager(
-        document.querySelector('section.perfection .scroll-slider'),
-        document.querySelector('section.perfection .scroll-pager'),
-        document.querySelector('section.perfection .discrete-pager')
-    );
+// new StackSlider(
+    //     document.querySelector('section.advantages .stack'),
+    //     document.querySelector('section.advantages .paging'),
+    //     document.querySelector('section.advantages .cards-stack')
+    // );
+    //
+    // new ScrollPager(
+    //     document.querySelector('section.entertainment-section .scroll-slider'),
+    //     document.querySelector('section.entertainment-section .scroll-pager'),
+    //     document.querySelector('section.entertainment-section .discrete-pager')
+    // );
 
     let fetchingHotelsInfo;
     if (window.known_hotels) {
+        function applyHotelFilterByCountry() {
+            const activeSwitch = document.querySelector('.switcher .switch.active');
+            if (!activeSwitch) return;
+
+            const countryMap = {
+                egypt: 'Egypt',
+                turkey: 'Turkey',
+                uae: 'UAE'
+            };
+            const targetCountry = countryMap[activeSwitch.classList[0]];
+            const cards = Array.from(document.querySelectorAll('.hotel-card'));
+
+            // Шаг 1: Скрываем все карточки с анимацией
+            const hideAnimations = cards.map(card => {
+                return new Promise(resolve => {
+                    if (!card.classList.contains('hidden')) {
+                        card.classList.remove('fade-in');
+                        card.classList.add('fade-out');
+                        setTimeout(() => {
+                            card.classList.add('hidden');
+                            card.classList.remove('fade-out');
+                            resolve();
+                        }, 400);
+                    } else {
+                        resolve();
+                    }
+                });
+            });
+
+            // Шаг 2: После того как всё скрыто — показываем нужные
+            Promise.all(hideAnimations).then(() => {
+                cards.forEach(card => {
+                    if (card.dataset.country === targetCountry) {
+                        card.classList.remove('hidden');
+                        card.classList.add('fade-in');
+                    }
+                });
+            });
+        }
+
+
         fetchingHotelsInfo = listHotelInfo(window.known_hotels.map(hotel => hotel.id));
         fetchingHotelsInfo.then(infos => {
             const { hotels } = infos;
@@ -83,6 +124,7 @@ import { debounce } from "lodash";
                     });
                 }
             }
+            applyHotelFilterByCountry();
         });
         new ScrollPager(
             document.querySelector('section.rixos-hotels .hotels-grid'),
@@ -104,6 +146,8 @@ import { debounce } from "lodash";
 
     }
 
+
+
     let map_init = false;
     watchIntersection('#rixos-map', { threshold: .01 }, async (el, observer) => {
         if (!map_init) {
@@ -112,5 +156,44 @@ import { debounce } from "lodash";
             map_init = true;
         }
     });
+
+    document.querySelector('.switcher').addEventListener('click', (e) => {
+        const clickedSwitch = e.target.closest('.switch');
+        if (!clickedSwitch) return; // Клик был не по .switch и не внутри него
+
+        document.querySelectorAll('.switcher .switch').forEach(s =>
+            s.classList.remove('active')
+        );
+        clickedSwitch.classList.add('active');
+        applyHotelFilterByCountry();
+    });
+
+    const container = document.querySelector('.blocks_items');
+    const dots = document.querySelectorAll('.pagination .dot');
+    const items = document.querySelectorAll('.blocks_item');
+
+    const updateActiveDot = () => {
+        const scrollLeft = container.scrollLeft;
+        const containerWidth = container.offsetWidth;
+
+        let activeIndex = Math.round(scrollLeft / containerWidth);
+
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[activeIndex]?.classList.add('active');
+    };
+
+    container.addEventListener('scroll', () => {
+        requestAnimationFrame(updateActiveDot);
+    });
+
+    dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            const index = +dot.dataset.index;
+            const scrollTo = index * container.offsetWidth;
+            container.scrollTo({ left: scrollTo, behavior: 'smooth' });
+        });
+    });
+
+    updateActiveDot(); // инициализация
 
 })();
