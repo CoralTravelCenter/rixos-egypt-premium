@@ -3,7 +3,7 @@
         hotels: [
             {
                 id: 13279,
-                country: 'Egypt',
+                country: 'Египет',
                 name: 'Rixos Premium Seagate',
                 description: 'Отель предлагает концепцию «все включено» с отличными ресторанами, развлечениями и спортом',
                 url: '/chain/rixos/egypt/rixos-premium-seagate/',
@@ -58,7 +58,7 @@
             },
             {
                 id: 7891,
-                country: 'Egypt',
+                country: 'Египет',
                 name: 'Rixos Sharm El Sheikh',
                 description: 'Отель с видом на залив Акаба и остров Тиран. Предлагает гостям сконференц-залы, 7 бассейнов, 10 ресторанов, 9 баров, спа и велнес центр',
                 url: '/chain/rixos/egypt/rixos-sharm-el-sheikh/',
@@ -114,7 +114,7 @@
             },
             //            {
             //                id: 52439,
-            //                  country: 'Egypt',
+            //                  country: 'Египет',
             //                name: 'Rixos Golf Villas & Suites',
             //                description: 'Виллы и люксы Rixos Golf среди садов и гольф-поля предлагают услуги «все включено» и «все эксклюзивно»',
             //                url: '/chain/rixos/egypt/rixos-golf-villas-suites/',
@@ -145,7 +145,7 @@
             //            },
             {
                 id: 54272,
-                country: 'Egypt',
+                country: 'Египет',
                 name: 'Swissotel Sharm El Sheikh',
                 description: 'Отель в центре Наама-Бей с 590 номерами и потрясающими видами, предлагает изысканную кухню и комфорт',
                 url: '/chain/rixos/egypt/swissotel-sharm-el-sheikh/',
@@ -199,7 +199,7 @@
             },
             {
                 id: 64951,
-                country: 'Egypt',
+                country: 'Египет',
                 name: 'Rixos Radamis Sharm El Sheikh',
                 description: 'Этот водный рай с аквапарком, кафе, детским клубом и эксклюзивной кухней предлагает идеальный семейный отдых',
                 url: '/chain/rixos/egypt/rixos-radamis-sharm-el-sheikh/',
@@ -254,7 +254,7 @@
             },
             //            {
             //                id: 58464,
-            //                country: 'Egypt',
+            //                country: 'Египет',
             //                name: 'Rixos Radamis Tirana Hotel',
             //                description:  'Этот рай для детей и взрослых с аквапарком, детским клубом, а также рестораном с изысканной кухней предлагает незабываемый отдых для всей семьи.',
             //                url: '/chain/rixos/egypt/rixos-radamis-tirana-hotel/',
@@ -285,7 +285,7 @@
             //            },
             //            {
             //                id: 58465,
-            //                country: 'Egypt',
+            //                country: 'Египет',
             //                name: 'Rixos Radamis Blue Planet',
             //                description:  'Отдых здесь станет незабываемым для всей семьи. К услугам гостей: аквапарк, детский клуб и рестораны с изысканной кухней.',
             //                url: '/chain/rixos/egypt/rixos-radamis-blue-planet-hotel/',
@@ -316,7 +316,7 @@
             //            },
             {
                 id: 58466,
-                country: 'Egypt',
+                country: 'Египет',
                 name: 'Club Prive By Rixos',
                 description: 'Это мир роскоши и элитных услуг, где комфорт сочетается с природой, а ваши желания формируют отдых',
                 url: '/chain/rixos/egypt/club-prive-by-rixos/',
@@ -354,7 +354,7 @@
             },
             {
                 id: 29367,
-                country: 'Egypt',
+                country: 'Египет',
                 name: 'Rixos Premium Magawish',
                 description: 'Курорт Хургада — рай для любителей дайвинга. Отель с клубом дайвинга и серфинга, идеально подходит для изучения Красного моря.',
                 url: '/chain/rixos/egypt/rixos-premium-magawish/',
@@ -496,7 +496,7 @@
             //            },
             {
                 id: 461,
-                country: 'Turkey',
+                country: 'Турция',
                 name: 'RIXOS PREMIUM TEKIROVA',
                 description: 'Отель с большой благоустроенной площадью, чей частный пляж отмечен голубым флагом',
                 //                     url: '/chain/rixos/turkey/rixos-premium-tekirova-the-land-of-legends-free-access-kemer/',
@@ -559,7 +559,7 @@
             },
             {
                 id: 978,
-                country: 'Turkey',
+                country: 'Турция',
                 name: 'RIXOS PREMIUM BELEK',
                 description: 'Расположенный почти в центре Белека отель идеально подойдет для тех, кто ценит экотуризм.',
                 //               url: '/chain/rixos/turkey/rixos-premium-belek-the-land-of-legends-free-access-belek/',
@@ -621,7 +621,7 @@
             },
             {
                 id: 934,
-                country: 'Turkey',
+                country: 'Турция',
                 name: 'RIXOS SUNGATE',
                 description: 'Отель располагается в живописном заливе, на его территории проводятся спортивные мероприятия и фестивали.',
                 //                url: '/chain/rixos/turkey/rixos-sungate-the-land-of-legends-free-access-kemer/',
@@ -683,7 +683,7 @@
             },
             {
                 id: 21888,
-                country: 'Turkey',
+                country: 'Турция',
                 name: 'CLUB PRIVE BY RIXOS BELEK',
                 description: 'Концепция элитного сервиса в отеле Rixos Premium Belek с проживанием на частной вилле.',
                 //                  url: '/chain/rixos/turkey/club-prive-by-rixos-belek-belek/',
@@ -745,7 +745,7 @@
             },
             {
                 id: 52703,
-                country: 'Turkey',
+                country: 'Турция',
                 name: 'RIXOS PARK BELEK',
                 description: 'Отель с благоустроенной территорией и прекрасным сервисом, расположенный максимально близко к парку The Land of Legends.',
                 //                   url: '/chain/rixos/turkey/rixos-park-belek-the-land-of-legends-free-access-belek/',
@@ -807,7 +807,7 @@
             },
             {
                 id: 781,
-                country: 'Turkey',
+                country: 'Турция',
                 name: 'RIXOS DOWNTOWN ANTALYA',
                 description: 'Отель в самом центре Антальи для тех, кто хочет сочетать отдых с яркими открытиями в городе и окрестностях.',
                 //                    url: '/chain/rixos/turkey/rixos-downtown-antalya-the-land-of-legends-free-access-antalya/',
@@ -869,7 +869,7 @@
             },
             {
                 id: 805,
-                country: 'Turkey',
+                country: 'Турция',
                 name: 'RIXOS PREMIUM BODRUM',
                 description: 'Отель для тех, кто хочет насладиться высоким уровнем сервиса и предпочитает активный отдых.',
                 //                     url: '/chain/rixos/turkey/rixos-premium-bodrum-bodrum',
@@ -931,7 +931,7 @@
             },
             {
                 id: 21965,
-                country: 'Turkey',
+                country: 'Турция',
                 name: 'CLUB PRIVE BY RIXOS GOCEK',
                 description: 'Концепция элитного сервиса в отеле Rixos Gocek с проживанием на частной вилле.',
                 //                    url: '/chain/rixos/turkey/club-prive-by-rixos-gocek-fethiye',
@@ -993,7 +993,7 @@
             },
             {
                 id: 9789,
-                country: 'Turkey',
+                country: 'Турция',
                 name: 'RIXOS PREMIUM GOCEK',
                 description: 'Отель, расположенный в природном заповеднике, принимает гостей 13+.',
                 //                 url: '/chain/rixos/turkey/rixos-premium-gocek-fethiye',

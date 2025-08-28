@@ -157,24 +157,32 @@ import { debounce } from "lodash";
         }
     });
 
-    document.querySelector('.switcher').addEventListener('click', (e) => {
-        const clickedSwitch = e.target.closest('.switch');
-        if (!clickedSwitch) return; // Клик был не по .switch и не внутри него
-
-        document.querySelectorAll('.switcher .switch').forEach(s =>
-            s.classList.remove('active')
-        );
-        clickedSwitch.classList.add('active');
-        applyHotelFilterByCountry();
+    document.querySelector('.country-selector > *')?.classList.add('selected');
+    document.querySelectorAll('.country-selector > *')?.forEach(country_el => {
+        country_el.addEventListener('click', () => {
+            country_el.parentElement.querySelector('.selected').classList.remove('selected');
+            country_el.classList.add('selected');
+        });
     });
+
+    // document.querySelector('.switcher').addEventListener('click', (e) => {
+    //     const clickedSwitch = e.target.closest('.switch');
+    //     if (!clickedSwitch) return; // Клик был не по .switch и не внутри него
+    //
+    //     document.querySelectorAll('.switcher .switch').forEach(s =>
+    //         s.classList.remove('active')
+    //     );
+    //     clickedSwitch.classList.add('active');
+    //     applyHotelFilterByCountry();
+    // });
 
     const container = document.querySelector('.blocks_items');
     const dots = document.querySelectorAll('.pagination .dot');
     const items = document.querySelectorAll('.blocks_item');
 
     const updateActiveDot = () => {
-        const scrollLeft = container.scrollLeft;
-        const containerWidth = container.offsetWidth;
+        const scrollLeft = container?.scrollLeft;
+        const containerWidth = container?.offsetWidth;
 
         let activeIndex = Math.round(scrollLeft / containerWidth);
 
@@ -182,7 +190,7 @@ import { debounce } from "lodash";
         dots[activeIndex]?.classList.add('active');
     };
 
-    container.addEventListener('scroll', () => {
+    container?.addEventListener('scroll', () => {
         requestAnimationFrame(updateActiveDot);
     });
 

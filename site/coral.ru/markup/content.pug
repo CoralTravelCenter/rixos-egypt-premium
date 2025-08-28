@@ -1,6 +1,7 @@
 include ../markup/mixins
 
 - const known_hotels = hotels.filter(hotel => !!hotel.id);
+- const all_countries = [...new Set(known_hotels.map(hotel => hotel.country))];
 
 body
     +internal-nav([
@@ -197,16 +198,17 @@ body
     //            .right
     //                img.hidden-on-desktop(src='https://b2ccdn.coral.ru/content/landing-pages/rixos-egypt-premium/x2_m.webp')
     //                img.hidden-on-mobile(src='https://b2ccdn.coral.ru/content/landing-pages/rixos-egypt-premium/x2.webp')
+
+    style
+        each country in all_countries
+            | .country-selector:has(.selected[data-value="#{ country }"]) ~ .hotels-grid .hotel-card:not([data-country="#{ country }"]) { display: none }
+
     section.held.rixos-hotels
         .inhalt
             h2 Отели Rixos
-            .switcher
-                .egypt.switch.active
-                    h3 Египет
-                .turkey.switch
-                    h3 Турция
-                //.uae.switch
-                //    h3 ОАЭ
+            .country-selector
+                each country in all_countries
+                    h3(data-value=`${country}`) #{ country }
             .hotels-grid
                 each hotel in known_hotels
                     +hotel-card(hotel)

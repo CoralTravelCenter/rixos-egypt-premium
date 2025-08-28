@@ -919,24 +919,12 @@ section.enrique {
 section.rixos-hotels {
     background: @brand-pale-bg;
 
-    .switcher {
+    .country-selector {
         display: flex;
-        gap: 32px;
-
-        .switch {
+        gap: 2em;
+        > *:not(.selected) {
+            opacity: .33;
             cursor: pointer;
-
-            h3 {
-                color: #575757;
-                opacity: .2;
-                transition: opacity .3s ease-in-out;
-            }
-
-            &.active {
-                h3 {
-                    opacity: 1;
-                }
-            }
         }
     }
 
