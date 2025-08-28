@@ -842,7 +842,7 @@
                 country: 'Турция',
                 name: 'CLUB PRIVE BY RIXOS GOCEK',
                 description: 'Концепция элитного сервиса в отеле Rixos Gocek с проживанием на частной вилле.',
-                //                    url: '/chain/rixos/turkey/club-prive-by-rixos-gocek-fethiye',
+                url: '/chain/rixos/turkey/club-prive-by-rixos-gocek/',
                 logo: '/site/coral.ru/assets/logos/club-prive-gocek.png',
                 roomsSplit: [
                     {
