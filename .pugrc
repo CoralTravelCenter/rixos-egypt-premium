@@ -499,44 +499,23 @@
                 country: 'Турция',
                 name: 'RIXOS PREMIUM TEKIROVA',
                 description: 'Отель с большой благоустроенной площадью, чей частный пляж отмечен голубым флагом',
-                //                     url: '/chain/rixos/turkey/rixos-premium-tekirova-the-land-of-legends-free-access-kemer/',
+                url: '/chain/rixos/turkey/rixos-premium-tekirova/',
                 logo: '/site/coral.ru/assets/logos/rixos-tekirova.png',
                 searchOffersStart: 60,
                 roomsSplit: [
                     {
                         name: 'Все',
-                        matcher: {
-                            field: 'name',
-                            regex: '.',
-                            flags: ''
-                        },
+                        matcher: {field: 'name', regex: '.', flags: ''},
                         default: true
                     },
                     {
-                        name: 'Номера',
-                        matcher: {
-                            field: 'name',
-                            regex: 'suite|villa',
-                            flags: 'i',
-                            negate: true
-                        }
-                    },
-                    {
                         name: 'Номера люкс',
-                        matcher: {
-                            field: 'name',
-                            regex: 'suite',
-                            flags: 'i'
-                        }
+                        matcher: {field: 'name', regex: 'deluxe', flags: 'i'}
                     },
                     {
-                        name: 'Виллы',
-                        matcher: {
-                            field: 'name',
-                            regex: 'villa',
-                            flags: 'i'
-                        }
-                    }
+                        name: 'Номера',
+                        matcher: {field: 'name', regex: 'deluxe', flags: 'i', negate: true}
+                    },
                 ],
                 usps: [
                     {
