@@ -904,7 +904,7 @@
                 country: 'Турция',
                 name: 'RIXOS PREMIUM GOCEK',
                 description: 'Отель, расположенный в природном заповеднике, принимает гостей 13+.',
-                //                 url: '/chain/rixos/turkey/rixos-premium-gocek-fethiye',
+                url: '/chain/rixos/turkey/rixos-premium-gocek/',
                 logo: '/site/coral.ru/assets/logos/rixos-premium-gocek.png',
                 roomsSplit: [
                     {
