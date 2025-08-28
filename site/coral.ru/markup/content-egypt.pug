@@ -1,0 +1,211 @@
+include ../markup/mixins
+
+- const known_hotels = hotels.filter(hotel => !!hotel.id).filter(hotel => hotel.country === 'Египет');
+
+body
+    +internal-nav([
+        {label: 'Отели', ref: 'section.rixos-hotels'},
+        {label: 'CoralBonus', ref: 'section.coral-bonus'},
+        {label: 'Контакты', ref: 'section.leased-line-premium'},
+    ], '#_', '.interactive-map', {label: 'Выбрать отель', ref: 'section.rixos-hotels'})
+
+    +kvv({
+        h1: 'All Inclusive – All Exclusive',
+        desktop_poster: '/site/coral.ru/assets/kv-poster-desktop-new.webp',
+        mobile_poster: '/site/coral.ru/assets/kv-poster-mobile-new.webp',
+        desktop_vid: 1107679517,
+        mobile_vid: 1107680259
+    })
+
+    section.held.intro.unique-concept
+        .inhalt
+            p.generic
+                :typo
+                    «All inclusive — All exclusive» – главная философия премиальной сети Rixos Hotels. Она объединяет все преимущества системы «Все включено» и уникальные привилегии, доступные только для гостей отелей. Каждый резорт предлагает исключительные возможности, которые превосходят все ожидания. Rixos Hotels — это отели, где мечты об идеальном отдыхе становятся реальностью!
+            .actions
+                button.knopf(data-ref='section.rixos-hotels') Забронировать
+
+    section.held.edge2edge.rixy-club.visuals-x-slider
+        .x-slider
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-magawish/visuals/eg-1.webp); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-magawish/visuals/eg-1m.webp)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-magawish/visuals/eg-2.webp); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-magawish/visuals/eg-2m.webp)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-magawish/visuals/eg-3.webp); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-magawish/visuals/eg-3m.webp)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-magawish/visuals/eg-4.webp); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-magawish/visuals/eg-4m.webp)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-magawish/visuals/eg-5.webp); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-magawish/visuals/eg-5m.webp)')
+
+    section.held.entertainment-section
+        +entertainment({
+            heading: 'Преимущества отдыха в Rixos',
+            ps: [
+                'Окунитесь в мир благополучия вместе с нашей командой профессиональных фитнес-тренеров Exclusive Sports Club, которые готовы провести вас через бодрящие спортивные тренировки. Независимо от того, являетесь ли вы энтузиастом фитнеса или только начинаете свой путь к оздоровлению, наши тренеры позаботятся о том, чтобы каждое занятие соответствовало вашим индивидуальным потребностям.',
+                'Погрузитесь в мир релаксации и омоложения в нашем изысканном спа-центре Anjana, где спокойствие сочетается с наслаждением. Наши опытные специалисты создают индивидуальные спа-процедуры, предлагая симфонию спокойствия для вашего разума, тела и души.'
+            ],
+            lefty: {
+                title: 'Rixy Kids Club',
+                text: 'Идеальный отдых — это счастливая семья! Расслабьтесь и отдохните, пока ваши любимые малыши и подростки веселятся, открывают таланты и заводят новых друзей под присмотром внимательных аниматоров. Танцевальная академия, творческие мастер-классы, программы, которые направлены на развитие логики, и многое другое придётся по душе юным гостям. Rixy Kids Club принимает детей от 4 до 17 лет.',
+                visual_desktop: '/site/coral.ru/assets/le-1.webp',
+                visual_mobile: '/site/coral.ru/assets/l-1m.webp'
+            },
+            righty: {
+                title: 'Спа и восстановление',
+                text: 'Насладитесь полным спектром оздоровительных услуг в спа-центер Anjana: сауны, паровые бани, бассейны, джакузи, снежные и соляные комнаты. Также вы можете побаловать себя антивозрастными и обновляющимися процедурами для лица с использованием косметики известных брендов и фирменных продуктов Rixos.',
+                visual_desktop: '/site/coral.ru/assets/ri-1.webp',
+                visual_mobile: '/site/coral.ru/assets/ri-1m.webp'
+            }
+
+        })
+
+
+    section.held.events-section
+        .inhalt
+            .events
+                .header
+                    h3='Совершенство гостеприимства'
+                .tags
+                    .tag
+                        .tag_text
+                            span='Отели по всему миру'
+                        .tag-icon
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                            <path d="M21.781 14.3251C22.8817 8.96464 19.5687 3.69701 14.3811 2.55955C9.19353 1.4221 4.09582 4.84556 2.99506 10.2061C1.8943 15.5666 5.20732 20.8342 10.3949 21.9717C15.5825 23.1091 20.6802 19.6857 21.781 14.3251Z" stroke="white" stroke-miterlimit="10"/>
+                            <path d="M8.76344 3.07471C8.76344 3.07471 13.3107 4.12725 10.5186 6.5116C7.72648 8.89596 5.20607 8.5226 5.79872 9.9743C6.39211 11.426 9.67921 12.1743 10.6567 12.2721C11.6341 12.37 13.708 14.0995 10.0545 17.8862C6.40092 21.673 7.88952 17.8149 7.64717 16.8193C7.40482 15.8236 7.56492 14.9934 6.28048 14.0813C4.99604 13.1684 4.51061 11.2727 4.55394 10.8037C4.59727 10.3348 3.18945 9.53947 3.18945 9.53947" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20.3422 6.95984C20.3422 6.95984 18.3821 8.68171 16.0372 6.95984C13.6923 5.23798 11.1851 9.49976 13.8135 9.95964C16.4419 10.4195 17.857 10.1683 17.9782 13.3024C18.0994 16.4365 20.4531 17.4527 20.4531 17.4527" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                    .tag
+                        .tag_text
+                            span='Высокие стандарты сервиса'
+                        .tag-icon
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                            <path d="M12.8 2.79336L14.0268 6.52775C14.1829 7.00219 14.6294 7.32352 15.1338 7.32352H19.1034C20.9372 7.32352 21.6996 9.64468 20.2161 10.7107L17.0046 13.0187C16.5969 13.3117 16.4262 13.8315 16.5816 14.3059L17.8084 18.0403C18.3753 19.7654 16.3791 21.2001 14.8956 20.134L11.6841 17.8261C11.2764 17.5331 10.7236 17.5331 10.3159 17.8261L7.10438 20.134C5.62091 21.2001 3.62469 19.7654 4.19158 18.0403L5.41835 14.3059C5.57441 13.8315 5.4037 13.3117 4.99541 13.0187L1.78388 10.7107C0.300412 9.64468 1.06285 7.32352 2.89664 7.32352H6.86615C7.37062 7.32352 7.81713 7.00219 7.97318 6.52775L9.19996 2.79336C9.76622 1.06888 12.2331 1.06888 12.8 2.79336Z" stroke="white" stroke-miterlimit="10"/>
+                            </svg>
+                    .tag
+                        .tag_text
+                            span='Премиум-питание и импортные напитки'
+                        .tag-icon
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_940_14256)">
+                            <path d="M21.6313 15.3681H4.30469C4.30469 10.2693 8.18339 6.13574 12.9677 6.13574C17.7521 6.13574 21.6313 10.2693 21.6313 15.3681Z" stroke="white" stroke-miterlimit="10"/>
+                            <path d="M6.29883 13.7679C6.74955 11.6246 8.08697 9.83829 9.87933 8.86865" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.9844 8.39666C11.6129 8.19377 12.2792 8.08447 12.9697 8.08447C13.097 8.08447 13.2232 8.0884 13.3489 8.09568" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M23.1348 17.0132H2.85936C2.38475 17.0132 2 17.4232 2 17.929C2 18.4348 2.38475 18.8449 2.85936 18.8449H23.1348C23.6095 18.8449 23.9942 18.4348 23.9942 17.929C23.9942 17.4232 23.6095 17.0132 23.1348 17.0132Z" stroke="white" stroke-miterlimit="10"/>
+                            <path d="M21.6313 18.585C21.6313 19.6947 20.7867 20.5949 19.7453 20.5949H6.19066C5.14932 20.5949 4.30469 19.6947 4.30469 18.585" stroke="white" stroke-miterlimit="10"/>
+                            <path d="M13.8234 4.5H12.1147C11.7008 4.5 11.3652 4.85759 11.3652 5.29869C11.3652 5.7398 11.7008 6.09738 12.1147 6.09738H13.8234C14.2373 6.09738 14.5729 5.7398 14.5729 5.29869C14.5729 4.85759 14.2373 4.5 13.8234 4.5Z" stroke="white" stroke-miterlimit="10"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_940_14256">
+                            <rect width="24" height="23.2258" fill="white" transform="translate(0.5 0.886719)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+
+                    .tag
+                        .tag_text
+                            span='Детский мир Rixy Kids Club'
+                        .tag-icon
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                            <g clip-path="url(#clip0_940_14268)">
+                            <path d="M10.2154 5.41231H14.1064C14.4572 5.41231 14.5778 4.94515 14.2708 4.77525L8.3758 1.51839C8.2736 1.46197 8.14948 1.46197 8.04728 1.51839L2.15256 4.77525C1.84531 4.94483 1.96589 5.41231 2.31698 5.41231H6.57424" stroke="white" stroke-width="0.933462" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.2137 5.45312H12.5076V12.827H3.91211V5.45312H6.57254" stroke="white" stroke-width="0.933462" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M5.36516 12.8267H3.91211V23.0625H5.36516V12.8267Z" stroke="white" stroke-width="0.933462" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.5058 12.8267H11.0527V23.0625H12.5058V12.8267Z" stroke="white" stroke-width="0.933462" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8.23692 11.1106C9.63199 11.1106 10.7629 9.97964 10.7629 8.58458C10.7629 7.18952 9.63199 6.05859 8.23692 6.05859C6.84186 6.05859 5.71094 7.18952 5.71094 8.58458C5.71094 9.97964 6.84186 11.1106 8.23692 11.1106Z" stroke="white" stroke-width="0.933462" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.5039 6.3252L13.119 6.50542C16.7112 7.55804 20.047 9.34187 22.917 11.745C24.0922 12.4636 24.3591 14.056 23.4825 15.1186C22.7906 15.9571 21.601 16.1861 20.6473 15.6638L19.998 15.2018C17.7845 13.6269 15.3475 12.3934 12.7676 11.5416L12.5039 11.4545V6.3252Z" stroke="white" stroke-width="0.933462" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16.0945 12.8916C10.9232 18.0464 16.3273 23.7728 18.9706 23.4637" stroke="white" stroke-width="0.933462" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19.5421 23.5251C21.0032 23.5251 22.1877 22.3406 22.1877 20.8795C22.1877 19.4184 21.0032 18.2339 19.5421 18.2339C18.081 18.2339 16.8965 19.4184 16.8965 20.8795C16.8965 22.3406 18.081 23.5251 19.5421 23.5251Z" stroke="white" stroke-width="0.933462" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21.6315 15.9404C19.2425 16.4298 19.1081 17.5524 19.5411 18.2336" stroke="white" stroke-width="0.933462" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_940_14268">
+                            <rect width="24" height="24" fill="white" transform="translate(0.5 0.5)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                    .tag
+                        .tag_text
+                            span='Шоу мирового уровня'
+                        .tag-icon
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                            <g clip-path="url(#clip0_940_14281)">
+                            <path d="M15.4544 21.8743C14.2458 22.4081 12.9084 22.7025 11.5035 22.7025C6.08014 22.7025 1.6875 18.3099 1.6875 12.8866C1.6875 11.9357 1.82247 11.0216 2.074 10.1504" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7.55273 3.89902C8.76132 3.36528 10.0987 3.0708 11.5037 3.0708C16.927 3.0708 21.3196 7.46344 21.3196 12.8868C21.3196 13.7272 21.2153 14.5371 21.019 15.3162" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3.52845 1.5L4.61434 4.43865L7.55299 5.52454L4.61434 6.61043L3.52845 9.54908L2.44256 6.61043L-0.496094 5.52454L2.44256 4.43865L3.52845 1.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19.4796 16.2241L20.5655 19.1628L23.5042 20.2487L20.5655 21.3346L19.4796 24.2732L18.3937 21.3346L15.4551 20.2487L18.3937 19.1628L19.4796 16.2241Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.502 3.0708V22.7027" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1.6875 12.8867H21.3133" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21.3132 12.8865C20.7181 9.49997 14.6751 7.19936 8.03711 8.14414" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.3071 22.3224C6.59541 21.3899 5.90829 12.169 6.84081 9.81934" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1.76758 13.0894C2.42402 16.4636 8.51604 18.6476 15.1357 17.5679" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.3984 3.11377C16.5518 5.35917 17.1776 13.5064 16.2941 15.8684" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_940_14281">
+                            <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                    .tag
+                        .tag_text
+                            span='Концерты известных артистов'
+                        .tag-icon
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                            <path d="M14.9708 4.61821C14.9708 2.89607 13.5747 1.5 11.8526 1.5C10.1304 1.5 8.73438 2.89607 8.73438 4.61821V8.95866C8.73438 10.6808 10.1304 12.0769 11.8526 12.0769C13.5747 12.0769 14.9708 10.6808 14.9708 8.95866V4.61821Z" stroke="white" stroke-width="0.892497" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16.3172 9.38818C16.3172 11.8539 14.3184 13.8525 11.853 13.8525C9.38721 13.8525 7.38867 11.8536 7.38867 9.38818" stroke="white" stroke-width="0.892497" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.8535 13.8452V17.6097" stroke="white" stroke-width="0.892497" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.5535 20.4965H8.11328V17.6099H15.668V20.4965" stroke="white" stroke-width="0.892497" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15.6669 20.4966H17.2459V22.9201H6.5332V20.4966H13.5524" stroke="white" stroke-width="0.892497" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.53344 22.9199H5.40039" stroke="white" stroke-width="0.892497" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18.3811 22.9199H17.248" stroke="white" stroke-width="0.892497" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.8691 1.78906V8.93419" stroke="white" stroke-width="0.892497" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.8418 1.78906V8.93419" stroke="white" stroke-width="0.892497" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17.6484 5.1709H20.2147" stroke="white" stroke-width="0.892497" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3.49609 5.1709H6.01433" stroke="white" stroke-width="0.892497" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17.6484 7.13867L19.6106 8.01239" stroke="white" stroke-width="0.892497" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.10352 2.32959L6.01766 3.18169" stroke="white" stroke-width="0.892497" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.06569 7.13867L4.10352 8.01204" stroke="white" stroke-width="0.892497" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19.6094 2.32959L17.6895 3.18444" stroke="white" stroke-width="0.892497" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                    .tag
+                        .tag_text
+                            span='Спа и восстановление'
+                        .tag-icon
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                            <path d="M9.37695 10.2358C9.97386 8.37079 11.0413 6.76112 12.4452 5.64844" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.378 19.7355C12.933 14.9936 9.96901 10.548 5.37824 9.23633C4.80183 10.8972 4.73778 12.6393 5.12718 14.266" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.38 19.7352L12.0888 19.2946C9.99755 16.1342 6.17617 14.5877 2.4752 15.404L1.88086 15.5356C3.94824 19.1016 8.14279 20.8471 12.1298 19.801L12.38 19.7352Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.4453 5.64844C13.8483 6.76197 14.9166 8.37079 15.5127 10.2358" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.5041 19.7355C11.9491 14.9936 14.9131 10.548 19.5039 9.23633C20.0803 10.8972 20.1443 12.6393 19.7549 14.266" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.5039 19.7352L12.7951 19.2946C14.8864 16.1342 18.7078 14.5877 22.4087 15.404L23.0031 15.5356C20.9357 19.1016 16.7411 20.8471 12.7541 19.801L12.5039 19.7352Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                    .tag
+                        .tag_text
+                            span='Активные развлечения'
+                        .tag-icon
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                            <path d="M19.9352 22.1694C19.3817 22.671 18.0223 22.5607 16.9475 21.8449C16.917 21.9905 16.8538 22.133 16.7572 22.2619C16.4267 22.7027 15.8279 22.8124 15.4199 22.507C15.0745 22.2481 14.9767 21.7751 15.1551 21.3683C14.731 21.2186 14.2973 21.0379 13.8643 20.8232C13.847 20.8512 13.8279 20.8792 13.8076 20.9061C13.4772 21.3469 12.8783 21.4566 12.4703 21.1512C12.082 20.8608 12.0063 20.2983 12.2848 19.8652C11.9323 19.607 11.5887 19.3219 11.2601 19.0057C10.9273 19.2354 10.4906 19.2503 10.1715 19.0111C9.76354 18.7057 9.70091 18.1003 10.0314 17.6595C10.0427 17.644 10.0546 17.6291 10.0671 17.6147C9.75042 17.1656 9.46172 16.6753 9.21001 16.1385C8.07015 13.7061 6.95654 15.0887 5.23273 14.3598C3.31865 13.5504 1.10931 11.8403 1.75112 10.3706C1.98374 9.36791 2.53607 8.62589 2.86175 8.57818M16.4011 8.79589C16.1649 9.10367 16.0235 9.41205 14.6982 9.41145M16.7822 10.6348C16.546 10.9426 16.4047 11.251 15.0793 11.2504M17.39 12.4046C17.1538 12.7123 17.0125 13.0207 15.6871 13.0201M18.45 14.0341C18.2138 14.3419 18.0724 14.6503 16.747 14.6497M19.427 16.3103C19.3507 16.4099 18.5144 17.5324 16.7119 16.7129C11.7665 14.4642 12.2204 8.81915 9.23984 9.71267M13.4897 22.6806H1.63779M10.1584 21.1781H2.87964M2.46927 19.1542H1.5M15.8344 5.68647C14.8998 4.63847 14.5592 5.28028 13.9764 6.63845C12.5896 9.87073 9.05016 7.34527 8.92788 3.81653C8.90104 3.0441 8.69585 2.11479 7.6562 2.66713C7.22018 2.89916 3.36577 7.40611 3.82565 7.75325L3.91393 7.82006C6.07435 9.44962 8.36541 9.13886 9.34064 12.7923C9.84645 14.6873 11.8804 17.5551 13.9389 19.0493C14.6642 19.5759 17.0369 20.6055 18.8645 20.6854C21.659 20.8077 21.8839 17.0051 21.3799 16.2989C20.8132 15.505 19.6018 15.6816 17.9835 12.8239C16.8258 10.778 16.8532 9.96199 16.4124 8.14931C16.1375 7.0184 16.0211 5.89703 15.8332 5.68707L15.8344 5.68647Z" stroke="white" stroke-width="0.875647" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                .disc
+                    p='Сеть отелей Rixos была основана в 2000-х годах в Турции. Сегодня под этим брендом открыто более 25 отелей в Египте, ОАЭ, России, Хорватии и других странах мира. Rixos не собирается останавливаться на достигнутом, открывая новые отели в самых живописных местах отдыха.'
+
+
+    //section.held.j_lo
+    //    .inhalt
+    //        h2 Акции и события
+    //        .banner_wrapper
+    //            .left
+    //                img.hidden-on-desktop(src='https://b2ccdn.coral.ru/content/landing-pages/rixos-egypt-premium/jlo_m.webp')
+    //                img.hidden-on-mobile(src='https://b2ccdn.coral.ru/content/landing-pages/rixos-egypt-premium/jlo.webp')
+    //            .right
+    //                img.hidden-on-desktop(src='https://b2ccdn.coral.ru/content/landing-pages/rixos-egypt-premium/x2_m.webp')
+    //                img.hidden-on-mobile(src='https://b2ccdn.coral.ru/content/landing-pages/rixos-egypt-premium/x2.webp')
+
+    section.held.rixos-hotels
+        .inhalt
+            h2 Отели Rixos в Египте
+            .hotels-grid
+                each hotel in known_hotels
+                    +hotel-card(hotel)
+            .discrete-pager
+
+    +coral-bonus()
+
+    +contacts-and-map()
