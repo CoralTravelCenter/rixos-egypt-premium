@@ -743,42 +743,25 @@
                 country: 'Турция',
                 name: 'RIXOS DOWNTOWN ANTALYA',
                 description: 'Отель в самом центре Антальи для тех, кто хочет сочетать отдых с яркими открытиями в городе и окрестностях.',
-                //                    url: '/chain/rixos/turkey/rixos-downtown-antalya-the-land-of-legends-free-access-antalya/',
+                url: '/chain/rixos/turkey/rixos-downtown-antalya/',
                 logo: '/site/coral.ru/assets/logos/rixos-downtown-antalya.png',
                 roomsSplit: [
                     {
                         name: 'Все',
-                        matcher: {
-                            field: 'name',
-                            regex: '.',
-                            flags: ''
-                        },
+                        matcher: {field: 'name', regex: '.', flags: ''},
                         default: true
                     },
                     {
                         name: 'Номера',
-                        matcher: {
-                            field: 'name',
-                            regex: 'suite|villa',
-                            flags: 'i',
-                            negate: true
-                        }
+                        matcher: {field: 'name', regex: 'suite|villa', flags: 'i', negate: true}
                     },
                     {
                         name: 'Номера люкс',
-                        matcher: {
-                            field: 'name',
-                            regex: 'suite',
-                            flags: 'i'
-                        }
+                        matcher: {field: 'name', regex: 'suite', flags: 'i'}
                     },
                     {
                         name: 'Виллы',
-                        matcher: {
-                            field: 'name',
-                            regex: 'villa',
-                            flags: 'i'
-                        }
+                        matcher: {field: 'name', regex: 'villa', flags: 'i'}
                     }
                 ],
                 usps: [
