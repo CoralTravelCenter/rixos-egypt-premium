@@ -541,7 +541,7 @@
                 country: 'Турция',
                 name: 'RIXOS PREMIUM BELEK',
                 description: 'Расположенный почти в центре Белека отель идеально подойдет для тех, кто ценит экотуризм.',
-                //               url: '/chain/rixos/turkey/rixos-premium-belek-the-land-of-legends-free-access-belek/',
+               url: '/chain/rixos/turkey/rixos-premium-belek/',
                 logo: '/site/coral.ru/assets/logos/rixos-belek.png',
                 roomsSplit: [
                     {
@@ -554,30 +554,22 @@
                         default: true
                     },
                     {
+                        name: 'Номера люкс',
+                        matcher: {
+                            field: 'name',
+                            regex: 'deluxe',
+                            flags: 'i'
+                        }
+                    },
+                    {
                         name: 'Номера',
                         matcher: {
                             field: 'name',
-                            regex: 'suite|villa',
+                            regex: 'deluxe',
                             flags: 'i',
                             negate: true
                         }
                     },
-                    {
-                        name: 'Номера люкс',
-                        matcher: {
-                            field: 'name',
-                            regex: 'suite',
-                            flags: 'i'
-                        }
-                    },
-                    {
-                        name: 'Виллы',
-                        matcher: {
-                            field: 'name',
-                            regex: 'villa',
-                            flags: 'i'
-                        }
-                    }
                 ],
                 usps: [
                     {
