@@ -788,7 +788,7 @@
                 country: 'Турция',
                 name: 'RIXOS PREMIUM BODRUM',
                 description: 'Отель для тех, кто хочет насладиться высоким уровнем сервиса и предпочитает активный отдых.',
-                //                     url: '/chain/rixos/turkey/rixos-premium-bodrum-bodrum',
+                url: '/chain/rixos/turkey/rixos-premium-bodrum/',
                 logo: '/site/coral.ru/assets/logos/rixos-premium-bodrum.png',
                 roomsSplit: [
                     {
@@ -804,7 +804,7 @@
                         name: 'Номера',
                         matcher: {
                             field: 'name',
-                            regex: 'suite|villa',
+                            regex: 'suite|executive',
                             flags: 'i',
                             negate: true
                         }
@@ -813,18 +813,10 @@
                         name: 'Номера люкс',
                         matcher: {
                             field: 'name',
-                            regex: 'suite',
+                            regex: 'suite|executive',
                             flags: 'i'
                         }
                     },
-                    {
-                        name: 'Виллы',
-                        matcher: {
-                            field: 'name',
-                            regex: 'villa',
-                            flags: 'i'
-                        }
-                    }
                 ],
                 usps: [
                     {
