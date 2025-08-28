@@ -636,7 +636,7 @@
                 country: 'Турция',
                 name: 'CLUB PRIVE BY RIXOS BELEK',
                 description: 'Концепция элитного сервиса в отеле Rixos Premium Belek с проживанием на частной вилле.',
-                //                  url: '/chain/rixos/turkey/club-prive-by-rixos-belek-belek/',
+                url: '/chain/rixos/turkey/club-prive-by-rixos-belek/',
                 logo: '/site/coral.ru/assets/logos/club-prive-by-rixos.png',
                 roomsSplit: [
                     {
@@ -698,42 +698,25 @@
                 country: 'Турция',
                 name: 'RIXOS PARK BELEK',
                 description: 'Отель с благоустроенной территорией и прекрасным сервисом, расположенный максимально близко к парку The Land of Legends.',
-                //                   url: '/chain/rixos/turkey/rixos-park-belek-the-land-of-legends-free-access-belek/',
+                url: '/chain/rixos/turkey/rixos-park-belek/',
                 logo: '/site/coral.ru/assets/logos/rixos-park-belek.png',
                 roomsSplit: [
                     {
                         name: 'Все',
-                        matcher: {
-                            field: 'name',
-                            regex: '.',
-                            flags: ''
-                        },
+                        matcher: {field: 'name', regex: '.', flags: ''},
                         default: true
                     },
                     {
                         name: 'Номера',
-                        matcher: {
-                            field: 'name',
-                            regex: 'suite|villa',
-                            flags: 'i',
-                            negate: true
-                        }
+                        matcher: {field: 'name', regex: 'suite|villa', flags: 'i', negate: true}
                     },
                     {
                         name: 'Номера люкс',
-                        matcher: {
-                            field: 'name',
-                            regex: 'suite',
-                            flags: 'i'
-                        }
+                        matcher: {field: 'name', regex: 'suite', flags: 'i'}
                     },
                     {
                         name: 'Виллы',
-                        matcher: {
-                            field: 'name',
-                            regex: 'villa',
-                            flags: 'i'
-                        }
+                        matcher: {field: 'name', regex: 'villa', flags: 'i'}
                     }
                 ],
                 usps: [
