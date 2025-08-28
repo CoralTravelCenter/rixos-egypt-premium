@@ -9,6 +9,7 @@ export class ScrollPager {
     discretePagerEl;
     shiftBackwardEl;
     shiftForwardEl;
+    _visibleChildren = [];
 
     constructor(scroller, scroll_pager, discrete_pager, shifters) {
         this.scrollerEl = scroller;
@@ -30,12 +31,12 @@ export class ScrollPager {
     }
 
     refillDiscretePager() {
-        const pager_items = new Array(this.scrollerEl.children.length).fill('<li></li>');
+        const pager_items = new Array(this.visibleChildren.length).fill('<li></li>');
         this.discretePagerEl.innerHTML = pager_items.join('');
-        watchIntersection(this.scrollerEl.children, { root: this.scrollerEl, threshold: .66 }, (el) => {
-            this.discretePagerEl.children[[...this.scrollerEl.children].indexOf(el)]?.classList.add('current');
+        watchIntersection(this.visibleChildren, { root: this.scrollerEl, threshold: .66 }, (el) => {
+            this.discretePagerEl.children[[...this.visibleChildren].indexOf(el)]?.classList.add('current');
         }, (el) => {
-            this.discretePagerEl.children[[...this.scrollerEl.children].indexOf(el)]?.classList.remove('current');
+            this.discretePagerEl.children[[...this.visibleChildren].indexOf(el)]?.classList.remove('current');
         });
         this.syncAppearance();
     }
@@ -48,7 +49,7 @@ export class ScrollPager {
         mo.observe(this.scrollerEl, { childList: true });
 
         this.refillDiscretePager();
-        // const pager_items = new Array(this.scrollerEl.children.length).fill('<li></li>');
+        // const pager_items = new Array(this.visibleChildren.length).fill('<li></li>');
         // this.discretePagerEl.innerHTML = pager_items.join('');
 
         this.shiftBackwardEl?.addEventListener('click', () => {
@@ -67,21 +68,36 @@ export class ScrollPager {
         this.discretePagerEl.addEventListener('click', (e) => {
             const page_idx = [...this.discretePagerEl.children].indexOf(e.target);
             if (~page_idx) {
-                const slide_el = this.scrollerEl.children[page_idx];
+                const slide_el = this.visibleChildren[page_idx];
                 // slide_el.scrollIntoView({ behavior: 'smooth' });
                 this.scrollerEl.scrollTo({ top: 0, left: slide_el.offsetLeft, behavior: 'smooth' });
             }
         });
 
-        // watchIntersection(this.scrollerEl.children, { root: this.scrollerEl, threshold: .66 }, (el) => {
-        //     this.discretePagerEl.children[[...this.scrollerEl.children].indexOf(el)].classList.add('current');
+        // watchIntersection(this.visibleChildren, { root: this.scrollerEl, threshold: .66 }, (el) => {
+        //     this.discretePagerEl.children[[...this.visibleChildren].indexOf(el)].classList.add('current');
         // }, (el) => {
-        //     this.discretePagerEl.children[[...this.scrollerEl.children].indexOf(el)].classList.remove('current');
+        //     this.discretePagerEl.children[[...this.visibleChildren].indexOf(el)].classList.remove('current');
         // });
         //
         // this.syncAppearance();
 
+        setInterval(() => {
+            this.visibleChildren
+        }, 500);
+
         return this;
+    }
+
+    get visibleChildren() {
+        const visibleNow = [...this.scrollerEl.children].filter(child => !!child.getBoundingClientRect().width);
+        if (visibleNow.length && !visibleNow.every((el ,idx) => this._visibleChildren[idx] === el)) {
+            this._visibleChildren = visibleNow;
+            setTimeout(() => {
+                this.refillDiscretePager();
+            }, 0);
+        }
+        return visibleNow;
     }
 
     syncAppearance() {
@@ -92,7 +108,7 @@ export class ScrollPager {
     shiftBackward() {
         this.scrollerEl.scrollBy({
             top: 0,
-            left: -this.scrollerEl.children[0].getBoundingClientRect().width,
+            left: -this.visibleChildren[0].getBoundingClientRect().width,
             behavior: 'smooth'
         });
     }
@@ -100,7 +116,7 @@ export class ScrollPager {
     shiftForward() {
         this.scrollerEl.scrollBy({
             top: 0,
-            left: this.scrollerEl.children[0].getBoundingClientRect().width,
+            left: this.visibleChildren[0].getBoundingClientRect().width,
             behavior: 'smooth'
         });
     }

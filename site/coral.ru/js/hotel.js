@@ -209,8 +209,8 @@ import { debounce } from "lodash";
     const items = document.querySelectorAll('.blocks_item');
 
     const updateActiveDot = () => {
-        const scrollLeft = container.scrollLeft;
-        const containerWidth = container.offsetWidth;
+        const scrollLeft = container?.scrollLeft;
+        const containerWidth = container?.offsetWidth;
 
         let activeIndex = Math.round(scrollLeft / containerWidth);
 
@@ -218,7 +218,7 @@ import { debounce } from "lodash";
         dots[activeIndex]?.classList.add('active');
     };
 
-    container.addEventListener('scroll', () => {
+    container?.addEventListener('scroll', () => {
         requestAnimationFrame(updateActiveDot);
     });
 
