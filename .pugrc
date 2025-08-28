@@ -593,44 +593,23 @@
             {
                 id: 934,
                 country: 'Турция',
-                name: 'RIXOS SUNGATE',
+                name: 'RIXOS PREMIUM SUNGATE',
                 description: 'Отель располагается в живописном заливе, на его территории проводятся спортивные мероприятия и фестивали.',
-                //                url: '/chain/rixos/turkey/rixos-sungate-the-land-of-legends-free-access-kemer/',
+                url: '/chain/rixos/turkey/rixos-premium-sungate/',
                 logo: '/site/coral.ru/assets/logos/rixos-sungate.png',
                 roomsSplit: [
                     {
                         name: 'Все',
-                        matcher: {
-                            field: 'name',
-                            regex: '.',
-                            flags: ''
-                        },
+                        matcher: {field: 'name', regex: '.', flags: ''},
                         default: true
                     },
                     {
                         name: 'Номера',
-                        matcher: {
-                            field: 'name',
-                            regex: 'suite|villa',
-                            flags: 'i',
-                            negate: true
-                        }
+                        matcher: {field: 'name', regex: 'suite', flags: 'i', negate: true}
                     },
                     {
                         name: 'Номера люкс',
-                        matcher: {
-                            field: 'name',
-                            regex: 'suite',
-                            flags: 'i'
-                        }
-                    },
-                    {
-                        name: 'Виллы',
-                        matcher: {
-                            field: 'name',
-                            regex: 'villa',
-                            flags: 'i'
-                        }
+                        matcher: {field: 'name', regex: 'suite', flags: 'i'}
                     }
                 ],
                 usps: [
