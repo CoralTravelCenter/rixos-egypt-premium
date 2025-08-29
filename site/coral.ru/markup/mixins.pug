@@ -80,9 +80,13 @@ mixin restaurants-and-bars(setup, has_accommodation=true)
     section.held.restaurants-and-bars
         .inhalt
             h2 Рестораны и бары
-            p.generic
-                :typo
-                    Отправьтесь в гастрономическое приключение.
+            if setup.subline
+                p.generic
+                    != setup.subline
+            else
+                p.generic
+                    :typo
+                        Отправьтесь в гастрономическое приключение.
             .combo
                 .info
                     h3
