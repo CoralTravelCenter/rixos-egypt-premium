@@ -15,7 +15,7 @@ body
     ], '/chain/rixos/turkey/', '.interactive-map', { label: 'Выбрать номер', ref: 'section.suites' })
 
     +kvv({
-        h1: 'Rixos Premium Sungate',
+        h1: 'Rixos Sungate',
         logo: '/site/coral.ru/assets/logos/rixos-sungate.png',
         desktop_poster: '/site/coral.ru/assets/rixos-premium-sungate/kv.webp',
         mobile_poster:  '/site/coral.ru/assets/rixos-premium-sungate/kv_m.webp',
@@ -34,7 +34,7 @@ body
                     Это один из самых популярных отелей сети Rixos. Его огромная озелененная территория имеет все необходимое для роскошного отдыха. Здесь можно почувствовать себя по-настоящему VIP-персоной, насладиться услугами спа-центров, принять участие в групповых или частных занятиях спортом и побывать на живых представлениях под открытым небом.
             p.generic
                 :typo
-                    Концертный зал, зоны отдыха, аквапарки, теннисный корт и даже картинг доступны всем гостям, в то время как для самых маленьких имеются площадки и дневные мероприятия в Rixy Kids Club. Также посетителям предлагают эксклюзивные услуги и бесплатный трансфер до тематического парка The Land of Legends.
+                    Концертный зал, зоны отдыха, аквапарки, теннисный корт доступны всем гостям, в то время как для самых маленьких имеются площадки и дневные мероприятия в Rixy Kids Club. Также посетителям предлагают эксклюзивные услуги и бесплатный трансфер до тематического парка The Land of Legends.
 
             .actions
                 button.knopf(data-ref='section.suites') Выбрать номер
@@ -56,6 +56,7 @@ body
         { visual_desktop: '/site/coral.ru/assets/rixos-premium-sungate/gallery/07-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-premium-sungate/gallery/07-gallery-mobile.webp' },
         { visual_desktop: '/site/coral.ru/assets/rixos-premium-sungate/gallery/08-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-premium-sungate/gallery/08-gallery-mobile.webp' },
         { visual_desktop: '/site/coral.ru/assets/rixos-premium-sungate/gallery/09-gallery-desktop.webp', visual_mobile: '/site/coral.ru/assets/rixos-premium-sungate/gallery/09-gallery-mobile.webp' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-premium-sungate/gallery/10-gallery-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-premium-sungate/gallery/10-gallery-mobile.jpg' },
     ])
 
     +restaurants-and-bars({
@@ -73,13 +74,18 @@ body
             },
             {
                 visual: '/site/coral.ru/assets/rixos-premium-sungate/restaurants-and-bars/rest-03.webp',
-                heading: 'Rixy Kids Club и Rixy Kids Dining',
+                heading: 'Rixy Restaurant',
                 body: 'Полезное меню для детей и их родителей, чтобы вы могли отдохнуть, а маленькие туристы повеселиться.'
             },
             {
                 visual: '/site/coral.ru/assets/rixos-premium-sungate/restaurants-and-bars/rest-04.webp',
                 heading: 'Teppanyaki',
                 body: 'Блюда классической японской кухни в нестандартной обстановке.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-sungate/restaurants-and-bars/rest-03-2.jpg',
+                heading: 'Rixy Â la Carte Restaurant',
+                body: 'Полезное меню для детей и их родителей, чтобы вы могли отдохнуть, а маленькие туристы повеселиться.'
             },
             {
                 visual: '/site/coral.ru/assets/rixos-premium-sungate/restaurants-and-bars/rest-05.webp',
@@ -107,22 +113,22 @@ body
                 body: 'Ресторан международной кухни с шедевральными блюдами и высоким уровнем сервиса.'
             },
             {
-                visual: '/site/coral.ru/assets/rixos-premium-sungate/restaurants-and-bars/rest-10.webp',
+                visual: '/site/coral.ru/assets/rixos-premium-sungate/restaurants-and-bars/rest-10-2.jpg',
                 heading: 'Noodle House',
                 body: 'Ресторан тайской кухни с необычными азиатскими блюдами.'
             },
             {
-                visual: '/site/coral.ru/assets/rixos-premium-sungate/restaurants-and-bars/rest-11.webp',
-                heading: 'Круассан Корнер ',
+                visual: '/site/coral.ru/assets/rixos-premium-sungate/restaurants-and-bars/rest-11-2.jpg',
+                heading: 'Croissant Corner',
                 body: 'Попробуйте вкуснейшие свежеиспеченные круассаны с разными начинками.'
             },
             {
-                visual: '/site/coral.ru/assets/rixos-premium-sungate/restaurants-and-bars/rest-12.webp',
+                visual: '/site/coral.ru/assets/rixos-premium-sungate/restaurants-and-bars/rest-12-2.jpg',
                 heading: 'Rixy La Patisserie',
                 body: 'Кафе, где вы можете отдохнуть за чашечкой чая или кофе. А также попробовать домашнюю турецкую кухню.'
             },
             {
-                visual: '/site/coral.ru/assets/rixos-premium-sungate/restaurants-and-bars/rest-13.webp',
+                visual: '/site/coral.ru/assets/rixos-premium-sungate/restaurants-and-bars/rest-13-2.jpg',
                 heading: 'Aka Kuro',
                 body: 'Стильный и атмосферный ресторан с международной кухней. '
             },
@@ -188,7 +194,7 @@ body
             h2 Rixy Kids Club
             p
                 :typo
-                    Концертный зал, зоны отдыха, аквапарки, теннисный корт и даже картинг доступны всем гостям, в то время как для самых маленьких имеются площадки и дневные мероприятия в Rixy Kids Club. Также посетителям предлагают эксклюзивные услуги и бесплатный трансфер до тематического парка The Land of Legends.
+                    Концертный зал, зоны отдыха, аквапарки, теннисный корт доступны всем гостям, в то время как для самых маленьких имеются площадки и дневные мероприятия в Rixy Kids Club. Также посетителям предлагают эксклюзивные услуги и бесплатный трансфер до тематического парка The Land of Legends.
     section.three-blocks.held
         .inhalt
             h2 РАЗВЛЕЧЕНИЯ И МЕРОПРИЯТИЯ

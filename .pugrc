@@ -593,7 +593,7 @@
             {
                 id: 934,
                 country: 'Турция',
-                name: 'RIXOS PREMIUM SUNGATE',
+                name: 'RIXOS SUNGATE',
                 description: 'Отель располагается в живописном заливе, на его территории проводятся спортивные мероприятия и фестивали.',
                 url: '/chain/rixos/turkey/rixos-premium-sungate/',
                 logo: '/site/coral.ru/assets/logos/rixos-sungate.png',
