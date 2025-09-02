@@ -1015,6 +1015,60 @@
                         }
                     }
                 ]
+            },
+            {
+                id: 6454,
+                country: 'ОАЭ',
+                name: 'RIXOS THE PALM DUBAI HOTEL & SUITES',
+                description: 'Отель на знаменитом острове Палм-Джумейра с панорамным видом на Персидский залив и небоскребы Дубая.',
+                url: '/chain/rixos/uae/rixos-the-palm-dubai-hotel-and-suites/',
+                logo: '/site/coral.ru/assets/logos/rixos-the-palm-dubai-hotel-and-suites.png',
+                usps: [
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-rixos-sharm-el-sheikh-service.svg',
+                        label: 'Уникальное расположение'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-catering.svg',
+                        label: 'Ультра все включено'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-beach.svg',
+                        label: 'Километровый частный пляж'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-spa.svg',
+                        label: 'Спа-центр Anjana'
+                    }
+                ],
+                roomsSplit: [
+                    {
+                        name: 'Все',
+                        matcher: {
+                            field: 'name',
+                            regex: '.',
+                            flags: ''
+                        },
+                        default: true
+                    },
+                    {
+                        name: 'Номера',
+                        matcher: {
+                            field: 'name',
+                            regex: 'suite',
+                            flags: 'i',
+                            negate: true
+                        }
+                    },
+                    {
+                        name: 'Номера люкс',
+                        matcher: {
+                            field: 'name',
+                            regex: 'suite',
+                            flags: 'i',
+                        }
+                    }
+                ]
             }
         ]
     }

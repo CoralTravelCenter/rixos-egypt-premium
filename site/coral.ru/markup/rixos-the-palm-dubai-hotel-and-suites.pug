@@ -1,0 +1,183 @@
+include ../markup/mixins
+
+- const hotel = hotels.find(hotel => hotel.id === 6454);
+
+body
+    script
+        != `var known_hotel = ${ JSON.stringify(hotel) };`
+
+    +internal-nav([
+        { label: 'Номера', ref: 'section.suites' },
+        { label: 'Рестораны и бары', ref: 'section.restaurants-and-bars' },
+        { label: 'CoralBonus', ref: 'section.coral-bonus' },
+        { label: 'Контакты', ref: 'section.leased-line-premium' },
+    ], '/chain/rixos/uae/', '.interactive-map', { label: 'Выбрать номер', ref: 'section.suites' })
+
+    +kvv({
+        h1: 'Rixos The Palm Dubai Hotel & Suites',
+        logo: '/site/coral.ru/assets/logos/rixos-the-palm-dubai-hotel-and-suites.png',
+        desktop_poster: '/site/coral.ru/assets/rixos-the-palm-dubai/kv-poster-desktop.jpg',
+        mobile_poster:  '/site/coral.ru/assets/rixos-the-palm-dubai/kv-poster-mobile.jpg',
+        desktop_vid: 1110866938,
+        mobile_vid: 1110866984,
+        video_scale: 1.5,
+        five_stars: true,
+        location: 'ОАЭ, Джумейра'
+    })
+
+    section.held.intro
+        .inhalt
+            h2 Добро пожаловать в Rixos The Palm Dubai Hotel & Suites
+            p.generic
+                :typo
+                    Роскошный пляжный курорт в Дубае, предлагающий премиальный отдых по системе «все включено». Насладитесь панорамными видами на лазурные воды Персидского залива, знаменитые небоскребы Дубая, сверкающий район Дубай-Марина, потрясающие лагуны и уникальную архитектуру острова Палм-Джумейра. Благодаря своему превосходному расположению, Rixos Palm Dubai находится в непосредственной близости от самых популярных туристических достопримечательностей и развлекательных районов Дубая, позволяя вам легко исследовать все, что может предложить город.
+            .actions
+                button.knopf(data-ref='section.suites') Выбрать номер
+
+    section.held.suites
+        .inhalt
+            h2.rooms-splitter
+            .rooms-list-combo
+                .rooms-grid
+                .rooms-paging.discrete-pager
+
+    +gallery([
+      { visual_desktop: '/site/coral.ru/assets/rixos-the-palm-dubai/gallery/01-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-the-palm-dubai/gallery/01-mobile.jpg' },
+      { visual_desktop: '/site/coral.ru/assets/rixos-the-palm-dubai/gallery/02-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-the-palm-dubai/gallery/02-mobile.jpg' },
+      { visual_desktop: '/site/coral.ru/assets/rixos-the-palm-dubai/gallery/03-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-the-palm-dubai/gallery/03-mobile.jpg' },
+      { visual_desktop: '/site/coral.ru/assets/rixos-the-palm-dubai/gallery/04-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-the-palm-dubai/gallery/04-mobile.jpg' },
+      { visual_desktop: '/site/coral.ru/assets/rixos-the-palm-dubai/gallery/05-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-the-palm-dubai/gallery/05-mobile.jpg' },
+      { visual_desktop: '/site/coral.ru/assets/rixos-the-palm-dubai/gallery/06-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-the-palm-dubai/gallery/06-mobile.jpg' },
+      { visual_desktop: '/site/coral.ru/assets/rixos-the-palm-dubai/gallery/07-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-the-palm-dubai/gallery/07-mobile.jpg' },
+      { visual_desktop: '/site/coral.ru/assets/rixos-the-palm-dubai/gallery/08-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-the-palm-dubai/gallery/08-mobile.jpg' },
+      { visual_desktop: '/site/coral.ru/assets/rixos-the-palm-dubai/gallery/09-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-the-palm-dubai/gallery/09-mobile.jpg' },
+    ])
+
+    +restaurants-and-bars({
+       subline: 'Турне по кухням мира',
+       about: 'Турецкий ресторан A La Turca в самом сердце курорта готов удивлять вас с утра до вечера. Вы также можете насладиться разнообразными изысканными блюдами в итальянском ресторане L’Olivo Ristorante, стейк-хаусе Toro Loco Steakhouse или ресторане морепродуктов и турецкой кухни Bodrum. Каждое из заведений найдет, чем порадовать гурмана.',
+       restaurants: [
+           {
+               visual: '/site/coral.ru/assets/rixos-the-palm-dubai/restaurants-and-bars/rest-01.jpg',
+               heading: 'A La Turca',
+               body: 'Фирменная концепция шведского стола, предлагающего мировую кухню.'
+           },
+           {
+               visual: '/site/coral.ru/assets/rixos-the-palm-dubai/restaurants-and-bars/rest-02.jpg',
+               heading: 'Ресторан Turquoise',
+               body: 'Главный ресторан с аутентичной турецкой и международной кухней по системе шведский стол.'
+           },
+           {
+               visual: '/site/coral.ru/assets/rixos-the-palm-dubai/restaurants-and-bars/rest-03.jpg',
+               heading: 'L’olivo Ristorante',
+               body: 'Новинками итальянской и средиземноморской кухни.'
+           },
+           {
+               visual: '/site/coral.ru/assets/rixos-the-palm-dubai/restaurants-and-bars/rest-04.jpg',
+               heading: 'Стейк-хаус Toro Loco',
+               body: 'Испанский мясной ресторан с лучшей говядиной на гриле.'
+           },
+           {
+               visual: '/site/coral.ru/assets/rixos-the-palm-dubai/restaurants-and-bars/rest-05.jpg',
+               heading: 'Ресторан Bodrum',
+               body: 'Эксклюзивные яркие блюда турецкой кухни. А также живая музыка и представления.'
+           },
+           {
+               visual: '/site/coral.ru/assets/rixos-the-palm-dubai/restaurants-and-bars/rest-06.jpg',
+               heading: 'Aqua & More Restaurant',
+               body: 'Ресторан на берегу Персидского залива Подаются блюда из морепродуктов.'
+           },
+           {
+               visual: '/site/coral.ru/assets/rixos-the-palm-dubai/restaurants-and-bars/rest-07.jpg',
+               heading: 'Patisserie Istanbul',
+               body: 'Лобби-лаунж с венские булочками, турецкими сладостями и широкий выбор кофе и чая.'
+           },
+       ],
+       bars: [
+           {
+               visual:  '/site/coral.ru/assets/rixos-the-palm-dubai/restaurants-and-bars/bar-01.jpg',
+               heading: 'I Chill Beach Lounge',
+               body:    'Комфортный лаундж с видом на Дубай. Здесь подают разнообразные коктейли.'
+           },
+           {
+               visual:  '/site/coral.ru/assets/rixos-the-palm-dubai/restaurants-and-bars/bar-02.jpg',
+               heading: 'Bar1',
+               body:    'Бар с алкогольным и безалкогольными напитками, фирменными коктейлями и разливным пивом.'
+           },
+           {
+               visual:  '/site/coral.ru/assets/rixos-the-palm-dubai/restaurants-and-bars/bar-03.jpg',
+               heading: 'Nargile Lounge',
+               body:    'Лаунж, где подают экзотический кальян, органический чай и фирменных напитки.'
+           },
+           {
+               visual:  '/site/coral.ru/assets/rixos-the-palm-dubai/restaurants-and-bars/bar-04.jpg',
+               heading: 'Highlights Pool Bar',
+               body:    'Бар у бассейна с инновационными напитками.'
+           },
+           {
+               visual:  '/site/coral.ru/assets/rixos-the-palm-dubai/restaurants-and-bars/bar-05.jpg',
+               heading: 'The Breeze Pool Bar',
+               body:    'Бар у бассейна, где подают креативные закуски и напитки.'
+           },
+           {
+               visual:  '/site/coral.ru/assets/rixos-the-palm-dubai/restaurants-and-bars/bar-06.jpg',
+               heading: 'Highlights Bar',
+               body:    'Открытый лаундж, где проходят различные выступления и шоу.'
+           },
+           {
+               visual:  '/site/coral.ru/assets/rixos-the-palm-dubai/restaurants-and-bars/bar-07.jpg',
+               heading: 'Nu Air Shisha Lounge',
+               body:    'Живописная лаунж-зона с экзотическим кальяном и органическим чаем.'
+           },
+           {
+               visual:  '/site/coral.ru/assets/rixos-the-palm-dubai/restaurants-and-bars/bar-08.jpg',
+               heading: 'I Chill Beach Lounge',
+               body:    'Лаунж-зона с видом на Пальма-Джумейра. Здесь подают коктейли и закуски.'
+           },
+       ]
+    })
+
+    section.held.edge2edge.rixy-club.visuals-x-slider
+        .x-slider
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-the-palm-dubai/rixy-club/01-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-the-palm-dubai/rixy-club/01-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-the-palm-dubai/rixy-club/02-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-the-palm-dubai/rixy-club/02-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-the-palm-dubai/rixy-club/03-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-the-palm-dubai/rixy-club/03-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-the-palm-dubai/rixy-club/04-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-the-palm-dubai/rixy-club/04-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-the-palm-dubai/rixy-club/05-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-the-palm-dubai/rixy-club/05-mobile.jpg)')
+        .overlay
+            h2 Rixy Kids Club
+            p
+                :typo
+                    Пока родители наслаждаются отдыхом, маленькие гости весело проведут время в детском клубе Rixy, участвуя в увлекательных играх и образовательных мероприятиях. А завершить день всей семьей можно в современном детском кинотеатре Rixinema, где демонстрируются любимые фильмы и мультфильмы, которые подарят незабываемые впечатления.
+
+
+    section.three-blocks.held
+        .inhalt
+            h2 РАЗВЛЕЧЕНИЯ И МЕРОПРИЯТИЯ
+            p.text
+                :typo
+                    Спортивный клуб предлагает ежедневные спортивные мероприятия и занятия под руководством опытных тренеров: йога, пилатес, TRX, табата, катание на сапах, круговые тренировки, аквафит, Kangoo Jump и многое другое! Для тех, кто предпочитает тренировки на свежем воздухе, есть тренажерный зал, расположенный среди живописных джунглей. В спа-центре Anjana Spa можно насладиться турецким хамамом, глубоким очищающим массажем, расслабиться в парной или сауне. Отдохните в уютных залах спа-центра с любимой книгой и чашкой ароматного чая, полностью отвлекаясь от забот.
+            p.text
+                :typo
+                    Пока родители наслаждаются отдыхом, маленькие гости весело проведут время в детском клубе Rixy, участвуя в увлекательных играх и образовательных мероприятиях. А завершить день всей семьей можно в современном детском кинотеатре Rixinema, где демонстрируются любимые фильмы и мультфильмы, которые подарят незабываемые впечатления.
+            .blocks_items
+                .blocks_item
+                    img(src='/site/coral.ru/assets/rixos-the-palm-dubai/visuals/01-desktop.jpg').hidden-on-mobile
+                    img(src='/site/coral.ru/assets/rixos-the-palm-dubai/visuals/01-mobile.jpg').hidden-on-desktop
+                    .text Anjana Spa
+                .blocks_item
+                    img(src='/site/coral.ru/assets/rixos-the-palm-dubai/visuals/02-desktop.jpg').hidden-on-mobile
+                    img(src='/site/coral.ru/assets/rixos-the-palm-dubai/visuals/02-mobile.jpg').hidden-on-desktop
+                    .text Тематические вечеринки
+                .blocks_item
+                    img(src='/site/coral.ru/assets/rixos-the-palm-dubai/visuals/03-desktop.jpg').hidden-on-mobile
+                    img(src='/site/coral.ru/assets/rixos-the-palm-dubai/visuals/03-mobile.jpg').hidden-on-desktop
+                    .text Спорт и фитнес
+            .pagination
+                .dot(data-index='0')
+                .dot(data-index='1')
+                .dot(data-index='2')
+
+    +coral-bonus()
+
+    +contacts-and-map()
