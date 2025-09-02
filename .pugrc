@@ -1069,6 +1069,60 @@
                         }
                     }
                 ]
+            },
+            {
+                id: 25536,
+                country: 'ОАЭ',
+                name: 'RIXOS PREMIUM SAADIYAT ISLAND',
+                description: 'Семейный отель с высоким уровнем сервиса на острове Саадият.',
+                url: '/chain/rixos/uae/rixos-premium-saadiyat-island/',
+                logo: '/site/coral.ru/assets/logos/rixos-premium-saadiyat-island.png',
+                usps: [
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-aquapark.svg',
+                        label: 'Отдых для всей семьи'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-gym.svg',
+                        label: 'Спа-центр и фитнесс в отеле'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-vip-transfer.svg',
+                        label: 'Трансфер до главных достопримечательностей'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-butler.svg',
+                        label: 'Элитный сервис'
+                    }
+                ],
+                roomsSplit: [
+                    {
+                        name: 'Все',
+                        matcher: {
+                            field: 'name',
+                            regex: '.',
+                            flags: ''
+                        },
+                        default: true
+                    },
+                    {
+                        name: 'Номера',
+                        matcher: {
+                            field: 'name',
+                            regex: 'suite',
+                            flags: 'i',
+                            negate: true
+                        }
+                    },
+                    {
+                        name: 'Номера люкс',
+                        matcher: {
+                            field: 'name',
+                            regex: 'suite',
+                            flags: 'i',
+                        }
+                    }
+                ]
             }
         ]
     }
