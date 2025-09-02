@@ -26,13 +26,6 @@ export default class RoomsSplitter {
                 if (setup_item.matcher.negate ? !test_is_positive : test_is_positive) {
                     if (!setup_item.list) {
                         setup_item.list = [];
-                        const splitter_item = document.createElement('span');
-                        splitter_item.classList.add('splitter-item');
-                        splitter_item.textContent = setup_item.name;
-                        splitter_item.addEventListener('click', e => {
-                            this.selectSetupItem(setup_item);
-                        });
-                        this.splitterEl.append(splitter_item);
                     }
                     if (!setup_item.list.includes(room_card_el)) {
                         setup_item.list.push(room_card_el);
@@ -42,6 +35,15 @@ export default class RoomsSplitter {
         }
         // remove categories with empty lists
         this.setup = this.setup.filter(item => !!item.list);
+        this.setup.forEach(setup_item => {
+            const splitter_item = document.createElement('span');
+            splitter_item.classList.add('splitter-item');
+            splitter_item.textContent = setup_item.name;
+            splitter_item.addEventListener('click', e => {
+                this.selectSetupItem(setup_item);
+            });
+            this.splitterEl.append(splitter_item);
+        });
         // select 'default' item or first in list
         this.selectSetupItem(this.setup.find(item => item.default) || this.setup[0]);
         return this;
