@@ -961,6 +961,61 @@
                     },
                 ]
             },
+            // UAE
+            {
+                id: 22401,
+                country: 'ОАЭ',
+                name: 'RIXOS PREMIUM DUBAI',
+                description: 'Стильный современный отель, расположенный в самом сердце Jumeirah Beach Residence.',
+                url: '/chain/rixos/uae/rixos-premium-dubai/',
+                logo: '/site/coral.ru/assets/logos/rixos-premium-dubai.png',
+                usps: [
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-rixos-sharm-el-sheikh-service.svg',
+                        label: 'Удобное расположение'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-beach.svg',
+                        label: 'Доступ к частному пляжу'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-authentic.svg',
+                        label: 'Площадка для банкетов и конференций'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-gym.svg',
+                        label: 'Тренажерный зал с панорамным видом'
+                    },
+                ],
+                roomsSplit: [
+                    {
+                        name: 'Все',
+                        matcher: {
+                            field: 'name',
+                            regex: '.',
+                            flags: ''
+                        },
+                        default: true
+                    },
+                    {
+                        name: 'Номера',
+                        matcher: {
+                            field: 'name',
+                            regex: 'suite|premium',
+                            flags: 'i',
+                            negate: true
+                        }
+                    },
+                    {
+                        name: 'Номера люкс',
+                        matcher: {
+                            field: 'name',
+                            regex: 'suite|premium',
+                            flags: 'i',
+                        }
+                    }
+                ]
+            }
         ]
     }
 }

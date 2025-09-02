@@ -7,6 +7,7 @@ export default class RoomsSplitter {
     modelsList;
     template;
     constructor(setup, models_list, template, splitter_el, list_el) {
+        // console.log(models_list);
         this.setup = setup;
         window.room_splitter_setup = setup;
         this.splitterEl = splitter_el;

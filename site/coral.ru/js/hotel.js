@@ -21,7 +21,7 @@ dayjs.extend(MinMax);
 
 import RoomsSplitter from "./rooms-splitter";
 import Swiper from "swiper";
-import { debounce } from "lodash";
+import { debounce, groupBy } from "lodash";
 
 (async function () {
     await hostReactAppReady();
@@ -65,11 +65,13 @@ import { debounce } from "lodash";
                 // const hotel_page_uri = `${ search.redirectionUrl }?qp=${ search.queryParam }&p=2`;
                 const hotel_page_uri = `${ search.redirectionUrl }?qp=${ search.queryParam }&p=1`;
                 priceSearchDetail(query).then(details => {
-                    console.log('=== details: %o', details);
+                    // console.log('=== details: %o', details);
                     const { products, rooms } = details;
-                    const models_list = products.filter(product => {
+                    let products2show = products.filter(product => {
                         return !!rooms[product.rooms.at(0).roomKey]?.hasDetail;
-                    }).map((product, idx) => {
+                    });
+                    products2show = Object.values(groupBy(products2show, product => product.rooms.at(0).roomKey)).map(list => list.at(0));
+                    const models_list = products2show.map((product, idx) => {
                         let room_key = product.rooms.at(0).roomKey;
                         const room = rooms[room_key];
                         let visual = room.images?.at(0)?.sizes.find(s => s.type === 4)?.url;
@@ -82,10 +84,10 @@ import { debounce } from "lodash";
                         const bedrooms = room.bedroom.value.split(/\s+/).join('<br>');
                         return {
                             id: room_key,
-                            // name: room.name,
-                            name: room.name.replace(/\d.*/, ''),
+                            name: room.name,
+                            // name: room.name.replace(/\d.*/, ''),
                             priceFormatted: Math.round(product.price.amount / product.stayNights).formatCurrency(),
-                            tag_visual: `<duv class="visual" style="background-image: ${ visual_style }"></duv>`,
+                            tag_visual: `<div class="visual" style="background-image: ${ visual_style }"></div>`,
                             room_area,
                             pax,
                             bedrooms,

@@ -1,0 +1,148 @@
+include ../markup/mixins
+
+- const hotel = hotels.find(hotel => hotel.id === 22401);
+
+body
+    script
+        != `var known_hotel = ${ JSON.stringify(hotel) };`
+
+    +internal-nav([
+        { label: 'Номера', ref: 'section.suites' },
+        { label: 'Рестораны и бары', ref: 'section.restaurants-and-bars' },
+        { label: 'CoralBonus', ref: 'section.coral-bonus' },
+        { label: 'Контакты', ref: 'section.leased-line-premium' },
+    ], '/chain/rixos/uae/', '.interactive-map', { label: 'Выбрать номер', ref: 'section.suites' })
+
+    +kvv({
+        h1: 'Rixos Premium Dubai',
+        logo: '/site/coral.ru/assets/logos/rixos-premium-dubai.png',
+        desktop_poster: '/site/coral.ru/assets/rixos-premium-gocek/kv.webp',
+        mobile_poster:  '/site/coral.ru/assets/rixos-premium-gocek/kv_m.webp',
+        desktop_vid: 1110867322,
+        mobile_vid: 1110867351,
+        video_scale: 1.5,
+        five_stars: true,
+        location: 'ОАЭ, Дубай'
+    })
+
+    section.held.intro
+        .inhalt
+            h2 Добро пожаловать в Rixos Premium Dubai
+            p.generic
+                :typo
+                    Стильная городская достопримечательность, расположенная в самом сердце Jumeirah Beach Residence в Дубае. Частный пляж, ультрасовременные площадки для проведения конференций и банкетов, 6 ресторанов, удостоенных мировых наград, гости могут насладиться аутентичной турецкой или греческой кухней, закусками, напитками и кондитерскими изделиями. В отеле есть современный фитнес-центр, тренажерный зал RixGym с панорамным видом на пляж Azure Beach и Персидский залив, а также спа-центр Naturelife Spa, известный своими фирменными процедурами в турецком хаммаме.
+            .actions
+                button.knopf(data-ref='section.suites') Выбрать номер
+
+    section.held.suites
+        .inhalt
+            h2.rooms-splitter
+            .rooms-list-combo
+                .rooms-grid
+                .rooms-paging.discrete-pager
+
+    +gallery([
+       { visual_desktop: '/site/coral.ru/assets/rixos-premium-dubai/gallery/01-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-premium-dubai/gallery/01-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/rixos-premium-dubai/gallery/02-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-premium-dubai/gallery/02-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/rixos-premium-dubai/gallery/03-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-premium-dubai/gallery/03-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/rixos-premium-dubai/gallery/04-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-premium-dubai/gallery/04-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/rixos-premium-dubai/gallery/05-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-premium-dubai/gallery/05-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/rixos-premium-dubai/gallery/06-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-premium-dubai/gallery/06-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/rixos-premium-dubai/gallery/07-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-premium-dubai/gallery/07-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/rixos-premium-dubai/gallery/08-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-premium-dubai/gallery/08-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/rixos-premium-dubai/gallery/09-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-premium-dubai/gallery/09-mobile.jpg' },
+    ])
+
+    +restaurants-and-bars({
+        subline: 'Рай для гурманов',
+        about: 'Тщательно подобранные, самые интересные интересные и классические гастрономические концепции еды и напитков, подарят вам неповторимое удовольствие и множество незабываемых моментов. Побалуйте себя лучшими блюдами со всего мира в ресторанах и барах отеля.',
+        restaurants: [
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-dubai/restaurants-and-bars/rest-01.jpg',
+                heading: 'Turquoise',
+                body:    'Главный ресторан с аутентичной турецкой и международной кухней по системе шведский стол.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-dubai/restaurants-and-bars/rest-02.jpg',
+                heading: 'Кафе Godiva',
+                body:    'Сладости из бельгийского шоколада. Ежедневно играет пианино и арфа. '
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-dubai/restaurants-and-bars/rest-03.jpg',
+                heading: 'Azure Beach',
+                body:    'Семейный ресторан с азиатской кухней, кальяном и зонами отдыха у моря и бассейна.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-dubai/restaurants-and-bars/rest-04.jpg',
+                heading: 'Ресторан Ammos',
+                body:    'Греческий ресторан, где подают аутентичную кухню в атмосфере средиземноморского гостеприимства.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-dubai/restaurants-and-bars/rest-05.jpg',
+                heading: 'Ресторан Asil',
+                body:    'Ресторан с арабскими, турецкими, ливанскими и марокканскими блюдами.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-dubai/restaurants-and-bars/rest-07.jpg',
+                heading: 'Ресторан Luigia',
+                body:    'Итальянская а-ля карт ресторан с традиционными блюдами.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-dubai/restaurants-and-bars/rest-06.jpg',
+                heading: 'Ресторан Stk',
+                body:    'Стильный стейк-хаус, где подают премиальные стейки и устраивают вечеринки.'
+            },
+        ],
+        bars: [
+            {
+                visual:  '/site/coral.ru/assets/rixos-premium-dubai/restaurants-and-bars/bar-01.jpg',
+                heading: 'Lock, Stock & Barrel',
+                body:    'Бар для вечеринок с живой музыкой и спортивными трансляциями.'
+            },
+        ]
+    })
+
+    section.held.edge2edge.rixy-club.visuals-x-slider
+        .x-slider
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-dubai/rixy-club/01-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-dubai/rixy-club/01-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-dubai/rixy-club/02-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-dubai/rixy-club/02-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-dubai/rixy-club/03-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-dubai/rixy-club/03-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-dubai/rixy-club/04-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-dubai/rixy-club/04-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-premium-dubai/rixy-club/05-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-premium-dubai/rixy-club/05-mobile.jpg)')
+        .overlay
+            h2 Rixy Kids Club
+            p
+                :typo
+                    В детском клубе Rixy Kids Club предлагает широкий выбор ежедневных детских развлечений, интерактивных игр и увлекательных шоу.
+
+
+    section.three-blocks.held
+        .inhalt
+            h2 РАЗВЛЕЧЕНИЯ И МЕРОПРИЯТИЯ
+            p.text
+                :typo
+                    Расслабьтесь и восстановите силы в удостоенном наград спа-центре Naturelife Spa, выполненном в традиционном турецком стиле: аутентичный хаммам, парная и сауна, ледяной фонтан, процедуры в прекрасно оборудованных кабинетах.
+            p.text
+                :typo
+                    Любителям активного отдыха доступны развлечения на любой вкус: вейкбординг, катание на гидроциклах, парасейлинг и флайбординг, широкий выбор групповых занятий, включая йогу, пилатес, TRX, кроссфит и кенгу джампс, а также групповые велопрогулки. Также в отеле проходят тематические вечера, играет живая музыка и выступают артисты. А в детском клубе Rixy Kids Club предлагает широкий выбор ежедневных детских развлечений, интерактивных игр и увлекательных шоу.
+            .blocks_items
+                .blocks_item
+                    img(src='/site/coral.ru/assets/rixos-premium-dubai/visuals/01-desktop.jpg').hidden-on-mobile
+                    img(src='/site/coral.ru/assets/rixos-premium-dubai/visuals/01-mobile.jpg').hidden-on-desktop
+                    .text Naturelife Spa
+                .blocks_item
+                    img(src='/site/coral.ru/assets/rixos-premium-dubai/visuals/02-desktop.jpg').hidden-on-mobile
+                    img(src='/site/coral.ru/assets/rixos-premium-dubai/visuals/02-mobile.jpg').hidden-on-desktop
+                    .text Тематические вечеринки
+                .blocks_item
+                    img(src='/site/coral.ru/assets/rixos-premium-dubai/visuals/03-desktop.jpg').hidden-on-mobile
+                    img(src='/site/coral.ru/assets/rixos-premium-dubai/visuals/03-mobile.jpg').hidden-on-desktop
+                    .text Спорт и фитнес
+            .pagination
+                .dot(data-index='0')
+                .dot(data-index='1')
+                .dot(data-index='2')
+
+    +coral-bonus()
+
+    +contacts-and-map()
