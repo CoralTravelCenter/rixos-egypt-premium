@@ -137,8 +137,11 @@ mixin entertainment(setup)
     section.held.entertainment
         .inhalt
             h2!= setup.heading || 'Развлечения и мероприятия'
-             // each p in setup.ps
-             //    p.generic!= p
+            // each p in setup.ps
+            //    p.generic!= p
+            if setup.paras
+                each p in setup.paras
+                    p.generic!= p
             .two-usps
                 .usp.lefty
                     .heading(style=`--visual-desktop: url("${ setup.lefty.visual_desktop }"); --visual-mobile: url("${ setup.lefty.visual_mobile }")`)
