@@ -1,0 +1,164 @@
+include ../markup/mixins
+
+- const hotel = hotels.find(hotel => hotel.id === 46703);
+
+body
+    script
+        != `var known_hotel = ${ JSON.stringify(hotel) };`
+
+    +internal-nav([
+        { label: 'Номера', ref: 'section.suites' },
+        { label: 'Рестораны и бары', ref: 'section.restaurants-and-bars' },
+        { label: 'CoralBonus', ref: 'section.coral-bonus' },
+        { label: 'Контакты', ref: 'section.leased-line-premium' },
+    ], '/chain/rixos/uae/', '.interactive-map', { label: 'Выбрать номер', ref: 'section.suites' })
+
+    +kvv({
+        h1: 'Club Privé By Rixos Saadiyat Island',
+        logo: '/site/coral.ru/assets/logos/club-prive-by-rixos-saadiyat-island.png',
+        desktop_poster: '/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/kv-poster-desktop.jpg',
+        mobile_poster:  '/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/kv-poster-mobile.jpg',
+        desktop_vid: 1110867099,
+        mobile_vid: 1110867124,
+        video_scale: 1.5,
+        five_stars: true,
+        location: 'ОАЭ, Абу-Даби'
+    })
+
+    section.held.intro
+        .inhalt
+            h2 Добро пожаловать в Club Privé By Rixos Saadiyat Island
+            p.generic
+                :typo
+                    Club Privé – это синоним роскоши на уединенном арабском острове в Абу-Даби. Погрузитесь в мир эксклюзивных привилегий, выбрав виллу Executive с 3 спальнями и общим бассейном, обслуживаемую круглосуточным дворецким, или виллу Executive с 4 спальнями и собственным бассейном. Ощутите непревзойденный комфорт, уединение и полный доступ ко всем удобствам «все включено» Rixos Premium Saadiyat Island, а также восхитительные ужины в эксклюзивном ресторане Club House.
+            .actions
+                button.knopf(data-ref='section.suites') Выбрать номер
+
+    section.held.suites
+        .inhalt
+            h2.rooms-splitter
+            .rooms-list-combo
+                .rooms-grid
+                .rooms-paging.discrete-pager
+
+    +gallery([
+        { visual_desktop: '/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/gallery/01-desktop.jpg', visual_mobile: '/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/gallery/01-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/gallery/02-desktop.jpg', visual_mobile: '/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/gallery/02-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/gallery/03-desktop.jpg', visual_mobile: '/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/gallery/03-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/gallery/04-desktop.jpg', visual_mobile: '/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/gallery/04-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/gallery/05-desktop.jpg', visual_mobile: '/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/gallery/05-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/gallery/06-desktop.jpg', visual_mobile: '/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/gallery/06-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/gallery/07-desktop.jpg', visual_mobile: '/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/gallery/07-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/gallery/08-desktop.jpg', visual_mobile: '/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/gallery/08-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/gallery/09-desktop.jpg', visual_mobile: '/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/gallery/09-mobile.jpg' },
+    ])
+
+    +restaurants-and-bars({
+        subline: 'Многообразие вкусов',
+        about: 'Гости, проживающие в виллах, могут открыть для себя гастрономическое великолепие ресторанов и баров в отеле Rixos Premium Saadiyat Island',
+        restaurants: [
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-saadiyat-island/restaurants-and-bars/rest-01.jpg',
+                heading: 'Ресторан Turquoise',
+                body: 'Главный ресторан с аутентичной турецкой и международной кухней по системе шведский стол.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-saadiyat-island/restaurants-and-bars/rest-02.jpg',
+                heading: 'Aja & Teppanyaki',
+                body: 'Ресторан со станцией приготовления Тэппанъяки и саке. Также есть суши-бар.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-saadiyat-island/restaurants-and-bars/rest-03.jpg',
+                heading: 'L’olivo Ristorante',
+                body: 'Новинками итальянской и средиземноморской кухни.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-saadiyat-island/restaurants-and-bars/rest-04.jpg',
+                heading: 'Mermaid Restaurant',
+                body: 'Средиземноморская кухня с морепродуктами.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-saadiyat-island/restaurants-and-bars/rest-05.jpg',
+                heading: 'People’s Restaurant',
+                body: 'Ресторан у бассейна. Подаются обеды, закуски и напитки.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-saadiyat-island/restaurants-and-bars/rest-06.jpg',
+                heading: 'Orient Restaurant',
+                body: 'Ресторан с новой  интерпретацией турецкой кухни.'
+            },
+        ],
+        bars: [
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-saadiyat-island/restaurants-and-bars/bar-01.jpg',
+                heading: 'Lobby Courtyard',
+                body: 'Бар с разнообразными сортами чая, кофе, коктейлями и закусками на выбор.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-saadiyat-island/restaurants-and-bars/bar-02.jpg',
+                heading: 'Highlights Bar',
+                body: 'Открытый бар у бассейна, где проходят различные выступления и шоу'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-saadiyat-island/restaurants-and-bars/bar-03.jpg',
+                heading: 'Farasha Bar & Lounge',
+                body: 'Широкий выбор чая, кофе, печенья и закусок.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-saadiyat-island/restaurants-and-bars/bar-04.jpg',
+                heading: 'Aqua Bar',
+                body: 'Бар у бассейна с закусками и напитками.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-saadiyat-island/restaurants-and-bars/bar-05.jpg',
+                heading: 'Vitamin Bar',
+                body: 'Бар в спа-центре Anjana со свежими фруктовыми соками и безалкогольными напитками.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-saadiyat-island/restaurants-and-bars/bar-06.jpg',
+                heading: 'Âme Beach Bar',
+                body: 'Пляжный бар с освежающими напитками.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-saadiyat-island/restaurants-and-bars/bar-07.jpg',
+                heading: 'Savanna Sol',
+                body: 'Бар, где мастера-миксологи создают яркие и освежающие коктейли.'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-premium-saadiyat-island/restaurants-and-bars/bar-08.jpg',
+                heading: 'Arela Terrace & Bar',
+                body: 'Бар, выступает диджей и подаются коктейли от миксолога.'
+            },
+        ]
+    })
+
+    section.held.edge2edge.rixy-club.visuals-x-slider
+        .x-slider
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/rixy-club/01-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/rixy-club/01-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/rixy-club/02-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/rixy-club/02-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/rixy-club/03-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/rixy-club/03-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/rixy-club/04-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/rixy-club/04-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/rixy-club/05-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/rixy-club/05-mobile.jpg)')
+        .overlay
+            h2 Rixy Kids Club
+            p
+                :typo
+                    В детском клубе Rixy к каждому ребёнку относятся как к VIP-персоне. Наш детский клуб Rixy предлагает разнообразные ежедневные занятия для детей, интерактивные игры и увлекательные шоу. Клуб создан для того, чтобы увлечь детей, развить их творческие способности и побудить их к общению друг с другом – всё это в безопасной образовательной среде.
+
+    +entertainment({
+        heading: 'РАЗВЛЕЧЕНИЯ И МЕРОПРИЯТИЯ',
+        lefty: {
+            title: 'Anjana Spa',
+            visual_desktop: '/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/visuals/entertain-01-desktop.jpg',
+            visual_mobile: '/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/visuals/entertain-01-mobile.jpg'
+        },
+        righty: {
+            title: 'Спорт и фитнес',
+            visual_desktop: '/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/visuals/entertain-02-desktop.jpg',
+            visual_mobile: '/site/coral.ru/assets/club-prive-by-rixos-saadiyat-island/visuals/entertain-02-mobile.jpg'
+        }
+    })
+
+    +coral-bonus()
+
+    +contacts-and-map()

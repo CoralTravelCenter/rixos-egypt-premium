@@ -1123,6 +1123,60 @@
                         }
                     }
                 ]
+            },
+            {
+                id: 46703,
+                country: 'ОАЭ',
+                name: 'CLUB PRIVÉ BY RIXOS SAADIYAT ISLAND',
+                description: 'Эксклюзивная концепция Club PRIVÉ в отеле Rixos Saadiyat Island',
+                url: '/chain/rixos/uae/club-prive-by-rixos-saadiyat-island/',
+                logo: '/site/coral.ru/assets/logos/club-prive-by-rixos-saadiyat-island.png',
+                usps: [
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-vip-transfer.svg',
+                        label: 'Индивидуальное время заезд'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-butler.svg',
+                        label: 'VIP-обслуживание в номере'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-luxe-villas-swimup.svg',
+                        label: 'Персональная вилла'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-rixos-sharm-el-sheikh-service.svg',
+                        label: 'Эксклюзивный доступ'
+                    }
+                ],
+                roomsSplit: [
+                    {
+                        name: 'Все',
+                        matcher: {
+                            field: 'name',
+                            regex: '.',
+                            flags: ''
+                        },
+                        default: true
+                    },
+                    {
+                        name: 'Номера',
+                        matcher: {
+                            field: 'name',
+                            regex: 'villa',
+                            flags: 'i',
+                            negate: true
+                        }
+                    },
+                    {
+                        name: 'Виллы',
+                        matcher: {
+                            field: 'name',
+                            regex: 'villa',
+                            flags: 'i',
+                        }
+                    }
+                ]
             }
         ]
     }
