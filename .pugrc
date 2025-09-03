@@ -1177,6 +1177,60 @@
                         }
                     }
                 ]
+            },
+            {
+                id: 50797,
+                country: 'ОАЭ',
+                name: 'RIXOS MARINA ABU DHABI',
+                description: 'Отель с уникальной архитектурой, удачным расположением и безупречным сервисом.',
+                url: '/chain/rixos/uae/rixos-marina-abu-dhabi/',
+                logo: '/site/coral.ru/assets/logos/rixos-marina-abu-dhabi.png',
+                usps: [
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-city.svg',
+                        label: 'Расположен в центре Абу-Даби'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-spa.svg',
+                        label: 'Спа-центр Naturelife'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-rixy-kids-town.svg',
+                        label: 'Уникальный дизайн'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-fine-cousine.svg',
+                        label: 'Рестораны, удостоенные наград'
+                    }
+                ],
+                roomsSplit: [
+                    {
+                        name: 'Все',
+                        matcher: {
+                            field: 'name',
+                            regex: '.',
+                            flags: ''
+                        },
+                        default: true
+                    },
+                    {
+                        name: 'Номера',
+                        matcher: {
+                            field: 'name',
+                            regex: 'suite',
+                            flags: 'i',
+                            negate: true
+                        }
+                    },
+                    {
+                        name: 'Номера люкс',
+                        matcher: {
+                            field: 'name',
+                            regex: 'suite',
+                            flags: 'i',
+                        }
+                    }
+                ]
             }
         ]
     }

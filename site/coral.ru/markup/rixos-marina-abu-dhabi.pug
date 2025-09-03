@@ -1,0 +1,170 @@
+include ../markup/mixins
+
+- const hotel = hotels.find(hotel => hotel.id === 50797);
+
+body
+    script
+        != `var known_hotel = ${ JSON.stringify(hotel) };`
+
+    +internal-nav([
+        { label: 'Номера', ref: 'section.suites' },
+        { label: 'Рестораны и бары', ref: 'section.restaurants-and-bars' },
+        { label: 'CoralBonus', ref: 'section.coral-bonus' },
+        { label: 'Контакты', ref: 'section.leased-line-premium' },
+    ], '/chain/rixos/uae/', '.interactive-map', { label: 'Выбрать номер', ref: 'section.suites' })
+
+    +kvv({
+        h1: 'Rixos Marina Abu Dhabi',
+        logo: '/site/coral.ru/assets/logos/rixos-marina-abu-dhabi.png',
+        desktop_poster: '/site/coral.ru/assets/rixos-marina-abu-dhabi/kv-poster-desktop.jpg',
+        mobile_poster:  '/site/coral.ru/assets/rixos-marina-abu-dhabi/kv-poster-mobile.jpg',
+        desktop_vid: 1110867197,
+        mobile_vid: 1110867219,
+        video_scale: 1.5,
+        five_stars: true,
+        location: 'ОАЭ, Абу-Даби'
+    })
+
+    section.held.intro
+        .inhalt
+            h2 Добро пожаловать в Rixos Marina Abu Dhabi
+            p.generic
+                :typo
+                    Это больше, чем отель: это архитектурная икона, гармонично объединяющая арабское наследие и турецкое гостеприимство. Расположенный в самом центре Абу-Даби, в окружении торговых центров, развлечений и жилых районов, этот курорт с видом на Персидский залив предлагает захватывающие виды на море и побережье. Отель рассказывает историю Абу-Даби, от его морских корней до современного процветающего города, сочетая изысканный дизайн с непревзойденной роскошью. Rixos Marina Abu Dhabi – это место, где гостей ждут незабываемые впечатления, превосходная кухня и безграничные возможности для отдыха.
+            .actions
+                button.knopf(data-ref='section.suites') Выбрать номер
+
+    section.held.suites
+        .inhalt
+            h2.rooms-splitter
+            .rooms-list-combo
+                .rooms-grid
+                .rooms-paging.discrete-pager
+
+    +gallery([
+       { visual_desktop: '/site/coral.ru/assets/rixos-marina-abu-dhabi/gallery/01-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-marina-abu-dhabi/gallery/01-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/rixos-marina-abu-dhabi/gallery/02-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-marina-abu-dhabi/gallery/02-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/rixos-marina-abu-dhabi/gallery/03-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-marina-abu-dhabi/gallery/03-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/rixos-marina-abu-dhabi/gallery/04-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-marina-abu-dhabi/gallery/04-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/rixos-marina-abu-dhabi/gallery/05-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-marina-abu-dhabi/gallery/05-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/rixos-marina-abu-dhabi/gallery/06-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-marina-abu-dhabi/gallery/06-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/rixos-marina-abu-dhabi/gallery/07-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-marina-abu-dhabi/gallery/07-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/rixos-marina-abu-dhabi/gallery/08-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-marina-abu-dhabi/gallery/08-mobile.jpg' },
+       { visual_desktop: '/site/coral.ru/assets/rixos-marina-abu-dhabi/gallery/09-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-marina-abu-dhabi/gallery/09-mobile.jpg' },
+    ])
+
+    +restaurants-and-bars({
+        subline: 'Отправляйтесь в незабываемое гастрономическое путешествие',
+        about: 'Откройте для себя новое чувство свободы и возможностей благодаря удостоенным наград ресторанам, предлагающим различные мировые кухни. Гости Rixos Marina Abu Dhabi смогут воспользоваться персонализированными услугами, включая пакеты «Проживание и завтрак», полупансион и «Все включено ультра», что гарантирует незабываемые впечатления.',
+        restaurants: [
+            {
+                visual:  '/site/coral.ru/assets/rixos-marina-abu-dhabi/restaurants-and-bars/rest-01.jpg',
+                heading: 'Terra Mare',
+                body:    'Блюда мировой кухни, которые подаются по концепции «шведского стола»'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-marina-abu-dhabi/restaurants-and-bars/rest-02.jpg',
+                heading: 'Ресторан Turquoise',
+                body:    'Главный ресторан с аутентичной турецкой и международной кухней по системе шведский стол.'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-marina-abu-dhabi/restaurants-and-bars/rest-03.jpg',
+                heading: 'People’s Restaurant',
+                body:    'Ресторан у бассейна. Подаются обеды, закуски и напитки'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-marina-abu-dhabi/restaurants-and-bars/rest-04.jpg',
+                heading: 'The Flame Steakhouse',
+                body:    'Стейк-хаус, где подают аргентинские стейки высшего сорта'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-marina-abu-dhabi/restaurants-and-bars/rest-05.jpg',
+                heading: 'Infinity Lounge',
+                body:    'Горячие и холодные напитки, разнообразная выпечка и шоколадные шедевры'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-marina-abu-dhabi/restaurants-and-bars/rest-06.jpg',
+                heading: 'The Bakery Club',
+                body:    'Инновационная пекарня с изысканной выпечкой'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-marina-abu-dhabi/restaurants-and-bars/rest-07.jpg',
+                heading: 'Vero Italiano',
+                body:    'Итальянский ресторан, где подают традиционные блюда'
+            },
+        ],
+        bars: [
+            {
+                visual:  '/site/coral.ru/assets/rixos-marina-abu-dhabi/restaurants-and-bars/bar-01.jpg',
+                heading: 'Anti-Dote Bar',
+                body:    'Широкий выбор коктейлей мирового класса и ассортимент закусок'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-marina-abu-dhabi/restaurants-and-bars/bar-02.jpg',
+                heading: 'Isla Beach Bar',
+                body:    'Элитный пляжный клуб, предлагающий широкий освежающих коктейлей'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-marina-abu-dhabi/restaurants-and-bars/bar-03.jpg',
+                heading: 'Prive Lounge',
+                body:    'Расположен на 37-м и 38-м этажах отеля, откуда открывается вид на городской пейзаж'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-marina-abu-dhabi/restaurants-and-bars/bar-04.jpg',
+                heading: 'People’s Bar',
+                body:    'Коктейль-бар, предлагающий широкий выбор коктейлей и напитков'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-marina-abu-dhabi/restaurants-and-bars/bar-05.jpg',
+                heading: 'Fruit Kiosk',
+                body:    'Киоск, где можно побаловать свежими и сладкими фруктами'
+            },
+            {
+                visual:  '/site/coral.ru/assets/rixos-marina-abu-dhabi/restaurants-and-bars/bar-06.jpg',
+                heading: 'Ice Cream Kiosk',
+                body:    'Киоск с шариковым мороженым'
+            },
+        ]
+    })
+
+    section.held.edge2edge.rixy-club.visuals-x-slider
+        .x-slider
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-marina-abu-dhabi/rixy-club/01-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-marina-abu-dhabi/rixy-club/01-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-marina-abu-dhabi/rixy-club/02-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-marina-abu-dhabi/rixy-club/02-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-marina-abu-dhabi/rixy-club/03-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-marina-abu-dhabi/rixy-club/03-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-marina-abu-dhabi/rixy-club/04-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-marina-abu-dhabi/rixy-club/04-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-marina-abu-dhabi/rixy-club/05-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-marina-abu-dhabi/rixy-club/05-mobile.jpg)')
+        .overlay
+            h2 Rixy Kids Club
+            p
+                :typo
+                    Маленьких гостей ждет Rixy Kids Club, где их встретят как VIP-персон и предложат разнообразные развлечения и игры. Активные гости могут посетить эксклюзивный спорт-клуб и попробовать TRX, кроссфит, зумбу или йогу. И, наконец, расслабьтесь и восстановите силы в отмеченном наградами спа-центре с традиционным турецким хамамом и широким выбором процедур.
+
+
+    section.three-blocks.held
+        .inhalt
+            h2 РАЗВЛЕЧЕНИЯ И МЕРОПРИЯТИЯ
+            p.text
+                :typo
+                    Rixos Marina Abu Dhabi – это место, где жизнь бьет ключом! Семьи, друзья и пары могут насладиться широким спектром развлечений, от живой музыки и оперных певцов до зажигательных танцевальных шоу и диджейских сетов. Отель стремится создавать незабываемые впечатления для каждого гостя. Для проведения мероприятий Rixos Marina Abu Dhabi предлагает современные аудиовизуальные технологии, позволяющие персонализировать каждое событие. К вашим услугам бальный зал, конференц-залы, сад под открытым небом и пляж.
+            .blocks_items
+                .blocks_item
+                    img(src='/site/coral.ru/assets/rixos-marina-abu-dhabi/visuals/01-desktop.jpg').hidden-on-mobile
+                    img(src='/site/coral.ru/assets/rixos-marina-abu-dhabi/visuals/01-mobile.jpg').hidden-on-desktop
+                    .text Anjana Spa
+                .blocks_item
+                    img(src='/site/coral.ru/assets/rixos-marina-abu-dhabi/visuals/02-desktop.jpg').hidden-on-mobile
+                    img(src='/site/coral.ru/assets/rixos-marina-abu-dhabi/visuals/02-mobile.jpg').hidden-on-desktop
+                    .text Тематические вечеринки
+                .blocks_item
+                    img(src='/site/coral.ru/assets/rixos-marina-abu-dhabi/visuals/03-desktop.jpg').hidden-on-mobile
+                    img(src='/site/coral.ru/assets/rixos-marina-abu-dhabi/visuals/03-mobile.jpg').hidden-on-desktop
+                    .text Спорт и фитнес
+            .pagination
+                .dot(data-index='0')
+                .dot(data-index='1')
+                .dot(data-index='2')
+
+    +coral-bonus()
+
+    +contacts-and-map()
