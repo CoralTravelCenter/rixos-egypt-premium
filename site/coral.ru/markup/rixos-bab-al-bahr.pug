@@ -1,0 +1,157 @@
+include ../markup/mixins
+
+- const hotel = hotels.find(hotel => hotel.id === 9388);
+
+body
+    script
+        != `var known_hotel = ${ JSON.stringify(hotel) };`
+
+    +internal-nav([
+        { label: 'Номера', ref: 'section.suites' },
+        { label: 'Рестораны и бары', ref: 'section.restaurants-and-bars' },
+        { label: 'CoralBonus', ref: 'section.coral-bonus' },
+        { label: 'Контакты', ref: 'section.leased-line-premium' },
+    ], '/chain/rixos/uae/', '.interactive-map', { label: 'Выбрать номер', ref: 'section.suites' })
+
+    +kvv({
+        h1: 'Rixos Bab Al Bahr',
+        logo: '/site/coral.ru/assets/logos/rixos-bab-al-bahr.png',
+        desktop_poster: '/site/coral.ru/assets/rixos-bab-al-bahr/kv-poster-desktop.jpg',
+        mobile_poster:  '/site/coral.ru/assets/rixos-bab-al-bahr/kv-poster-mobile.jpg',
+        desktop_vid: 1110867162,
+        mobile_vid: 1110867266,
+        video_scale: 1.5,
+        five_stars: true,
+        location: 'ОАЭ, Рас-эль-Хайма'
+    })
+
+    section.held.intro
+        .inhalt
+            h2 Добро пожаловать в Rixos Bab Al Bahr
+            p.generic
+                :typo
+                    Уникальный отель, представленный тремя пирамидальными зданиями, объединенными общим двором и большим бассейном. Этот эксклюзивный курорт предлагает гостям все удобства, характерные для отелей премиум-класса. Спа-центр и фитнес зал с современным оборудованием, живые выступления и специальные события только для гостей, удобства для детей и подростков, а также 8 ресторанов с разнообразной кухней и профессиональными поварами.
+            .actions
+                button.knopf(data-ref='section.suites') Выбрать номер
+
+    section.held.suites
+        .inhalt
+            h2.rooms-splitter
+            .rooms-list-combo
+                .rooms-grid
+                .rooms-paging.discrete-pager
+
+    +gallery([
+        { visual_desktop: '/site/coral.ru/assets/rixos-bab-al-bahr/gallery/01-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-bab-al-bahr/gallery/01-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-bab-al-bahr/gallery/02-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-bab-al-bahr/gallery/02-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-bab-al-bahr/gallery/03-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-bab-al-bahr/gallery/03-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-bab-al-bahr/gallery/04-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-bab-al-bahr/gallery/04-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-bab-al-bahr/gallery/05-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-bab-al-bahr/gallery/05-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-bab-al-bahr/gallery/06-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-bab-al-bahr/gallery/06-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-bab-al-bahr/gallery/07-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-bab-al-bahr/gallery/07-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-bab-al-bahr/gallery/08-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-bab-al-bahr/gallery/08-mobile.jpg' },
+        { visual_desktop: '/site/coral.ru/assets/rixos-bab-al-bahr/gallery/09-desktop.jpg', visual_mobile: '/site/coral.ru/assets/rixos-bab-al-bahr/gallery/09-mobile.jpg' },
+    ])
+
+    +restaurants-and-bars({
+        subline: 'Познакомьтесь с шедеврами мировой кухни',
+        about: 'Насладитесь яркими вкусами мировых кухонь в 8 ресторанах отеля. Мясные и рыбные заведения, кондитерские изделия, классика и авторские блюда, приготовленные профессиональными поварами, здесь каждый найдет для себя что-то новое.',
+        restaurants: [
+            {
+                visual: '/site/coral.ru/assets/rixos-bab-al-bahr/restaurants-and-bars/rest-01.jpg',
+                heading: 'Seven Heights Restaurant',
+                body: 'Ресторан, работающий весь день, предлагает широкий выбор блюд'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-bab-al-bahr/restaurants-and-bars/rest-02.jpg',
+                heading: 'L’olivo Ristorante',
+                body: 'Новинками итальянской и средиземноморской кухни'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-bab-al-bahr/restaurants-and-bars/rest-03.jpg',
+                heading: 'Aja Restaurant',
+                body: 'Ресторан, в котором подают блюда японской, тайской, индонезийской и индийской кухни'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-bab-al-bahr/restaurants-and-bars/rest-04.jpg',
+                heading: 'Lalezar',
+                body: 'Насладитесь экзотической кухней Ближнего Востока'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-bab-al-bahr/restaurants-and-bars/rest-05.jpg',
+                heading: 'Meatpoint Restaurant',
+                body: 'Изысканное меню а-ля карт с блюдами, приготовленными на гриле'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-bab-al-bahr/restaurants-and-bars/rest-06.jpg',
+                heading: 'Fishbone',
+                body: 'Широкий ассортимент блюд из рыбы, который понравится всем посетителям'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-bab-al-bahr/restaurants-and-bars/rest-07.jpg',
+                heading: 'Toast ‘n Burger',
+                body: 'Идеальное место для быстрого перекуса в течение дня'
+            },
+        ],
+        bars: [
+            {
+                visual: '/site/coral.ru/assets/rixos-bab-al-bahr/restaurants-and-bars/bar-01.jpg',
+                heading: 'Aisha Lobby Lounge',
+                body: 'Идеальное место для кофе и послеобеденного чая'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-bab-al-bahr/restaurants-and-bars/bar-02.jpg',
+                heading: 'Su Pool Bar',
+                body: 'Предлагает микс фирменных напитков, которыми вы сможете насладиться у бассейна'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-bab-al-bahr/restaurants-and-bars/bar-03.jpg',
+                heading: 'Infinity Pool Bar',
+                body: 'Широкий выбор напитков по системе «все включено»'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-bab-al-bahr/restaurants-and-bars/bar-04.jpg',
+                heading: 'Sea & See Bar',
+                body: 'Бар на крыше, где можно наслаждаться видами на Персидский залив'
+            },
+            {
+                visual: '/site/coral.ru/assets/rixos-bab-al-bahr/restaurants-and-bars/bar-05.jpg',
+                heading: 'Cigar Bar',
+                body: 'Бар, где можно посмотреть спортивные трансляции по поиграть с близкими в бильярд'
+            },
+        ]
+    })
+
+    section.held.edge2edge.rixy-club.visuals-x-slider
+        .x-slider
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-bab-al-bahr/rixy-club/01-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-bab-al-bahr/rixy-club/01-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-bab-al-bahr/rixy-club/02-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-bab-al-bahr/rixy-club/02-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-bab-al-bahr/rixy-club/03-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-bab-al-bahr/rixy-club/03-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-bab-al-bahr/rixy-club/04-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-bab-al-bahr/rixy-club/04-mobile.jpg)')
+            .x-slide(style='--visual-desktop: url(/site/coral.ru/assets/rixos-bab-al-bahr/rixy-club/05-desktop.jpg); --visual-mobile: url(/site/coral.ru/assets/rixos-bab-al-bahr/rixy-club/05-mobile.jpg)')
+        .overlay
+            h2 Rixy Kids Club & Teens Club
+            p
+                :typo
+                    Маленькие гости будут в восторге от Rixy Kids Club, где их ждут VIP-развлечения в безопасной и познавательной обстановке. Подростки могут весело провести время в Teen Club, участвуя в играх, турнирах и мастер-классах. Всех гостей отеля порадуют многочисленные мероприятия, живые выступления и музыка.
+
+    +entertainment({
+        heading: 'РАЗВЛЕЧЕНИЯ И МЕРОПРИЯТИЯ',
+        paras: [
+            'Поддерживайте активный образ жизни в Rixos! К вашим услугам разнообразные фитнес-программы: ежедневные занятия, современный фитнес-центр Techno Gym и уникальный гимнастический комплекс «Джунгли» на открытом воздухе. Занимайтесь под руководством опытных тренеров, выбирая из TRX, кроссфита, зумбы, йоги или водных видов спорта. Эксклюзивные групповые тренировки, персональные занятия и оздоровительные программы, включая йогу, пилатес и спиннинг. А для полной релаксации посетите Avitane Spa, крупнейший в Рас-эль-Хайме, и насладитесь оздоровительными и косметическими процедурами.',
+        ],
+        lefty: {
+            title: 'Anjana Spa',
+            visual_desktop: '/site/coral.ru/assets/rixos-bab-al-bahr/visuals/entertain-01-desktop.jpg',
+            visual_mobile: '/site/coral.ru/assets/rixos-bab-al-bahr/visuals/entertain-01-mobile.jpg'
+        },
+        righty: {
+            title: 'Спорт и фитнес',
+            visual_desktop: '/site/coral.ru/assets/rixos-bab-al-bahr/visuals/entertain-02-desktop.jpg',
+            visual_mobile: '/site/coral.ru/assets/rixos-bab-al-bahr/visuals/entertain-02-mobile.jpg'
+        }
+    })
+
+    +coral-bonus()
+
+    +contacts-and-map()

@@ -1231,6 +1231,60 @@
                         }
                     }
                 ]
+            },
+            {
+                id: 9388,
+                country: 'ОАЭ',
+                name: 'RIXOS BAB AL BAHR',
+                description: 'Отель с первоклассным сервисом и уникальным дизайном в виде комплекса пирамид.',
+                url: '/chain/rixos/uae/rixos-bab-al-bahr/',
+                logo: '/site/coral.ru/assets/logos/rixos-bab-al-bahr.png',
+                usps: [
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-castle.svg',
+                        label: 'Необычный дизайн и архитектура'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-butler.svg',
+                        label: 'Элитный сервис'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-aquapark.svg',
+                        label: 'Подходит для семейного отдыха'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-gym.svg',
+                        label: 'Премиальный фитнес-клуб'
+                    }
+                ],
+                roomsSplit: [
+                    {
+                        name: 'Все',
+                        matcher: {
+                            field: 'name',
+                            regex: '.',
+                            flags: ''
+                        },
+                        default: true
+                    },
+                    {
+                        name: 'Номера',
+                        matcher: {
+                            field: 'name',
+                            regex: 'suite|premium',
+                            flags: 'i',
+                            negate: true
+                        }
+                    },
+                    {
+                        name: 'Номера люкс',
+                        matcher: {
+                            field: 'name',
+                            regex: 'suite|premium',
+                            flags: 'i',
+                        }
+                    }
+                ]
             }
         ]
     }
