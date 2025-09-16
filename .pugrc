@@ -1285,6 +1285,60 @@
                         }
                     }
                 ]
+            },
+            {
+                id: 2055,
+                country: 'ОАЭ',
+                name: 'RIXOS AL MAIRID RAS AL KHAIMAH',
+                description: 'Семейный пляжный отель, расположенный на Аравийском полуострове',
+                url: '/chain/rixos/uae/rixos-al-mairid-ras-al-khaimah/',
+                logo: '/site/coral.ru/assets/logos/rixos-al-mairid-ras-al-khaimah.png',
+                usps: [
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-rixy-kids-town.svg',
+                        label: 'Семейный курорт'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-rixos-sharm-el-sheikh-service.svg',
+                        label: 'Удобное расположение для изучения города'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-palm.svg',
+                        label: 'Частный пляж 1,5 км'
+                    },
+                    {
+                        icon: '/site/coral.ru/assets/icons/usp-seashore-supper.svg',
+                        label: 'Ультра все включено'
+                    }
+                ],
+                roomsSplit: [
+                    {
+                        name: 'Все',
+                        matcher: {
+                            field: 'name',
+                            regex: '.',
+                            flags: ''
+                        },
+                        default: true
+                    },
+                    {
+                        name: 'Номера',
+                        matcher: {
+                            field: 'name',
+                            regex: 'suite|premium',
+                            flags: 'i',
+                            negate: true
+                        }
+                    },
+                    {
+                        name: 'Номера люкс',
+                        matcher: {
+                            field: 'name',
+                            regex: 'suite|premium',
+                            flags: 'i',
+                        }
+                    }
+                ]
             }
         ]
     }
