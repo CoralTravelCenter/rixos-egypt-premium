@@ -6783,5 +6783,15 @@
         "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/logos/rixos-al-mairid-ras-al-khaimah.png",
         "relativePath": "logos/rixos-al-mairid-ras-al-khaimah.png",
         "md5": "e9ca2e774f683b578c1e1e60b76bede4"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/rixos-al-mairid-ras-al-khaimah/kv-poster-mobile.jpg",
+        "relativePath": "rixos-al-mairid-ras-al-khaimah/kv-poster-mobile.jpg",
+        "md5": "053f73c5cdb5a89c854c1ce6ee26abad"
+    },
+    {
+        "absolutePath": "/Users/shoore/PROJECTS/coral.ru/rixos-egypt-premium/site/coral.ru/assets/rixos-al-mairid-ras-al-khaimah/kv-poster-desktop.jpg",
+        "relativePath": "rixos-al-mairid-ras-al-khaimah/kv-poster-desktop.jpg",
+        "md5": "7bec1cfc5c7178d01a9703139171d190"
     }
 ]
